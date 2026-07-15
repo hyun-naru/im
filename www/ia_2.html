@@ -1,0 +1,2002 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<link rel="stylesheet" href="./_feWorksheet.min.css">
+	<style>
+		body {position:relative;border-bottom:none !important;}
+		.bg01 td {background:#fffac8 !important;font-weight:bold;color:#000;}
+		.bg01 td a {font-weight:bold;color:#000;}
+		.bg02 td {background:#d1feff !important;font-weight:normal;color:#000;}
+		.bg02 td a {font-weight:normal;color:#000;}
+		.bg03 td {background:#f3f3f3 !important;font-weight:normal;color:#777;}
+		.bg03 td a {font-weight:normal;color:#777;}
+		.del td {background:#e9e9e9 !important;}
+		.btntop {position:fixed;right:10px;bottom:0;display:inline-block;width:40px;height:40px;background:#e92828;color:#fff;line-height:40px;text-align:center;text-decoration:none !important;font-size:11px;font-weight:bold;}
+		.previewIframe{display:none;position:fixed; bottom:0; left:0;background:#fff;width:390px;height:100%; border:1px solid #000;z-index:999;}
+		.date span {
+			display: block;
+		}
+	</style>
+	<script type="text/javascript" src="./js/libs/jquery/jquery-1.11.0.min.js"></script>
+	<script src="./_feWorksheet.min.js"></script>
+	<script>
+		
+	/* User script(setting) */
+	$(function () {
+		$("body").feWorksheet({
+			// Options
+		});
+		$(".delete a").removeAttr("href").attr("disabled");
+	});
+		document.addEventListener('DOMContentLoaded', () => {
+  // --------------------------------
+  // 1. 탭 선택 상태 제어 (.menuWrap dt)
+  // --------------------------------
+  const tabHeaders = document.querySelectorAll('.menuWrap dt');
+  tabHeaders.forEach((dt) => {
+    dt.addEventListener('click', () => {
+      tabHeaders.forEach((other) => {
+        other.classList.remove('selected');
+      });
+      dt.classList.add('selected');
+    });
+  });
+
+  // --------------------------------
+  // 2. 여러 개의 .js-menu-table 처리
+  // --------------------------------
+  const tables = document.querySelectorAll('section table');
+
+  tables.forEach((table) => {
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    // 이 테이블 안의 수정일 select박스만 남김
+    const mdDateSel   = table.querySelector('.js-md-date');  // 수정일
+
+    // --- thead 안에서 수정일 th가 몇 번째인지 구해두기 ---
+    const headerThs = Array.from(table.querySelectorAll('thead th'));
+    const mdIdx     = headerThs.findIndex((th) => th.classList.contains('dueDate'));
+
+    // -------------------------------
+    // 1. 수정일 데이터 수집
+    // -------------------------------
+    const mdDateList   = [];
+
+    rows.forEach((tr, index) => {
+      const tds = tr.querySelectorAll('td');
+
+      // 수정일 수집 및 tr에 dataset 저장
+      if (mdIdx >= 0 && tds[mdIdx]) {
+        const mdSpans = tds[mdIdx].querySelectorAll('span');
+        const dates = [];
+        mdSpans.forEach((span) => {
+          const mdDate = span.textContent.trim();
+          if (mdDate) {
+            dates.push(mdDate);
+            if (!mdDateList.includes(mdDate)) mdDateList.push(mdDate);
+          }
+        });
+
+        // 쉼표로 연결하여 data 속성에 저장
+        if (dates.length > 0) {
+          tr.dataset.mdDate = dates.join(',');
+        }
+      }
+    });
+
+    // 정렬
+    mdDateList.sort();
+
+    // -------------------------------
+    // 2. No 컬럼 추가 (colgroup + thead + 각 tr 앞에)
+    // -------------------------------
+    const colgroup = table.querySelector('colgroup');
+    if (colgroup) {
+      const noCol = document.createElement('col');
+      noCol.style.width = '40px';
+      colgroup.insertBefore(noCol, colgroup.firstChild);
+    }
+
+    const theadFirstRow = table.querySelector('thead tr');
+    if (theadFirstRow && !theadFirstRow.querySelector('.js-no-header') && !theadFirstRow.querySelector('.pageNumber')) {
+      const th = document.createElement('th');
+      th.className = 'js-no-header';
+      th.setAttribute('scope', 'col');
+      th.style.borderRight = '1px solid #ccc';
+      th.textContent = 'No';
+      theadFirstRow.insertBefore(th, theadFirstRow.firstChild);
+    }
+
+    rows.forEach((tr, index) => {
+      if (!tr.querySelector('.td-no') && !theadFirstRow.querySelector('.pageNumber')) {
+        const tdNo = document.createElement('td');
+        tdNo.className = 'td-no';
+        tdNo.style.fontWeight = 'bold';
+        tdNo.style.textAlign = 'center';
+        tdNo.textContent = String(index + 1);
+        tr.insertBefore(tdNo, tr.firstChild);
+      }
+    });
+
+    // -------------------------------
+    // 3. select 옵션 채우기 (수정일만 진행)
+    // -------------------------------
+    const buildOptions = (list, withEmpty = true) => {
+      const arr = [];
+      if (withEmpty) arr.push('<option value="">선택</option>');
+      list.forEach((v) => arr.push(`<option value="${v}">${v}</option>`));
+      return arr.join('');
+    };
+
+    if (mdDateSel) {
+      mdDateSel.innerHTML = buildOptions(mdDateList, true);
+    }
+
+    // -------------------------------
+    // 4. 필터 적용 함수 (수정일 기준으로만 필터링)
+    // -------------------------------
+    const applyFilters = () => {
+      const mdVal = mdDateSel ? mdDateSel.value : '';
+
+      rows.forEach((tr) => {
+        let show = true;
+
+        if (mdVal) {
+          const trMdDates = tr.dataset.mdDate || '';
+          const mdDatesArr = trMdDates.split(',');
+          show = show && mdDatesArr.includes(mdVal);
+        }
+
+        tr.style.display = show ? '' : 'none';
+      });
+    };
+
+    // -------------------------------
+    // 5. 이벤트 바인딩 (수정일만 진행)
+    // -------------------------------
+    if (mdDateSel) {
+      mdDateSel.addEventListener('change', applyFilters);
+    }
+
+    // URL 컬럼 index 찾기
+    const urlTh = table.querySelector('thead th.fileName');
+    const urlIdx = Array.from(table.querySelectorAll('thead th')).indexOf(urlTh);
+
+    // iframe 생성 후 body에 추가
+    const iframe = document.createElement('iframe');
+    iframe.className = 'previewIframe';
+    iframe.id = 'ifrm';
+    document.body.appendChild(iframe);
+
+    // 각 row의 URL 셀 선택
+    rows.forEach((tr) => {
+      const tds = tr.querySelectorAll('td');
+      const urlCell = tds[urlIdx];
+      if (!urlCell) return;
+
+      const link = urlCell.querySelector('a');
+      if (!link) return;
+
+      // .delete 클래스 포함된 행은 제외
+      if (link.closest('.delete')) return;
+
+      // mouseover
+      link.addEventListener('mouseover', () => {
+        iframe.style.display = 'block';
+        iframe.src = link.getAttribute('href');
+
+        // 내부 iframe 로딩 후 wrap scale 조정
+        setTimeout(() => {
+          try {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const wrap = iframeDoc.querySelector('.wrap');
+            if (wrap) {
+              wrap.style.transform = 'scale(1)';
+              wrap.style.transformOrigin = '0 0';
+            }
+          } catch (e) {
+            console.warn('iframe 내부에 접근 불가:', e);
+          }
+        }, 200);
+      });
+
+      // mouseout
+      link.addEventListener('mouseout', () => {
+        iframe.style.display = 'none';
+      });
+    });
+
+  });
+});
+
+
+
+
+	</script>
+</head>
+<body>
+	<header><h1><em>iM라이프</em> M스마트 퍼블리싱</h1></header>
+
+	<!-- noticeWrap -->
+	<section class="noticeWrap">
+		<h2>Notice</h2>
+		<ul>
+			<li>Undone: 코딩중, Done: 코딩완료, Delete: 코딩 완료 후 SB삭제</li>
+		</ul>
+	</section>
+	<!-- //noticeWrap -->
+
+	<!-- filterWrap -->
+	<section class="filterWrap">
+		<h2>Task Key/Filter</h2>
+		<form action="/">
+			<fieldset>
+				<legend>Filter option(It'll be automatically applied)</legend>
+				<label><input type="checkbox" value="all">All</label>
+				<label><input type="checkbox"><b class='default'>0</b><i>Undone</i></label>
+				<label><input type="checkbox"><b>1</b><i>Done</i></label>
+				<label><input type="checkbox"><b>2</b><i>Delete</i></label>
+			</fieldset>
+		</form>
+	</section>
+	<!-- //filterWrap -->
+	<!-- Worksheet -->
+	<section>
+		<h2>Worksheet : Front</h2>
+
+		<h3></h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption></caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">기존 화면리스트</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName"><a href="./codinglist_1.html" target="_blank">codinglist_1.html</a></td>
+					<td class="date"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">2026 ui개선 퍼블가이드</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName"><a href="./pub_new/guide/guide.html" target="_blank">guide.html</a></td>
+					<td class="date"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>가입제안</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>pub_new/view/dc</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">포함ID</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify<select class="js-md-date"></select></th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>		
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">New상품정보</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">DC-2000L</td>
+					<td class="fileName">DC-2010E.html</td>
+					<td class="date">26.06.17<span>26.07.15</span></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">New상품정보 > 상품선택(플랜선택)</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2011L.html</td>
+					<td class="date">26.06.17<span>26.07.15</span></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">New가입조건(주특약상품,주계약단독상품)</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2020E.html</td>
+					<td class="date">26.06.17<span>26.07.15</span></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">New가입조건(플랜저장P)</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2021L.html</td>
+					<td class="date">26.06.08<span>26.07.15</span></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">New가입조건(한도상세조회P)</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2022L.html</td>
+					<td class="date">26.06.08<span>26.07.15</span></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">New가입조건(특약선택)</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2021E.html</td>
+					<td class="date">26.06.09<span>26.07.15</span></td>
+					<td class="issueMemo">기획서18,19,21</td>
+					<td class="checkTask">1</td>
+				</tr>																				
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">전산심사결과</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-0112L.html</td>
+					<td class="date">26.06.18</td>
+					<td class="issueMemo">기획서20</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<!-- <tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">가입제안</td>
+					<td class="menuDepth">[TAB]가입조건</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-1060E.html</td>
+					<td class="date">26.06.18</td>
+					<td class="issueMemo">아이프레임 content
+						<br/>기획서24
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">[TAB]가입조건</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-1080E.html</td>
+					<td class="date">26.06.18</td>
+					<td class="issueMemo">아이프레임 wrap
+						<br/>기획서24
+					</td>
+					<td class="checkTask">1</td>
+				</tr> -->
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2030L.html</td>
+					<td class="date">26.06.18</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 26
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth">셀프고지 발송</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2033L.html</td>
+					<td class="date">26.06.19</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 28
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth">고지작성안내 팝업</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2031L.html</td>
+					<td class="date"></td>
+					<td class="issueMemo">
+						기존화면 못찾음 & 디자인 없음<br/>
+						기획서 29
+					</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth">알릴고지 불러오기</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">26.06.22</td>
+					<td class="fileName">DC-2032L.html</td>
+					<td class="date"></td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 49
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth">고지문항작성</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2034E.html</td>
+					<td class="date">26.06.22</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						본문내용 SR-1120E ~ SR-1120E_6.html 에서 가져왔습니다. 
+						<strong>알릴고지 답변현황</strong> 기본적인 기능은 내부 스크립트로 작성해두었으니 참고해주세요.<br/><br/>
+						기획서 30,31,32<br/>
+						청약 정의서 와 화면 아이디가 동일한데 동일한 화면일까요?
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth">고지문항작성</td>
+					<td class="menuDepth">질병검색</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2038L.html</td>
+					<td class="date">26.06.22</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 33
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">알릴의무고지</td>
+					<td class="menuDepth">고지문항작성</td>
+					<td class="menuDepth">질병상세고지</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2039L.html</td>
+					<td class="date">26.06.23</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 34
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">선심사 결과</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2040L.html</td>
+					<td class="date">26.06.23</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 51
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">선심사 결과</td>
+					<td class="menuDepth">비교설계</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2041L.html</td>
+					<td class="date">26.06.23</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 54
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">선심사 결과</td>
+					<td class="menuDepth">인심사 요청</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2042L.html</td>
+					<td class="date">26.06.23</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						화면정의서에 첨부된 참고 예시 화면을 못찾음.<br/>
+						사진첨부하는 부분의 스타일 참고를 위해 화면 공유 부탁드립니다.<br/>
+						기획서 56
+					</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">선심사 결과</td>
+					<td class="menuDepth">인심사 요청</td>
+					<td class="menuDepth">상세</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2043L.html</td>
+					<td class="date">26.06.23</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						사진첨부하는 부분의 스타일 참고를 위해 화면 공유 부탁드립니다.<br/>
+						기획서 57
+					</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">선심사 결과</td>
+					<td class="menuDepth">대안설계</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-2044L.html</td>
+					<td class="date">26.06.23</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서 60
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">가입제안이력</td>
+					<td class="menuDepth">가입이력조회</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-0120E.html</td>
+					<td class="date">26.06.24</td>
+					<td class="issueMemo">
+						퍼블 수정<br/>
+						기획서5
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">가입제안이력</td>
+					<td class="menuDepth">마이플랜관리</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-3010E.html</td>
+					<td class="date">26.06.24</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서7
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">가입제안이력</td>
+					<td class="menuDepth">마이플랜관리</td>
+					<td class="menuDepth">플랜상세</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-3011L.html</td>
+					<td class="date">26.06.24</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서8
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">가입제안이력</td>
+					<td class="menuDepth">마이플랜관리</td>
+					<td class="menuDepth">순서변경</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">DC-3012L.html</td>
+					<td class="date">26.06.24</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						<strong>순서변경</strong> 기본적인 기능은 내부 스크립트로 작성해두었으니 참고해주세요.<br/><br/>
+						기획서9
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>선심사</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>pub_new/view/uw</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">질병심사매뉴얼</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1080P.html</td>
+					<td class="date">26.06.24</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						기획서5
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">질병심사매뉴얼</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1081P.html</td>
+					<td class="date">26.06.24</td>
+					<td class="issueMemo">
+						퍼블 신규생성<br/>
+						정의서에는 1080P와 같은 페이지로 나와있는데, 퍼블 확인을 위해 페이지 분리가 필요할것 같아 임의ID로 생성했습니다.<br/><br/>
+						기획서6
+					</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">선심사</td>
+					<td class="menuDepth">안내</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1110E.html</td>
+					<td class="date">8.9</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">고객선택</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1120E.html</td>
+					<td class="date">8.9<br>9.1<br>9.10<br>10.26</td>
+					<td class="issueMemo">하단 입력폼 추가</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">고지정보 입력</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1130E.html</td>
+					<td class="date">8.9<br>9.10<br>9.17<br>9.23<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">추가서류 제출</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1140E.html</td>
+					<td class="date">8.9<br>9.10<br>9.17<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">필요서류 등록(native)</td>
+					<td class="menuDepth"></td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">native</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">완료</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1160E.html</td>
+					<td class="date">8.14</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">진행현황 목록</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1170E.html</td>
+					<td class="date">8.14</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">진행현황 상세</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">UW-1180E.html</td>
+					<td class="date">8.14<br>9.17</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth">질병매뉴얼</td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">경로미정, 신규생성추정, 임시자리</td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>청약보완(Web)</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>pub_new/view/sr</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">청약보완(Web)</td>
+					<td class="menuDepth">설계사</td>
+					<td class="menuDepth">로그인</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1010E.html</td>
+					<td class="date">8.14<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">가입내용확인</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1020E.html</td>
+					<td class="date">8.14<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약보완 발송 완료</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1030E.html</td>
+					<td class="date">8.14</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">고객</td>
+					<td class="menuDepth">청약보완 안내</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1040E.html</td>
+					<td class="date">8.14<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">본인인증</td>
+					<td class="menuDepth"></td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">공통</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">가입내용/보완사유 확인</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1050E.html</td>
+					<td class="date">8.14<br>11.06</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보완문서 확인(클립뷰어)</td>
+					<td class="fileName">SR-1060E.html</td>
+					<td class="date"></td>
+					<td class="issueMemo">클립뷰어</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보완문서 작성</td>
+					<td class="menuDepth">청약서 보완</td>
+					<td class="fileName">SR-1070E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험료 할증</td>
+					<td class="fileName">SR-1080E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험계약변경(감액)</td>
+					<td class="fileName">SR-1090E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">수익자지정동의</td>
+					<td class="fileName">SR-1100E.html</td>
+					<td class="date">8.26<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">재정심사</td>
+					<td class="fileName">SR-1110E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">건강고지</td>
+					<td class="fileName">SR-1120E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">건강고지2</td>
+					<td class="fileName">SR-1120E_2.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">건강고지3</td>
+					<td class="fileName">SR-1120E_3.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">건강고지4</td>
+					<td class="fileName">SR-1120E_4.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">건강고지5</td>
+					<td class="fileName">SR-1120E_5.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">건강고지6</td>
+					<td class="fileName">SR-1120E_6.html</td>
+					<td class="date">8.26<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">추가서류제출(native)</td>
+					<td class="fileName">SR-1130E.html</td>
+					<td class="date"></td>
+					<td class="issueMemo">native</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">휴대폰 자필서명</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1140E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약보완완료</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1150E.html</td>
+					<td class="date">8.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약보완 진행현황</td>
+					<td class="menuDepth">목록</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1160E.html</td>
+					<td class="date">8.26<br>9.18<br>10.12</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">상세</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">SR-1170E.html</td>
+					<td class="date">8.26<br>9.10<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>모바일 청약</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>pub_new/view/su</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">모바일청약</td>
+					<td class="menuDepth">청약</td>
+					<td class="menuDepth">청약정보입력</td>
+					<td class="menuDepth">계약정보</td>
+					<td class="fileName">su-1010E.html</td>
+					<td class="date">7.24<br>9.10<br>9.15<br>9.22<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약관계자</td>
+					<td class="fileName">su-1020E.html</td>
+					<td class="date">7.24<br>9.15<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">수령정보</td>
+					<td class="fileName">su-1030E.html</td>
+					<td class="date">7.31<br>9.15<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">개인정보동의</td>
+					<td class="fileName">su-1040E.html</td>
+					<td class="date">7.31<br>9.15<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">FATCA</td>
+					<td class="fileName">su-1050E.html</td>
+					<td class="date">8.3<br>9.15<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">펀드정보</td>
+					<td class="fileName">su-1060E.html</td>
+					<td class="date">8.6<br>9.15<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">KYC</td>
+					<td class="fileName">su-1070E.html</td>
+					<td class="date">8.3<br>9.15<br>9.22<br>9.25<br>10.5<br>10.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">기타</td>
+					<td class="fileName">su-1080E.html</td>
+					<td class="date">8.7<br>9.15<br>9.22<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">FC서명</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1090E.html</td>
+					<td class="date">8.7<br>9.15</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약서 작성(계약자)</td>
+					<td class="menuDepth">진행목록</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1100E.html</td>
+					<td class="date">7.31<br>9.15<br>9.25</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">정보동의</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1110E.html</td>
+					<td class="date">7.24<br>9.25<br>10.5<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">동의서</td>
+					<td class="fileName">su-1120E.html</td>
+					<td class="date">7.29<br>9.15</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1130E.html</td>
+					<td class="date">7.29<br>9.15</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1140E.html</td>
+					<td class="date">7.29<br>9.15<br>9.22<br>9.25</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">본인인증</td>
+					<td class="menuDepth"></td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">공통</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">휴대폰인증</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">공통</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">신용카드인증</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">공통</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약정보 확인</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1150E.html</td>
+					<td class="date">8.5<br>9.16<br>9.18<br>10.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약서류 작성</td>
+					<td class="menuDepth">청약서 - 가필</td>
+					<td class="fileName">su-1160E.html</td>
+					<td class="date">8.7<br>9.17<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험료 납입정보</td>
+					<td class="fileName">su-1170E.html</td>
+					<td class="date">8.7<br>9.16<br>9.22<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약서 - 서명</td>
+					<td class="fileName">su-1180E.html</td>
+					<td class="date">8.7<br>9.1<br>9.18<br>9.25<br>10.5<br>10.26</td>
+					<td class="issueMemo">옴니 바이오서명 화면 추가<br>하단 첨부내용 none처리</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 안내</td>
+					<td class="fileName">su-1190E.html</td>
+					<td class="date">8.21<br>9.16<br>9.25</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 계약자</td>
+					<td class="fileName">su-1200E.html</td>
+					<td class="date">8.21<br>9.16<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 고지1</td>
+					<td class="fileName">su-1210E.html</td>
+					<td class="date">8.21<br>9.16<br>9.18<br>10.26</td>
+					<td class="issueMemo">청약 기획 6 참고용</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 고지2</td>
+					<td class="fileName">su-1220E.html</td>
+					<td class="date">8.21<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 고지3</td>
+					<td class="fileName">su-1230E.html</td>
+					<td class="date">8.21<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 고지4</td>
+					<td class="fileName">su-1240E.html</td>
+					<td class="date">8.21<br>9.18<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 고지5</td>
+					<td class="fileName">su-1250E.html</td>
+					<td class="date">8.21<br>9.16<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 고지6</td>
+					<td class="fileName">su-1260E.html</td>
+					<td class="date">8.21<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 간편고지</td>
+					<td class="fileName">su-1270E.html</td>
+					<td class="date">8.21<br>9.16<br>9.18<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약전 알릴의무사항 - 치매고지</td>
+					<td class="fileName">su-1280E.html</td>
+					<td class="date">8.21<br>9.16<br>9.18<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">상품설명서 -가필</td>
+					<td class="fileName">su-1290E.html</td>
+					<td class="date">8.7<br>9.18<br>9.22<br>9.25<br>10.5<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">상품설명서 -서명</td>
+					<td class="fileName">su-1300E.html</td>
+					<td class="date">8.7<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험계약 이동에 따른 비교안내 -정보입력</td>
+					<td class="fileName">su-1310E.html</td>
+					<td class="date">8.7<br>9.16<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험계약 이동에 따른 비교안내 - 가필</td>
+					<td class="fileName">su-1320E.html</td>
+					<td class="date">8.7<br>9.18<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험계약 이동에 따른 비교안내 - 비교설명표</td>
+					<td class="fileName">su-1330E.html</td>
+					<td class="date">8.7<br>10.5<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험계약 이동에 따른 비교안내 - 서명</td>
+					<td class="fileName">su-1340E.html</td>
+					<td class="date">8.14<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험계약사항 비교안내자료</td>
+					<td class="fileName">su-1350E.html</td>
+					<td class="date">8.14<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">개인고객거래확인서 - 서명</td>
+					<td class="fileName">su-1360E.html</td>
+					<td class="date">8.14<br>10.5<br>10.26</td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1361E.html</td>
+					<td class="date">9.25<br>10.5<br>10.26</td>
+					<td class="issueMemo">샘플</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">FATCA - 서명</td>
+					<td class="fileName">su-1370E.html</td>
+					<td class="date">8.14<br>10.5<br>10.26</td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1371E.html</td>
+					<td class="date">9.25<br>10.5<br>10.26</td>
+					<td class="issueMemo">샘플</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">금융소비자불이익사항우선셜명확인서 - 가필1</td>
+					<td class="fileName">su-1380E.html</td>
+					<td class="date">8.14<br>9.16<br>9.22<br>9.25<br>10.12<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>				
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">금융소비자불이익사항우선셜명확인서 - 가필2</td>
+					<td class="fileName">su-1390E.html</td>
+					<td class="date">8.14<br>9.16<br>9.22<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>	
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">금융소비자불이익사항우선셜명확인서 - 서명</td>
+					<td class="fileName">su-1400E.html</td>
+					<td class="date">8.14<br>9.16<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">보험료이체신규신청서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">자동송금서비스신청서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">전자청약동의서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약체결및이행을위한동의서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">상품소개를위한동의서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">개인신용정보 조회동의서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">지정대리청구인지정신청서 -서명</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">변액보험 보험계약자 정보확인서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">상품설명서 별지(변액보험일경우)</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">적합성 진단보고서 - 서명</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">변액연금 GMAB미부여형 강품가입시 주요내용</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">적합성 진단보고서[변액보험 GMAB 미부여형]</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">부적합 보험계약 체결 확인서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr class="bg03">
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">과세적용신청확인서</td>
+					<td class="fileName"></td>
+					<td class="date"></td>
+					<td class="issueMemo">su-1180e와 통합</td>
+					<td class="checkTask">0</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">최종문서 확인</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1550e.html</td>
+					<td class="date">9.17<br>9.18<br>9.22<br>10.26</td>
+					<td class="issueMemo">이 화면전에 청약 기획서 23 화면 추가</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">지정대리청구인</td>
+					<td class="menuDepth">지정대리청구인지정신청서</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1551e.html</td>
+					<td class="date">11.03</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">완료</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1560e.html</td>
+					<td class="date">9.17<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">옴니청약(Web)</td>
+					<td class="menuDepth">안내페이지</td>
+					<td class="menuDepth">휴대폰 명의</td>
+					<td class="fileName">su-1600e.html</td>
+					<td class="date">9.4<br>9.18<br>9.25</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">작성기간</td>
+					<td class="fileName">su-1610e.html</td>
+					<td class="date">9.4<br>9.25<br>11.02</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계좌안내</td>
+					<td class="fileName">su-1620e.html</td>
+					<td class="date">9.4<br>9.25<br>10.5<br>11.02</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">대면설명확인서</td>
+					<td class="fileName">su-1650P.html</td>
+					<td class="date">9.4<br>9.18</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">본인인증 및 서명 방식 선택</td>
+					<td class="fileName">su-1670p.html</td>
+					<td class="date">9.4<br>9.18<br>10.5</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">옴니 지정청구대리인</td>
+					<td class="menuDepth">안내페이지</td>
+					<td class="menuDepth">휴대폰</td>
+					<td class="fileName">su-1660e.html</td>
+					<td class="date">9.4<br>9.18<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">진행기한</td>
+					<td class="fileName">su-1661e.html</td>
+					<td class="date">9.25<br>11.02</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">모바일청약진행대상(FC)</td>
+					<td class="menuDepth">목록</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1700e.html</td>
+					<td class="date">9.4<br>9.18<br>9.22<br>9.25<br>10.30</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">진행단계 상세</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1700p.html</td>
+					<td class="date">9.22<br>9.25</td>
+					<td class="issueMemo">임시아이디</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">피보험자 서명동의서 등록</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1710e.html</td>
+					<td class="date">9.4<br>9.22<br>9.25<br>10.6<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">모집경위확인서 작성</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1720e.html</td>
+					<td class="date">9.4<br>9.10<br>9.18<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">청약확정</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1730e.html</td>
+					<td class="date">9.4<br>9.18<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr><tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">조회보험료 납입 완료(실패)</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1740e.html</td>
+					<td class="date">9.4<br>9.18</td>
+					<td class="issueMemo">완료 주석처리</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">옴니청약 안내</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1750e.html</td>
+					<td class="date">9.23</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계좌변경 신청</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1750p.html</td>
+					<td class="date">9.4<br>9.18<br>9.23<br>9.25</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계좌선택</td>
+					<td class="fileName">su-1760P.html</td>
+					<td class="date">9.4<br>10.21<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계좌변경 처리완료</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1770e.html</td>
+					<td class="date">9.4</td>
+					<td class="issueMemo">아이디 확인</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계좌변경 이력확인</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1780e.html</td>
+					<td class="date">9.4<br>9.18</td>
+					<td class="issueMemo">아이디 확인</td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">판매체크리스트</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">su-1790e.html</td>
+					<td class="date">9.16<br>9.25<br>10.26</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>기타</h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>pub_new/view/in</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth">기타</td>
+					<td class="menuDepth">보장분석</td>
+					<td class="menuDepth">안내</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">IN-1010E.html</td>
+					<td class="date">7.17<br>9.17</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">계약 및 한도조회</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">IN-1020E.html</td>
+					<td class="date">7.17<br>9.17</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">세부조회</td>
+					<td class="fileName">IN-1030P.html</td>
+					<td class="date">7.17<br>9.17</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth">주요급부 한도조회</td>
+					<td class="menuDepth"></td>
+					<td class="fileName">IN-1040E.html</td>
+					<td class="date">7.17<br>9.17</td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">1</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3></h3>
+		<table>
+			<!-- caption : 경로입력 -->
+			<caption>pub_new/view/</caption>
+			<colgroup>
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="12%">
+				<col width="10%">
+				<col width="*">
+				<col width="5%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="menuDepth">Depth1</th>
+					<th scope="col" class="menuDepth">Depth2</th>
+					<th scope="col" class="menuDepth">Depth3</th>
+					<th scope="col" class="menuDepth">Depth4</th>
+					<th scope="col" class="fileName">File Name/ID</th>
+					<th scope="col" class="dueDate">Done/Modify</th>
+					<th scope="col" class="issueMemo">Issue/Memo</th>
+					<th scope="col" class="checkTask">Task</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="menuDepth"></td>
+					<td class="fileName">.html</td>
+					<td class="date"></td>
+					<td class="issueMemo"></td>
+					<td class="checkTask">0</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</section>
+	<!-- //Worksheet -->
+
+	<a href="#" class="btntop">TOP</a>
+</body>
+</html>
