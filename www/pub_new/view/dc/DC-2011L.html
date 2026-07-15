@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입제안</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<!-- <script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script> -->
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+<style>
+/* 2026 dcNew 이동 삭제 */
+</style>
+</head>
+<body>
+<input type="checkbox" id="stepToggle">
+
+<!-- 보험료계산결과 -->
+<div id="layer2" class="dim-layer none"><!-- 레이어팝업 노출 none class 삭제 -->
+	<div class="dimBg"></div>
+	<div id="layer1" class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>보험료 계산결과</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<ul class="pop-list02">
+					<li>
+						<span class="stit">초회 보험료</span>
+						<span class="scon"><em>145,000</em>원</span>
+					</li>
+					<li>
+						<span class="stit">할인 보험료</span>
+						<span class="scon"><em>145,000</em>원</span>
+					</li>
+					<li>
+						<span class="stit">할인 후 보험료</span>
+						<span class="scon"><em>145,000</em>원</span>
+					</li>
+				</ul>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st01">확인</button> 
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>가입제안</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<label for="stepToggle" class="sbtn-bdr-1 bdr-st06 btn-step-toggle"><span>Step</span></label><!-- 2026 dcNew 수정 -->
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+		<!-- <div class="notice-txt d-tit-area-GA">
+			<ul class="write-st02">
+				<li>
+					<label for="auth-tel"><em class="GA-text">제안기준일자</em></label>
+					<div class="search-box">
+						<input type="text" class="inp-wrap GA-text" id="planner" value="2026.04.27" disabled>
+					</div>
+				</li>
+			</ul>
+		</div> -->
+	</header>
+	<!-- //header -->
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step-GA pro-sel result"><!-- result 상품 선택 후 추가-->
+		<h2>상품선택</h2>
+		<div class="pos-ar">
+			<button class="sbtn-3 btn-st004 w90">적합성 진단</button>
+		</div>
+	</div>
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll pro-sel result"><!-- result 상품 선택 후 추가-->
+		<div class="d-cont dcNew"><!-- 2026 dcNew 클래스 추가 -->
+			<!-- 상품 선택 -->
+			<div class="pro-sel-cont">
+				<div class="tit-area">
+					<div class="tab_case">
+						<div class="GA-Advance-PaymentList w100p">
+							<div class="d-lite_chipfilter">
+								<div class="GA-Advance-Payment">
+									<div class="chipitem">
+										<input type="radio" id="item01" class="chipinput" name="filter00" checked>
+										<label for="item01" class="chiplabel quick">퀵</label>
+									</div>
+									<div class="chipitem">
+										<input type="radio" id="item02" class="chipinput" name="filter00">
+										<label for="item02" class="chiplabel">추천플랜</label>
+									</div>
+									<div class="chipitem">
+										<input type="radio" id="item03" class="chipinput" name="filter00">
+										<label for="item03" class="chiplabel">마이플랜</label>
+									</div>
+									<div class="chipitem">
+										<input type="radio" id="item04" class="chipinput" name="filter00">
+										<label for="item04" class="chiplabel">전체상품</label>
+									</div>
+									<div class="chipitem">
+										<input type="radio" id="item05" class="chipinput" name="filter00">
+										<label for="item05" class="chiplabel">즐겨찾기</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search search-GA">
+					<ul>
+						<li>
+							<input type="text" class="inp-wrap" id="self-uw02" placeholder="상품명 검색">
+							<button class="sbtn-search-g">검색</button>	
+							<button class="btn_fitter"><span class="ui-hidden-accessible">필터</span></button>	
+						</li>
+					</ul>
+				</div>
+				<div class="tit-area banner-GA">
+					<div class="chk-list-plan">
+						<input type="radio" id="sel01" name="radio-sel">
+						<label for="sel01">
+							<span class="GA-Pur-btn">보장</span>
+							<span class="pro_font">iM Plus 세븐UP 골드종신보험</span>
+						</label>
+					</div>
+					<div class="chk-list-plan">
+						<div class="custom-shape my">
+							<div>마이</div>
+						</div>
+						<input type="radio" id="sel02" name="radio-sel">
+						<label for="sel02">
+							<span class="GA-green-btn">연금</span>
+							<span class="pro_font">퍼펙트PRO연금보험</span>
+						</label>
+					</div>
+					<div class="chk-list-plan">
+						<input type="radio" id="sel03" name="radio-sel">
+						<label for="sel03">
+							<span class="GA-Pur-btn">보장</span>
+							<span class="pro_font">마음든든플러스유니버셜종신보험</span>
+						</label>
+					</div>
+					<div class="chk-list-plan">
+						<input type="radio" id="sel04" name="radio-sel">
+						<label for="sel04">
+							<span class="GA-lovry-btn">저축</span>
+							<span class="pro_font">THE당당한인생간편종신보험</span>
+						</label>
+					</div>
+					<div class="chk-list-plan">
+						<input type="radio" id="sel05" name="radio-sel">
+						<label for="sel05">
+							<span class="GA-Pur-btn">보장</span>
+							<span class="pro_font">THE당당한인생간편종신보험</span>
+						</label>
+					</div>
+					<div class="chk-list-plan">
+						<input type="radio" id="sel06" name="radio-sel">
+						<label for="sel06">
+							<span class="GA-Pur-btn">보장</span>
+							<span class="pro_font">iM Plus세븐Up더좋은종신버홈세븐UP더좋은종신보험</span>
+						</label>
+					</div>				
+				</div>
+			</div>							
+			<div class="pro-sel-cont2">
+				<div class="fullpop-cont">
+					<div class="tit-area banner-GA">
+						<div class="GA-Pr-Type">
+							<span class="" for="sel10">마음든든플러스유니버셜종신보험1종(기본형)</span>
+						</div>
+						<button type="button" class="GA-Pr-Open-Btn">
+							<spna class="GA_Pr-Ico"></spna>
+						</button>				
+					</div>			
+					<div class="search-result">
+						<ul class="link-list-st01">
+							<li class="border-bn">
+								<div class="tit-h2 pab_5">
+									<a href="#" class="link-go GA-go">
+										<span class="GA-h3">주계약 선택</span>
+										<span class="GA-upbtn"></span> <!-- class GA-downbtn 열림추가-->
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>			
+					<div class="tit-area banner-GA">
+						<div class="chk-list-plan">
+							<input type="radio" id="sel011" name="radio-sel2">
+							<label for="sel011" class="flexJcSb">
+								<span class="pro_font">마음든든플러스유니버셜종신보험1종(기본형)</span>
+								<span class="GA_Star-on"></span>
+							</label>
+						</div>
+						<div class="chk-list-plan">
+							<input type="radio" id="sel012" name="radio-sel2">
+							<label for="sel012" class="flexJcSb">
+								<span class="pro_font">iM Plus 세븐UP 골드종신보험</span>
+								<span class="GA_Star-off"></span>
+							</label>
+						</div>
+					</div>
+					<div class="cont1">				
+						<ul>
+							<li>
+								<label class="GA-h3">플랜선택</label>
+								<a href="#" class="coupon Plan-bottom">
+									<div class="chk-list chk-list-GA">
+										<ul>
+											<li class="GA-Pr-Lay">
+												<label class="GA-text" for="sel10">50세 남 순환계50세 남 순환계</label><span class="Up_btn"></span>
+											</li>
+										</ul>
+									</div>
+									<!-- <div>
+										<select id="sel1" class="select flex">
+											<option>선택하세요</option>
+										</select>
+									</div> -->
+								</a>
+							</li>
+						</ul>
+						<h3 class="GA-h3 mat_40 mab-10">가입조건</h3>
+						<article class="pro-covenant">
+							<ul class="list border-bn">
+								<li>
+									<label for="val1_1">가입금액(단위:만원)</label>
+									<span>
+										<input type="text" class="inp-wrap ta-r" id="val1_1" value="5,000">
+									</span>
+								</li>
+								<li>
+									<label for="period1_1">보험기간</label>
+									<span>
+										<select class="select" id="period1_1">
+											<option>99년</option>
+										</select>
+									</span>
+								</li>
+								<li>
+									<label for="period1_2">납입기간</label>
+									<span>
+										<select class="select" id="period1_2">
+											<option>20년</option>
+										</select>
+									</span>
+								</li>
+							</ul>
+							<div class="sum-info pdt-n">
+								<span class="fs-13">가입금액(증감액100만원)<em class="fs-12"> 최소 2,000만원 ~ 최대 12,500만원</em></span>
+							</div>
+							<div class="premium dis-block">					
+								<label>납입주기</label>
+								<div class="form">
+									<select class="select" id="period1_2">
+										<option>월납</option>
+									</select>
+								</div>
+							</div>
+							<!-- 04 연금전환신청  Start-->
+							<!-- <div class="write-st04 bg_fff mab-n pab_10 pat_15 GA-Bor-Top">	 -->
+							<div class="premium dis-block">	
+								<label class="pal_20">연금전환신청</label>
+								<div class="form checkBox-st01">
+									<div>
+										<input type="radio" name="ra3" id="ra3_1" checked /><label for="ra3_1">예</label>
+									</div>
+									<div>
+										<input type="radio" name="ra3" id="ra3_2" /><label for="ra3_2">아니오</label>
+									</div>
+								</div>
+							</div>
+							<div class="premium dis-block">					
+								<label class="w120">연금전환신청나이</label>
+								<div class="form">
+									<span class="GA-Advance-Payment">
+										<input type="text" class="inp-wrap ta-r" id="val1_1" value="80"><em>세</em>
+									</span>
+								</div>
+							</div>
+							<div class="premium dis-block">					
+								<label>거치기간</label>
+								<div class="form">
+									<select class="select" id="period1_2">
+										<option>월납</option>
+									</select>
+								</div>
+							</div>
+								<!-- 04 연금전환신청 End-->
+							<div class="premium dis-block GA-Bor-Top">					
+								<label class="w120">선납횟수(최대N회)</label>
+								<div class="form">
+									<span class="GA-Advance-Payment">
+										<input type="text" class="inp-wrap ta-r" id="val1_1" value="0"><em>회</em>
+									</span>
+								</div>
+							</div>
+						</article>				
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 상품 선택 완료 -->
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+<!-- 플랜선택 바텀시트 -->
+	<div class="bottom-sheet dcNew" id="popup01"><!-- 2026 dcNew 클래스 추가 -->
+		<div class="GA-dpop-head close">
+			<div class="dpop-head">
+				<span class="GA-h2">상세필터</span>
+			</div>	
+			<button class="btn-pop-close">닫기</button>
+		</div>
+		<div class="cont">
+			<label for="ra3_1" class="GA-h3">보험상품 유형을 선택해주세요.</label>
+			<div class="checkBox-st01 round">
+				<div class="">
+					<input type="checkbox" name="ra3" id="ra3_1">
+					<label for="ra3_1">사망</label>
+				</div>
+				<div>
+					<input type="checkbox" name="ra3" id="ra3_2">
+					<label for="ra3_2">변액</label>
+				</div>
+				<div>
+					<input type="checkbox" name="ra3" id="ra3_3">
+					<label for="ra3_3">암</label>
+				</div>
+				<div>
+					<input type="checkbox" name="ra3" id="ra3_4">
+					<label for="ra3_4">건강</label>
+				</div>
+				<div>
+					<input type="checkbox" name="ra3" id="ra3_5">
+					<label for="ra3_5">상해</label>
+				</div>
+				<div>
+					<input type="checkbox" name="ra3" id="ra3_6">
+					<label for="ra3_6">연금</label>
+				</div>
+			</div>
+		</div>
+		<!-- footer 고정영역 -->
+		<footer>
+			<div class="d-footer">
+				<button class="lbtn btn-st04">필터적용</button>
+			</div>
+		</footer>
+		<!-- //footer 고정영역 -->
+	</div>
+	<div class="dimmed"></div>
+	<!--// 바텀시트 -->
+
+<!-- 2026 dcNew 수정 -->
+<!-- 단계 이동 드롭다운 -->
+<div class="step-dropdown">
+	<label for="stepToggle" class="step-dropdown-bg"></label>
+	<div class="step-dropdown-panel">
+		<div class="step-dropdown-inner">
+			<ul class="step-dropdown-list">
+				<li class="complete border-n mg-n bg_fff">
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-title">가입제안단계</span>
+							<span class="step-sub close_btn">
+								<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="18" y1="6" x2="6" y2="18"></line>
+									<line x1="6" y1="6" x2="18" y2="18"></line>
+								</svg>
+							</span>
+						</div>
+						<!-- <p class="step-detail">계약자/피보험자 정보</p> -->
+					</div>
+				</li>
+				<!--01고객센터_01진입-->				
+				<li class="current mat-n">
+					<button type="button">
+						<div class="d-lite_flex">
+							<span class="step-num">1</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">고객센터</span>
+								</div>
+							</div>
+						</div>
+					</button>
+				</li>
+				<!--01고객센터_02계피정보-->
+				<li class="complete mat-n">
+					<button type="button">
+						<div class="d-lite_flex">
+							<span class="step-num">1</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">고객센터</span>
+								</div>
+							</div>
+						</div>
+						<ul class="step-info-detailList">
+							<li>
+								<dl>
+									<dt>계약자</dt>
+									<dd>
+										<span class="step-info-name">홍엄마엄마엄마엄마엄마엄마엄마</span>
+										<span>(45세 / 여)</span>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>피보험자</dt>
+									<dd>
+										<span class="step-info-name">김아들</span>
+										<span>(20세 / 남)</span>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</button>
+				</li>
+				
+				<li>
+					<button type="button">
+						<div class="d-lite_flex">
+							<span class="step-num">2</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">가입제안</span>
+									<!-- <span class="step-sub">상품 설계</span> -->
+								</div>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="complete">
+					<button type="button">
+						<div class="d-lite_flex">
+							<span class="step-num">2</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">가입제안</span>
+									<span class="step-sub link"><a href="#">상품선택</a></span>
+								</div>
+							</div>
+							<dl class="step-info-greenbox">
+								<dt>
+									당당한인생종신보험(무)2601 (해약환급금 일부지급형)
+								</dt>
+								<dd>
+									<dl>
+										<dt>초회보험료</dt>
+										<dd>
+											<strong>53,000</strong>원
+										</dd>
+									</dl>
+								</dd>
+							</dl>
+						</div>
+					</button>
+				</li>
+				<li class="current">
+					<button type="button">
+						<div class="d-lite_flex">
+						<span class="step-num">3</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">알릴의무고지</span>
+									<span class="step-sub temp">임시저장</span>
+								</div>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="complete">
+					<button type="button">
+						<div class="d-lite_flex">
+							<span class="step-num">4</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">선심사결과</span>
+									<span class="step-sub">표준인수</span>
+								</div>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li>
+					<button type="button">
+						<div class="d-lite_flex">
+							<span class="step-num">5</span>
+							<div class="step-info">
+								<div class="step-info-top">
+									<span class="step-name">청약입력</span>
+									<!-- <span class="step-sub">청약완료</span> -->
+								</div>
+							</div>
+						</div>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //단계 이동 드롭다운 -->
+<!-- //2026 dcNew 수정 -->
+
+<script>
+$(function(){
+	// 단계 아이템 클릭 이벤트
+	$('.step-dropdown-list li').on('click', function(){
+		var idx = $(this).index();
+		var name = $(this).find('.step-name').text();
+		console.log('단계 클릭:', (idx + 1), name);
+		$('#stepToggle').prop('checked', false);
+		// TODO: 실제 단계 이동 로직 연결
+	});
+	$(".btn_fitter").click(function(){
+		$("#popup01, #popup01 + .dimmed").addClass('open')
+	});
+	$("#popup01 .close, .dimmed").click(function(){
+		$("#popup01, #popup01 + .dimmed").removeClass('open')
+	});
+});
+</script>
+</body>
+</html>

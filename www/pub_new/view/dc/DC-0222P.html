@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전자청약 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>전자청약 입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div>
+		<div class="d-step">
+			<h2>3. 결제정보 입력</h2>
+			<p class="d-step-status">
+				<span>1</span> / <span>2</span> / <span class="on">3</span> / <span>4</span> / <span>5</span> / <span>6</span>
+			</p>
+		</div>
+		<div class="d-step3">
+			<ol><!-- 현재 class="on" / 과거 class="check" -->
+				<li class="on"><span>1</span>초회입금방법</li>
+				<li><span>2</span>계속납입방법</li>
+				<li><span>3</span>반환계좌</li>
+			</ol>
+		</div>
+	</div>
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+		<div class="cont1">
+			<h3 class="ui-hidden-accessible">초회입금방법 입력폼</h3>
+			<ul class="write-st04">
+				<li>
+					<label for="la-02">납입방법</label>
+					<div class="checkBox-st01">
+						<input id="ra1_1" name="ra33" type="radio" checked /><label for="ra1_1">즉시이체</label>
+						<input id="ra1_2" name="ra33" type="radio" /><label for="ra1_2">카드</label>
+						<input id="ra1_3" name="ra33" type="radio" /><label for="ra1_3">방문</label>
+					</div>
+				</li>
+				<!-- 즉시이체인 경우 -->
+				<li>
+					<label for="la1-01">은행명</label>
+					<div>
+						<input id="la1-01" type="text" class="inp-wrap" placeholder="은행선택" disabled />
+						<button class="btn-find">조회</button>
+					</div>
+				</li>
+				<li>
+					<label for="la1-02">계좌번호 <span class="label-desc fc-blue">본인 명의의 계좌만 가능합니다.</span></label>
+					<div>
+						<input id="la1-02" type="text" class="inp-wrap" placeholder="-없이 숫자만 입력하세요" disabled />
+						<button class="sbtn-5 btn-st02">확인</button>
+					</div>
+				</li>
+				<!-- //즉시이체인 경우 -->
+
+				<!-- 카드인경우 -->
+				<li>
+					<label for="la2-01">카드번호</label>
+					<div>
+						<input id="la2-01" type="tel" class="inp-wrap" placeholder="-없이 숫자만 입력하세요" disabled />
+						<button class="btn-find">조회</button>
+					</div>
+				</li>
+				<li><!-- 2018-05-03 / 2018-05-04 -->
+					<label for="la2-02">유효기간 <span class="label-desc fc-blue">본인 명의의 카드만 가능합니다.</span></label>
+					<div>
+						<input id="la2-02" type="tel" class="inp-wrap" placeholder="년월 입력" disabled />
+						<input type="month" class="sbtn-calendar" title="달력보기" />
+					</div>
+				</li>
+				<li>
+					<label for="la2-03">할부기간</label>
+					<div>
+						<select id="la2-03" class="select">
+							<option>일시불</option>
+						</select>
+					</div>
+				</li>
+				<!-- //카드인경우 -->
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

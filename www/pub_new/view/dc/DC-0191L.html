@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>신분증 인증</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>신분증 인증</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_tabcontents 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont1">
+			<h3 class="h2-st03">신분증 선택</h3>
+			<div class="certi-setting dform circle01">
+				<li><input type="radio" id="ra3-1" name="ra3" /><label for="ra3-1" class="jumin">주민등록증</label></li>
+				<li><input type="radio" id="ra3-2" name="ra3" checked/><label for="ra3-2" class="car">운전면허증</label></li>
+			</div>
+		</div>
+		<div class="button-section">
+			<button class="mbtn-2 btn-st02">신분증 촬영</button>
+		</div>
+
+		<div class="cont1">
+			<section class="loginBox">
+				<h2 class="h2-st03">상세정보</h2>
+				<!-- 주민등록증인 경우 -->
+				<ul>
+					<li>
+						<label for="inp-1">성명</label>
+						<input id="inp-1" type="text" class="inp-wrap2" />
+					</li>
+					<li>
+						<label for="inp-2">주민번호</label>
+						<input id="inp-2" type="tel" class="inp-wrap2" />
+					</li>
+					<li>
+						<label for="inp-3">발급일자</label>
+						<input id="inp-3" type="tel" class="inp-wrap2" />
+					</li>
+				</ul>
+				<!-- 운전면허증인 경우 -->
+				<ul>
+					<li>
+						<label for="inp2-1">성명</label>
+						<input id="inp2-1" type="text" class="inp-wrap2" />
+					</li>
+					<li><!-- 2018-05-03 / 2018-05-04 -->
+						<label for="inp2-2">생년월일</label>
+						<input id="inp2-2" type="tel" class="inp-wrap2" placeholder="생년월일 입력" />
+						<input type="date" class="sbtn-calendar" title="달력보기" />
+					</li>
+					<li>
+						<label for="inp2-3">면허번호</label>
+						<input id="inp2-3" type="tel" class="inp-wrap2" />
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" >확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

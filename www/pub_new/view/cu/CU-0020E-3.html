@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객등록</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 알림팝업 영역  -->
+<div class="dim-layer">
+	<div class="dimBg"></div>
+	<div id="alertP-1" class="alert-layer"><!-- 고객등록 완료 -->
+		<div class="alert-container">
+			<div class="alert-head"><!-- 헤드 타이틀 없을시  alert-head-none -->
+				<h1>알&nbsp;&nbsp;림</h1><!-- 9.25 수정 -->
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>고객등록이 완료되었습니다.</p><!-- 9.25 수정 -->
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st02">확&nbsp;&nbsp;인</button><!-- 9.25 수정 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 알림팝업 영역 -->
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>고객등록</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치이동  -->
+	<div class="d-step">
+		<h2>정보동의 및 본인인증</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span>2</span>
+			<span>3</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<!-- 휴대폰 인증 노출 -->
+			<div class="consent-info">
+				<span class="stit">동의서 번호</span><em class="scon">2019.07.12~2020.07.11(1년)</em>
+			</div>
+			<!-- //휴대폰 인증 노출 -->
+		
+			<div class="cont3">
+				<ul class="write-st04 mab-n">
+					<li>
+						<label for="wt-name">고객명</label>
+						<div class="dform square02">
+							<input type="text" class="inp-wrap" id="wt-name" placeholder="이름" value="홍길동" disabled>
+							<label for="add-5_1" class="w70 inline-block"><input type="checkbox" id="add-5_1">외국인</label>
+						</div>
+					</li>
+					<li>
+						<label for="wt-jomin">주민등록번호 입력</label>
+						<div>
+							<input type="number" class="inp-wrap" id="wt-jomin" placeholder="생년월일 6자리" value="801205" disabled>
+							<span class="dash">-</span>
+							<input type="text" class="inp-wrap" placeholder="● ● ● ● ● ● ●" value="1 ● ● ● ● ● ●" disabled>
+						</div>
+					</li>
+					<li>
+						<label for="wt-tel">휴대전화</label>
+						<div>
+							<input type="tel" class="inp-wrap" id="wt-tel" placeholder="생년월일 6자리" value="010.123.1234" readonly>
+						</div>
+					</li>
+					<li>
+						<label for="wt-post">우편물 수령지</label>
+						<div class="checkBox-st01">
+							<input type="radio" name="post" id="wt-post" checked=""><label for="wt-post">자택</label>
+							<input type="radio" name="post" id="wt-post2"><label for="wt-post2">직장</label>
+						</div>
+					</li>
+					<li>
+						<label for="wt-addr">주소</label>
+						<div class="pdb-n">
+							<input type="number" class="inp-wrap" id="wt-addr" value="123" readonly>
+							<button class="sbtn-search-g">검색</button>
+						</div>
+						<div class="pdb-n"><input type="text" class="inp-wrap" value="서울 은평구 불광동(불광1동)" readonly></div>
+						<div><input type="text" class="inp-wrap" value="건물명 국립환경연구원" readonly></div>
+					</li>
+					<li>
+						<label for="wt-email">이메일</label>
+						<div>
+							<input type="email" class="inp-wrap" id="wt-email">
+							<span class="dash">@</span>
+							<select class="select flex w100p">
+								<option selected="">직접입력</option>
+								<option>gmail.com</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label for="wt-jop">직업</label>
+						<div>
+							<input type="text" class="inp-wrap" id="wt-jop" value="사무직" readonly>
+							<button class="sbtn-search-g">검색</button>
+						</div>
+					</li>
+					<li>
+						<label for="wt-drive">운전</label>
+						<div>
+							<input type="text" class="inp-wrap" id="wt-drive" value="승용차(자가용)" readonly>
+							<button class="sbtn-search-g">검색</button>
+						</div>
+					</li>
+					<li>
+						<label for="wt-nation">국적</label>
+						<div>
+							<input type="text" class="inp-wrap" id="wt-nation" value="한국" readonly>
+							<button class="sbtn-search-g">검색</button>
+						</div>
+					</li>
+					<!-- 외국국적 선택시 노출 -->
+					<li>
+						<label for="wt-nation-date">발급일자</label>
+						<div>
+							<input type="number" class="inp-wrap" id="wt-nation-date"  placeholder="발급일 입력" readonly>
+							<input type="date" class="sbtn-calendar" title="달력보기">
+						</div>
+					</li>
+					<li>
+						<label for="wt-nation-code">체류코드</label>
+						<div>
+							<select class="select" id="wt-nation-code">
+								<option selected="">발급일 입력</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label for="wt-nation-date2">체류일자</label>
+						<div>
+							<input type="number" class="inp-wrap" id="wt-nation-date2" placeholder="체류일 입력" readonly>
+							<input type="date" class="sbtn-calendar" title="달력보기">
+						</div>
+					</li>
+					<!-- //외국국적 선택시 노출 -->
+				</ul>
+			</div>
+			
+			
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04">등록완료</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

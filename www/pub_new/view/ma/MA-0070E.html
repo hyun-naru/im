@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>패턴 재설정</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>패턴 재설정</h1>
+			<button class="lbtn btn-back">이전</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<div class="cont2">
+			<div class="borderbox bg-st01">
+				<ul class="bul-list-st01">
+					<li>SMS인증 이후에 재설정 버튼을 선택하면 '패턴설정 화면'으로 이동합니다.</li>
+					<li>패턴설정 화면에서 패턴 입력을 2번 진행하면 재설정 됩니다.</li>
+				</ul>
+			</div>
+
+			<section class="loginBox">
+				<ul><!-- 2018-05-03 /2018-05-04 -->
+					<li>
+						<label for="empNo">사원번호</label>
+						<input id="empNo" type="text" class="inp-wrap2" placeholder="사원번호 입력" />
+					</li>
+					<li>
+						<button class="btn-sms" id="btnSmsRequest">SMS인증요청</button>
+						<input id="authKey" type="tel" class="inp-wrap2" disabled placeholder="인증키입력" />
+					</li>
+				</ul>
+				<button class="lbtn btn-st04" id="btnPatternReg" disabled>재설정</button>
+			</section>
+		</div>
+	</div>
+</div>
+<!-- //화면 영역 -->
+
+
+<!-- 레이어팝업 영역: none 을 없애면 보입니다. -->
+<div class="dim-layer none" id="layerSmsInfo">
+	<div class="dimBg"></div>
+	<div id="layer1" class="dpop-layer ma-0130">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>SMS 본인인증 안내</h1>
+				<button class="btn-pop-close" data-id="btnLayerClose">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<p class="login-txt1" id="phoneNumber">휴대폰번호 010-XXXX-XXXX으로<br />전송 받으시겠습니까?</p>
+			
+				<ul class="bul-list-st01">
+					<li>번호가 맞지 않는 경우 지점송부 또는 영업인사 담당자에게 정정 요청 후 인증하시기 바립니다.</li>
+				</ul>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st01" id="btnLayerOk">확인</button>
+				<button class="mbtn-2 btn-st06" data-id="btnLayerClose">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 레이어팝업 영역 -->
+
+</body>
+</html>

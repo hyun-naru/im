@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step  -->
+	<div class="d-step">
+		<h2>계약관계자</h2><!-- 9.15 수정 -->
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-insure">
+				<ul class="toggle">
+					<li>
+						<div class="toggle-header">
+							<div class="title">
+								마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과
+							</div>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<div class="cont">
+								<ul class="data-list-st01">
+									<li>
+										<span class="stit">월납기준보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+									<li>
+										<span class="stit">할인후 보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="contract-info">
+				<div class="cont3">
+					<!--  9.15 삭제 
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">계약관계자</h3>	
+					</div>
+					-->
+					<ul class="write-st02 d-half"><!-- 9.15 수정 -->
+						<li>
+							<label for="contract1_1">계약자</label>
+							<div>
+								<input type="text" class="inp-wrap" id="contract1_1" value="이서진" disabled>
+								<select class="select" disabled>
+									<option value="">본인</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="contract1_2">피보험자</label>
+							<div>
+								<input type="text" class="inp-wrap" id="contract1_2" value="이서진" disabled>
+								<select class="select" disabled>
+									<option value="">본인</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="contract1_3">만기수익자</label>
+							<div>
+								<select class="select" id="contract1_3">
+									<option value="">이서진</option>
+								</select>
+								<select class="select" disabled>
+									<option value="">본인</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="contract1_4">장해수익자</label>
+							<div>
+								<select class="select" id="contract1_4">
+									<option value="">이서진</option>
+								</select>
+								<select class="select" disabled>
+									<option value="">본인</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="contract1_5">사망수익자</label>
+							<div>
+								<select class="select"  id="contract1_5">
+									<option value="">법정상속인</option>
+								</select>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="cont3">
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">지정대리청구인</h3>
+					</div>
+					<ul class="write-st02 d-half"><!-- 9.15 수정 -->
+						<li>
+							<label for="contract2_1">만기수익자</label>
+							<div>
+								<select class="select">
+									<option value=""></option>
+								</select>
+								<input type="text" class="inp-wrap" id="contract1_1" disabled>
+							</div>
+						</li>
+						<li>
+							<label for="contract2_2">장해수익자</label>
+							<div>
+								<select class="select" >
+									<option value=""></option>
+								</select>
+								<input type="text" class="inp-wrap" id="contract1_2" disabled>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

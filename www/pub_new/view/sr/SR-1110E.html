@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>보완문서 작성</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>보완문서 작성</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="fullpop-cont">
+			<div class="notice-txt btm-line">
+				<p class="icoTxt">다음 사항은 DGB생명보험(주) 보험계약의 청약을 인수하는데 필요한 자료이므로 계약자(또는 피보험자)는 사실대로 알려주셔야 합니다. 소득 및 부채상환에 대하여는 계약자(또는 피보험자)의 소득이 없는 경우 생계를 같이하는 가족(실제 보험료를 부담하는 가족)에 대한 자료를 제공해주세요.</p>
+			</div>
+			<div class="cont1 contract-info">
+				<ol class="qaBox">
+					<li>
+						<div class="qaBox-q"><span class="no">01</span>질의서 작성자의 인적사항을 체크해주세요.</div>
+						<div class="qaBox-a checkBox-st01">
+							<input type="checkbox" id="Q1-1" name="Q1"><label for="Q1-1">계약자</label>
+							<input type="checkbox" id="Q1-2" name="Q1"><label for="Q1-2">피보험자</label>
+							<input type="checkbox" id="Q1-3" name="Q1"><label for="Q1-3">기타</label>
+						</div>
+						<div class="qaBox-ex none"><!-- 기타시 노출 -->
+							<input type="text" class="inp-wrap" id="Q1-3-1" name="Q1">
+						</div>
+					</li>
+
+					<li>
+						<label for="Q2-1" class="qaBox-q"><span class="no">02</span>보험에 가입하시는 목적은 무엇입니까?</label>
+						<div class="qaBox-a">
+							<input type="text" class="inp-wrap" id="Q2-1" name="Q2">
+						</div>
+					</li>
+
+					<li>
+						<div class="qaBox-q"><span class="no">03</span>타 보험회사에 가입하고 계십니까?</div>
+						<div class="qaBox-a checkBox-st01">
+							<input type="radio" id="Q3-1" name="Q3"><label for="Q3-1">예</label>
+							<input type="radio" id="Q3-2" name="Q3"><label for="Q3-2">아니오</label>
+						</div>
+						<div class="qaBox-ex none"><!-- "예"시 노출 none 삭제 -->
+							<div class="tit-box flex-box">
+								<p class="h3-tit-st01">가입한 보험</p>
+								<div class="r-box">
+									<button type="button" class="sbtn-bdr-1 bdr-st01 w60"><span>추가</span></button>
+								</div>
+							</div>
+							<div>
+								<div class="list-tit02">보험1</div>
+								<ul class="write-st02">
+									<li>
+										<label for="info3-1" class="label-txt">회사명</label>
+										<div>
+											<input type="text" class="inp-wrap" id="info3-1">
+										</div>
+									</li>
+									<li>
+										<label for="info3-2" class="label-txt">상품명</label>
+										<div>
+											<input type="text" class="inp-wrap" id="info3-2">
+										</div>
+									</li>
+									<li>
+										<label for="info3-3" class="label-txt">재해사망보험금</label>
+										<div>
+											<input type="text" class="inp-wrap" id="info3-3"><span class="won">만원</span>
+										</div>
+									</li>
+									<li>
+										<label for="info3-4" class="label-txt">입원특약</label>
+										<div>
+											<input type="text" class="inp-wrap" id="info3-4"><span class="won">만원</span>
+										</div>
+									</li>
+									<li>
+										<label for="info3-5" class="label-txt">보험금</label>
+										<div>
+											<input type="text" class="inp-wrap" id="info3-5"><span class="won">원</span>
+										</div>
+									</li>
+									<li>
+										<label for="info3-6">가입일</label>
+										<div>
+											<input type="number" class="inp-wrap" id="info3-6" readonly="">
+											<input type="date" class="sbtn-calendar" title="달력보기">
+										</div>
+									</li>
+								</ul>
+								<div class="btn-box align-c mab-20">
+									<button class="mbtn btn-st24 w80">삭제</button>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="qaBox-q"><span class="no">04</span>주거형태</div>
+						<div class="qaBox-a">
+							<ul class="write-st02">
+								<li>
+									<span class="label-txt">거주지역</span>
+									<ul class="write-st02 col-2">
+										<li>
+											<div><input type="text" class="inp-wrap" id="info4-1-1"><label for="info4-1-1" class="sub">시(도)</label></div>
+										</li>
+										<li>
+											<div><input type="text" class="inp-wrap" id="info4-1-2"><label for="info4-1-2" class="sub">구(군)</label></div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<label for="info4-2" class="label-txt">거주형태</label>
+									<div class="checkBox-st01 col-02">
+										<ul>
+											<li><input type="radio" id="info4-2-1" name="info4-2"><label for="info4-2-1">자택</label></li>
+											<li><input type="radio" id="info4-2-2" name="info4-2"><label for="info4-2-2">임대</label></li>
+											<li><input type="radio" id="info4-2-3" name="info4-2"><label for="info4-2-3">부모동거</label></li>
+											<li><input type="radio" id="info4-2-4" name="info4-2"><label for="info4-2-4">기타</label></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="qaBox-ex none"><!-- 자택,임대선택시 노출 -->
+							<ul class="write-st02">
+								<li>
+									<label for="info4-3" class="label-txt">임대금액</label>
+									<div>
+										<input type="text" class="inp-wrap ta-r" id="info4-3"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info4-4" class="label-txt">규모</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info4-4"><span class="won">평</span>
+									</div>
+								</li>
+								<li>
+									<label for="info4-5" class="label-txt">현재가격</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info4-5"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info4-5" class="label-txt">융자</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info4-5"><span class="won">만원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<div class="qaBox-q"><span class="no">05</span>직업</div>
+						<div class="qaBox-a">
+							<ul class="write-st02">
+								<li>
+									<span class="label-txt">형태</span>
+									<div class="checkBox-st01">
+										<input type="radio" id="Q5-1" name="Q5"><label for="Q5-1">근로</label>
+										<input type="radio" id="Q5-2" name="Q5"><label for="Q5-2">사업</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 근로소득 -->
+						<div class="qaBox-ex none">
+							<div class="tit-box flex-box">
+								<p class="h3-tit-st01">근로소득</p>
+							</div>
+							<ul class="write-st02 col-2">
+								<li class="full">
+									<label for="info5-1-1" class="label-txt">회사명</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-1-1">
+									</div>
+								</li>
+								<li>
+									<label for="info5-1-2" class="label-txt">업종</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-1-2">
+									</div>
+								</li>
+								<li>
+									<label for="info5-1-3" class="label-txt">직위</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-1-3">
+									</div>
+								</li>
+								<li>
+									<label for="info5-1-4" class="label-txt">직무</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-1-4">
+									</div>
+								</li>
+								<li>
+									<label for="info5-1-5" class="label-txt">근무년수</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-1-5">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //근로소득 -->
+						<!-- 사업소득 -->
+						<div class="qaBox-ex none">
+							<div class="tit-box flex-box">
+								<p class="h3-tit-st01">사업소득</p>
+							</div>
+							<ul class="write-st02 col-2">
+								<li class="full">
+									<label for="info5-2-1" class="label-txt">회사명</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-2-1">
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-2" class="label-txt">업종</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-2-2">
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-3" class="label-txt">창업년도</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info5-2-3">
+									</div>
+								</li>
+							</ul>
+							<p class="list-tit02 mat_20">규모(직전 3년간)</p>
+							<ul class="write-st02 half">
+								<li>
+									<label for="info5-2-4" class="label-txt">자본금(전년)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-4"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-5" class="label-txt">자본금(2년전)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-5"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-6" class="label-txt">자본금(3년전)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-6"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-7" class="label-txt">매출액(전년)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-7"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-8" class="label-txt">매출액(2년전)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-8"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-9" class="label-txt">매출액(3년전)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-9"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-10" class="label-txt">순이익 세액(전년)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-10"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-11" class="label-txt">순이익 세액(2년전)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-11"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info5-2-12" class="label-txt">순이익 세액(3년전)</label>
+									<div>
+										<input type="number" class="inp-wrap ta-r" id="info5-2-12"><span class="won">만원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //사업소득 -->
+					</li>
+
+					<li>
+						<div class="qaBox-q"><span class="no">06</span>소득 및 재무상태</div>
+						<div class="qaBox-a dis-block">
+							<div class="tit-box flex-box">
+								<p class="list-tit01">월소득</p><span class="sum">1,000 만원</span>
+							</div>
+							<ul class="write-st02 col-2">
+								<li>
+									<label for="info6-1-1" class="label-txt">근로(사업)</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-1-1"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info6-1-2" class="label-txt">금융</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-1-2"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info6-1-3" class="label-txt">임대</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-1-3"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info6-1-4" class="label-txt">기타</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-1-4"><span class="won">만원</span>
+									</div>
+								</li>
+							</ul>
+							
+							<div class="tit-box flex-box">
+								<p class="list-tit01">자산 총액</p><span class="sum">40,000 만원</span>
+							</div>
+							<ul class="write-st02 col-2">
+								<li>
+									<label for="info6-2-1" class="label-txt">동산</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-2-1"><span class="won">만원</span>
+									</div>
+								</li>
+								<li>
+									<label for="info6-2-2" class="label-txt">부동산</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-2-2"><span class="won">만원</span>
+									</div>
+								</li>
+								<li class="full">
+									<label for="info6-2-3" class="label-txt">부채 총액</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info6-2-3"><span class="won">만원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<label for="Q7" class="qaBox-q"><span class="no">07</span>기타 참고적으로 알리고 싶으신 사항이 있으면 기록하여 주십시오.(00자 이내)</label>
+						<div class="qaBox-a">
+							<textarea id="Q7" class="dis-block"></textarea>
+						</div>
+					</li>
+				</ol>
+			</div>
+			<div class="sign-cont bg-st02">
+				<ul class="bul-list-st02">
+					<li>위 고지사항은 계약인수시 필수 심사서류이므로 향후 분쟁시 참고자료로 활용됨을 확입합니다.<br>
+						또한 위의 작성된 내용은 공정 성실히 면담하고 사실과 다름없이 기재하였으므로 이에 관한 보고상 일체의 책임을 질 거을 서약합니다.
+					</li>
+				</ul>
+				<div class="sign-chk-btn">
+					<input type="checkbox" id="sign-chk">
+					<label for="sign-chk">네, 서약합니다.</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer">
+			<button class="lbtn btn-st04">확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

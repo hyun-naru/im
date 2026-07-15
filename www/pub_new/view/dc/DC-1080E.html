@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입제안</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+
+</head>
+<body>
+<input type="checkbox" id="stepToggle"><!-- 2026 dcNew 추가 -->
+
+<!-- 환산보험료 --> <!-- 10.05 추가   -->
+<div id="layer3" class="dim-layer none"><!-- 레이어팝업 노출 none class 삭제 -->
+	<div class="dimBg"></div>
+	<div id="layer1" class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>환산  보험료</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<ul class="pop-list02">
+					<li>
+						<span class="scon"><em>145,000,000,000</em>원</span>
+					</li>
+				</ul>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 환산보험료 -->
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>가입제안</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<label for="stepToggle" class="sbtn-bdr-1 bdr-st06 btn-step-toggle"><span>Step</span></label><!-- 2026 dcNew 수정 -->
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-iframe">
+		<iframe src="DC-1060E.html" class="cont-iframe" frameborder="0"></iframe>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 9.15 수정 -->
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+<!-- 2026 dcNew 추가 -->
+<!-- 단계 이동 드롭다운 -->
+<div class="step-dropdown">
+	<label for="stepToggle" class="step-dropdown-bg"></label>
+	<div class="step-dropdown-panel">
+		<div class="step-dropdown-inner">
+			<ul class="step-dropdown-list">
+				<li class="complete border-n mg-n bg_fff" style="padding: 1.5rem 2rem;">
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-title">가입제안단계</span>
+							<span class="step-sub close_btn">
+								<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="18" y1="6" x2="6" y2="18"></line>
+									<line x1="6" y1="6" x2="18" y2="18"></line>
+								</svg>
+							</span>
+						</div>
+						<!-- <p class="step-detail">계약자/피보험자 정보</p> -->
+					</div>
+				</li>
+				<!--01고객센터-->
+				<li class="complete mat-n">
+					<span class="step-num">1</span>
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-name">고객센터</span>
+						</div>
+					</div>
+					<ul class="step-info-detailList">
+						<li>
+							<dl>
+								<dt>계약자</dt>
+								<dd>
+									<span class="step-info-name">홍엄마엄마엄마엄마엄마엄마엄마</span>
+									<span>(45세 / 여)</span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>피보험자</dt>
+								<dd>
+									<span class="step-info-name">김아들</span>
+									<span>(20세 / 남)</span>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</li>
+				<li class="complete">
+					<span class="step-num">2</span>
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-name">가입제안</span>
+							<span class="step-sub link"><a href="#">상품선택</a></span>
+						</div>
+					</div>
+					<dl class="step-info-greenbox">
+						<dt>
+							당당한인생종신보험(무)2601 (해약환급금 일부지급형)
+						</dt>
+						<dd>
+							<dl>
+								<dt>초회보험료</dt>
+								<dd>
+									<strong>53,000</strong>원
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</li>
+				<li class="complete">
+					<span class="step-num">3</span>
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-name">알릴의무고지</span>
+							<span class="step-sub temp">임시저장</span>
+						</div>
+					</div>
+				</li>
+				<li class="complete">
+					<span class="step-num">4</span>
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-name">선심사결과</span>
+							<span class="step-sub">표준인수</span>
+						</div>
+					</div>
+				</li>
+				<li class="complete">
+					<span class="step-num">5</span>
+					<div class="step-info">
+						<div class="step-info-top">
+							<span class="step-name">청약입력</span>
+							<!-- <span class="step-sub">청약완료</span> -->
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //단계 이동 드롭다운 -->
+ <script>
+$(function(){
+	// 단계 아이템 클릭 이벤트
+	$('.step-dropdown-list li').on('click', function(){
+		var idx = $(this).index();
+		var name = $(this).find('.step-name').text();
+		console.log('단계 클릭:', (idx + 1), name);
+		$('#stepToggle').prop('checked', false);
+		// TODO: 실제 단계 이동 로직 연결
+	});
+});
+</script>
+<!-- //2026 dcNew 추가 -->
+</body>
+</html>

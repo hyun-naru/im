@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입제안 고객 조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>가입제안 고객 조회</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-04-04 -->
+	<div class="search">
+		<ul>
+			<li>
+				<select class="select" title="상태">
+					<option>전체</option>
+				</select>
+				<input class="inp-wrap" type="text" placeholder="이름을 입력하세요." />
+				<button class="sbtn-search" type="submit">검색</button>
+			</li>
+		</ul>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="fullpop-cont d-scroll">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구
+		<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+		<!-- 검색 후 문구
+		<div class="no-data">검색결과가 없습니다.</div>-->
+
+		<div>
+			<p class="result-txt">총 5명이 검색되었습니다.</p>
+			<ul class="con-list">
+				<li>
+					<!-- checked 삭제시 class="on 삭제" -->
+					<div class="tit-h2">
+						<input id="chk-01" type="radio" checked />
+						<label for="chk-01" class="radio-st1">
+							<span class="name">홍달수홍달수</span>
+							<span class="age">(44/남)</span>
+						</label>
+						<p>
+							<span class="status status-02">가망</span>
+						</p>
+					</div>
+					<ul class="bult-st01"><!-- 1column일경우 class="col-01"추가 -->
+						<li><span class="stit">동의만료일</span> <span class="scon">2018.02.10</span></li>
+						<li><span class="stit">상령일</span> <span class="scon">2018.02.12</span></li>
+						<li class="col-01"><span class="stit">직업</span><span class="scon">관리직 및 사무직</span></li>
+						<li class="col-01"><span class="stit">운전</span><span class="scon">자가용(승용차)</span></li>
+					</ul>
+				</li>
+				<li>
+					<label for="chk-02" class="radio-st1"><!-- checked시 class="on 추가" -->
+						<h2>
+							<p>
+								<input type="radio" id="chk-02"/><span class="name">홍달수</span>(44/남)</label>
+							</p>
+							<p>
+								<span class="status status-02">가망</span>
+							</p>
+						</h2>
+						<ul class="bult-st01">
+							<li><span class="stit">동의만료일</span> <span class="scon">2018.02.10</span></li>
+							<li><span class="stit">상령일</span> <span class="scon">2018.02.12</span></li>
+							<li class="col-01"><span class="stit">직업</span><span class="scon">관리직 및 사무직</span></li>
+							<li class="col-01"><span class="stit">운전</span><span class="scon">자가용(승용차)</span></li>
+						</ul>
+					</label>
+				</li>
+				<li>
+					<label for="chk-03" class="radio-st1">
+						<h2>
+							<p><input type="radio" id="chk-03"/><span class="name">홍달수홍달수</span>(44/남)</p>
+							<p>
+								<span class="status status-03">계약</span>
+							</p>
+						</h2>
+						<ul class="bult-st01">
+							<li><span class="stit">동의만료일</span> <span class="scon">2018.02.10</span></li>
+							<li><span class="stit">상령일</span> <span class="scon">2018.02.12</span></li>
+							<li class="col-01"><span class="stit">직업</span><span class="scon">관리직 및 사무직</span></li>
+							<li class="col-01"><span class="stit">운전</span><span class="scon">자가용(승용차)</span></li>
+						</ul>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" disabled>확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

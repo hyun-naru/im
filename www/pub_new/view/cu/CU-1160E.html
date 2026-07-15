@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>적합성 진단</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>적합성 진단</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>진단결과 확인하기</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span class="on">5</span>
+			<span>6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+
+			<div class="cont1 mat-n">
+				<div class="dia-result">
+					<div class="cus-info">
+						<span class="cus-name">홍길순 (37세/여자)</span>
+						<span class="score">진단점수 <em>64</em> 점</span>
+					</div>
+					<div class="dia-info">
+						<div>
+							<span class="stit">보험상품성향</span>
+							<span class="dia-type type1">저축형</span>
+						</div>
+						<div>
+							<span class="stit">투자성향</span>
+							<span class="dia-type type2">공격형</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div  id="CU1160Pul_toggle">
+				<!-- 11.02 수정 -->
+				<div class="cont3">
+					<div class="top-tit">
+						<h2 class="h2-tit-st01">추천보험상품</h2>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_ins_1">저축형</h3>
+					<div class="box-line" name="CU-1160_ins_1">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">자산증식</span>
+									<span class="sort">목돈자금마련</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">변액유니버셜(적립형)</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_ins_2">연금형</h3>
+					<div class="box-line" name="CU-1160_ins_2">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">자산증식</span>
+									<span class="sort">목돈자금마련</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">변액유니버셜(적립형)</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_ins_3">보장형</h3>
+					<div class="box-line" name="CU-1160_ins_3">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">사망,질병 등을 대비</span>
+									<span class="sort">보장자산 마련</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">변액 CI,변액종신,변액유니버셜(보장형)</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="cont3">
+					<div class="top-tit">
+						<h2 class="h2-tit-st01">추천 특별계정 펀드</h2>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_fund_1">위험회피형</h3>
+					<div class="box-line" name="CU-1160_fund_1">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">원금손실 X</span>
+									<span class="sort">예ㆍ적금 수익률</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">채권형 100%</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_fund_2">안정추구형</h3>
+					<div class="box-line" name="CU-1160_fund_2">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">원금손실 최소</span>
+									<span class="sort">안정적 수익</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">채권형 70% 이상</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_fund_3">위험중립형</h3>
+					<div class="box-line" name="CU-1160_fund_3">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">원금손실 인식</span>
+									<span class="sort">금리보다 높은 수익률</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">채권형 70% 미만</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_fund_4">적극투자형</h3>
+					<div class="box-line" name="CU-1160_fund_4">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">원금손실 감내</span>
+									<span class="sort">높은 수익률</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">채권형 50% 미만</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h3 class="h3-tit-ico01" name="CU-1160_fund_5">위험선호형</h3>
+					<div class="box-line" name="CU-1160_fund_5">
+						<ul class="bul-list-st03">
+							<li>
+								<div class="stit2">성향</div>
+								<div class="scon">
+									<span class="sort">위험자산 투자의향</span>
+									<span class="sort">아주 높은 수익률</span>
+								</div>
+							</li>
+							<li>
+								<div class="stit2">추천</div>
+								<div class="scon">
+									<em class="fc-orange2">채권형 30% 미만</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 11.02 수정 -->
+			
+			
+			<!-- 
+			<ul class="toggle mat-n">
+				<li>
+					<div class="toggle-header">
+						<div class="title">
+							<h2 class="stit">추천보험상품</h2>
+						</div>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con" style="display:block">
+						<div class="cont3">
+							<h3 class="h3-tit-ico01">저축형</h3>
+							<div class="box-line">
+								<ul class="bul-list-st03">
+									<li>
+										<div class="stit2">성향</div>
+										<div class="scon">
+											<span class="sort">자산증식</span>
+											<span class="sort">목돈자금마련</span>
+										</div>
+									</li>
+									<li>
+										<div class="stit2">추천</div>
+										<div class="scon">
+											<em class="fc-orange2">변액유니버셜(적립형)</em>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<h3 class="h3-tit-ico01">연금형</h3>
+							<div class="box-line">
+								<ul class="bul-list-st03">
+									<li>
+										<div class="stit2">성향</div>
+										<div class="scon">
+											<span class="sort">자산증식</span>
+											<span class="sort">목돈자금마련</span>
+										</div>
+									</li>
+									<li>
+										<div class="stit2">추천</div>
+										<div class="scon">
+											<em class="fc-orange2">변액유니버셜(적립형)</em>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="toggle-header">
+						<div class="title">
+							<h2 class="stit">추천 특별계정 펀드</h2>
+						</div>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con"  style="display:block">
+						<div class="cont3">
+							<h3 class="h3-tit-ico01">저축형</h3>
+							<div class="box-line">
+								<ul class="bul-list-st03">
+									<li>
+										<div class="stit2">성향</div>
+										<div class="scon">
+											<span class="sort">자산증식</span>
+											<span class="sort">목돈자금마련</span>
+										</div>
+									</li>
+									<li>
+										<div class="stit2">추천</div>
+										<div class="scon">
+											<em class="fc-orange2">변액유니버셜(적립형)</em>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<h3 class="h3-tit-ico01">연금형</h3>
+							<div class="box-line">
+								<ul class="bul-list-st03">
+									<li>
+										<div class="stit2">성향</div>
+										<div class="scon">
+											<span class="sort">자산증식</span>
+											<span class="sort">목돈자금마련</span>
+										</div>
+									</li>
+									<li>
+										<div class="stit2">추천</div>
+										<div class="scon">
+											<em class="fc-orange2">변액유니버셜(적립형)</em>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li
+			</ul>
+			-->
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button><!-- 9.25 수정 -->
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

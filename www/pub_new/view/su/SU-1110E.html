@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>정보동의</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="agree-chk-list">
+				<ul class="list dform square02 arr-none"><!-- 9.25 전체 수정 -->
+					<li class="all">
+						<div class="item jc">
+							<input type="checkbox" id="chk_all">
+							<label for="chk_all">전체확인</label>
+						</div>
+					</li>
+					<li>
+						<div class="item jc">
+							<input type="checkbox" id="chk1" checked>
+							<label for="chk1">전자적 방식에 의한 보험계약자료 작성 및 제공에 대한 사전 동의서</label>
+							<span class="status-17">확인완료</span><!-- 10.5 수정 -->
+						</div>
+					</li>
+					<li>
+						<div class="item jc">
+							<input type="checkbox" id="chk2" >
+							<label for="chk2">계약 체결&middot;이행 등을 위한 개인(신용)정보 처리 동의서</label>
+							<span class="status-17 none">확인완료</span><!-- 10.5 수정 -->
+						</div>
+					</li>
+					<li>
+						<div class="item jc">
+							<input type="checkbox" id="chk3">
+							<label for="chk3">상품 소개 등을 위한 개인(신용)정보 처리 동의서(선택적 동의)</label>
+							<span class="status-17 none">확인완료</span><!-- 10.5 수정 -->
+						</div>
+						<!-- 선택 체크시 노출 9.25 삭제
+						<ul class="add-select-list">
+							<li>
+								<label>가입권유 연락방식 선택</label>
+								<div>
+									<ul>
+										<li><input type="checkbox" id="chk3_1_1"><label for="chk3_1_1">전체</label></li>
+										<li><input type="checkbox" id="chk3_1_2"><label for="chk3_1_2">전화</label></li>
+										<li><input type="checkbox" id="chk3_1_3"><label for="chk3_1_3">SMS</label></li>
+										<li><input type="checkbox" id="chk3_1_4"><label for="chk3_1_4">이메일</label></li>
+										<li><input type="checkbox" id="chk3_1_5"><label for="chk3_1_5">우편</label></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<label>개인(신용)정보의 보유·이용기간 선택</label>
+								<div class="dform circle01">
+									<ul>
+										<li><input type="radio" id="chk3_2_1" name="year"><label for="chk3_2_1">5년</label></li>
+										<li><input type="radio" id="chk3_2_2" name="year"><label for="chk3_2_2">4년</label></li>
+										<li><input type="radio" id="chk3_2_3" name="year"><label for="chk3_2_3">3년</label></li>
+										<li><input type="radio" id="chk3_2_4" name="year"><label for="chk3_2_4">2년</label></li>
+										<li><input type="radio" id="chk3_2_5" name="year"><label for="chk3_2_5">1년</label></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						-->
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

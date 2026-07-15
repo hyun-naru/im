@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치이동 -->
+	<div class="d-step">
+		<h2>계약정보</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-insure">
+				<ul class="toggle">
+					<li>
+						<div class="toggle-header">
+							<div class="title">
+								마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과
+							</div>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<div class="cont">
+								<ul class="data-list-st01">
+									<li>
+										<span class="stit">월납기준보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+									<li>
+										<span class="stit">할인후 보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="contract-info">
+				<ul class="search-st01">
+					<li class="flex-type"><!-- 9.15 수정 -->
+						<h3 class="h3-tit-st01"><label for="date">계약일</label></h3>
+						<div>
+							<select class="select" id="date">
+								<option value="">2020.05.09</option>
+							</select>
+							<button class="sbtn-5 btn-st24 w105 ico-arr">Self UW</button>
+							<!-- 완료시
+							<button class="sbtn-5 btn-st01 w105">Self UW 완료</button>
+							-->
+						</div>
+					</li>
+					<li>
+						<h3 class="h3-tit-st01">청약종류 선택</h3>
+						<div class="checkBox-st03"><!-- 10.13 수정 -->
+							<input type="radio" name="ra1" id="sort1" checked=""><label for="sort1">옴니청약</label>
+							<input type="radio" name="ra1" id="sort2"><label for="sort2">전자청약</label>
+						</div>
+					</li>
+					<li><!-- 9.22 추가 -->
+						<h3 class="h3-tit-st01">장애인 전용보험</h3>
+						<div class="checkBox-st01">
+							<input type="radio" id="lab3-1-1" name="ra3-1" checked><label for="lab3-1-1">신청</label>
+							<input type="radio" id="lab3-1-2" name="ra3-1"><label for="lab3-1-2">미신청</label>
+						</div>
+					</li>
+					<!-- 장애인전용보험 신청시 노출 -->
+					<li class="low-dep">
+						<div class="dform square02"><!-- 9.15 수정 -->
+							<label for="lab6-3-1"><input type="radio" id="lab6-3-1" name="ra6-3" checked>주피보험자</label>
+							<label for="lab6-3-2"><input type="radio" id="lab6-3-2" name="ra6-3">수익자</label>
+						</div>
+						<!-- 9.22 삭제
+						<div class="tit-box">
+							<h4 class="list-tit01">주피보험자</h4>
+						</div>
+						-->
+						<ul class="write-st02"><!-- 9.15 수정 -->
+							<li>
+								<label>장애여부</label>
+								<div class="checkBox-st01">
+									<input type="radio" id="lab6-4-1" name="lab6-4" checked><label for="lab6-4-1">영구</label>
+									<input type="radio" id="lab6-4-2" name="lab6-4"><label for="lab6-4-2">한시</label>
+								</div>
+							</li>
+							<li>
+								<label for="lab6-5-1">최초진단일</label>
+								<div>
+									<input type="tel" class="inp-wrap" id="ipt_sDt" value="2020.01.05" data-name="picker">
+									<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- //장애인전용보험 신청시 노출  -->
+				</ul>
+
+				<div class="cont3">
+					<h3 class="h3-tit-st01">계약상세</h3>
+					<ul class="insure-list-st02"><!-- 9.15 순서 변경 주가 첫번째 -->
+						<li>
+							<div class="item">
+								<div class="in-top">
+									<span class="flag-c flag-b-st03">주</span><strong class="in-name">소액암진단특약(무)_순수보장</strong>
+								</div>
+								<div class="in-info">
+									<div class="info">
+										<span class="stit">보험료</span>
+										<span class="val">30,800원<span>(상령일 후 31,800원)</span></span>
+									</div>
+									<div class="detail">
+										<div>
+											<span>2,000만원</span><span>월납</span>
+										</div>
+										<div>
+											<span>99년보장</span><span>80세 납입</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<div class="in-top">
+									<span class="flag-c flag-b-st02">특약</span><strong class="in-name">마음든든 유니버셜종신보험(무)1904(보증비용부과형보증비용부과형)</strong>
+								</div>
+								<div class="in-info">
+									<div class="info">
+										<span class="stit">보험료</span>
+										<span class="val">30,800원<span>(상령일 후 31,800원)</span></span>
+									</div>
+									<div class="detail">
+										<div>
+											<span>2,000만원</span><span>월납</span>
+										</div>
+										<div>
+											<span>99년보장</span><span>80세 납입</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

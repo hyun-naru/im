@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전자청약 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>전자청약 입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div class="d-step">
+		<h2>1. 정보동의 및 본인인증</h2>
+		<p class="d-step-status"><!-- 2018-03-19 -->
+			<span class="on">1</span> / <span>2</span> / <span>3</span> / <span>4</span> / <span>5</span> / <span>6</span>
+		</p>
+	</div>
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+		<div class="cont1">
+			<h3 class="h2-st03">고객동의 정보입력</h3>
+			<ul class="write-st04">
+				<li>
+					<div class="checkBox-st01">
+						<input type="radio" id="ra1" name="ra" checked /><label for="ra1">계약자</label>
+						<input type="radio" id="ra1_2" name="ra"/><label for="ra1_2">피보험자</label>
+					</div>
+				</li>
+				<li>
+					<div class="borderbox-st01">
+						<ul class="bul-list-st01">
+							<li>
+								<span class="stit3">전자적 방식에 의한 보험계약자료 작성 및 제공에 대한 사전 동의서</span>
+								<span class="scon3"><button class="sbtn-5 btn-st03">확인</button></span><!-- 확인 시 class="btn-st03" -->
+							</li>
+							<li>
+								<span class="stit3">계약의 체결, 이행 등을 위한 개인(신용) 이용 및 정보 처리 동의서</span>
+								<span class="scon3"><button class="sbtn-5 btn-st21">확인</button></span><!-- 확인 시 class="btn-st03" -->
+							</li>
+							<li>
+								<span class="stit3">상품의 소개 등을 위한 개인(신용)정보처리 동의서(선택적 동의)</span>
+								<span class="scon3"><button class="sbtn-5 btn-st21">확인</button></span><!-- 확인 시 class="btn-st03" -->
+							</li>
+						</ul>
+					</div>
+					<div class="borderbox-st01">
+						<ul class="dform circle03">
+							<li>
+								<label for="chk2"><input type="checkbox" id="chk2" name="chk2" />위 내용에 대해서 충분한 설명을 받고 이해하였으며, 이에 동의함을 확인합니다.(전체동의)</label>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+
+			<h3 class="h2-st03">인증방법 선택</h3><!-- 선택설정인 경우 li에 class="on"추가 -->
+			<div class="certi-setting dform circle01">
+				<li><input type="radio" id="ra3-1" name="ra3" checked /><label for="ra3-1" class="sms">SMS 인증</label></li>
+				<li><input type="radio" id="ra3-2" name="ra3"/><label for="ra3-2" class="iden">신분증인증</label></li>
+			</div>
+		</div>
+
+		<div class="cont1"><!-- 2018-05-16 오후 -->
+			<h3 class="hgroup-st01 h2-st03">
+				피보험자 서면동의서
+				<button type="button" class="sbtn-3 btn-st02">촬영</button>
+			</h3>
+			<div class="hbox jc">
+				<ol class="file-list flex w100p">
+					<li>
+						<span class="file-name">파일명.jpg</span>
+						<button class="del-list">파일삭제</button>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st02">청약입력 수정</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>로그인 설정 안내</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>로그인 설정 안내</h1>
+			<button class="lbtn btn-pop-close">닫기</button><!-- 2018-05-15 앱 종료기능 -->
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont2">
+			<div class="header-img">
+				<p class="stxt">모바일 영업지원 시스템(D-Lite)에 오신걸 환영합니다. </p>
+				<p>본인 인증 후 <em>로그인 방법</em>을<br />선택해 주세요. </p>
+			</div>
+
+			<section class="loginBox" id="ma-0030_form">
+				<h2 class="h2-st03" id="ma-0030_testEmpno">본인 인증</h2>
+				<ul>
+					<li>
+						<label for="ma-0030_empNo">사원번호</label>
+						<input id="ma-0030_empNo" type="text" class="inp-wrap2" placeholder="사원번호 입력" />
+					</li>
+					<li>
+						<label for="ma-0030_pw">비밀번호</label>
+						<input id="ma-0030_pw" type="password" class="inp-wrap2" placeholder="비밀번호 입력"  readOnly />
+					</li>
+				</ul>
+				<button class="lbtn btn-st04" id="ma-0030_smsRequest">SMS인증요청</button>
+			</section>
+
+			<!-- SMS인증 완료후 노출  -->
+			<section id="ma-0030_loginConfigMethodSection" style="display: none">
+				<h2 class="h2-st03">로그인 설정방법 선택</h2>
+				<ul class="login-setting"><!-- 선택설정인 경우 li에 class="on"추가 -->
+					<li data-path="pattern"><a href="javascript:void(0);" class="pattern">패턴<br />로그인</a></li>
+					<li data-path="simple"><a href="javascript:void(0);" class="simple">간편비밀번호<br />로그인</a></li>
+					<li data-path="finger"><a href="javascript:void(0);" class="finger">지문<br />로그인</a></li>
+					<li data-path="idpwd"><a href="javascript:void(0);" class="idpwd">ID/PW<br />로그인</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

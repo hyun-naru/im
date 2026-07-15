@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap dc-0170e"><!-- 2018-06-15 -->
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역  -->
+	<div class="d-cont">
+	<div class="d-scroll">
+		<div class="search">
+			<ul>
+				<li class="dform circle01">
+					<label class="label-txt2">청약종류</label>
+					<label for="ra1_1"><input id="ra1_1" type="radio" name="ra1" checked />전자청약</label>
+					<label for="ra1_2"><input id="ra1_2" type="radio" name="ra1" />옴니청약</label>
+				</li>
+				<li class="b-line">
+					<button class="btn-edit">라이프파라이프파라이프파트라이프파트라이프파트너플러스변액유니버셜종신보험</button>
+				</li>
+				<li>
+					<ul class="bul-list-st01 rbox-st01">
+						<li>
+							<span class="stit2">월납기준보험료</span>
+							<span class="scon2">83,895<em>원</em></span>
+						</li>
+						<li>
+							<span class="stit2">할인후보험료
+								<a href="#layer2" class="sprite-link link-05 txt-none" title="레이어팝업">도움말</a>
+								<!-- 레이어팝업 영역  -->
+								<div class="dim-layer none">
+									<div class="dimBg"></div>
+									<div class="dpop-layer2">
+										<div class="dpop-container">
+											<div class="info-box ">
+												<h2 class="info-tit">환산P</h2>
+												<div class="info-con">99,999,999원</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// 레이어팝업 영역 -->
+							</span>
+							<span class="scon2 fc-orange">99,900,000,999<em>원</em></span>
+						</li>
+					</ul>
+				</li>
+				<li class="pdt-n">
+					<label class="w80">계약일</label>
+					<select class="select flex w100p">
+						<option></option>
+					</select>
+				</li>
+				<li class="dform circle01 bg-darkblue">
+					<label class="label-txt2">헬스케어서비스</label>
+					<label for="ra2_1"><input id="ra2_1" type="radio" name="ra2" checked />신청</label>
+					<label for="ra2_2"><input id="ra2_2" type="radio" name="ra2" />미신청</label>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<!-- toggle-list영역 -->
+			<ul class="toggle">
+				<!-- 1계약관리자 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">계약관계자</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="cont1">
+							<ul class="write-st02">
+								<li>
+									<label for="la1-1">계약자</label>
+									<div>
+										<input id="la1-1" class="inp-wrap" type="text" value="홍길동" disabled />
+										<select class="select w100p" title="계약자와의 관계">
+											<option>배우자</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la1-2">피보험자</label>
+									<div>
+										<input id="la1-2" class="inp-wrap" type="text" value="김아내" disabled />
+										<select class="select w100p" title="계약자와의 관계">
+											<option>본인</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la1-3">만기수익자</label>
+									<div>
+										<select id="la1-3" class="select w100p" >
+											<option>홍길동</option>
+										</select>
+										<select class="select w100p" title="계약자와의 관계">
+											<option>배우자</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la1-4">장해수익자</label>
+									<div>
+										<select id="la1-4" class="select w100p">
+											<option>홍길동</option>
+										</select>
+										<select class="select w100p" title="계약자와의 관계">
+											<option>배우자</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la1-5">사망수익자</label>
+									<div>
+										<select id="la1-5" class="select w100p">
+											<option>법적상속인</option>
+										</select>
+										<!-- 법적상속인이 아닌경우 보여짐 -->
+										<select class="select w100p" title="계약자와의 관계">
+											<option>배우자</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="cont1 border-t">
+							<h3 class="h2-st03">지정청구 대리인</h3>
+							<ul class="write-st02 ">
+								<li>
+									<label for="la1-6">만기수익자</label>
+									<div>
+										<select id="la1-6" class="select w100p">
+											<option>홍동동</option>
+										</select>
+										<input class="inp-wrap" type="text" title="계약자와의 관계" value="삼촌" />
+									</div>
+								</li>
+								<li>
+									<label for="la1-7">장해수익자</label>
+									<div>
+										<select id="la1-7" class="select w100p">
+											<option>김외촌</option>
+										</select>
+										<input class="inp-wrap" type="text" title="계약자와의 관계" value="외삼촌" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<!-- 2우편물/증권/약관 수령 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">우편물/증권/약관 수령</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="cont1 border-t">
+							<ul class="write-st02">
+								<li>
+									<label class="w90" for="la2-1">우편물수령</label>
+									<div class="checkBox-st01">
+										<input id="ra2-1-1" type="radio" name="ra2-1" checked /><label for="ra2-1-1">자택</label>
+										<input id="ra2-1-2" type="radio" name="ra2-1" /><label for="ra2-1-2">직장</label>
+									</div>
+								</li>
+								<li>
+									<label for="la2-6">주소</label>
+									<div>
+										<input readonly id="lab4" class="inp-wrap" type="tel" value="03367" />
+										<button class="sbtn-search-g">검색</button>
+									</div>
+									<div><input readonly class="inp-wrap" type="text" value="서울 은평구 불광동(불광1동)"/></div>
+									<div><input readonly class="inp-wrap" type="text" value="건물명 국립환경연구원"/></div>
+								</li>
+								<li>
+									<label for="la2-3">증권수령</label>
+									<div class="checkBox-st01">
+										<input id="la2-3-1" type="radio" name="ra2-3" /><label for="la2-3-1">모바일</label>
+										<input id="la2-3-2" type="radio" name="ra2-3" checked /><label for="la2-3-2">이메일</label>
+										<input id="la2-3-3" type="radio" name="ra2-3" /><label for="la2-3-3">방문수령</label>
+									</div>
+								</li>
+								<!-- 삭제
+								<li class="pdb-n">
+									<label class="w90" for="la2-4">이메일</label>
+									<div>
+										<input id="la2-4" class="inp-wrap " type="email" />
+										<span class="dash">@</span>
+										<select class="select flex w100p">
+											<option>직접입력</option>
+										</select>
+									</div>
+									<div>
+										<input class="inp-wrap" type="email" />
+										<button class="sbtn-5 btn-st02">적용</button>
+									</div>
+								</li>
+								-->
+								<li class="pdb-n">
+									<label class="w90" for="la2-4">이메일</label>
+									<div class="text-sm-07">
+										이메일주소 : test@text.com
+									</div>
+								</li>
+								<li class="pdb-n">
+									<label class="w90" for="la2-4">이메일</label>
+									<div class="text-sm-07">
+										이메일주소가 없습니다. 고객정보수정 후 가능합니다.
+									</div>
+								</li>
+								<li>
+									<label for="lab2-5">약관수령</label>
+									<div class="checkBox-st01">
+										<input id="ra2-5-1" type="radio" name="ra2-5" checked /><label for="ra2-5-1">모바일</label>
+										<input id="ra2-5-2" type="radio" name="ra2-5" /><label for="ra2-5-2">이메일</label>
+										<input id="ra2-5-3" type="radio" name="ra2-5" /><label for="ra2-5-3">종이</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<p class="pad-20">* 선납횟수는 선택 입력사항입니다.</p>
+					</div>
+				</li>
+				<!-- 3개인정보동의 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">개인정보동의</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="cont1">
+							<h3>1. 계약체결 및 이행 등을 위한 개인신용정보 수집·이용,조회, 제공 동의</h3>
+							<ul class="write-st02">
+								<li>
+									<label for="la3-1">계약자</label>
+									<div class="checkBox-st01">
+										<input id="la3-1-1" type="radio" name="la3-1"/><label for="la3-1-1">동의함</label>
+										<input id="la3-1-2" type="radio" name="la3-1"/><label for="la3-1-2">동의안함</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="cont1 border-t">
+							<h3>2. 상품소개를 위한 동의사항 </h3>
+							<h4>(1) 개인(신용)정보 수집·이용에 관한 동의</h4>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-2-1" type="checkbox" name="la3-2" /><label for="la3-2-1">전체</label>
+										<input id="la3-2-2" type="checkbox" name="la3-2" /><label for="la3-2-2">계약자</label>
+										<input id="la3-2-3" type="checkbox" name="la3-2" /><label for="la3-2-3">피보험자</label>
+										<input type="tel" class="inp-wrap maL-10 w70"/><span class="dash">년</span>
+									</div>
+								</li>
+							</ul>
+							<h4>(2) 개인(신용)정보 제공에 관한 동의</h4>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-3-1" type="checkbox" name="la3-3" /><label for="la3-3-1">전체</label>
+										<input id="la3-3-2" type="checkbox" name="la3-3" /><label for="la3-3-2">계약자</label>
+										<input id="la3-3-3" type="checkbox" name="la3-3" /><label for="la3-3-3">피보험자</label>
+										<input type="tel" class="inp-wrap maL-10 w70"/><span class="dash">년</span>
+									</div>
+								</li>
+							</ul>
+							<h4>(3) 상품소개를 위한 가입권유 연락방식(중복가능)</h4>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-4-1" type="checkbox" name="la3-4" /><label for="la3-4-1">전체</label>
+										<input id="la3-4-2" type="checkbox" name="la3-4" /><label for="la3-4-2">전화</label>
+										<input id="la3-4-3" type="checkbox" name="la3-4" /><label for="la3-4-3">SMS</label>
+										<input id="la3-4-4" type="checkbox" name="la3-4" /><label for="la3-4-4">이메일</label>
+										<input id="la3-4-5" type="checkbox" name="la3-4" /><label for="la3-4-5">우편</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="cont1 border-t">
+							<h3>3. 보험계약자 사망 시 상속인 등 승계인이 보험수익자 지정, 변경권을 행사함</h3>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-5-1" type="radio" name="la3-5" /><label for="la3-5-1">동의함</label>
+										<input id="la3-5-2" type="radio" name="la3-5" /><label for="la3-5-2">동의안함</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="cont1 border-t">
+							<h3>4. 통신수단을 이용한 철회 및 해지요청 동의</h3>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-6-1" type="radio" name="la3-6"/><label for="la3-6-1">동의함</label>
+										<input id="la3-6-2" type="radio" name="la3-6"/><label for="la3-6-2">동의안함</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<!-- 4FATCA -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">FATCA</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<h3 class="h3-tit">1. 고객 인적사항</h3>
+						<div class="cont1">
+							<ul class="write-st02">
+								<li>
+									<label for="la4-1">국적</label>
+									<div>
+										<select id="la4-1" class="select w100p">
+											<option>한국</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="border-t">
+							<h3 class="h3-tit">2. 해외 거주자여부 확인</h3>
+							<div class="cont1">
+								<div class="consentBox">
+									<ul class="write-st04">
+										<li>
+											<label for="la4-2-1">미국세법상 미국인에 해당됩니까?</label>
+											<div class="checkBox-st01">
+												<input id="la4-2-1" type="radio" name="la4-2" /><label for="la4-2-1">예</label>
+												<input id="la4-2-2" type="radio" name="la4-2" /><label for="la4-2-2">아니오</label>
+											</div>
+										</li>
+										<li>
+											<label for="la4-3-1">'예'인 경우 해당되는 사항을 체크하십시오.</label>
+											<div class="checkBox-st01 rows-3">
+												<input id="la4-3-1" type="radio" name="la4-3" /><label for="la4-3-1">미국시민권자<br />(이중국적자포함)</label>
+												<input id="la4-3-2" type="radio" name="la4-3" /><label for="la4-3-2">미국영주권자</label>
+												<input id="la4-3-3" type="radio" name="la4-3" /><label for="la4-3-3">미국거주자</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="consentBox">
+									<ul class="write-st04">
+										<li>
+											<label for="la4-4">대한민국 이외의 조세목적상 해외 거주지가 있습니까?</label>
+											<div class="checkBox-st01">
+												<input id="la4-4-1" type="radio" name="la4-4" /><label for="la4-4-1">예</label>
+												<input id="la4-4-2" type="radio" name="la4-4" /><label for="la4-4-2">아니오</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="border-t">
+							<div class="h2-group">
+								<h3 class="h3-tit">3. 납세자 정보</h3>
+								<button class="sbtn-5 btn-st02">거주지 국가 추가</button>
+							</div>
+							<div class="cont1">
+								<div class="consentBox2 mat_20">
+									<ul class="write-st02">
+										<li>
+											<label for="la4-5">성(Surname)</label>
+											<div>
+												<input id="la4-5" type="text" class="inp-wrap" />
+											</div>
+										</li>
+										<li>
+											<label for="la4-6">명(Given name)</label>
+											<div>
+												<input id="la4-6" type="text" class="inp-wrap" />
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="consentBox2">
+									<ul class="write-st02">
+										<li>
+											<label for="la4-7">거주지국가1</label>
+											<div>
+												<select id="la4-7" class="select w100p">
+													<option>선택하세요.<option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label for="la4-9">영문주소1</label>
+											<div>
+												<input id="la4-9" type="text" class="inp-wrap" />
+											</div>
+										</li>
+										<li class="flex-none">
+											<label for="">납세자번호1</label>
+											<div class="checkBox-st01">
+												<input id="la4-11-1" type="radio" name="la4-11-1" /><label class="w50p" for="la4-11-1">유</label>
+												<input id="la4-11-2" type="radio" name="la4-11-1" /><label class="w50p" for="la4-11-2">무</label>
+											</div>
+										</li>
+										<li class="flex-none pd-n">
+											<label for="la4-11-3" class="stxt">(TIN):SSN or ITIN</label>
+											<div>
+												<input id="la4-11-3" type="text" class="inp-wrap flex" />
+											</div>
+										</li>
+										<li class="flex-none">
+											<label for="la4-12">미기재사유</label>
+											<div class="dform square01">
+												<label for="la4-12-1"><input id="la4-12-1" type="radio" name="la4-12" />미발급국가</label>
+												<label for="la4-12-2"><input id="la4-12-2" type="radio" name="la4-12" />미요구국가</label>
+												<label for="la4-12-3"><input id="la4-12-3" type="radio" name="la4-12" />미취득</label>
+												<label for="la4-12-4"><input id="la4-12-4" type="radio" name="la4-12" />기타</label>
+												<input type="text" class="inp-wrap" />
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="consentBox2">
+									<ul class="write-st02">
+										<li>
+											<label for="la4-13">거주지국가2</label>
+											<div>
+												<select id="la4-13" class="select w100p">
+													<option>선택하세요.<option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label for="la4-14">영문주소2</label>
+											<div>
+												<input id="la4-14" type="text" class="inp-wrap" />
+											</div>
+										</li>
+										<li class="flex-none">
+											<label for="">납세자번호2</label>
+											<div class="checkBox-st01">
+												<input id="la4-15-1" name="la4-15" type="radio" /><label class="w50p" for="la4-15-1">유</label>
+												<input id="la4-15-2" name="la4-15" type="radio" /><label class="w50p" for="la4-15-2">무</label>
+											</div>
+										</li>
+										<li class="flex-none pd-n">
+											<label class="stxt">(TIN):SSN or ITIN</label>
+											<div>
+												<input type="text" class="inp-wrap flex" />
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- 5KYC  -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">KYC</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="h3-tit">
+							<h3>고객확인 기본정보(CDD)</h3>
+						</div>
+						<div class="cont1">
+							<ul class="write-st02">
+								<li>
+									<label for="la99-1">실명번호 구분</label>
+									<div class="checkBox-st03">
+										<input type="radio" name="la99-1" id="la99-1" checked /><label for="la99-1">주민등록번호<br />(개인)</label>
+										<input type="radio" name="la99-1" id="la99-2" /><label for="la99-2">외국인<br />등록번호</label>
+										<input type="radio" name="la99-1" id="la99-3" /><label for="la99-3">국내거소<br />신고번호</label>
+									</div>
+								</li>
+								<li>
+									<label for="la5-1-1">실명번호</label>
+									<div>
+										<input id="la5-1-1" type="text" class="inp-wrap" value="000000-1******" readonly/>
+									</div>
+								</li>
+								<li>
+									<label for="la5-2">성명</label>
+									<div>
+										<input id="la5-2" type="text" class="inp-wrap" value="홍길동(44/남)" />
+									</div>
+								</li>
+								<li>
+									<label for="la5-12">연락처</label>
+									<div>
+										<select id="lab1-2" class="select">
+											<option>선택</option>
+										</select>
+										<input class="inp-wrap" type="tel" value="2020"/>
+										<input class="inp-wrap" type="tel" value="0000"/>
+									</div>
+								</li>
+								<li><!-- 2018-06-15 -->
+									<label for="la5-4" class="fs-style01">직업(업종)</label>
+									<div>
+										<select id="la5-4" class="select w100p">
+											<option>(필수)선택해주세요</option>
+											<option>급여소득자</option>
+											<option>그외 일반개인</option>
+											<option>남자무직(55세이하)</option>
+											<option>대부업자</option>
+											<option>무기제조업자/무기판매상</option>
+											<option>변호사</option>
+											<option>회계사/세무사</option>
+											<option>미성년자</option>
+											<option>5급이상 고위공무원</option>
+											<option>지방정부 고위공무원(5급)</option>
+											<option>정당고위임원</option>
+											<option>공인노무사</option>
+											<option>감정평가사</option>
+											<option>보석감정사</option>
+											<option>미술품감정사</option>
+											<option>부동산감정사</option>
+											<option>기타감정사</option>
+											<option>관세사</option>
+											<option>판사</option>
+											<option>검사</option>
+											<option>법무사</option>
+											<option>변리사</option>
+											<option>의사</option>
+											<option>환전산</option>
+											<option>공무원</option>
+											<option>카지노/성인오락실</option>
+											<option>연금소득자</option>
+											<option>보험설계사(당사)</option>
+											<option>보험설계사(타사)</option>
+											<option>금융자산운용가</option>
+											<option>기타회계 및 금융 보험관련 전문직 종사자</option>
+											<option>귀금속/보석상</option>
+										</select>
+									</div>
+								</li>
+								<!-- 2018-06-15 직업(업종)이 급여소득자일 경우에만 노출 -->
+								<li class="none"><!-- class='none'삭제 -->
+									<ul class="write-st02">
+										<li>
+											<label for="la5-8">직장(회사)명</label>
+											<div>
+												<input id="la5-8" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la5-9">부서명</label>
+											<div>
+												<input id="la5-9" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la5-10">직위</label>
+											<div>
+												<input id="la5-10" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la5-12">직장연락처</label>
+											<div>
+												<select id="lab1-2" class="select">
+													<option>선택</option>
+												</select>
+												<input class="inp-wrap" type="tel" value="2020"/>
+												<input class="inp-wrap" type="tel" value="0000"/>
+											</div>
+										</li>
+										<li>
+											<label for="lab4">주소(직장)</label>
+											<div>
+												<input readonly id="lab4" class="inp-wrap" type="text" value="03367"/>
+												<button class="sbtn-search-g">검색</button>
+											</div>
+											<div><input readonly class="inp-wrap" type="text" value="서울 은평구 불광동(불광1동)"/></div>
+											<div><input readonly class="inp-wrap" type="text" value="건물명 국립환경연구원"/></div>
+										</li>
+									</ul>
+								</li>
+								<!--// 직업(업종)이 급여소득자일 경우에만 노출 -->
+
+								<li>
+									<label for="la5-3">국적</label>
+									<div>
+										<select id="la5-3" class="select w100p">
+											<option>대한민국</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la5-14-11">여권번호</label>
+									<div>
+										<input id="la5-14-11" type="text" class="inp-wrap" value="" />
+									</div>
+								</li>
+								<li>
+									<label for="lab4">주소(자택)</label>
+									<div>
+										<input readonly id="lab4" class="inp-wrap" type="text" value="03367"/>
+										<button class="sbtn-search-g">검색</button>
+									</div>
+									<div><input readonly class="inp-wrap" type="text" value="서울 은평구 불광동(불광1동)"/></div>
+									<div><input readonly class="inp-wrap" type="text" value="건물명 국립환경연구원"/></div>
+								</li>
+								<li>
+									<label for="la5-13">신원확인증</label>
+									<div>
+										<select id="la5-13" class="select w100p">
+											<option>주민등록증</option>
+											<option>운전면허</option>
+											<option>국내거소증</option>
+										</select>
+									</div>
+								</li>
+
+								<!-- 운전면허 선택 시 보여짐 class='none'삭제  -->
+								<li class="none">
+									<label for="la5-14-1">면허번호</label>
+									<div>
+										<input id="la5-14-1" type="text" class="inp-wrap" value="" disabled />
+										<button class="sbtn-5 btn-st02">촬영</button>
+									</div>
+								</li>
+								<!-- //운전면허 선택 시 -->
+
+								<li>
+									<label for="la5-14">발급일자</label>
+									<div>
+										<input id="la5-14" type="text" class="inp-wrap" value="" disabled />
+										<button class="sbtn-5 btn-st02">촬영</button>
+									</div>
+								</li>
+
+								<!-- 외국인등록증일 경우 -->
+								<li>
+									<label for="la5-14-1">발급일자</label>
+									<div>
+										<input id="la5-14-1" type="tel" class="inp-wrap" placeholder="발급일 입력" value="1982-01-04" />
+										<input type="date" class="sbtn-calendar" title="달력보기" />
+									</div>
+								</li>
+								<!--// 외국인등록증일 경우 -->
+
+								<li>
+									<label for="la5-15">진위여부</label>
+									<div>
+										<select id="la5-13" class="select w100p" disabled>
+											<option>미실행</option>
+										</select>
+										<button class="sbtn-5 btn-st02">진위체크</button>
+									</div>
+									<div>
+										<select id="la5-13" class="select w100p">
+											<option>미실행</option>
+										</select>
+									</div>
+								</li>
+
+								<li>
+									<label for="la5-16">실제소유자</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="la5-16" id="la5-16-1" checked /><label for="la5-16-1">예</label>
+										<input type="radio" name="la5-16" id="la5-16-2" /><label for="la5-16-2">아니오</label>
+									</div>
+								</li>
+								<!-- 2018-06-15 실제소유자 '아니오'선택시 노출 -->
+								<li class="none"><!-- class="none"삭제 -->
+									<ul class="write-st02">
+										<li>
+											<label for="la5-17">성명</label>
+											<div>
+												<input id="la5-17" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la5-18">생년월일</label>
+											<div>
+												<input id="la5-18" type="tel" class="inp-wrap" placeholder="생년월일 입력" value="1982-01-04" />
+												<input type="date" class="sbtn-calendar" title="달력보기" />
+											</div>
+										</li>
+										<li>
+											<label for="la5-19">국적</label>
+											<div>
+												<select id="la5-19" class="select w100p">
+													<option>대한민국</option>
+												</select>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--// 실제소유자 '아니오'선택시 노출 -->
+							</ul>
+						</div>
+
+						<div class="border-t">
+							<h3 class="h3-tit">고객확인 추가정보(EDD)</h3>
+							<ul class="cont1 write-st04 pdb-n">
+								<li>
+									<label for="la16-16">정보제공 거절</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="la16-16" id="la16-16-1" checked /><label for="la16-16-1">예</label>
+										<input type="radio" name="la16-16" id="la16-16-2" /><label for="la16-16-2">아니오</label>
+									</div>
+								</li>
+								<li class="flex-none">
+									<label for="la5-20">거래자금 원천 및 출처</label>
+									<div class="dform circle01 rows-2">
+										<label for="la5-20-1" class="w40p"><input type="radio" name="la5-20" id="la5-20-1" checked />근로소득</label>
+										<label for="la5-20-2" class="w60p"><input type="radio" name="la5-20" id="la5-20-2" checked />사업소득</label>
+										<label for="la5-20-3" class="w40p"><input type="radio" name="la5-20" id="la5-20-3" checked />부동산 임대소득</label>
+										<label for="la5-20-4" class="w60p"><input type="radio" name="la5-20" id="la5-20-4" checked />금융소득(이자 및 배당)</label>
+										<label for="la5-20-5" class="w40p"><input type="radio" name="la5-20" id="la5-20-5" checked />상속증여</label>
+										<label for="la5-20-6" class="w60p"><input type="radio" name="la5-20" id="la5-20-6" checked />재산양도소득</label>
+										<label for="la5-20-7" class="w40p"><input type="radio" name="la5-20" id="la5-20-7" checked />연금소독</label>
+										<label for="la5-20-8" class="w60p"><input type="radio" name="la5-20" id="la5-20-8" checked />보험금</label>
+										<label for="la5-20-9" class="w40p"><input type="radio" name="la5-20" id="la5-20-9" checked />기타소득</label>
+										<label for="la5-20-10" class="w60p"><input id="la5-20-10" type="text" class="inp-wrap" value="" /></label>
+									</div>
+								</li>
+								<li class="flex-none">
+									<label for="la5-21">거래목적(신계약)</label>
+									<div class="dform circle01 rows-2 pdb-n">
+										<label for="la5-21-1" class="w40p"><input type="radio" name="la5-21" id="la5-21-1" checked />가족보장</label>
+										<label for="la5-21-2" class="w60p"><input type="radio" name="la5-21" id="la5-21-2" checked />노후대비</label>
+										<label for="la5-21-3" class="w40p"><input type="radio" name="la5-21" id="la5-21-3" checked />상속</label>
+										<label for="la5-21-4" class="w60p"><input type="radio" name="la5-21" id="la5-21-4" checked />목적자금(교육,주택 등)</label>
+										<label for="la5-21-5" class="w40p"><input type="radio" name="la5-21" id="la5-21-5" checked />재계약</label>
+										<label for="la5-21-6" class="w60p"><input type="radio" name="la5-21" id="la5-21-6" checked />기타</label>
+										<label for="la5-21-7" class="w100p"><input id="la5-21-7" type="text" class="inp-wrap" value="" /></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- btn -->
+						<div class="cont1 btnArea border-t">
+							<button class="sbtn-5 btn-st01">KYC 처리</button>
+						</div>
+					</div>
+				</li>
+				<!-- 6친권자KYC -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">친권자 KYC</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="cont1">
+							<ul class="write-st02">
+								<li>
+									<label for="la10-1">친권자 선택</label>
+									<div>
+										<select id="la10-1" class="select w100p">
+											<option>선택</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="h3-tit">
+							<h3>고객확인 기본정보(CDD)</h3>
+						</div>
+						<div class="cont1">
+							<ul class="write-st02">
+								<li>
+									<label for="la10-2">실명번호 구분</label>
+									<div class="checkBox-st03">
+										<input type="radio" name="la10-2" id="la10-2-1" checked /><label for="la10-2-1">주민등록번호<br />(개인)</label>
+										<input type="radio" name="la10-2" id="la10-2-2" /><label for="la10-2-2">외국인<br />등록번호</label>
+										<input type="radio" name="la10-2" id="la10-2-3" /><label for="la10-2-3">국내거소<br />신고번호</label>
+									</div>
+								</li>
+								<li>
+									<label for="la10-3-1">실명번호</label>
+									<div>
+										<input id="la10-3-1" type="text" class="inp-wrap" value="000000-1******" readonly/>
+									</div>
+								</li>
+								<li>
+									<label for="la10-4-1">성명</label>
+									<div>
+										<input id="la10-4-1" type="text" class="inp-wrap" value="홍길동(44/남)" />
+									</div>
+								</li>
+								<li>
+									<label for="la10-5-1">연락처</label>
+									<div>
+										<select id="la10-5-1" class="select">
+											<option>선택</option>
+										</select>
+										<input class="inp-wrap" type="tel" value="2020"/>
+										<input class="inp-wrap" type="tel" value="0000"/>
+									</div>
+								</li>
+								<li><!-- 2018-06-15 -->
+									<label for="la10-6-1" class="fs-style01">직업(업종)</label>
+									<div>
+										<select id="la10-6-1" class="select w100p">
+											<option>(필수)선택해주세요</option>
+											<option>급여소득자</option>
+											<option>그외 일반개인</option>
+											<option>남자무직(55세이하)</option>
+											<option>대부업자</option>
+											<option>무기제조업자/무기판매상</option>
+											<option>변호사</option>
+											<option>회계사/세무사</option>
+											<option>미성년자</option>
+											<option>5급이상 고위공무원</option>
+											<option>지방정부 고위공무원(5급)</option>
+											<option>정당고위임원</option>
+											<option>공인노무사</option>
+											<option>감정평가사</option>
+											<option>보석감정사</option>
+											<option>미술품감정사</option>
+											<option>부동산감정사</option>
+											<option>기타감정사</option>
+											<option>관세사</option>
+											<option>판사</option>
+											<option>검사</option>
+											<option>법무사</option>
+											<option>변리사</option>
+											<option>의사</option>
+											<option>환전산</option>
+											<option>공무원</option>
+											<option>카지노/성인오락실</option>
+											<option>연금소득자</option>
+											<option>보험설계사(당사)</option>
+											<option>보험설계사(타사)</option>
+											<option>금융자산운용가</option>
+											<option>기타회계 및 금융 보험관련 전문직 종사자</option>
+											<option>귀금속/보석상</option>
+										</select>
+									</div>
+								</li>
+								<!-- 2018-06-15 직업(업종)이 급여소득자일 경우에만 노출 -->
+								<li class="none"><!-- class='none'삭제 -->
+									<ul class="write-st02">
+										<li>
+											<label for="la10-10-1">직장(회사)명</label>
+											<div>
+												<input id="la10-10-1" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la10-11-1">부서명</label>
+											<div>
+												<input id="la10-11-1" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la10-12-1">직위</label>
+											<div>
+												<input id="la10-12-1" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la10-13-1">직장연락처</label>
+											<div>
+												<select id="la10-13-1" class="select">
+													<option>선택</option>
+												</select>
+												<input class="inp-wrap" type="tel" value="2020"/>
+												<input class="inp-wrap" type="tel" value="0000"/>
+											</div>
+										</li>
+										<li>
+											<label for="la10-14-1">주소(직장)</label>
+											<div>
+												<input readonly id="la10-14-1" class="inp-wrap" type="text" value="03367"/>
+												<button class="sbtn-search-g">검색</button>
+											</div>
+											<div><input readonly class="inp-wrap" type="text" value="서울 은평구 불광동(불광1동)"/></div>
+											<div><input readonly class="inp-wrap" type="text" value="건물명 국립환경연구원"/></div>
+										</li>
+									</ul>
+								</li>
+								<!--// 직업(업종)이 급여소득자일 경우에만 노출 -->
+
+								<li>
+									<label for="la10-7-1">국적</label>
+									<div>
+										<select id="la10-7-1" class="select w100p">
+											<option>대한민국</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la10-8-1">여권번호</label>
+									<div>
+										<input id="la10-8-1" type="text" class="inp-wrap" value="" />
+									</div>
+								</li>
+								<li>
+									<label for="la10-9-1">주소(자택)</label>
+									<div>
+										<input readonly id="la10-9-1" class="inp-wrap" type="text" value="03367"/>
+										<button class="sbtn-search-g">검색</button>
+									</div>
+									<div><input readonly class="inp-wrap" type="text" value="서울 은평구 불광동(불광1동)"/></div>
+									<div><input readonly class="inp-wrap" type="text" value="건물명 국립환경연구원"/></div>
+								</li>
+								<li>
+									<label for="la10-15-1">신원확인증</label>
+									<div>
+										<select id="la10-15-1" class="select w100p">
+											<option>주민등록증</option>
+											<option>운전면허</option>
+											<option>국내거소증</option>
+										</select>
+									</div>
+								</li>
+								<!-- 운전면허 선택시 보여짐 class='none'삭제  -->
+								<li class="none">
+									<label for="la10-16-1">면허번호</label>
+									<div>
+										<input id="la10-16-1" type="text" class="inp-wrap" value="" disabled />
+										<button class="sbtn-5 btn-st02">촬영</button>
+									</div>
+								</li>
+								<!-- //운전면허 선택시   -->
+
+								<!-- 주민등록증 선택시 보여짐 class='none'삭제  -->
+								<li>
+									<label for="la10-17-1">발급일자</label>
+									<div>
+										<input id="la10-17-1" type="text" class="inp-wrap" value="" disabled/>
+										<button class="sbtn-5 btn-st02">촬영</button>
+									</div>
+								</li>
+								<!--// 주민등록증 선택시   -->
+
+								<!-- 외국인등록증 선택시 보여짐 class='none'삭제  -->
+								<li class="none">
+									<label for="la10-18-1">발급일자</label>
+									<div>
+										<input id="la10-18-1" type="tel" class="inp-wrap" placeholder="발급일 입력" value="1982-01-04" />
+										<input type="date" class="sbtn-calendar" title="달력보기" />
+									</div>
+								</li>
+								<li>
+									<label for="la10-20-1">진위여부</label>
+									<div>
+										<select id="la10-20-1" class="select w100p" disabled>
+											<option>미실행</option>
+										</select>
+										<button class="sbtn-5 btn-st02">진위체크</button>
+									</div>
+									<div>
+										<select id="la10-20-2" class="select w100p">
+											<option>미실행</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la10-19-1">실제소유자</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="la10-19-1" id="la10-19-1" checked /><label for="la10-19-1">예</label>
+										<input type="radio" name="la10-19-1" id="la10-19-2" /><label for="la10-19-2">아니오</label>
+									</div>
+								</li>
+								<!-- 2018-06-15 실제소유자 '아니오'일 경우에만 노출 -->
+								<li class="none"><!-- class='none'삭제 -->
+									<ul class="write-st02">
+										<li>
+											<label for="la10-21-1">성명</label>
+											<div>
+												<input id="la10-21-1" type="text" class="inp-wrap" value="" />
+											</div>
+										</li>
+										<li>
+											<label for="la10-22-1">생년월일</label>
+											<div>
+												<input id="la10-22-1" type="tel" class="inp-wrap" placeholder="생년월일 입력" value="1982-01-04" />
+												<input type="date" class="sbtn-calendar" title="달력보기" />
+											</div>
+										</li>
+										<li>
+											<label for="la10-23-1">국적</label>
+											<div>
+												<select id="la10-23-1" class="select w100p">
+													<option>대한민국</option>
+												</select>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!--// 실제소유자 '아니오'일 경우에만 노출 -->
+							</ul>
+						</div>
+
+						<div class="border-t">
+							<h3 class="h3-tit">고객확인 추가정보(EDD)</h3>
+							<ul class="cont1 write-st04 pdb-n">
+								<li>
+									<label for="la10-24-1">정보제공 거절</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="la10-24-1" id="la10-24-1" checked /><label for="la10-24-1">예</label>
+										<input type="radio" name="la10-24-1" id="la10-24-2" /><label for="la10-24-2">아니오</label>
+									</div>
+								</li>
+								<li class="flex-none">
+									<label for="la10-25-1">거래자금 원천 및 출처</label>
+									<div class="dform circle01 rows-2">
+										<label for="la10-25-1" class="w40p"><input type="radio" name="la10-25-1" id="la10-25-1" checked />근로소득</label>
+										<label for="la10-25-2" class="w60p"><input type="radio" name="la10-25-1" id="la10-25-2" checked />사업소득</label>
+										<label for="la10-25-3" class="w40p"><input type="radio" name="la10-25-1" id="la10-25-3" checked />부동산 임대소득</label>
+										<label for="la10-25-4" class="w60p"><input type="radio" name="la10-25-1" id="la10-25-4" checked />금융소득(이자 및 배당)</label>
+										<label for="la10-25-5" class="w40p"><input type="radio" name="la10-25-1" id="la10-25-5" checked />상속증여</label>
+										<label for="la10-25-6" class="w60p"><input type="radio" name="la10-25-1" id="la10-25-6" checked />재산양도소득</label>
+										<label for="la10-25-7" class="w40p"><input type="radio" name="la10-25-1" id="la10-25-7" checked />연금소독</label>
+										<label for="la10-25-8" class="w60p"><input type="radio" name="la10-25-1" id="la10-25-8" checked />보험금</label>
+										<label for="la10-25-9" class="w40p"><input type="radio" name="la10-25-1" id="la10-25-9" checked />기타소득</label>
+										<label for="la10-25-10" class="w60p"><input id="la5-20-10" type="text" class="inp-wrap" value="" /></label>
+									</div>
+								</li>
+								<li class="flex-none">
+									<label for="la10-26-1">거래목적(신계약)</label>
+									<div class="dform circle01 rows-2 pdb-n">
+										<label for="la10-26-1" class="w40p"><input type="radio" name="la10-26-1" id="la10-26-1" checked />가족보장</label>
+										<label for="la10-26-2" class="w60p"><input type="radio" name="la10-26-1" id="la10-26-2" checked />노후대비</label>
+										<label for="la10-26-3" class="w40p"><input type="radio" name="la10-26-1" id="la10-26-3" checked />상속</label>
+										<label for="la10-26-4" class="w60p"><input type="radio" name="la10-26-1" id="la10-26-4" checked />목적자금(교육,주택 등)</label>
+										<label for="la10-26-5" class="w40p"><input type="radio" name="la10-26-1" id="la10-26-5" checked />재계약</label>
+										<label for="la10-26-6" class="w60p"><input type="radio" name="la10-26-1" id="la10-26-6" checked />기타</label>
+										<label for="la10-26-7" class="w100p"><input id="la5-21-7" type="text" class="inp-wrap" value="" /></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- btn -->
+						<div class="cont2 btnArea border-t">
+							<button class="sbtn-5 btn-st01">친권자 KYC 처리</button>
+						</div>
+					</div>
+				</li>
+				<!-- 펀드정보 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">펀드정보</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<h3 class="h3-tit">펀드비율</h3>
+						<div class="cont1">
+							<ul class="write-st02 dform square02">
+								<li>
+									<label class="w60p" for="la6-1"><input id="la6-1" type="checkbox" id="la6-1" />채권형</label>
+									<div>
+										<input title="채권형비율 입력" class="inp-wrap ta-r" type="tel" /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-2"><input id="la6-2" type="checkbox" />안정성장형</label>
+									<div>
+										<input title="안정성장형비율 입력" class="inp-wrap ta-r" type="tel" /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-3"><input id="la6-3" type="checkbox" />주식성장형</label>
+									<div>
+										<input title="주식성장형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-4"><input id="la6-4" type="checkbox" />인텍스성장형</label>
+									<div>
+										<input title="인텍스성장형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-5"><input id="la6-5" type="checkbox" />글로벌주식성장형</label>
+									<div>
+										<input title="글로벌주식성장형비율 입력" class="inp-wrap ta-r" type="tel"  disabled /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-6"><input id="la6-6" type="checkbox" />글로벌채권형</label>
+									<div>
+										<input title="글로벌채권형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-7"><input id="la6-7" type="checkbox" />글로벌인덱스형</label>
+									<div>
+										<input title="글로벌인덱스형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-8"><input id="la6-8" type="checkbox" />글로벌베스트셀렉션형</label>
+									<div>
+										<input title="글로벌베스트셀렉션형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+									</div>
+								</li>
+							</ul>
+							<p class="txt-desc">* 펀드비율의 합은 100%입니다.</p>
+						</div>
+
+						<div class="border-t">
+							<p class="txt-desc">펀드운용옵션 및 적합성 관련 입력은 필수 입력사항이 아닙니다.</p>
+							<h3 class="h3-tit">펀드운용옵션</h3>
+							<ul class="cont1 write-st02">
+								<li>
+									<label class="w60p" for="la6-9-1">펀드자동재분배</label>
+									<div>
+										<select id="la6-9-2" class="select w100p">
+											<option>신청안함</option>
+											<option>12개월</option>
+											<option>6개월</option>
+											<option>3개월</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-9-2">추가보험료 포함</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="la6-9-2" id="la6-9-2-1" checked /><label for="la6-9-2-1">예</label>
+										<input type="radio" name="la6-9-2" id="la6-9-2-2" /><label for="la6-9-2-2">아니오</label>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-9-3">주식성장형</label>
+									<div>
+										<select id="la6-9-3" class="select w100p" disabled>
+											<option>신청안함</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class=" border-t">
+							<h3 class="h3-tit">적합성 진단결과</h3>
+							<ul class="cont1 write-st02">
+								<li>
+									<label class="w60p" for="la6-9-4">투자성향</label>
+									<div>
+										<select id="la6-9-4" class="select w100p">
+											<option>신청안함</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label class="w60p" for="la6-9-5">부적합 보험계약 체결</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="la6-9-5" id="la6-9-5-1" checked /><label for="la6-9-5-1">예</label>
+										<input type="radio" name="la6-9-5" id="la6-9-5-2" /><label for="la6-9-5-2">아니오</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<!-- 기타정보 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">기타정보</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="cont1 border-t">
+							<ul class="write-st02">
+								<li>
+									<label for="lab8-1">해피콜 종류</label>
+									<div class="checkBox-st01">
+										<input id="ra8-1-1" type="radio" name="ra8-1" checked /><label for="ra8-1-1">모바일</label>
+										<input id="ra8-1-2" type="radio" name="ra8-1" /><label for="ra8-1-2">전화</label>
+									</div>
+								</li>
+								<li>
+									<label for="lab8-2">휴대폰</label>
+									<div>
+										<select id="lab8-2" class="select">
+											<option>선택</option>
+										</select>
+										<input class="inp-wrap" type="tel" value="2020"/>
+										<input class="inp-wrap" type="tel" value="0000"/>
+									</div>
+								</li>
+								<li>
+									<label for="lab8-3">통화가능시간</label>
+									<div>
+										<input class="inp-wrap w70" type="tel" value="15"/>
+										<span class="dash">~</span>
+										<input class="inp-wrap w70" type="tel" value="17"/>
+										<span class="dash">시</span>
+									</div>
+								</li>
+								<li>
+									<label for="lab8-4">모집경로</label>
+									<div>
+										<select id="lab8-4" class="select w100p">
+											<option>설계사 본인 및 가족</option>
+										</select>
+									</div>
+								</li>
+								<li class="dform square02">
+									<label for="lab8-5" class="w130"><input id="lab8-5" type="checkbox" />세금우대금액</label>
+									<div>
+										<input class="inp-wrap" type="tel" value="" disabled /><span class="dash">원</span>
+										<button class="sbtn-5 btn-st02">조회</button>
+									</div>
+								</li>
+								<li>
+									<label for="lab8-6" class="w150">의료급여 수금권자 유무</label>
+									<div class="checkBox-st01">
+										<input id="lab8-6-1" type="radio" name="lab8-6" checked /><label for="lab8-6-1">예</label>
+										<input id="lab8-6-2" type="radio" name="lab8-6" /><label for="lab8-6-2">아니오</label>
+									</div>
+								</li>
+								<li>
+									<label for="lab8-7" class="w100 vat-0">선납횟수</label>
+									<div class="checkBox-st01">
+										<button class="sbtn-minus">-</button>
+										<input id="lab8-8" class="inp-wrap w70" type="tel" value="0" />
+										<button class="sbtn-plus">+</button>
+										<button class="sbtn-5 btn-st02">조회</button>
+									</div>
+									<p class="txt-desc">* 최대 선납횟수는 00회입니다.</p>
+								</li>
+								<li>
+									<label for="lab8-8" class="w100 vat-0">의무납입기간</label>
+									<div class="checkBox-st01">
+										<input id="lab8-8" class="inp-wrap" type="tel" value="24" disabled /><span class="won">개월</span>
+									</div>
+									<p class="txt-desc pad-20">* 선납횟수는 선택 입력사항입니다.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" >심사처리</button>
+			<button class="lbtn btn-st02" >청약저장</button>
+			<button class="lbtn btn-st01" >KYC</button><!-- 2018-06-29 -->
+			<button class="lbtn btn-st10" >청약진행</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

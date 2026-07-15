@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전자청약 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 2018-05-14(전체적으로 비교필요) -->
+<div class="d-wrap dc-0221">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>전자청약 입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div>
+		<div class="d-step">
+			<h2>4. 계약 전 알릴 의무사항</h2>
+			<p class="d-step-status">
+				<span>1</span> / <span>2</span> / <span>3</span> / <span class="on">4</span> / <span>5</span>
+			</p>
+		</div>
+		<div class="d-step3 border-b"><!-- 2018-05-14 -->
+			<ol><!-- 현재 class="on" / 과거 class="check" -->
+				<li class="check"><span>1</span></li>
+				<li class="check"><span>2</span></li>
+				<li class="check"><span>3</span></li>
+				<li class="check"><span>4</span></li>
+				<li class="on"><span>5</span></li>
+			</ol>
+		</div>
+	</div>
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+
+		<div class="cont1">
+			<ol class="qaBox">
+				<!-- CI보험 추가되는 항목 -->
+				<li>
+					<p class="qaBox-q">CI 1) 신장, 간, 조혈모세포 등 신체장기를 이식 받은 사실이 있습니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q18-1"><input id="Q18-1" name="Q18" type="radio" checked />예</label>
+						<label for="Q18-2"><input id="Q18-2" name="Q18" type="radio" />아니오</label>
+					</p>
+				</li>
+				<li>
+					<p class="qaBox-q">CI 2) 조부모, 부모, 형제, 자매 중(생존과 관계없이) 65세 이전에 아래의 사유에 해당하는 질병에 걸린 분이 있습니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q19-1"><input id="Q19-1" name="Q19" type="radio" checked />예</label>
+						<label for="Q19-2"><input id="Q19-2" name="Q19" type="radio" />아니오</label>
+					</p>
+					<p class="cont1 fs-26">* 회사는 본 내용으로 보험가입을 거절하거나 또는 해지하지 않으며 보험금 지급을 거절하지 않습니다.</p>
+					<div class="qaBox-ex">
+						<ul class="dform square02">
+							<li>
+								<label for="Q19-chk1"><input id="Q19-chk1" name="Q19-chk1" type="checkbox" />암</label>
+							</li>
+							<li>
+								<label for="Q19-chk2"><input id="Q19-chk2" name="Q19-chk1" type="checkbox" />당뇨병</label>
+							</li>
+							<li>
+								<label for="Q19-chk3"><input id="Q19-chk3" name="Q19-chk1" type="checkbox" />간경화증</label>
+							</li>
+							<li>
+								<label for="Q19-chk4"><input id="Q19-chk4" name="Q19-chk1" type="checkbox" />뇌,심혈관질환</label>
+							</li>
+							<li>
+								<label for="Q19-chk5"><input id="Q19-chk5" name="Q19-chk1" type="checkbox" />다낭성신질환</label>
+							</li>
+							<li>
+								<label for="Q19-chk6"><input id="Q19-chk6" name="Q19-chk1" type="checkbox" />가족성용종증</label>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<!-- 장기간병보험 추가되는 항목 -->
+				<li>
+					<p class="qaBox-q">장기간병 1) 아래와 같은 일상의 활동중에 다른 사람의 도움을 필요로 하거나 보살핌을 필요로 하십니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q18-1"><input id="Q18-1" name="Q18" type="radio" checked />예</label>
+						<label for="Q18-2"><input id="Q18-2" name="Q18" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="bul-list-st01 col-02">
+							<li>이동(보행)하기</li>
+							<li>식사하기</li>
+							<li>화장실 사용하기</li>
+							<li>목욕하기</li>
+							<li>옷입기</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<p class="qaBox-q">장기간병 2) 최근 5년 이내에 다음과 같은 기구, 장비를 사용하신 적이 있거나 현재 사용하고 계십니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q19-1"><input id="Q19-1" name="Q19" type="radio" checked />예</label>
+						<label for="Q19-2"><input id="Q19-2" name="Q19" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="bul-list-st01 col-02">
+							<li class="w100p">휠체어 (보조이동장치 포함)</li>
+							<li>목발, 지팡이</li>
+							<li>도뇨관</li>
+							<li>산소호흡장치</li>
+							<li>인공호흡장치</li>
+							<li>투석장치</li>
+							<li>기타의료보조장구</li>
+						</ul>
+					</div>
+				</li>
+
+				<!-- 태아보험 추가되는 항목 -->
+				<li>
+					<p class="qaBox-q">태아 1) 임신과정 또는 산전검사에서 아래와 같은 태아 이상 가능성이 발견되었거나 진단을 받은 적이 있습니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q19-1"><input id="Q19-1" name="Q19" type="radio" checked />예</label>
+						<label for="Q19-2"><input id="Q19-2" name="Q19" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="dform square02">
+							<li>
+								<label for="Q19-chk1"><input id="Q19-chk1" name="Q19-chk1" type="checkbox" />신천성기형</label>
+							</li>
+							<li>
+								<label for="Q19-chk2"><input id="Q19-chk2" name="Q19-chk1" type="checkbox" />선청성장애</label>
+							</li>
+							<li>
+								<label for="Q19-chk3"><input id="Q19-chk3" name="Q19-chk1" type="checkbox" />자궁내발육부진</label>
+							</li>
+							<li>
+								<label for="Q19-chk4"><input id="Q19-chk4" name="Q19-chk1" type="checkbox" />큰몸증</label>
+							</li>
+							<li>
+								<label for="Q19-chk5"><input id="Q19-chk5" name="Q19-chk1" type="checkbox" />신경학적결손</label>
+							</li>
+							<li>
+								<label for="Q19-chk6"><input id="Q19-chk6" name="Q19-chk1" type="checkbox" />염색체이상</label>
+							</li>
+							<li>
+								<label for="Q19-chk7"><input id="Q19-chk7" name="Q19-chk1" type="checkbox" />양수과소증</label>
+							</li>
+							<li>
+								<label for="Q19-chk8"><input id="Q19-chk8" name="Q19-chk1" type="checkbox" />양수과다증</label>
+							</li>
+							<li>
+								<label for="Q19-chk9"><input id="Q19-chk9" name="Q19-chk1" type="checkbox" />태아수종</label>
+							</li>
+							<li>
+								<label for="Q19-chk10"><input id="Q19-chk10" name="Q19-chk1" type="checkbox" />용혈성질환</label>
+							</li>
+							<li>
+								<label for="Q19-chk11"><input id="Q19-chk11" name="Q19-chk1" type="checkbox" />태아감염</label>
+							</li>
+							<li>
+								<label for="Q19-chk12"><input id="Q19-chk12" name="Q19-chk1" type="checkbox" />인공수정</label>
+							</li>
+							<li>
+								<label for="Q19-chk13"><input id="Q19-chk13" name="Q19-chk1" type="checkbox" />다태아임신</label>
+							</li>
+							<li>
+								<label for="Q19-chk14"><input id="Q19-chk14" name="Q19-chk1" type="checkbox" />과숙임신</label>
+							</li>
+							<li>
+								<label for="Q19-chk15"><input id="Q19-chk15" name="Q19-chk1" type="checkbox" />전치태반</label>
+							</li>
+							<li>
+								<label for="Q19-chk16"><input id="Q19-chk16" name="Q19-chk1" type="checkbox" />태반조기박리</label>
+							</li>
+							<li>
+								<label for="Q19-chk17"><input id="Q19-chk17" name="Q19-chk1" type="checkbox" />자궁경관무력증</label>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<!-- 실손의료보험 추가되는 항목 -->
+				<li>
+					<p class="qaBox-q">실손 1) 현재 의료기관에 예약중인 검사 또는 치료를 목적으로 하는 진료가 있습니까?(단순검진 제외)</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q18-1"><input id="Q18-1" name="Q18" type="radio" checked />예</label>
+						<label for="Q18-2"><input id="Q18-2" name="Q18" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la18-1">검사명</label>
+								<div>
+									<input id="la18-1" class="inp-wrap" type="text" />
+								</div>
+							</li>
+							<li>
+								<label for="la18-2">예약일</label>
+								<div>
+									<input id="la18-2" class="inp-wrap" type="tel" />
+								</div>
+							</li>
+						</ul>
+					</div>
+					<p class="cont1 fs-26">* 위의 사항을 사실과 다르게 알린 경우 보험가입이 거절될 수 있습니다.</p>
+				</li>
+
+				<!-- 공통 -->
+				<li>
+					<p class="qaBox-q">상기 질문 사항중 "예"를 체크하신 것이 있습니다. 병명 등의 정보를 입력해주시기 바랍니다.(6개까지)</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la-1">병명</label>
+								<div>
+									<input id="la-1" class="inp-wrap" type="text" />
+								</div>
+							</li>
+							<li><!-- 2018-05-03 / 2018-05-04 -->
+								<label for="la-2-1">치료시작일</label>
+								<div>
+									<input id="la-2-1" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+									<input type="date" class="sbtn-calendar" title="달력보기" />
+								</div>
+							</li>
+							<li><!-- 2018-05-04 -->
+								<label for="la-2-2">치료종료일</label>
+								<div>
+									<input id="la-2-2" class="inp-wrap" type="tel" placeholder="종료일 입력" />
+									<input type="date" class="sbtn-calendar" title="달력보기" />
+								</div>
+							</li>
+							<li>
+								<label for="la-3">치료병원</label>
+								<div>
+									<input id="la-3" class="inp-wrap" type="text" />
+								</div>
+							</li>
+							<li>
+								<label for="la-4">재발경험</label>
+								<div class="checkBox-st01">
+									<input id="la-4-1" name="la-4" type="radio" /><label for="la-4-1">예</label>
+									<input id="la-4-2" name="la-4" type="radio" checked /><label for="la-4-2">아니오</label>
+								</div>
+							</li>
+							<li>
+								<label for="la-5">완치여부</label>
+								<div class="checkBox-st01">
+									<input id="la-5-1" name="la-5" type="radio" /><label for="la-5-1">예</label>
+									<input id="la-5-2" name="la-5" type="radio" checked /><label for="la-5-2">아니오</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="button-section btn-more"><!-- 2018-04-17 -->
+						<button disabled>병력삭제 -</button><!-- 사용시 disabled 삭제 -->
+						<button>병력추가 +</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>마이플랜관리</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script><!-- 2018-04-04 -->
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap dc-0120e">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>마이플랜관리</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-05-03 / 2018-05-04 -->
+	<div class="search dcNew">
+		<ul>
+			<li>
+				<label for="sel2" class="label-txt">대표상품</label>
+				<select id="sel2" class="select">
+					<option>대표상품 선택</option>
+				</select>
+			</li>
+			<li>
+				<label for="la1-2" class="label-txt">등록일자</label>
+				<input id="la1-2" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
+				<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" />
+			</li>
+			<li>
+				<label for="text1" class="label-txt">플랜명</label>
+				<input id="text1" class="inp-wrap" type="text" title="플랜명" placeholder="플랜명을 입력하세요." />
+			</li>
+			<li>
+				<label for="filter04" class="label-txt">플랜명</label>
+				<div class="xScroll">
+					<div class="d-lite_chipfilter">
+						<div class="chipitem">
+							<input type="checkbox" id="type03item00" class="chipinput" name="filter04" />
+							<label for="type03item00" class="chiplabel">전체</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item01" class="chipinput" name="filter04" />
+							<label for="type03item01" class="chiplabel">사망</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item02" class="chipinput" name="filter04" />
+							<label for="type03item02" class="chiplabel">암</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item03" class="chipinput" name="filter04" />
+							<label for="type03item03" class="chiplabel">뇌심</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item04" class="chipinput" name="filter04" />
+							<label for="type03item04" class="chiplabel">입원수술</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item05" class="chipinput" name="filter04" />
+							<label for="type03item05" class="chiplabel">치매</label>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="btnArea">
+			<button class="lbtn-search" type="submit">검색</button>
+		</div>
+	</div>	
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont dcNew"><!-- 2026 dcNew 클래스 추가 -->
+			<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+			<!-- 검색 전 문구
+			<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+			<!-- 검색 후 문구
+			<div class="no-data">검색결과가 없습니다.</div>-->
+
+			<div>
+				<div class="flexJcSb flexAiCt bg-st01 border-b-st01">
+					<p class="result-txt border-n">총 5건이 검색되었습니다.</p>
+					<div class="GA-Advance-Payment par_15">
+						<label class="toggle-switch w90">
+							<input type="checkbox">
+							<span class="slider"><em>QUICK 보기</em></span>
+						</label>
+					</div>
+				</div>
+				<!-- 2026 dcNew 수정 -->
+				<div class="cont3">
+					<article class="pro-covenant">
+						<div class="headerpat_5">	
+							<ul class="titBox link-list-st01 w100p pat_12 pab_12">
+								<li class="bg-st02 border-n pal_20 par_20">
+									<div class="flexJcSb">
+										<div class="tit-h2 pd-n square02 dform w70p webBox-align_s">
+											<input id="chk1" type="checkbox" checked="">
+											<label for="chk1">
+												<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험 1종(기본형)플랜명 노출</span>
+											</label>
+										</div>
+										<div class="pro-optionMenu">
+											<div>
+												<div class="starMarkBox">
+													<input type="checkbox" id="starChk" class="starMark" name="starMark"checked="">
+													<label for="starChk">QUICK목록에 표시</label>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="moreLink">상세보기</button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="bg-st01 pad-20">
+							<ul class="data-list-st01 col-mix">
+								<li class="full">
+									<span class="stit">상품명</span>
+									<span class="scon align-l">마음든든플러스유니버셜종신보험2026 1종(기본형)상품명</span>
+								</li>
+								<li class="par_20 border-r">
+									<span class="stit">가입금액</span>
+									<span class="scon">2,000 만원</span>
+								</li>
+								<li class="pal_20">
+									<span class="stit">예상 보험료</span>
+									<span class="scon">374,800 원</span>
+								</li>
+								<li class="full">
+									<span class="stit">등록일</span>
+									<span class="scon">2026.04.27</span>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<article class="pro-covenant">
+						<div class="headerpat_5">	
+							<ul class="titBox link-list-st01 w100p pat_12 pab_12">
+								<li class="bg-st02 border-n pal_20 par_20">
+									<div class="flexJcSb">
+										<div class="tit-h2 pd-n square02 dform w70p webBox-align_s">
+											<input id="chk2" type="checkbox">
+											<label for="chk2">
+												<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험 1종(기본형)플랜명 노출</span>
+											</label>
+										</div>
+										<div class="pro-optionMenu">
+											<div>
+												<div class="starMarkBox">
+													<input type="checkbox" id="starChk2" class="starMark" name="starMark">
+													<label for="starChk2">QUICK목록에 표시</label>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="moreLink">상세보기</button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="bg-st01 pad-20">
+							<ul class="data-list-st01 col-mix">
+								<li class="full">
+									<span class="stit">상품명</span>
+									<span class="scon align-l">마음든든플러스유니버셜종신보험2026 1종(기본형)상품명</span>
+								</li>
+								<li class="par_20 border-r">
+									<span class="stit">가입금액</span>
+									<span class="scon">2,000 만원</span>
+								</li>
+								<li class="pal_20">
+									<span class="stit">예상 보험료</span>
+									<span class="scon">374,800 원</span>
+								</li>
+								<li class="full">
+									<span class="stit">등록일</span>
+									<span class="scon">2026.04.27</span>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<div class="pab_15">
+						<p class="ico-txt-st02">☆ 클릭 시 가입제안 상품 선택 시 QUICK 목록에 표시됩니다.</p>
+						<p class="ico-txt-st02 mat_20">플랜을 선택하지 않아도 ‘순서변경'을 할 수 있습니다.</p>
+					</div>
+				</div>
+				<!-- //2026 dcNew 수정 -->
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">삭제</button>
+			<button class="lbtn btn-st04">순서변경</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

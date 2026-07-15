@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>모바일청약진행현황</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap ">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>모바일청약진행현황</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-05-03 / 2018-05-04 -->
+	<div class="search">
+		<ul>
+			<li class="dform circle01">
+				<label class="w70">계약일</label>
+				<label for="ra1_1" ><input id="ra1_1" type="radio" name="ra1" checked />1주일</label>
+				<label for="ra1_2" ><input id="ra1_2" type="radio" name="ra1" />당월</label>
+				<label for="ra1_3"><input id="ra1_3" type="radio" name="ra1" />기간</label>
+			</li>
+			<li class=""><!-- 기간 라디오버튼 선택되었을 경우 노출 -->
+				<label for="la1-2" class="label-txt w70">기간입력</label>
+				<input id="la1-2" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
+				<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" />
+			</li>
+			<li>
+				<label for="la-1" class="w70">상태</label>
+				<select id="la-1" class="select">
+					<option>전체</option>
+					<option>진행중</option>
+					<option>문서작서 중</option>
+					<option>승인완료</option>
+					<option>작성완료</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" type="submit">검색</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="blind">검색결과 영역</h2>
+
+		<!-- 검색 전 문구
+		<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+		<!-- 검색 후 문구
+		<div class="no-data">검색결과가 없습니다.</div>-->
+
+		<div>
+			<p class="result-txt">총 5건이 검색되었습니다.</p>
+			<ul class="link-list-st01 dform circle01">
+				<li>
+					<div class="tit-h2">
+						<input id="ra1" name="ra" type="radio" />
+						<label for="ra1">
+							<span class="pro-num">5160100021 / 전자청약</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</label>
+						<p class="tit-h2-con">
+							<span class="status-02">진행중</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">발행일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">입금</span>
+								<span class="scon">미완료</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="ra2" name="ra" type="radio" />
+						<label for="ra2">
+							<span class="pro-num">5160100021 / 옴니청약</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</label>
+						<p class="tit-h2-con">
+							<span class="status-02">작성완료</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">발행일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">입금</span>
+								<span class="scon">미완료</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="ra3" name="ra" type="radio" />
+						<label for="ra3">
+							<span class="pro-num">5160100021 / 전자청약</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</label>
+						<p class="tit-h2-con">
+							<span class="status-02">승인완료</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">발행일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">입금</span>
+								<span class="scon">완료</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="ra4" name="ra" type="radio" />
+						<label for="ra4">
+							<span class="pro-num">5160100021 / 옴니청약</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</label>
+						<p class="tit-h2-con">
+							<span class="status-02">문서 작성중</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">발행일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">입금</span>
+								<span class="scon">완료</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04" >전자청약</button>
+			<button class="lbtn btn-st02" >계좌변경</button>
+			<button class="lbtn btn-st03" >보험료인출</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

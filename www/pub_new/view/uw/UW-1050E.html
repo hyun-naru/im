@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>Self UnderWriting</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 알림팝업 영역  -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="alertP-1" class="alert-layer">
+		<div class="alert-container">
+			<div class="alert-head">
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>예상심사결과 확인 후 <em>반드시 전산심사</em><br>
+					<em>재심사 재실행하시어 인수조건 재확인</em>바랍니다.
+				</p>
+				<p>예상심사결과를 종료합니다.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 알림팝업 영역 -->
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>Self UnderWriting</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>심사결과</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="cont3 bg-st02 mat-n">
+				<div class="box-cont">
+					<div class="title-box">
+						<div class="stit ico-chk">배타미(37세/여자)</div>
+						<div class="fc-info">FC 김태희(AA123456)</div>
+					</div>
+					<div class="insure-detail-info toggle">
+						<div class="toggle-header">	
+							<span class="tit">마음든든 유니버셜종신보험(무)1904 (보증비용부과형)가산형_기본형 </span>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<ul class="data-list-st01 col-02 pd-n">
+								<li>
+									<span class="stit">제안일</span>
+									<span class="scon">2019.07.12</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">300,000원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">배타미</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">배타미</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="scroll-tab">
+				<ul>
+					<li class="on"><button type="button"><span>최종</span></button></li>
+					<li><button type="button"><span>고혈압</span></button></li>
+					<li><button type="button"><span>당뇨</span></button></li>
+					<li><button type="button"><span>당뇨당뇨당뇨</span></button></li>
+					<li><button type="button"><span>당뇨당뇨당뇨당뇨당뇨</span></button></li>
+				</ul>
+			</div>
+			
+			<!-- 최종 -->
+			<div class="tab-cont">
+				<div class="cont3">
+					<h3 class="h3-tit-st01">예상 심사결과</h3>
+					<table class="tb-view">
+						<caption>예상 심사결과</caption>
+						<colgroup>
+							<col style="25%">
+							<col style="25%">
+							<col style="25%">
+							<col style="25%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>연금</th>
+								<td class="ta-c">표준</td>
+								<th>암</th>
+								<td class="ta-c">표준</td>
+							</tr>
+							<tr>
+								<th>일반사망</th>
+								<td class="ta-c">서류필요</td>
+								<th>2대&GI&CI</th>
+								<td class="ta-c">표준</td>
+							</tr>
+							<tr>
+								<th>재해장해</th>
+								<td class="ta-c">서류필요</td>
+								<th>LTC</th>
+								<td class="ta-c">서류필요</td>
+							</tr>
+							<tr>
+								<th>입원</th>
+								<td class="ta-c">서류필요</td>
+								<th>실손</th>
+								<td class="ta-c">거절</td>
+							</tr>
+							<tr>
+								<th>수술</th>
+								<td class="ta-c">서류필요</td>
+								<th>납입면제</th>
+								<td class="ta-c">거절</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="h3-tit-st01">안내사항</h3>
+					<ul class="toggle toggle-round">
+						<li>
+							<div class="toggle-header">
+								<div class="title">
+									<span class="ico-txt-st02">필요 서류/절차</span>
+								</div>
+								<button type="button" class="btn-toggle">더보기</button>
+							</div>
+							<div class="toggle-con">
+								<div class="duc-list"><!-- 9.17 수정 -->
+									<ul class="bul-list-st02">
+										<li>eus에서 뿌려지는 서류정보 표기</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="toggle toggle-round">
+						<li>
+							<div class="toggle-header">
+								<div class="title">
+									<span class="ico-txt-st02">주의사항</span>
+								</div>
+								<button type="button" class="btn-toggle">더보기</button>
+							</div>
+							<div class="toggle-con"><!-- 9.17 수정 -->
+								<ul class="bul-list-st02">
+									<li>고지정보와 실제정보(필요서류 포함)와 내용이 상이할 경우 심사결과가 달라질 수 있습니다.</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //최종 -->
+			
+			<!-- 질병별경과 -->
+			<div class="tab-cont none">
+				<div class="cont3">
+					<h3 class="h3-tit-st01">예상 심사결과</h3>
+					<table class="tb-data">
+						<caption>예상 심사결과</caption>
+						<colgroup>
+							<col style="25%">
+							<col style="25%">
+							<col style="25%">
+							<col style="25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="cols">질문</th>
+								<th scope="cols">담보</th>
+								<th scope="cols">점수</th>
+								<th scope="cols">결과</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>경과기간</td>
+								<td>연금</td>
+								<td>20</td>
+								<td>서류필요</td>
+							</tr>
+							<tr>
+								<td>입원력</td>
+								<td>일반사망</td>
+								<td>40</td>
+								<td>연기</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="h3-tit-st01">예상 담보별 결과</h3>
+					<table class="tb-data">
+						<caption>예상 담보별 </caption>
+						<colgroup>
+							<col style="30%">
+							<col style="30%">
+							<col style="40%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="cols">담보</th>
+								<th scope="cols">점수</th>
+								<th scope="cols">점수 결과</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>연금</td>
+								<td>20</td>
+								<td>할증1단계</td>
+							</tr>
+							<tr>
+								<td>일반사망</td>
+								<td>40</td>
+								<td>소견서</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="h3-tit-st01">안내사항</h3>
+					<ul class="toggle toggle-round">
+						<li>
+							<div class="toggle-header">
+								<div class="title">
+									<span class="ico-txt-st02">필요 서류/절차</span>
+								</div>
+								<button type="button" class="btn-toggle">더보기</button>
+							</div>
+							<div class="toggle-con">
+								<div class="duc-list"><!-- 9.17 수정 -->
+									<ul class="bul-list-st02">
+										<li>eus에서 뿌려지는 서류정보 표기</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="toggle toggle-round">
+						<li>
+							<div class="toggle-header">
+								<div class="title">
+									<span class="ico-txt-st02">주의사항</span>
+								</div>
+								<button type="button" class="btn-toggle">더보기</button>
+							</div>
+							<div class="toggle-con"><!-- 9.17 수정 -->
+								<ul class="bul-list-st02">
+									<li>고지정보와 실제정보(필요서류 포함)와 내용이 상이할 경우 심사결과가 달라질 수 있습니다.</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //질병별경과 -->
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04">확인</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

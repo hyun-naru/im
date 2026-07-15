@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객등록</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>고객등록</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	
+	<!-- d-step 10.26 위치이동 -->
+	<div class="d-step">
+		<h2>정보동의 및 본인인증</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span>2</span>
+			<span>3</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+
+			<div class="consent-info">
+				<span class="stit">동의서 번호</span><em class="scon">24560886</em>
+			</div>
+
+			<div class="agree-chk-list">
+				<div class="title-box">
+					<h3 class="tit">가입설계를 위한 개인(신용)정보 처리동의(필수)</h3>
+				</div>
+				<ul class="list dform square02">
+					<li class="all bg-st01"><!-- 9.17 추가 -->
+						<div class="item">
+							<input id="chk_all" type="checkbox">
+							<label for="chk_all">전체동의</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input id="chk1" type="checkbox">
+							<label for="chk1">개인(신용)정보 수집 이용에 관한 동의</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input id="chk2" type="checkbox">
+							<label for="chk2">개인(신용)정보 조회에 관한 동의</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input id="chk3" type="checkbox">
+							<label for="chk3">개인(신용)정보 제공에 관한 동의</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input id="chk4" type="checkbox">
+							<label for="chk4">민감정보 고유식별정보 처리에 관한 동의</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="cont3">
+				<ul class="write-st04 mab-n">
+					<li>
+						<div class="pd-n">
+							<label for="id-card-auth1">본인확인을 위해 신분증 인증을 진행해주세요.</label>
+							<button type="button" class="sbtn-bdr-1 bdr-st06"><span>촬영하기</span></button>
+						</div>
+						<div class="pdb-n">
+							<input type="text" class="inp-wrap" id="id-card-auth1" placeholder="이름" disabled>
+						</div>
+						<div class="pdb-n">
+							<input type="number" class="inp-wrap" id="id-card-auth2" placeholder="주민번호" disabled>
+						</div>
+						<div class="btnArea">
+							<button type="button" class="sbtn-5 btn-st11">중복확인</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

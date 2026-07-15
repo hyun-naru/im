@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>My보장진단</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>My보장진단</h1><!-- 2018-05-09 -->
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label class="label-txt" for="searchTxt">분석대상자</label>
+				<input class="inp-wrap" type="text" id="searchTxt" placeholder="이름을 입력하세요." />
+				<button class="sbtn-search-w" id="search">찾기</button> 
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button type="button" class="lbtn-search">검색</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="titArea-st01">계약분석</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none" id="beforeSearch">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none" id="afterSearch">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt" id="resultCnt">총 <span id="cnt">3</span>건이 검색되었습니다.</p>
+			<ul class="link-list-st01" id="resultList">
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-num">515110002008</span>
+							<span class="pro-stit">매월생활비주는암보험(무)1511[갱신형](최초계약)</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약일</span>
+								<span class="scon">2018.03.20</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">최혜진</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">20,552원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">최혜진</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-num">2011036020014</span>
+							<span class="pro-stit">무)헬스케어암보험v1.0만기환급형</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약일</span>
+								<span class="scon">2011.03.31</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">최혜진</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">23,800원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">최혜진</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-num">210090070031</span>
+							<span class="pro-stit">무)우리가족행복보험v1.1</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약일</span>
+								<span class="scon">2010.09.30</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">최혜진</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">59,620원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">최혜진</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st02" id="grntChk" disabled>보장진단하기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

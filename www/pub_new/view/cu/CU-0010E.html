@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>고객조회</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역  -->
+	<div class="search">
+		<ul class="dform square02">
+			<li>
+				<label for="selCsStgSecd" class="label-txt">고객유형</label>
+				<select class="select flex0 w70" id="selCsStgSecd">
+					<option>전체</option>
+				</select>
+				<input class="inp-wrap" type="text" id="edtCsNam" placeholder="이름을 입력하세요." maxlength="20">
+			</li>
+			<li>
+				<label for="chk_week" class="dform square01"><input type="checkbox" id="chk_week"> 1주일 내 등록된 고객만 검색</label>
+			</li>
+		</ul>
+		<div class="btnArea">
+			<button class="lbtn-search" id="btn_srch" type="submit">검색</button>
+		</div>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-scroll" id="scroll">
+		<div class="d-cont">
+			<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+			<!-- 검색 전 문구 -->
+			<div class="no-data none">검색조건을 입력하고 검색을 진행해 주세요.</div>
+			<!-- 검색 후 문구 -->
+			<div class="no-data none">검색결과가 없습니다.</div>
+
+			<div>
+				<p class="result-txt">총 <span id="listCnt">0</span>명이 검색되었습니다.</p>
+				<ul class="link-list-st01" id="resultList">
+					<li>
+						<div class="tit-h2">
+							<a href="#" class="link-go ico-arr">
+								<span class="name">홍길동</span>
+								<span class="age">(44/남)</span>
+							</a>
+							<p class="tit-h2-con">
+								<a href="tel:010-0000-0000" class="btn-tel" title="전화걸기">010-****-0000</a>
+								<span class="status-02">가망</span>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">동의만료일</span>
+									<span class="scon">2018.05.25</span>
+								</li>
+								<li>
+									<span class="stit">상령일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">마케팅동의</span>
+									<span class="scon">O</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<div class="tit-h2">
+							<a href="#" class="link-go ico-arr">
+								<span class="name">홍길동</span>
+								<span class="age">(44/남)</span>
+							</a>
+							<p class="tit-h2-con">
+								<a href="tel:010-0000-0000" class="btn-tel" title="전화걸기">010-****-0000</a>
+								<span class="status-05">계약</span>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">동의만료일</span>
+									<span class="scon">2018.05.25</span>
+								</li>
+								<li>
+									<span class="stit">상령일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">마케팅동의</span>
+									<span class="scon">O</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<div class="tit-h2">
+							<a href="#" class="link-go ico-arr">
+								<span class="name">홍길동</span>
+								<span class="age">(44/남)</span>
+							</a>
+							<p class="tit-h2-con">
+								<a href="tel:010-0000-0000" class="btn-tel" title="전화걸기">010-****-0000</a>
+								<span class="status-26">이탈</span>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">동의만료일</span>
+									<span class="scon">2018.05.25</span>
+								</li>
+								<li>
+									<span class="stit">상령일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">마케팅동의</span>
+									<span class="scon">O</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

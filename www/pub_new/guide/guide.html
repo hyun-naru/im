@@ -1,0 +1,1860 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>Guide</title>
+		<link rel="stylesheet" type="text/css" href="../../css/d-lite_style.css"/>
+		<script type="text/javascript" src="../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../../js/libs/ui.js"></script>
+		<style>
+			html {
+				font-size: 62.5%;
+				scroll-behavior: smooth;
+			}
+			:root {
+				--px-0: 0px;
+				--px-1: 2px;
+				--px-2: 4px;
+				--px-3: 6px;
+				--px-4: 8px;
+				--px-5: 10px;
+				--px-6: 12px;
+				--px-7: 14px;
+				--px-8: 16px;
+				--px-9: 18px;
+				--px-10: 20px;
+				--px-11: 24px;
+				--px-12: 28px;
+				--px-13: 32px;
+				--px-14: 36px;
+				--px-15: 40px;
+				--px-16: 48px;
+				--px-17: 52px;
+				--px-18: 56px;
+				--px-19: 60px;
+				--px-20: 64px;
+				--white-color: #ffffff;
+				--gray-color-100: #f9fafb;
+				--gray-color-200: #f4f6f8;
+				--gray-color-300: #dfe3e8;
+				--gray-color-400: #c4cdd5;
+				--gray-color-500: #919eab;
+				--gray-color-600: #637381;
+				--gray-color-700: #454f5b;
+				--gray-color-800: #212b36;
+				--gray-color-900: #161c24;
+				--black-color: #000000;
+				--primary-lighter: #c8facd;
+				--primary-light: #5be584;
+				--primary: #00ab55;
+				--primary-dark: #007b55;
+				--primary-darker: #005249;
+				--secondary-lighter: #d6e4ff;
+				--secondary-light: #84a9ff;
+				--secondary: #3366ff;
+				--secondary-dark: #1939b7;
+				--secondary-darker: #091a7a;
+				--info-lighter: #cafdf5;
+				--info-light: #61f3f3;
+				--info: #00b8d9;
+				--info-dark: #006c9c;
+				--info-darker: #003768;
+				--success-lighter: #d8fbde;
+				--success-light: #86e8ab;
+				--success: #36b37e;
+				--success-dark: #1b806a;
+				--success-darker: #0a5554;
+				--warning-lighter: #fff5cc;
+				--warning-light: #ffd666;
+				--warning: #ffab00;
+				--warning-dark: #b76e00;
+				--warning-darker: #7a4100;
+				--error-lighter: #fde7e7;
+				--error-light: #fab8b8;
+				--error: #ef2b2a;
+				--error-dark: #d51110;
+				--error-darker: #a60d0c;
+				--font-h1: var(--px-10);
+				--font-h2: var(--px-14);
+				--font-h3: var(--px-13);
+				--font-h4: var(--px-12);
+				--font-h5: var(--px-10);
+				--font-h6: var(--px-9);
+				--font-body-xs: var(--px-6);
+				--font-body-s: var(--px-7);
+				--font-body-m: var(--px-8);
+				--font-body-l: var(--px-9);
+				--font-body-xl: var(--px-10);
+				--radius-xs: var(--px-1);
+				--radius-s: var(--px-2);
+				--radius-m: var(--px-3);
+				--radius-l: var(--px-4);
+				--radius-xl: var(--px-5);
+				--radius-max: 50vw;
+				--radius-full: 50%;
+				}
+
+				.guide_wrap {
+				padding: var(--px-10) 0;
+				}
+
+				.guide_location {
+				position: sticky;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				overflow-x: auto;
+				width: calc(100vw- var(--px-10));
+				height: 50px;
+				padding: 0 var(--px-6);
+				background: var(--white-color);
+				border-bottom: 3px solid var(--black-color);
+				z-index: 10;
+				}
+				.guide_location div {
+				display: flex;
+				align-items: center;
+				width: 1px;
+				height: 100%;
+				}
+				.guide_location div::after {
+				content: "";
+				display: inline-block;
+				height: 10px;
+				width: 1px;
+				background: var(--gray-color-300);
+				}
+				.guide_location a {
+				font-size: 14px;
+				color: #333;
+				font-weight: 700;
+				}
+
+				.section {
+				padding: 32px 0 0;
+				}
+				.section + * {
+				margin-top: 40px;
+				border-top: 4px double var(--gray-color-300);
+				}
+				.section.row .guideComponent:not(.column) {
+				display: flex;
+				gap: var(--px-6);
+				}
+				.section.row .guideComponent:not(.column) .inp_wrap {
+				margin-top: 0;
+				flex: 1;
+				}
+
+				.group_wrap.flex {
+				display: flex;
+				justify-content: space-between;
+				}
+				.group_wrap.flex > div {
+				flex: 1;
+				}
+
+				.tit01 {
+				font-size: 36px;
+				font-weight: 700;
+				}
+
+				.compWrap{margin-top:10px;}
+
+				.compWrap > h2 {
+				display: flex;
+				gap: 8px;
+				align-items: center;
+				font-size: 28px;
+				font-weight: 700;
+				}
+				.compWrap > h2 .guideCopyBtn {
+				width: 30px;
+				height: 30px;
+				border: 1px solid var(--gray-color-300);
+				background-color: var(--gray-color-100);
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1.33301C9.14134 1.33301 9.27696 1.38938 9.37695 1.48926L13.1768 5.29004C13.2766 5.39003 13.333 5.52567 13.333 5.66699V13.4668C13.333 14.1295 12.7956 14.667 12.1328 14.667H3.86621C3.20368 14.6667 2.66699 14.1294 2.66699 13.4668V2.5332C2.66706 1.87067 3.20372 1.33325 3.86621 1.33301H9ZM3.86621 2.40039C3.79283 2.40064 3.73347 2.45978 3.7334 2.5332V13.4668C3.7334 13.5403 3.79278 13.6003 3.86621 13.6006H12.1328C12.2064 13.6006 12.2666 13.5404 12.2666 13.4668V6.2002H9.66699C9.00425 6.2002 8.4668 5.66274 8.4668 5V2.40039H3.86621ZM9.99902 10.667C10.2936 10.667 10.5332 10.9056 10.5332 11.2002C10.5331 11.4947 10.2935 11.7334 9.99902 11.7334H5.33301C5.03852 11.7334 4.79991 11.4947 4.7998 11.2002C4.7998 10.9056 5.03846 10.667 5.33301 10.667H9.99902ZM7.99902 8.40039C8.29358 8.40039 8.5332 8.63904 8.5332 8.93359C8.5331 9.22806 8.29351 9.4668 7.99902 9.4668H5.33301C5.03852 9.4668 4.79991 9.22806 4.7998 8.93359C4.7998 8.63904 5.03846 8.40039 5.33301 8.40039H7.99902ZM9.5332 5C9.5332 5.07364 9.59335 5.13379 9.66699 5.13379H11.5117L9.5332 3.1543V5Z' fill='%23666666'/%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 20px;
+				border-radius: 50%;
+				}
+				.compWrap .guideComponent {
+				margin-top: 20px;
+				}
+				.compWrap + * {
+				margin-top: 40px;
+				}
+
+				.alert_wrap {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 999;
+				background: rgba(0, 0, 0, 0.4);
+				outline: rgba(0, 0, 0, 0.5);
+				}
+				.alert_wrap .alert_pop {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+				}
+				.alert_wrap .alert_pop .alert_cont {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 300px;
+				height: 100px;
+				background: #fff;
+				border-radius: 8px;
+				}
+
+				.btn_area {
+				flex-wrap: wrap;
+				}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				// --------------------------------
+				// 1. 탭 전체 상태 제어 (.menuWrap dt)
+				// --------------------------------
+				const tabHeaders = document.querySelectorAll('.menuWrap dt');
+				tabHeaders.forEach((dt) => {
+					dt.addEventListener('click', () => {
+					tabHeaders.forEach((other) => {
+						other.classList.remove('selected');
+					});
+					dt.classList.add('selected');
+					});
+				});
+
+				// --------------------------------
+				// 2. 여러 개의 .js-menu-table 처리
+				// --------------------------------
+				const tables = document.querySelectorAll('.js-menu-table');
+
+				tables.forEach((table) => {
+					const tbody = table.querySelector('tbody');
+					if (!tbody) return;
+
+					const rows = Array.from(tbody.querySelectorAll('tr'));
+
+					// 이 테이블 안의 select들 (id 대신 class 기반)
+					const depth1Sel   = table.querySelector('.js-depth1');   // D1
+					const depth2Sel   = table.querySelector('.js-depth2');   // D2
+					const ownerSel    = table.querySelector('.js-owner');    // 담당
+					const dDayDateSel = table.querySelector('.js-day-date');  // 완료일
+					const edDateSel   = table.querySelector('.js-ed-date');  // 완료일
+					const mdDateSel   = table.querySelector('.js-md-date');  // 수정일
+
+					// --- thead 안에서 각 class의 th가 몇 번째인지 구해두기 ---
+					const headerThs = Array.from(table.querySelectorAll('thead th'));
+					const d1Idx     = headerThs.findIndex((th) => th.classList.contains('depth1'));
+					const d2Idx     = headerThs.findIndex((th) => th.classList.contains('depth2'));
+					const ownerIdx  = headerThs.findIndex((th) => th.classList.contains('owner'));
+					const dDayIdx   = headerThs.findIndex((th) => th.classList.contains('day-date'));
+					const edIdx     = headerThs.findIndex((th) => th.classList.contains('ed-date'));
+					const mdIdx     = headerThs.findIndex((th) => th.classList.contains('md-date'));
+
+					// -------------------------------
+					// 1. D1 / D2 / 담당 / 완료일 / 수정일 데이터 수집
+					// -------------------------------
+					const menuData     = {};  // { seq1: { name: 'D1', children: { seq2: 'D2' } } }
+					const ownerList    = [];
+					const dDayDateList = [];
+					const edDateList   = [];
+					const mdDateList   = [];
+
+					let depth1Text = '';
+					let depth1Seq  = '';
+					let depth2Text = '';
+					let depth2Seq  = '';
+
+					rows.forEach((tr, index) => {
+					const tds = tr.querySelectorAll('td');
+
+					// D1, D2
+					const d1Cell = d1Idx >= 0 ? tds[d1Idx] : null;
+					const d2Cell = d2Idx >= 0 ? tds[d2Idx] : null;
+
+					if (d1Cell && d1Cell.textContent.trim() !== '') {
+						depth1Text = d1Cell.textContent.trim();
+						depth1Seq  = String(index);
+
+						if (!menuData[depth1Seq]) {
+						menuData[depth1Seq] = { name: depth1Text, children: {} };
+						} else {
+						menuData[depth1Seq].name = depth1Text;
+						}
+					}
+
+					if (d2Cell && d2Cell.textContent.trim() !== '') {
+						depth2Text = d2Cell.textContent.trim();
+						depth2Seq  = String(index);
+					}
+
+					// 담당자
+					if (ownerIdx >= 0 && tds[ownerIdx]) {
+						const ownerSpan = tds[ownerIdx].querySelector('span');
+						const owner = ownerSpan ? ownerSpan.textContent.trim() : '';
+						if (owner) {
+						if (!ownerList.includes(owner)) ownerList.push(owner);
+						tr.dataset.owner = owner;
+						}
+					}
+
+					// 완료예정일
+					if (dDayIdx >= 0 && tds[dDayIdx]) {
+						const dDaySpan = tds[dDayIdx].querySelector('span');
+						const dDayDate = dDaySpan ? dDaySpan.textContent.trim() : '';
+						if (dDayDate) {
+						if (!dDayDateList.includes(dDayDate)) dDayDateList.push(dDayDate);
+						tr.dataset.dDayDate = dDayDate;
+						}
+					}
+					// 완료일
+					if (edIdx >= 0 && tds[edIdx]) {
+						const edSpan = tds[edIdx].querySelector('span');
+						const edDate = edSpan ? edSpan.textContent.trim() : '';
+						if (edDate) {
+						if (!edDateList.includes(edDate)) edDateList.push(edDate);
+						tr.dataset.edDate = edDate;
+						}
+					}
+
+					// 수정일
+					if (mdIdx >= 0 && tds[mdIdx]) {
+						const mdSpans = tds[mdIdx].querySelectorAll('span');
+						const dates = [];
+						mdSpans.forEach((span) => {
+						const mdDate = span.textContent.trim();
+						if (mdDate) {
+							dates.push(mdDate);
+							if (!mdDateList.includes(mdDate)) mdDateList.push(mdDate);
+						}
+						});
+
+						// 쉼표로 연결하여 data 속성에 저장
+						if (dates.length > 0) {
+						tr.dataset.mdDate = dates.join(',');
+						}
+					}
+
+					// depth 관련 data-* 저장
+					tr.dataset.seq1   = depth1Seq;
+					tr.dataset.depth1 = depth1Text;
+					tr.dataset.seq2   = depth2Seq;
+					tr.dataset.depth2 = depth2Text;
+					});
+
+					// D1별 D2 children 구성
+					rows.forEach((tr) => {
+					const seq1 = tr.dataset.seq1;
+					const seq2 = tr.dataset.seq2;
+					const d2   = tr.dataset.depth2;
+
+					if (!seq1 || !menuData[seq1]) return;
+					if (!menuData[seq1].children) {
+						menuData[seq1].children = {};
+					}
+					menuData[seq1].children[seq2] = d2;
+					});
+
+					// 정렬
+					ownerList.sort();
+					dDayDateList.sort();
+					edDateList.sort();
+					mdDateList.sort();
+
+					// -------------------------------
+					// 2. No 컬럼 추가 (colgroup + thead + 각 tr 앞에)
+					// -------------------------------
+					const colgroup = table.querySelector('colgroup');
+					if (colgroup) {
+					const noCol = document.createElement('col');
+					noCol.style.width = '30px';
+					colgroup.insertBefore(noCol, colgroup.firstChild);
+					}
+
+					const theadFirstRow = table.querySelector('thead tr');
+					const hasPageNumber = theadFirstRow && theadFirstRow.querySelector('.pageNumber');
+
+					if (theadFirstRow && !hasPageNumber && !theadFirstRow.querySelector('.js-no-header')) {
+					const th = document.createElement('th');
+					th.className = 'js-no-header';
+					th.setAttribute('scope', 'col');
+					th.style.borderRight = '1px solid #ccc';
+					th.textContent = 'No';
+					theadFirstRow.insertBefore(th, theadFirstRow.firstChild);
+					}
+
+					rows.forEach((tr, index) => {
+					if (!hasPageNumber && !tr.querySelector('.td-no')) {
+						const tdNo = document.createElement('td');
+						tdNo.className = 'td-no';
+						tdNo.style.fontWeight = 'bold';
+						tdNo.style.textAlign = 'center';
+						tdNo.textContent = String(index + 1);
+						tr.insertBefore(tdNo, tr.firstChild);
+					}
+					});
+
+					// -------------------------------
+					// 3. select 옵션 채우기
+					// -------------------------------
+					const buildOptions = (list, withEmpty = true) => {
+					const arr = [];
+					if (withEmpty) arr.push('<option value="">전체</option>');
+					list.forEach((v) => arr.push(`<option value="${v}">${v}</option>`));
+					return arr.join('');
+					};
+
+					// D1
+					if (depth1Sel) {
+					const opts = ['<option value="">전체</option>'];
+					Object.keys(menuData).forEach((key) => {
+						if (menuData[key] && menuData[key].name) {
+						opts.push(`<option value="${key}">${menuData[key].name}</option>`);
+						}
+					});
+					depth1Sel.innerHTML = opts.join('');
+					}
+
+					// 담당
+					if (ownerSel) {
+					ownerSel.innerHTML = buildOptions(ownerList, true);
+					}
+
+					// 완료일
+					if (dDayDateSel) {
+					dDayDateSel.innerHTML = buildOptions(dDayDateList, true);
+					}
+					// 완료일
+					if (edDateSel) {
+					edDateSel.innerHTML = buildOptions(edDateList, true);
+					}
+
+					// 수정일
+					if (mdDateSel) {
+					mdDateSel.innerHTML = buildOptions(mdDateList, true);
+					}
+
+					// -------------------------------
+					// 4. 필터 적용 함수
+					// -------------------------------
+					const applyFilters = () => {
+					const depth1Val = depth1Sel ? depth1Sel.value : '';
+					const depth2Val = depth2Sel ? depth2Sel.value : '';
+					const ownerVal  = ownerSel  ? ownerSel.value  : '';
+					const dDayVal   = dDayDateSel ? dDayDateSel.value : '';
+					const edVal     = edDateSel ? edDateSel.value : '';
+					const mdVal     = mdDateSel ? mdDateSel.value : '';
+
+					rows.forEach((tr) => {
+						let show = true;
+
+						if (depth1Val) {
+						show = show && tr.dataset.seq1 === depth1Val;
+						}
+						if (depth2Val) {
+						show = show && tr.dataset.seq2 === depth2Val;
+						}
+						if (ownerVal) {
+						show = show && tr.dataset.owner === ownerVal;
+						}
+						if (edVal) {
+						show = show && tr.dataset.edDate === edVal;
+						}
+						if (dDayVal) {
+						show = show && tr.dataset.dDayDate === dDayVal;
+						}
+						if (mdVal) {
+						const trMdDates = tr.dataset.mdDate || '';
+						const mdDatesArr = trMdDates.split(',');
+						show = show && mdDatesArr.includes(mdVal);
+						}
+
+						tr.style.display = show ? '' : 'none';
+					});
+					};
+
+					// -------------------------------
+					// 5. 이벤트 바인딩 (D1 / D2 / 담당 / 완료일 / 수정일)
+					// -------------------------------
+					if (depth1Sel && depth2Sel) {
+					depth1Sel.addEventListener('change', () => {
+						const val = depth1Sel.value;
+
+						if (val && menuData[val] && menuData[val].children) {
+						const children = menuData[val].children;
+						const opts = ['<option value="">전체</option>'];
+
+						Object.keys(children).forEach((k) => {
+							const label = children[k];
+							if (label) {
+							opts.push(`<option value="${k}">${label}</option>`);
+							}
+						});
+
+						depth2Sel.innerHTML = opts.join('');
+						} else {
+						depth2Sel.innerHTML = '<option value="">전체</option>';
+						}
+
+						applyFilters();
+					});
+
+					depth2Sel.addEventListener('change', applyFilters);
+					}
+
+					if (ownerSel) {
+					ownerSel.addEventListener('change', applyFilters);
+					}
+					if (dDayDateSel) {
+					dDayDateSel.addEventListener('change', applyFilters);
+					}
+					if (edDateSel) {
+					edDateSel.addEventListener('change', applyFilters);
+					}
+					if (mdDateSel) {
+					mdDateSel.addEventListener('change', applyFilters);
+					}
+					// URL 컬럼 index 찾기
+					const urlTh = table.querySelector('thead th.url');
+					const urlIdx = Array.from(table.querySelectorAll('thead th')).indexOf(urlTh);
+
+					// iframe 생성 후 body에 추가
+					const iframe = document.createElement('iframe');
+					iframe.className = 'previewIframe';
+					iframe.id = 'ifrm';
+					document.body.appendChild(iframe);
+
+					// 각 row의 URL 셀 전체
+					rows.forEach((tr) => {
+					const tds = tr.querySelectorAll('td');
+					const urlCell = tds[urlIdx];
+					if (!urlCell) return;
+
+					const link = urlCell.querySelector('a');
+					if (!link) return;
+
+					// .delete 클래스 포함된 행은 제외
+					if (link.closest('.delete')) return;
+
+					// mouseover
+					link.addEventListener('mouseover', () => {
+						iframe.style.display = 'block';
+						iframe.src = link.getAttribute('href');
+
+						// 내부 iframe 로딩 후 wrap scale 조정
+						setTimeout(() => {
+						try {
+							const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+							const wrap = iframeDoc.querySelector('.wrap');
+							if (wrap) {
+							wrap.style.transform = 'scale(1)';
+							wrap.style.transformOrigin = '0 0';
+							}
+						} catch (e) {
+							console.warn('iframe 내부에 접근 불가:', e);
+						}
+						}, 200);
+					});
+
+					// mouseout
+					link.addEventListener('mouseout', () => {
+						iframe.style.display = 'none';
+					});
+					});
+
+				});
+				});
+
+
+
+
+
+				// UI 가이드 페이지 기능 스크립트: 복사 버튼, 섹션 이동, 탭 추가 등 유틸 도구 모음
+
+				let sectionArry = [];
+
+				// ✅ 복사 버튼 생성 및 클립보드 복사 기능 초기화
+				function guideCopyInit() {
+				$('.guideComponent').each(function () {
+					const $comp = $(this);
+					let btnNum = $comp.children().length;
+
+					if (btnNum === 0) $comp.addClass('empty');
+					if ($comp.hasClass('all')) btnNum = 1;
+
+					for (let i = 0; i < btnNum; ++i) {
+					if ($comp.prev().is('h2') && !$comp.children().eq(i).hasClass('noCopy')) {
+						const btnHTML = '<button type="button" class="guideCopyBtn"><span class="blind"></span></button>';
+						$comp.prev().append(btnHTML);
+
+						const $btn = $comp.prev().find('.guideCopyBtn').last();
+
+						// 복사할 HTML 설정
+						if (!$comp.hasClass('all')) {
+						$btn.data('comp', $comp.children().eq(i)[0].outerHTML);
+						} else {
+						let strHTML = '';
+						$comp.children().each(function () {
+							const $el = $(this);
+							if (!$el.hasClass('noCopy')) {
+							strHTML += !$el.hasClass('hiddenParent') ? $el[0].outerHTML : $el.children()[0].outerHTML;
+							}
+						});
+						$btn.data('comp', strHTML);
+						}
+
+						// 복사 이벤트 바인딩
+						$btn.on('click', function () {
+						copyToClipboard($(this).data('comp'));
+						});
+					}
+					}
+				});
+
+				// ✅ 클립보드 복사
+				function copyToClipboard(val) {
+					const t = document.createElement('textarea');
+					document.body.appendChild(t);
+					t.value = val;
+					t.select();
+					document.execCommand('copy');
+					document.body.removeChild(t);
+					clipboardAlert();
+				}
+
+				// ✅ 클립보드 복사 알림
+				function clipboardAlert(msg = '클립보드에 저장하였습니다', time = 500) {
+					if ($('.alert_wrap').length === 0) {
+					onlyAlertMake(msg);
+					setTimeout(() => {
+						$('.alert_wrap').fadeOut(() => $(this).remove());
+					}, time);
+					}
+				}
+
+				// ✅ 알림 UI 렌더링
+				function onlyAlertMake(msg) {
+					const str = `
+					<div class="alert_wrap">
+						<div class="alert_pop">
+						<div class="alert_cont">
+							<div class="msg">${msg}</div>
+						</div>
+						</div>
+					</div>`;
+					$('body').append(str);
+					$('.alert_wrap').hide().fadeIn(200);
+				}
+				}
+
+				// ✅ 섹션 이동 내비게이션 생성 및 바인딩
+				function sectionMoveInit() {
+				getSeiction();
+				sectionArry.forEach(([id, title], i) => {
+					const txt = title.replace('Guide', '');
+					$('.guide_location').append(`<div></div><a href="#${id}" class="guide_list">${txt}</a>`);
+				});
+
+				// 클릭 시 섹션 이동
+				$('.guide_list').on('click', function (e) {
+					e.preventDefault();
+					const id = $(this).attr('href').replace('#', '');
+					if ($(`#${id}`).length > 0) {
+					let posY = $(`#${id}`).offset().top - 57;
+					if ($(this).index() === 1) posY = 0;
+					$('html, body').animate({ scrollTop: posY }, 300);
+					}
+				});
+				}
+
+				// ✅ 섹션 ID + h1 제목 텍스트 추출
+				function getSeiction() {
+				$('div.section').each(function () {
+					const id = $(this).attr('id');
+					if (id) {
+					sectionArry.push([id, $(this).find('h1').first().text()]);
+					}
+				});
+				}
+
+				// ✅ 컴포넌트와 제목을 감싸는 구조 정리
+				function wrapSection() {
+				$('.guideComponent').each(function () {
+					$(this).after('<div class="compWrap"></div>');
+				});
+				$('.compWrap').each(function () {
+					const $wrap = $(this);
+					if ($wrap.prev().is('.guideComponent')) $wrap.prepend($wrap.prev());
+					if ($wrap.prev().is('.tit02')) $wrap.prepend($wrap.prev());
+				});
+				$('html').addClass('ready');
+				}
+
+				// ✅ 기본 실행
+				$(document).ready(function () {
+				guideCopyInit();
+				setTimeout(() => {
+					sectionMoveInit();
+					wrapSection();
+				}, 300);
+				});
+
+				// ✅ 샘플 alert 생성
+				function alertExample(txt) {
+				const html = `
+					<div class="popWrap" id="testAlert">
+					<div class="popContain">
+						<div class="popup alert">
+						<div class="popBody">${String(txt)}</div>
+						<div class="btn_wrap">
+							<button type="button" class="btn_primary" onclick="lp.close();"><span>확인</span></button>
+						</div>
+						</div>
+					</div>
+					</div>`;
+				$('body').append(html);
+				lp.open('#testAlert');
+				}
+
+				// ✅ 탭 항목 추가 예제
+				let myTestNum = 3;
+				function addTabList(target) {
+				const $li = $(target).closest('li');
+				$li.before(`<li><a href="#">${myTestNum}차</a></li>`);
+				$li.closest('.tabWrap')
+					.find('.tabContents')
+					.append(`<div class="tab_cont_list tabPanel">${myTestNum * 111111}</div>`);
+				myTestNum++;
+				if (myTestNum > 5) $('.tabWrap').removeClass('addTabWrap');
+				}
+
+		</script>
+	</head>
+	<body>
+		<div class="guide_wrap">
+			<div class="guide_location">
+			</div>
+			<div style="padding: 20px;">
+				<strong>NOTE</strong>
+				<ul style="margin-top: 10px;">
+					<li>상위에 .dcNew 포함하는걸 기본으로 합니다.</li>
+				</ul>
+			</div>
+			<div class="section row" id="formGuide">
+				<h1 class="tit01">가입제안</h1>
+				<h2 class="tit02">step-dropdown (헤더위치 고정이므로 가이드상 위치 무시)</h2>
+				<div class="guideComponent">
+					<div>
+						<input type="checkbox" id="stepToggle">
+						<div class="d-head" style="width: 500px;">
+							<h1>가입제안</h1>
+							<button class="lbtn btn-back">이전페이지 이동</button>
+							<label for="stepToggle" class="sbtn-bdr-1 bdr-st06 btn-step-toggle"><span>Step</span></label>
+							<button class="rbtn btn-view-side">전체메뉴</button>
+						</div>
+						<!-- 단계 이동 드롭다운 -->
+						<div class="step-dropdown">
+							<label for="stepToggle" class="step-dropdown-bg"></label>
+							<div class="step-dropdown-panel">
+								<div class="step-dropdown-inner">
+									<ul class="step-dropdown-list">
+										<li class="complete border-n mg-n bg_fff" style="padding: 1.5rem 2rem;">
+											<!-- <span class="step-num">제안가입단계</span> -->
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-title">가입제안단계</span>
+													<span class="step-sub close_btn">
+														<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+															<line x1="18" y1="6" x2="6" y2="18"></line>
+															<line x1="6" y1="6" x2="18" y2="18"></line>
+														</svg>
+													</span>
+												</div>
+												<!-- <p class="step-detail">계약자/피보험자 정보</p> -->
+											</div>
+										</li>
+										<!--01고객센터_01진입-->				
+										<li class="current mat-n">
+											<span class="step-num">1</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">고객센터</span>
+												</div>
+											</div>
+										</li>
+										<!--01고객센터_02계피정보-->
+										<li class="complete mat-n">
+											<span class="step-num">1</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">고객센터</span>
+												</div>
+											</div>
+											<ul class="step-info-detailList">
+												<li>
+													<dl>
+														<dt>계약자</dt>
+														<dd>
+															<span class="step-info-name">홍엄마엄마엄마엄마엄마엄마엄마</span>
+															<span>(45세 / 여)</span>
+														</dd>
+													</dl>
+												</li>
+												<li>
+													<dl>
+														<dt>피보험자</dt>
+														<dd>
+															<span class="step-info-name">김아들</span>
+															<span>(20세 / 남)</span>
+														</dd>
+													</dl>
+												</li>
+											</ul>
+										</li>
+										
+										<li>
+											<span class="step-num">2</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">가입제안</span>
+													<!-- <span class="step-sub">상품 설계</span> -->
+												</div>
+											</div>
+										</li>
+										<li class="complete">
+											<span class="step-num">2</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">가입제안</span>
+													<span class="step-sub link"><a href="#">상품선택</a></span>
+												</div>
+											</div>
+											<dl class="step-info-greenbox">
+												<dt>
+													당당한인생종신보험(무)2601 (해약환급금 일부지급형)
+												</dt>
+												<dd>
+													<dl>
+														<dt>초회보험료</dt>
+														<dd>
+															<strong>53,000</strong>원
+														</dd>
+													</dl>
+												</dd>
+											</dl>
+										</li>
+										<li class="current">
+											<span class="step-num">3</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">알릴의무고지</span>
+													<span class="step-sub temp">임시저장</span>
+												</div>
+											</div>
+										</li>
+										<li class="complete">
+											<span class="step-num">4</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">선심사결과</span>
+													<span class="step-sub">표준인수</span>
+												</div>
+											</div>
+										</li>
+										<li style="margin-bottom: 2rem;border-radius: 1rem !important;border-bottom: .1rem solid #f0f0f0 !important;">
+											<span class="step-num">5</span>
+											<div class="step-info">
+												<div class="step-info-top">
+													<span class="step-name">청약입력</span>
+													<!-- <span class="step-sub">청약완료</span> -->
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //단계 이동 드롭다운 -->
+					</div>
+					<script>
+						$(function(){
+							// 단계 아이템 클릭 이벤트
+							$('.step-dropdown-list li').on('click', function(){
+								var idx = $(this).index();
+								var name = $(this).find('.step-name').text();
+								console.log('단계 클릭:', (idx + 1), name);
+								$('#stepToggle').prop('checked', false);
+								// TODO: 실제 단계 이동 로직 연결
+							});
+						});
+					</script>
+				</div>
+				<h2 class="tit02">chipfilter</h2>
+				<div class="guideComponent dcNew">
+					<div class="d-lite_chipfilter type02">
+						<div class="chipitem">
+							<input type="checkbox" id="type03item01" class="chipinput" name="filter04" />
+							<label for="type03item01" class="chiplabel">사망</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item02" class="chipinput" name="filter04" />
+							<label for="type03item02" class="chiplabel">암</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item03" class="chipinput" name="filter04" />
+							<label for="type03item03" class="chiplabel">뇌심</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item04" class="chipinput" name="filter04" />
+							<label for="type03item04" class="chiplabel">입원수술</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="type03item05" class="chipinput" name="filter04" />
+							<label for="type03item05" class="chiplabel">치매</label>
+						</div>
+					</div>
+				</div>
+				<h2 class="tit02">GA-Advance-PaymentList</h2>
+				<div class="guideComponent dcNew">
+					<div class="GA-Advance-PaymentList">
+						<div class="d-lite_chipfilter">
+							<div class="GA-Advance-Payment">
+								<div class="chipitem">
+									<input type="radio" id="item01" class="chipinput" name="filter00" checked>
+									<label for="item01" class="chiplabel quick">퀵</label>
+								</div>
+								<div class="chipitem">
+									<input type="radio" id="item02" class="chipinput" name="filter00">
+									<label for="item02" class="chiplabel">추천플랜</label>
+								</div>
+								<div class="chipitem">
+									<input type="radio" id="item03" class="chipinput" name="filter00">
+									<label for="item03" class="chiplabel">마이플랜</label>
+								</div>
+								<div class="chipitem">
+									<input type="radio" id="item04" class="chipinput" name="filter00">
+									<label for="item04" class="chiplabel">전체</label>
+								</div>
+								<div class="chipitem">
+									<input type="radio" id="item05" class="chipinput" name="filter00">
+									<label for="item05" class="chiplabel">즐겨찾기</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tit-area GA-Advance-Payment pat_5">
+						<div class="tab_case">
+							<div class="GA-Advance-PaymentList">
+								<div class="d-lite_chipfilter type02">
+									<div class="chipitem">
+										<input type="checkbox" id="item01" class="chipinput" name="filter01">
+										<label for="item01" class="chiplabel">전체</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="item02" class="chipinput" name="filter01">
+										<label for="item02" class="chiplabel">검사비</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="item03" class="chipinput" name="filter01">
+										<label for="item03" class="chiplabel">치료비</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="item04" class="chipinput" name="filter01">
+										<label for="item04" class="chiplabel">진단비</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="item05" class="chipinput" name="filter01">
+										<label for="item05" class="chiplabel">시설급여</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="item06" class="chipinput" name="filter01">
+										<label for="item06" class="chiplabel">재가급여</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="item07" class="chipinput" name="filter01">
+										<label for="item07" class="chiplabel">필터명</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="tit02">GA-Pr-Open-Btn</h2>
+				<div class="guideComponent dcNew">
+					<div class="tit-area banner-GA">
+						<div class="GA-Pr-Type">
+							<span class="" for="sel10">마음든든플러스유니버셜종신보험1종(기본형)</span>
+						</div>
+						<div class="GA-Pr-Open-Btn">
+							<spna class="GA_Pr-Ico"></spna>
+						</div>				
+					</div>
+				</div>
+
+				<h2 class="tit02">플랜선택</h2>
+				<div class="guideComponent dcNew">
+					<ul>
+						<li>
+							<label class="GA-h3">플랜선택</label>
+							<a href="#" class="coupon Plan-bottom">
+								<div class="chk-list chk-list-GA">
+									<ul>
+										<li class="GA-Pr-Lay">
+											<label class="GA-text" for="sel10">50세 남 순환계50세 남 순환계</label><span class="Up_btn"></span>
+										</li>
+									</ul>
+								</div>
+								<!-- <div>
+									<select id="sel1" class="select flex">
+										<option>선택하세요</option>
+									</select>
+								</div> -->
+							</a>
+						</li>
+					</ul>
+					<!-- 플랜선택 바텀시트 -->
+					<div class="bottom-sheet" id="popup">
+						<div class="GA-header mat_40">
+							<ul class="tab col-4 mat_15">
+								<li class="on"><button type="button" onclick="location.href='#'">전체</button></li>
+								<li><button type="button" onclick="location.href='#'">추천플랜</button></li>
+								<li><button type="button" onclick="location.href='#'">지점플랜</button></li>
+								<li><button type="button" onclick="location.href='#'">마이플랜</button></li>
+							</ul>
+							<div class="tit-area pal_n par_n pab_5">
+								<div class="d-lite_chipfilter">
+									<div class="chipitem">
+										<input type="checkbox" id="type02item01" class="chipinput" name="filter03">
+										<label for="type02item01" class="chiplabel">전체</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="type02item02" class="chipinput" name="filter03">
+										<label for="type02item02" class="chiplabel">검사비</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="type02item03" class="chipinput" name="filter03">
+										<label for="type02item03" class="chiplabel">치료비</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="type02item04" class="chipinput" name="filter03">
+										<label for="type02item04" class="chiplabel">진단비</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="type02item05" class="chipinput" name="filter03">
+										<label for="type02item05" class="chiplabel">시설급여</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="type02item06" class="chipinput" name="filter03">
+										<label for="type02item06" class="chiplabel">재가급여</label>
+									</div>
+									<div class="chipitem">
+										<input type="checkbox" id="type02item07" class="chipinput" name="filter03">
+										<label for="type02item07" class="chiplabel">필터명</label>
+									</div>
+								</div>
+							</div>			
+						</div>
+						<div class="GA-cont">
+							<div class="chk-list chk-list-GA GA-on">
+								<ul>
+									<li class="GA-Pr-Lay mab-8">
+										<span class="GA-Pur-Lbtn">추천</span><label class="fs-28 bold fc_000" for="sel10">iM Plus 세븐UP 골드종신보험</label>
+									</li>
+								</ul>
+								<div class="Plan-line-text">
+									<span class="fs-small fc_000">예상보험료</span>
+									<span class="GA-h3 bold fc-orange">50,000원</span>
+								</div>
+							</div>
+							<div class="chk-list chk-list-GA">
+								<ul>
+									<li class="GA-Pr-Lay mab-8">
+										<span class="GA-green-Lbtn">마이</span><label class="pro_font" for="sel10">iM Plus 세븐UP 골드종신보험최대글자최대글자최대글자글자넘침</label>
+									</li>
+								</ul>
+								<div class="Plan-line-text">
+									<span class="fs-small fc_000">예상보험료</span>
+									<span class="GA-h3 bold fc-orange">50,000원</span>
+								</div>
+							</div>
+							<div class="chk-list chk-list-GA">
+								<ul>
+									<li class="GA-Pr-Lay mab-8">
+										<span class="GA-lovry-Lbtn">지점</span><label class="pro_font" for="sel10">iM Plus 세븐UP 골드종신보험</label>
+									</li>
+									<div class="Plan-line-text">
+										<span class="fs-small fc_000">예상보험료</span>
+										<span class="GA-h3 bold fc-orange">50,000원</span>
+									</div>
+								</ul>
+							</div>
+							<div class="chk-list chk-list-GA">
+								<ul>
+									<li class="GA-Pr-Lay mab-8">
+										<span class="GA-green-Lbtn">마이</span><label class="pro_font" for="sel10">iM Plus 세븐UP 골드종신보험</label>
+									</li>
+									<div class="Plan-line-text">
+										<span class="fs-small fc_000">예상보험료</span>
+										<span class="GA-h3 bold fc-orange">50,000원</span>
+									</div>
+								</ul>
+							</div>
+							<div class="chk-list chk-list-GA">
+								<ul>
+									<li class="GA-Pr-Lay mab-8">
+										<span class="GA-green-Lbtn">마이</span><label class="pro_font" for="sel10">iM Plus 세븐UP 골드종신보험</label>
+									</li>
+									<div class="Plan-line-text">
+										<span class="fs-small fc_000">예상보험료</span>
+										<span class="GA-h3 bold fc-orange">50,000원</span>
+									</div>
+								</ul>
+							</div>
+							<div class="chk-list chk-list-GA">
+								<ul>
+									<li class="GA-Pr-Lay mab-8">
+										<span class="GA-green-Lbtn">마이</span><label class="pro_font" for="sel10">iM Plus 세븐UP 골드종신보험</label>
+									</li>
+									<div class="Plan-line-text">
+										<span class="fs-small fc_000">예상보험료</span>
+										<span class="GA-h3 bold fc-orange">50,000원</span>
+									</div>
+								</ul>
+							</div>
+						</div>
+						<div class="GA-dpop-head close">
+							<div class="dpop-head">
+								<span class="GA-h2">플랜선택</span>
+							</div>	
+							<button class="btn-pop-close">닫기</button>
+						</div>
+						<!-- footer 고정영역 -->
+						<footer>
+							<div class="d-footer">
+								<button class="lbtn btn-st04">선택</button>
+							</div>
+						</footer>
+						<!-- //footer 고정영역 -->
+					</div>
+					<div class="dimmed"></div>
+					<!--// 바텀시트 -->	
+					<script>
+						$(document).ready(function(){
+						// 쿠폰 바텀시트
+							$(".coupon").click(function(){
+								$(".bottom-sheet, .dimmed").addClass('open')
+							});
+							$(".bottom-sheet .close, .dimmed").click(function(){
+								$("#popup, .dimmed").removeClass('open')
+							});
+						});
+					</script>
+				</div>
+
+				<h2 class="tit02">툴팁</h2>
+				<div class="guideComponent dcNew">
+					 <article class="pro-covenant mat_20 mab-10" style="width: 390px;">
+						<div class="header">
+							<ul class="link-list-st01 dform square02 pdt-n">
+								<li class="bg-st02 pd-n border-n">
+									<div class="tit-h2 pd-n">
+										<input id="chk1" type="checkbox"/>
+										<label for="chk1">
+											<div class="tooltip-wrap">
+												<span class="Advance-stit">평생소득보장변액연금보험(무)1801_연금계약1</span>
+												<button type="button" class="tooltip-btn" aria-label="도움말 보기" aria-expanded="false"></button>
+												<!-- 레이어팝업 영역 -->
+												<div class="dpop-layer2 tooltip-cont">
+													<div class="dpop-container">
+														<div class="info-box ">
+															<h2 class="info-tit">'투약'이란</h2>
+															<div class="info-con">의사가 환자에게 약을 처방하는 행위를 말하는 것으로 실제로 약을 구입하지 않았어도 기재해야 합니다 </div>
+														</div>
+														<button type="button" class="btn-pop-close">닫기</button>
+													</div>
+												</div>
+												<!--// 레이어팝업 영역 -->
+											</div>
+										</label>
+										<span class="GA_State_Blue"></span>
+									</div>
+								</li>
+							</ul>   
+						</div>
+						<ul class="list border-bn">
+							<li>
+								<label for="val1_1">가입금액(단위:만원)</label>
+								<span>
+									<input type="text" class="inp-wrap ta-r" id="val1_1" value="5,000">
+								</span>
+							</li>
+							<li>
+								<label for="period1_1">보험기간</label>
+								<span>
+									<select class="select" id="period1_1">
+										<option>99년</option>
+									</select>
+								</span>
+							</li>
+							<li>
+								<label for="period1_2">납입기간</label>
+								<span>
+									<select class="select" id="period1_2">
+										<option>20년</option>
+									</select>
+								</span>
+							</li>
+						</ul>
+						<div class="sum-info pdt-n">
+							<span class="fs-13">가입금액(증감액100만원)<em class="fs-12"> 최소 2,000만원 ~ 최대 12,500만원</em></span>
+						</div>
+						<div class="premium">
+							<label>보험료</label>
+							<div>
+								<p class="fs-point02">99,999,999,000원</p>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<h2 class="tit02">d-lite_boxList</h2>
+				<div class="guideComponent dcNew cont1">
+					<ul class="d-lite_boxList mat_15">
+						<li class="green">
+							<div class="box-cont">
+								<div class="title-box">
+									피보험자
+								</div>
+								<div class="info-cont">
+									<ul class="data-list-st01 col-02">
+										<li>
+											<span class="stit">이름</span>
+											<span class="scon">김아들</span>
+										</li>
+										<li>
+											<span class="stit">연락처</span>
+											<span class="scon">010-1234-2222</span>
+										</li>
+										<li class="w100p">
+											<span class="stit">주민등록번호</span>
+											<span class="scon">095648-2******</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="green">
+							<input type="radio" id="ra1" name="ra">
+							<label for="ra1">
+								<div class="box-cont">
+									<div class="title-box">
+										피보험자
+									</div>
+									<div class="info-cont">
+										<ul class="data-list-st01 col-02">
+											<li>
+												<span class="stit">이름</span>
+												<span class="scon">김아들</span>
+											</li>
+											<li>
+												<span class="stit">연락처</span>
+												<span class="scon">010-1234-2222</span>
+											</li>
+											<li class="w100p">
+												<span class="stit">주민등록번호</span>
+												<span class="scon">095648-2******</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li>
+							<input type="radio" id="ra2" name="ra">
+							<label for="ra2">
+								<div class="box-cont">
+									<div class="title-box">
+										친권자
+									</div>
+									<div class="info-cont">
+										<ul class="data-list-st01 col-02">
+											<li>
+												<span class="stit">이름</span>
+												<span class="scon">김아들</span>
+											</li>
+											<li>
+												<span class="stit">연락처</span>
+												<span class="scon">010-1234-2222</span>
+											</li>
+											<li class="w100p">
+												<span class="stit">주민등록번호</span>
+												<span class="scon">095648-2******</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</label>
+						</li>
+						<li>
+							<input type="radio" id="ra3" name="ra">
+							<label for="ra3">
+								<div class="box-cont">
+									<div class="title-box">
+										친권자2
+									</div>
+									<div class="info-cont">
+										<ul class="data-list-st01 col-02">
+											<li>
+												<span class="stit">이름</span>
+												<span class="scon">김아들</span>
+											</li>
+											<li>
+												<span class="stit">연락처</span>
+												<span class="scon">010-1234-2222</span>
+											</li>
+											<li class="w100p">
+												<span class="stit">주민등록번호</span>
+												<span class="scon">095648-2******</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<h2 class="tit02">pro-covenant</h2>
+				<div class="guideComponent dcNew">
+					<div class="cont1">
+						<article class="pro-covenant mat-n">
+							<div class="header pal_15 par_15" style="min-height:0rem">
+								<ul class="link-list-st01 dform square02 pdt-n w100p">
+									<li class="bg-st02 pd-n border-n">
+										<div class="tit-h2 pd-n webBox-align_s">
+											<input id="chk1" type="checkbox" checked="">
+											<label for="chk1">
+												<span class="Advance-stit par_n">당당한인생종신보험 무배당 2601(해약환급금 일부지급형)</span>
+											</label>
+										</div>
+									</li>
+								</ul>   
+							</div>
+							<ul class="list-limit border-bn">
+								<li class="maL-n">
+									<em class="label-title">설계일자</em>
+									<p class="label-vale fc_000 fw_500">2026.05.10</p>
+								</li>
+								<li>
+									<span class="separator">|</span>
+								</li>
+								<li class="maL-n">
+									<em class="label-title">선심사결과</em>
+									<p class="label-vale fc-3868e2 fw_500">인수</p>
+								</li>
+							</ul>
+						</article>
+						<article class="pro-covenant">
+							<div class="header">
+								<ul class="link-list-st01 dform square02 pdt-n w100p">
+									<li class="bg-st02 pd-n border-n">
+										<strong class="preResult-tit blue">표준인수</strong>
+										<div class="tit-h2 pd-n w100p pat_5">
+											<span class="Advance-stit fw_500">마음든든플러스플러스플러스유니버셜종신보험 1종 (기본형)</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<ul class="list-limit data-list-st01 col-02">
+								<li>
+									<span class="stit">가입금액</span>
+									<span class="scon">2,000 만원</span>
+								</li>
+								<li>
+									<span class="stit">보험기간</span>
+									<span class="scon">99 년</span>
+								</li>
+								<li>
+									<span class="stit">납입기간</span>
+									<span class="scon">7 년</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">274,800 원</span>
+								</li>
+								<li class="full border-t pat_15">
+									상세 결과 내용 노출
+								</li>
+							</ul>
+						</article>
+						<article class="pro-covenant">
+							<div class="headerpat_5">	
+								<ul class="titBox link-list-st01 w100p pat_12 pab_12">
+									<li class="bg-st02 border-n pal_20 par_20">
+										<div class="flexJcSb">
+											<div class="tit-h2 pd-n square02 dform w70p webBox-align_s">
+												<input id="chk1" type="checkbox" checked="">
+												<label for="chk1">
+													<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험 1종(기본형)플랜명 노출</span>
+												</label>
+											</div>
+											<div class="pro-optionMenu">
+												<div>
+													<div class="starMarkBox">
+														<input type="checkbox" id="starChk" class="starMark" name="starMark" checked="">
+														<label for="starChk">QUICK목록에 표시</label>
+													</div>
+												</div>
+												<div>
+													<button type="button" class="moreLink">상세보기</button>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="bg-st01 pad-20">
+								<ul class="data-list-st01 col-mix">
+									<li class="full">
+										<span class="stit">상품명</span>
+										<span class="scon align-l">마음든든플러스유니버셜종신보험2026 1종(기본형)상품명</span>
+									</li>
+									<li class="par_20 border-r">
+										<span class="stit">가입금액</span>
+										<span class="scon">2,000 만원</span>
+									</li>
+									<li class="pal_20">
+										<span class="stit">예상 보험료</span>
+										<span class="scon">374,800 원</span>
+									</li>
+									<li class="full">
+										<span class="stit">등록일</span>
+										<span class="scon">2026.04.27</span>
+									</li>
+								</ul>
+							</div>
+						</article>
+						<article class="pro-covenant">
+							<div class="toggle">
+								<div class="header toggle-header pat_5 on">	
+									<ul class="titBox link-list-st01 pdt-n">
+										<li class="bg-st02 pd-n border-n">
+											<div class="flexJcSb">
+												<div>
+													<span class="status-04">추가</span>
+													<span class="status-14">답변대기</span>
+												</div>
+												<button class="trash_btn">삭제</button>
+											</div>
+											<div class="tit-h2 pd-n mat_10">
+												<span class="Advance-stit par_n">[M560] 손목 및 손부위의 골절</span>
+											</div>
+										</li>
+									</ul>
+									<button type="button" class="btn-toggle">더보기</button>
+								</div>
+								<div class="toggle-con" style="display: block;">
+									<ul class="write-st02 bg-st01 pad-20">
+										<li>
+											<label for="la03-01">완치여부</label>
+											<div class="checkBox-st01">
+												<input type="radio" id="la03-01-01" name="la03-01"><label for="la03-01-01">예</label>
+												<input type="radio" id="la03-01-02" name="la03-01"><label for="la03-01-02">아니오</label>
+											</div>
+										</li>
+										<li>
+											<label for="la03-02">재발유무</label>
+											<div class="checkBox-st01">
+												<input type="radio" id="la03-02-01" name="la03-02"><label for="la03-02-01">있다</label>
+												<input type="radio" id="la03-02-02" name="la03-02"><label for="la03-02-02">없다</label>
+											</div>
+										</li>
+										<li>
+											<label for="la03-03">진단여부</label>
+											<div>
+												<select id="la03-03" class="select" disabled="">
+													<option>질병확정진단</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label for="la03-04">치료일자</label>
+											<div>
+												<input type="tel" class="inp-wrap" id="la03-04" value="2020.01.05" data-name="picker">
+												<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+											</div>
+										</li>
+										<li>
+											<label for="la03-07">치료횟수</label>
+											<div class="d-lite_flex flexAiCt">
+												<input type="tel" class="inp-wrap align-r" id="la03-07" value="1" data-name="picker"><span class="maL-5 fc_000">회</span>
+											</div>
+										</li>
+										<li>
+											<label for="la03-08">최종사고일자</label>
+											<div>
+												<input type="tel" class="inp-wrap" id="la03-08" value="2020.01.05" data-name="picker">
+												<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+											</div>
+										</li>
+										<li class="d-lite_flex flexAiCt">
+											<label for="la03-05" class="w25p">경과기간(월)</label>
+											<input type="tel" id="la03-05" class="inp-wrap w50" style="min-width: 5rem;" value="5"><span class="maL-5 fc_000">개월</span>
+											<label for="la03-06" class="w15p maL-10">청구건수</label>
+											<input type="tel" id="la03-06" class="inp-wrap w50 maL-5" style="min-width: 5rem;" value="5"><span class="maL-5 fc_000">건</span>
+										</li>
+									</ul>
+									<div class="bg-st01 pad-20 border-t">
+										<label for="la04-01" class="fs-28">질병부위가 어느쪽입니까?</label>
+										<div class="mat_20 add-select-list">
+											<ul class="dform square02">
+												<li><input type="radio" id="la04-01_01" name="la04-01"><label for="la04-01_01">왼쪽</label></li>
+												<li><input type="radio" id="la04-01_02" name="la04-01"><label for="la04-01_02">오른쪽</label></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="pro-covenant" style="margin-top:1px;">
+							<div class="header pal_15 par_15" style="min-height:0rem">
+								<ul class="link-list-st01 dform square02 pdt-n">
+									<li class="bg-st02 pd-n border-n">
+										<div class="tit-h2 pd-n">
+											<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험 1종(기본형)</span>
+										</div>
+									</li>
+								</ul>   
+							</div>
+							<ul class="list-limit data-list-st01 col-02">
+								<li>
+									<span class="stit">보험기간</span>
+									<span class="scon">99 년</span>
+								</li>
+								<li>
+									<span class="stit">납입기간</span>
+									<span class="scon">7 년</span>
+								</li>
+								<li>
+									<span class="stit">가능금액</span>
+									<span class="scon">2,000 년</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">50,000 원</span>
+								</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+
+				<h2 class="tit02">pro-covenant type02</h2>
+				<div class="guideComponent dcNew">
+					<div class="cont1">
+						<!-- 일반 토글 타입 -->
+						<article class="pro-covenant type02 mat-n">
+							<div class="toggle mat-n">
+								<div class="header toggle-header on"><!-- 펼침상태 class on -->
+									<ul class="titBox link-list-st01 pat_12 pab_12">
+										<li class="bg-st02 pal_20 par_n border-n">
+											<div class="tit-h2 pd-n">
+												<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험(무)2601(보증지용부과형)_1종(기본형)</span>
+											</div>
+										</li>
+									</ul>
+									<button type="button" class="btn-toggle">더보기</button>
+									<ul class="list border-bn">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>가입금액</dt>
+												<dd>
+													<span>6,000만원</span><span class="fc-3868e2">(+1,000만원)</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>보험료</dt>
+												<dd>
+													<span>239,600원</span><span class="fc-3868e2">(+1,000원)</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<div class="toggle-con" style="display: block;"><!-- 별도의 class가 아니라 style block/none 으로 제어합니다. -->
+									<ul class="list border-bn border-t">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>변경 전 가입금액</dt>
+												<dd>
+													<span>5,000만원</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>변경 전 보험료</dt>
+												<dd>
+													<span>239,600원</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+						<!-- // 일반 토글 타입 -->
+						<article class="pro-covenant type02 mat-n">
+							<div class="toggle mat-n">
+								<div class="header toggle-header">	
+									<ul class="titBox link-list-st01 pat_12 pab_12">
+										<li class="bg-st02 pal_20 par_n border-n">
+											<div class="tit-h2 pd-n">
+												<span class="Advance-stit par_n">고도장해(80%이상)보장특약(무)</span>
+											</div>
+										</li>
+									</ul>
+									<button type="button" class="btn-toggle">더보기</button>
+									<ul class="list border-bn">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>가입금액</dt>
+												<dd>
+													<span>6,000만원</span><span class="fc-f2303c">(+1,000만원)</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>보험료</dt>
+												<dd>
+													<span>239,600원</span><span class="fc-f2303c">(+1,000원)</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<div class="toggle-con" style="display: none;">
+									<ul class="list border-bn border-t">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>변경 전 가입금액</dt>
+												<dd>
+													<span>5,000만원</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>변경 전 보험료</dt>
+												<dd>
+													<span>239,600원</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+						<!-- 제외버튼추가 토글액션 삭제 타입 -->
+						<article class="pro-covenant type02 mat-n">
+							<div class="toggle mat-n">
+								<div class="header toggle-header on no-act"><!-- 토글 액션 삭제를 위한 class no-act, 제외버튼 삽입을 위한 class on -->
+									<ul class="titBox link-list-st01 pat_12 pab_12">
+										<li class="bg-st02 pal_20 par_n border-n">
+											<div class="tit-h2 pd-n">
+												<span class="Advance-stit par_n">암진단특약(무)</span>
+											</div>
+										</li>
+									</ul>
+									<!-- <button type="button" class="btn-toggle">더보기</button> -->
+									<div class="par_20">
+										<button class="status-14">제외</button>
+									</div>
+									<ul class="list border-bn">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>가입금액</dt>
+												<dd>
+													<span>6,000만원</span><span class="fc-f2303c">(+1,000만원)</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>보험료</dt>
+												<dd>
+													<span>239,600원</span><span class="fc-f2303c">(+1,000원)</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<div class="toggle-con" style="display: block;">
+									<ul class="list border-bn border-t">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>변경 전 가입금액</dt>
+												<dd>
+													<span>5,000만원</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>변경 전 보험료</dt>
+												<dd>
+													<span>239,600원</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+						<!-- //제외버튼추가 토글액션 삭제 타입 -->
+						<!-- 모든 버튼 제외, 토글 액션 삭제 타입 -->
+						<article class="pro-covenant type02 mat-n">
+							<div class="toggle mat-n">
+								<div class="header toggle-header no-act"><!-- 토글 액션 삭제를 위한 class no-act -->
+									<ul class="titBox link-list-st01 pat_12 pab_12">
+										<li class="bg-st02 pal_20 par_n border-n">
+											<div class="tit-h2 pd-n">
+												<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험(무)2601(보증지용부과형)_1종(기본형)</span>
+											</div>
+										</li>
+									</ul>
+									<!-- <button type="button" class="btn-toggle">더보기</button> -->
+									<ul class="list border-bn">
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>가입금액</dt>
+												<dd>
+													<span>6,000만원</span>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="pro-covenant_dlList">
+												<dt>보험료</dt>
+												<dd>
+													<span>239,600원</span>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<div class="toggle-con" style="display: none;"><!-- 내용 삭제 -->
+								</div>
+							</div>
+						</article>
+						<!-- //모든 버튼 제외, 토글 액션 삭제 타입 -->
+
+						<ul class="bul-list-st02 no-gap mab-20">
+							<li>대안설계는 심사결과 인수가 불가하지만, 설계조항을 통해 인수가능한 설계로 변경하여 제공하는 서비스입니다.</li>
+							<li>변경 내용을 적용하시려면 ‘대안설계 진행'버튼을 클릭합니다. (변경된 설계를 기반으로 신규 가입제안이 진행됩니다.)</li>
+						</ul>
+					</div>
+				</div>
+
+				<h2 class="tit02">drag-drop_list</h2>
+				<div class="guideComponent dcNew cont1">
+					<ul class="bx-data-list drag-drop_list">
+						<li class="drag_item">
+							<div class="item">
+								<div class="bx-top flexJcSb flexAiCt">
+									<div class="w90p">
+										<strong class="fc_000">50세 남 순환계 플랜</strong>
+									</div>
+									<button class="drag_btn">순서변경</button>
+								</div>
+								<div class="bx-info">
+									<ul class="data-list-st01 col-mix">
+										<li class="full">
+											<span class="stit">상품명</span>
+											<span class="scon align-l">마음든든플러스유니버셜종신보험2026 1종(기본형)상품명</span>
+										</li>
+										<li class="par_20 border-r">
+											<span class="stit">가입금액</span>
+											<span class="scon">2,000 만원</span>
+										</li>
+										<li class="pal_20">
+											<span class="stit">예상 보험료</span>
+											<span class="scon">374,800 원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="drag_item">
+							<div class="item">
+								<div class="bx-top flexJcSb flexAiCt">
+									<div class="w90p">
+										<strong class="fc_000">50세 남 순환계 플랜 마음든든플러스유니버설종신기본형</strong>
+									</div>
+									<button class="drag_btn">순서변경</button>
+								</div>
+								<div class="bx-info">
+									<ul class="data-list-st01 col-mix">
+										<li class="full">
+											<span class="stit">상품명</span>
+											<span class="scon align-l">마음든든플러스유니버셜종신보험2026 1종(기본형)상품명</span>
+										</li>
+										<li class="par_20 border-r">
+											<span class="stit">가입금액</span>
+											<span class="scon">2,000 만원</span>
+										</li>
+										<li class="pal_20">
+											<span class="stit">예상 보험료</span>
+											<span class="scon">374,800 원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="drag_item">
+							<div class="item">
+								<div class="bx-top flexJcSb flexAiCt">
+									<div class="w90p">
+										<strong class="fc_000">50세 남 순환계 플랜</strong>
+									</div>
+									<button class="drag_btn">순서변경</button>
+								</div>
+								<div class="bx-info">
+									<ul class="data-list-st01 col-mix">
+										<li class="full">
+											<span class="stit">상품명</span>
+											<span class="scon align-l">마음든든플러스유니버셜종신보험2026 1종(기본형)상품명</span>
+										</li>
+										<li class="par_20 border-r">
+											<span class="stit">가입금액</span>
+											<span class="scon">2,000 만원</span>
+										</li>
+										<li class="pal_20">
+											<span class="stit">예상 보험료</span>
+											<span class="scon">374,800 원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>지문인증 등록/재등록</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>지문인증 등록/재등록</h1>
+			<button class="lbtn btn-back">이전</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="agree-chk-list">
+				<div class="consent-info">
+					<span class="stit">지문등록을 위해 본인인증이 필요합니다.</em>
+				</div>
+				<ul class="list dform square02">
+					<li class="all">
+						<div class="item">
+							<input id="chk_all" type="checkbox">
+							<label for="chk_all">전체동의</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input id="chk1" type="checkbox">
+							<label for="chk1"><em class="nece">(필수)</em>휴대폰본인 인증 이용동의</label>
+						</div>
+					</li>
+					<li><!-- 해지시 숨김 -->
+						<div class="item">
+							<input id="chk2" type="checkbox">
+							<label for="chk2"><em class="nece">(필수)</em>지문인증 이용동의</label>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<input id="chk3" type="checkbox">
+							<label for="chk3"><em class="nece">(필수)</em>전자금융거래 이용약관 이용동의</label>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="cont3">
+				<ul class="write-st04">
+					<li>
+						<label for="name">이름</label>
+						<div>
+							<input type="text" class="inp-wrap" id="name" value="홍길동">
+						</div>
+					</li>
+					<li>
+						<label for="jumi-no">주민등록번호</label>
+						<div>
+							<input type="number" class="inp-wrap" id="jumi-no" value="770814">
+							<span class="dash">~</span>
+							<input type="text" class="inp-wrap" id="jumi-no2" value="1******">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button><!-- 9.25 수정 -->
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+</body>
+</html>

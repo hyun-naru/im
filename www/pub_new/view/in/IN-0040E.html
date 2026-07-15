@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>My위험클리닉</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>My위험클리닉</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label class="label-txt" for="searchTxt">분석대상자</label>
+				<input id="searchTxt" class="inp-wrap" type="text" placeholder="이름을 입력하세요." />
+				<button class="sbtn-search-w" id="search">찾기</button>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button type="button" class="lbtn-search">검색</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="titArea-st01" name="cover" id="summary">한장요약
+			<button class="sbtn-5 btn-st02" id="sendSns">고객전달</button>
+		</h2>
+		<div name="cover" id="cover" class="mab-10"><!-- 2018-05-15 -->
+			<ul class="tab col-5" id="tabBtn">
+				<li class="on" id="mdclChckupTab"><button>검사</button></li>
+				<li id="dgnssTab"><button>진단</button></li>
+				<li id="hsptlsTab"><button>입원</button></li>
+				<li id="srgryTab"><button>수술</button></li>
+				<li id="dedDfrmdTab"><button>사망/장해</button></li>
+			</ul>
+		</div>
+
+		<!-- 검사 -->
+		<div name="pageIndex">
+			<h3 class="result-txt none">1. 검사</h3>
+			<ul class="line-list-st02" id="mdclChckup">
+				<li>
+					<h3 class="tit-st01">질병입원의료비</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:100%;">100%</span>
+						</p>
+						<span class="per">100%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반암진단 영역</em>현재 23,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">질병통원의료비</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:100%;">100%</span>
+						</p>
+						<span class="per">100%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 30만원</span>
+						<span><em class="barcolor graph-bar2">고액암암진단 영역</em>현재 30만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">상해입원의료비</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:100%;">100%</span>
+						</p>
+						<span class="per">100%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">뇌출혈진단 영역</em>현재 23,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">상해통원의료비</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:100%;">100%</span>
+						</p>
+						<span class="per">100%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 30만원</span>
+						<span><em class="barcolor graph-bar4">급성심근경색진단 영역</em>현재 30만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 검사 -->
+
+		<!-- 진단 -->
+		<div class="none" name="pageIndex">
+			<h3 class="result-txt none">2. 진단</h3>
+			<ul class="line-list-st02" id="dgnss">
+				<li>
+					<h3 class="tit-st01">일반암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">고액암암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar2">고액암암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">뇌출혈진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">뇌출혈진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">급성심근경색진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar4">급성심근경색진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 진단 -->
+
+		<!-- 입원 -->
+		<div class="none" name="pageIndex">
+			<h3 class="result-txt none">3. 입원</h3>
+			<ul class="line-list-st02" id="hsptls">
+				<li>
+					<h3 class="tit-st01">일반암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">고액암암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar2">고액암암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">뇌출혈진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">뇌출혈진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">급성심근경색진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar4">급성심근경색진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 입원 -->
+
+		<!-- 수술 -->
+		<div class="none" name="pageIndex">
+			<h3 class="result-txt none">4. 수술</h3>
+			<ul class="line-list-st02" id="srgry">
+				<li>
+					<h3 class="tit-st01">일반암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">고액암암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar2">고액암암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">뇌출혈진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">뇌출혈진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">급성심근경색진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar4">급성심근경색진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 수술 -->
+
+		<!-- 사망/장해 -->
+		<div class="none" name="pageIndex">
+			<h3 class="result-txt none">5. 사망/장해</h3>
+			<ul class="line-list-st02" id="dedDfrmd">
+				<li>
+					<h3 class="tit-st01">일반암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">고액암암진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar2">고액암암진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">뇌출혈진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">뇌출혈진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">급성심근경색진단</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar4">급성심근경색진단 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 사망/장해 -->
+
+	</div>
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

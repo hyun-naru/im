@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>당일 설계지원 목록</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>당일 설계지원 목록</h1><!-- 9.15 수정 -->
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<!-- 
+			<div>
+				<ul class="tab">
+					<li class="on"><button type="button">FC승인목록</button></li>
+					<li><button type="button">당일 설계지원 진행 목록</button></li>
+				</ul>
+			</div>
+			 -->
+			
+			<!-- FC승인목록 
+			<div class="tab-con">
+				<h2 class="ui-hidden-accessible">FC승인목록</h2>
+				<div class="search">
+					<ul>
+						<li>
+							<label for="planner1" class="label-txt">설계사</label>
+							<select class="select flex w90" id="planner1">
+								<option value="">전체</option>
+							</select>
+							<input type="search" class="inp-wrap" placeholder="설계사명 입력">
+							<button class="sbtn-search-g">검색</button>
+						</li>
+					</ul>
+				</div>
+				<!-- 검색 결과 리스트 
+				<div>
+				<!-- 검색결과 전
+						<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div> 
+					-->
+					<!-- 검색결과 후
+						<div class="no-data">검색결과가 없습니다.</div> 
+					-->
+					
+					<!-- 검색 결과 리스트 
+					<ul class="search-list-st01 dform circle01">
+						<li>
+							<div class="item">
+								<div class="chk-area">
+									<input id="ra1-1" type="radio" name="ra1" title="설계사 홍길동(AA201021)">
+								</div>
+								<div class="info-area">
+									<ul class="bul-list-st03">
+										<li>
+											<div class="stit">설계사</div>
+											<div class="scon">홀길동(AA201021)</div>
+										</li>
+										<li>
+											<div class="stit">위탁인증일시</div>
+											<div class="scon">2020.06.21 15:22</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<div class="chk-area">
+									<input id="ra1-2" type="radio" name="ra1" title="설계사 홍길동(AA201021)">
+								</div>
+								<div class="info-area">
+									<ul class="bul-list-st03">
+										<li>
+											<div class="stit">설계사</div>
+											<div class="scon">홀길동(AA201021)</div>
+										</li>
+										<li>
+											<div class="stit">위탁인증일시</div>
+											<div class="scon">2020.06.21 15:22</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //검색 결과 리스트 
+			</div>
+			<!-- //FC승인목록 -->
+
+			<!-- 당일 설계지원 진행 목록 -->
+			<div class="tab-con">
+				<h2 class="ui-hidden-accessible">당일 설계지원 진행 목록</h2>
+				<div class="search">
+					<ul>
+						<li>
+							<label for="planner2" class="label-txt">FC</label><!-- 9.25 수정 -->
+							<select class="select flex w90" id="planner2">
+								<option value="">전체</option>
+							</select>
+							<input type="search" class="inp-wrap"><!-- 9.25 수정 -->
+							<button class="sbtn-search-g">검색</button>
+						</li>
+					</ul>
+				</div>
+				<!-- 검색 결과 리스트 -->
+				<div>
+					<!-- 검색결과 전
+						<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div> 
+					-->
+					<!-- 검색결과 후
+						<div class="no-data">검색결과가 없습니다.</div> 
+					-->
+					
+					<!-- 검색 결과 리스트 -->
+					<ul class="search-list-st01 dform circle01">
+						<li>
+							<div class="item">
+								<div class="chk-area">
+									<input id="ra2-1" type="radio" name="ra2" title="설계사 홍길동(AA201021)">
+								</div>
+								<div class="info-area">
+									<ul class="bul-list-st03">
+										<li>
+											<div class="stit">FC</div><!-- 9.25 수정 -->
+											<div class="scon">홀길동(AA201021)</div>
+										</li>
+										<!-- 9.25 삭제
+										<li>
+											<div class="stit">고객</div>
+											<div class="scon">김고객</div>
+										</li>
+										-->
+										<li>
+											<div class="stit">인증일시</div><!-- 9.15 수정 -->
+											<div class="scon">2020.06.21 15:22</div>
+										</li>
+									</ul>
+									<div class="state">
+										<span class="ico-auth">인증완료</span>
+										<!-- 상태 
+											<span class="ico-auth">인증완료</span>
+											<span class="ico-plan">설계완료</span>
+										-->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item">
+								<div class="chk-area">
+									<input id="ra2-2" type="radio" name="ra2" title="설계사 홍길동(AA201021)">
+								</div>
+								<div class="info-area">
+									<ul class="bul-list-st03">
+										<li>
+											<div class="stit">FC</div><!-- 9.25 수정 -->
+											<div class="scon">홀길동(AA201021)</div>
+										</li>
+										<!-- 9.25 삭제
+										<li>
+											<div class="stit">고객</div>
+											<div class="scon">김고객</div>
+										</li>
+										-->
+										<li>
+											<div class="stit">인증일시</div><!-- 9.15 수정 -->
+											<div class="scon">2020.06.21 15:22</div>
+										</li>
+									</ul>
+									<div class="state">
+										<span class="ico-plan">설계완료</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //검색 결과 리스트 -->
+			</div>
+			<!-- //당일 설계지원 진행 목록 -->
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 9.15 수정 -->
+			<button class="lbtn btn-st04">설계지원 시작</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

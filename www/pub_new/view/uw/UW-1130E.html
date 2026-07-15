@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>선심사</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>선심사</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>고지정보 입력</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span>3</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-info">
+				<div class="cont3">
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">피보험자 정보</h3>
+					</div>
+					<ul class="write-st04 col-02 mab-n">
+						<li>
+							<label for="info1-1">키</label><!-- 9.17 수정 -->
+							<div>
+								<input type="text" class="inp-wrap" id="info1-1" value="180">
+								<span class="dash">cm</span>
+							</div>
+						</li>
+						<li>
+							<label for="info1-2">몸무게</label>
+							<div>
+								<input type="text" class="inp-wrap" id="info1-2" value="75">
+								<span class="dash">kg</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="cont3">
+					<h3 class="h3-tit-st01">선심사 유형</h3>
+					<div class="checkBox-st01 flex-type">
+						<input type="radio" name="info2-1" id="info2-1-1" checked><label for="info2-1-1">전체</label>
+						<input type="radio" name="info2-1" id="info2-1-2"><label for="info2-1-2">병력</label>
+						<input type="radio" name="info2-1" id="info2-1-3"><label for="info2-1-3">재정</label>
+					</div>
+				</div>
+				<div class="cont3">
+					<div class="tit-box flex-box">
+						<h3 class="h3-tit-st01">건강정보</h3>
+						<div class="r-box">
+							<button type="button" class="sbtn-bdr-1 bdr-st06 w60"><span>추가</span></button>
+						</div>
+					</div>
+					<div>
+						<!-- 9.17 추가시 -->
+						<div class="tab-add full scroll-x">
+							<ul class="list">
+								<li class="on">
+									<button type="button" class="rtab">질병 1</button>
+									<button type="button" class="del"><span>삭제</span></button>
+								</li>
+								<li>
+									<button type="button" class="rtab">질병 2</button>
+									<button type="button" class="del"><span>삭제</span></button>
+								</li>
+							</ul>
+						</div>
+						<!-- //9.17 추가시 -->
+						<div class="tab-cont">
+							<ul class="write-st04">
+								<li>
+									<label for="info3-1">진단명</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info3-1" value="허리디스크">
+									</div>
+								</li>
+								<li>
+									<label for="info3-2">최초진단일</label>
+									<div>
+										<input type="number" class="inp-wrap" id="info3-2" value="2020.01" readonly>
+										<input type="date" class="sbtn-calendar" title="달력보기">
+									</div>
+								</li>
+								<li>
+									<label for="info3-3">치료방법</label>
+									<div>
+										<input type="text" class="inp-wrap" id="info3-3" value="입원 및 수술치료">
+									</div>
+								</li>
+								<li>
+									<label for="info3-4">치료기간</label>
+									<div>
+										<input type="number" class="inp-wrap" id="info3-4" value="2020.03" readonly>
+										<input type="date" class="sbtn-calendar" title="달력보기">
+										<span class="dash">~</span>
+										<input type="number" class="inp-wrap" value="2020.05" readonly>
+										<input type="date" class="sbtn-calendar" title="달력보기">
+									</div>
+								</li>
+								<li>
+									<label for="info3-5">합병증</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="info3-5" id="info3-5-1" checked><label for="info3-5-1">있음</label>
+										<input type="radio" name="info3-5" id="info3-5-2"><label for="info3-5-2">없음</label>
+									</div>
+								</li>
+								<li class="low-dep"><!-- 합병증 있음시 노출(class=none 추가삭제) -->
+									<label for="info3-6">합병증명</label>
+									<div class="checkBox-st01">
+										<input type="text" class="inp-wrap" id="info3-6">
+									</div>
+								</li>
+								<li>
+									<label for="info3-7">후유증</label>
+									<div class="checkBox-st01">
+										<input type="radio" name="info3-7" id="info3-7-1" checked><label for="info3-7-1">있음</label>
+										<input type="radio" name="info3-7" id="info3-7-2"><label for="info3-7-2">없음</label>
+									</div>
+								</li>
+								<!-- 9.17 수정 -->
+								<li class="low-dep"><!-- 후유증 있음 노출  -->
+									<label for="info3-7-1">후유증 내용</label>
+									<div>
+										<textarea id="info3-7-1" style="height:13.6rem"></textarea>
+									</div>
+								</li>
+								<!-- 9.23 위치 이동 수정
+								<li>
+									<label for="info3-8">현재상태 및 기타정보 <span class="label-desc">(00자 이내)</span></label>
+									<div>
+										<textarea id="info3-8" style="height:13.6rem"></textarea>
+									</div>
+								</li>-->
+							</ul>
+							<div class="btn-box align-c mab-20">
+								<button class="mbtn btn-st24 w80">삭제</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont3">
+					<h3 class="h3-tit-st01">현재상태 및 기타정보</h3>
+					<div>
+						<textarea id="info3-8" style="height:13.6rem"></textarea>
+						<span class="textarea-count">(00자 이내)</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>본인인증</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>로그인 인증</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- body_tab 고정영역 -->
+	<div>
+		<ul class="tab">
+			<li class="on"><button>본인인증</button></li>
+			<li><button>신용카드 로그인 인증</button></li>
+		</ul>
+	</div>
+	<!-- //body_tab 고정영역 -->
+	<!-- body_tabcontents 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont1">
+			<ul class="write-st04">
+				<li>
+					<label for="ma-0163_carrier">통신사</label>
+					<div>
+						<select class="select" id="ma-0163_carrier"></select>	
+					</div>
+				</li>
+				<li>
+					<label for="ma-0163_thriftPhone">알뜰폰</label>
+					<div>
+						<select class="select" id="ma-0163_thriftPhone" disabled></select>					
+					</div>
+					
+				</li>
+				<li>
+					<label for="ma-0163_hp">연락처</label>
+					<div class="pdb_0">
+						<input id="ma-0163_hp" type="text" class="inp-wrap flex" placeholder="휴대번호를 '-'없이 입력해주세요." disabled />
+					</div>
+				</li>				
+			</ul>
+			<div class="btnArea"><!-- 리스트선택시 disabled삭제 -->
+				<button class="mbtn-2 btn-st02" id="ma-0163_smsRequest">인증번호 발송</button>
+			</div>	
+			<ul class="write-st04 mat_80">
+				<li>
+					<label for="sel4">인증번호를 입력하세요.</label>
+					<div>
+						<input type="tel" id="ma-0163_authKey" class="inp-wrap flex" placeholder="인증번호 6자리" disabled/>
+						<button class="sbtn-5 btn-st02" id="ma-0163_smsAuth" disabled>인증하기</button><!-- 2018-05-15 -->
+						<!-- <button class="sbtn-5 btn-st01 maL-5" id="ma-0163_reSmsRequest" disabled>재발송</button> 2018-05-15 하나로 통합 -->
+					</div>
+					<!-- <p class="ceti-time">00:00</p> -->
+				</li>
+			</ul>			
+		</div>
+		
+		<!-- 신용카드 로그인 인증  -->
+		<div class="cont1">
+			<ul class="write-st04">
+				<li>
+					<label for="ma-0163_carrier">고객명</label>
+					<div>
+						<input class="inp-wrap" placeholder="이름을 입력하세요." type="text" id="" value="" maxlength="20">	
+					</div>
+				</li>
+				<li>
+					<label for="CU0100P_edtBrtYdm" class="label-txt">생년월일</label>
+					<div class="dform square02 hbox jc">
+						<input class="inp-wrap flex w100p" id="" type="tel" date="" data-name="picker" placeholder="주민번호 앞 6자리">
+						<span class="dash fc-orange">(주민번호 앞 6자리)</span>		
+					</div>
+				</li>
+				<li>
+					<label class="label-txt">카드번호</label>
+					<div>
+						<input class="inp-wrap" type="tel" value="">
+						<input class="inp-wrap" type="tel" value="">
+						<input class="inp-wrap" type="tel" value="">
+					    <input class="inp-wrap" type="tel" value="">
+					</div>
+				</li>
+				<li>
+					<label class="label-txt">유효기간</label>
+					<div>
+					<input class="inp-wrap" type="tel" number="" id="" maxlength="6"><span class="dash">월</span>
+					<input class="inp-wrap" type="tel" number="" id="" maxlength="6"><span class="dash">년</span>					
+					</div>
+				</li>
+				<li>
+					<label class="label-txt">비밀번호</label>
+					<div>
+					<input class="inp-wrap text-right" type="tel" number="" id="" maxlength="4" value=""><span class="dash">**</span><span class="dash fc-orange">(비밀번호 앞 2자리)</span>				
+					</div>
+				</li>				
+			</ul>
+			<p class="scon fc-red mar-bt-1">※ 신한,현대카드는 카드사 정책에 따라 인증이 불가합니다.</p>
+			<!-- 문구추가 20180713 -->
+				<div class="credit-txt-2">
+				     <h2>[공통사항]</h2>  
+				       <p>정확한 정보를 입력한 후에도 인증에 실패하였다면 시스템 및 통신 에 러가 발생하여 브라우저 또는 통신상의 일시적인
+				       장애 현상일 수 있으니 잠시 후 재시도해주시기 바라며 분제가 지속될 겨우 당사 <span class="txt-blue2">고객센터(1600-1522)</span>로 문의바합니다.</p>
+				   
+				     <h2>[휴대폰 본인확인]</h2>  
+				       <p>1. 문자를 수진받지 못한 경우, 휴대폰 스팸 메시지함 또는 해당 통신사 홈페이지 내[스팸차단서비스] 또는 [SMS 스팸필터링]에서 <span class="txt-red">스팸허용</span>으로 설정하시면 정상적으로 문자 수신이 가능합니다.
+					<br>
+					2. 본인의 인증수단이 실패하는 이유는 아래와 같습니다.</br>
+				       <ol class="sm-ol">
+				       	<li>① 본인의 명의로 개통한 휴대전화가 아닌 겨우(<span class="txt-red">탕의 명의</span>로 개통)</li>
+				       	<li>② 휴대전화 요금이 <span class="txt-red">미납(연체)중</span>인 경우</li>
+				       	<li>③ <span class="txt-red">선불요금카드</span>(예스카드, 앵콜카드 등)를 사용중인 경우</li>
+				       	<li>④ <span class="txt-red">특수요금제</span>(패밀리요금제, 커플요금제 등)를 사용중인 경우</li>
+				       </ol>
+				      </p>
+				</div>
+				<!-- 문구추가 끝 -->
+			<div class="btnArea mar-bt-1">
+				<button class="mbtn-2 btn-st02" id="">카드인증받기</button>
+			</div>
+		</div>
+		<!-- //신용카드 끝 -->
+	</div>
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer" ><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" id="ma-0163_smsConfirm" disabled>확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->	
+</div>
+<!--// 화면 영역 -->
+
+
+</body>
+</html>

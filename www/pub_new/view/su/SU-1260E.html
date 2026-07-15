@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(피보험자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(피보험자)</h1><!-- 9.25 수정-->
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">계약전 알릴의무 사항<span class="step">(<em>1</em>/3)</span></h3><!-- 9.16 수정 -->
+			</div>
+			<div class="subscribe-wrap">
+				<div class="top-info">
+					<p class="ico-txt-st01">다음 각 항목의 질문사항에 대하여 해당란에 (v)표시를 하시기 바랍니다.</p>
+				</div>
+				<div class="subscribe-cont">
+					<ol class="qaBox">
+						<li>
+							<p class="qaBox-q"><span class="no">13</span>흡연 여부</p>
+							<p class="qaBox-a checkBox-st01">
+								<input type="radio" id="Q13-1" name="Q13"><label for="Q13-1">예</label>
+								<input type="radio" id="Q13-2" name="Q13"><label for="Q13-2">아니오</label>
+							</p>
+							<div class="qaBox-ex">
+								<ul class="write-st02">
+									<li>
+										<label for="la13-1">흡연량<span class="stxt">(1일)</span></label>
+										<div>
+											<input type="tel" id="la13-1" class="inp-wrap"><span class="won">개피</span>
+										</div>
+									</li>
+									<li>
+										<label for="la13-2">흡연기간<br><span class="stxt">(과거부터 현재)</span></label><!-- 9.16 수정 -->
+										<div>
+											<input type="tel" id="la13-2" class="inp-wrap"><span class="won">년간</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+		 
+						<li>
+							<p class="qaBox-q"><span class="no">14</span>체격</p>
+							<div class="qaBox-a"><!-- 9.16 수정 -->
+								<ul class="write-st02 col-2">
+									<li>
+										<label for="la14-1">키</label>
+										<div>
+											<input type="tel" id="la14-1" class="inp-wrap"><span class="won">cm</span>
+										</div>
+									</li>
+									<li>
+										<label for="la14-2">몸무게</label>
+										<div>
+											<input type="tel" id="la14-2" class="inp-wrap"><span class="won">kg</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+		 
+						<li>
+							<p class="qaBox-q"><span class="no">15</span>다른 보험 회사(우체국보험 및 각종 공제계약 판매사 포함)에 생명보험, 손해보험, 제3보험 또는 각종 공제계약을 가입하고 있습니까?</p>
+							<p class="qaBox-a checkBox-st01">
+								<input type="radio" id="Q15-1" name="Q15"><label for="Q15-1">예</label>
+								<input type="radio" id="Q15-2" name="Q15"><label for="Q15-2">아니오</label>
+							</p>
+							<div class="qaBox-ex">
+								<ul class="write-st02">
+									<li>
+										<label for="la15-1">회사명</label>
+										<div>
+											<input type="text" id="la15-1" class="inp-wrap">
+										</div>
+									</li>
+									<li>
+										<label for="la15-2">건수</label>
+										<div>
+											<input type="tel" id="la15-2" class="inp-wrap"><span class="won">건</span>
+										</div>
+									</li>
+									<li>
+										<label for="la15-3">보험료(월)</label>
+										<div>
+											<input type="tel" id="la15-3" class="inp-wrap"><span class="won">원</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

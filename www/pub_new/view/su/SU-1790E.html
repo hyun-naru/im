@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>모바일청약(FC)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap ">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>모바일청약(FC)</h1><!-- 9.25 수정 -->
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>판매 체크리스트</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span>3</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="box-gray">
+				<ul class="bul-list-st04 dot">
+					<li>보험 모집종사자는 보험상품 판매 시 관계법령에 따른 절차를 준수하고 그 준수여부를 아래 각 항목별로 반드시 확인 바랍니다.(확인란에 v 표기)</li><!-- 9.25 수정 -->
+				</ul>
+			</div>
+			
+			<div class="cont3">
+				<h3 class="h3-tit-st01">보험계약 중요내용 설명</h3>
+				<table class="tb-data dform square01">
+					<caption>보험계약 중요내용 설명</caption>
+					<colgroup>
+						<col style="width:25%">
+						<col style="width:55%">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">점검항목</th>
+							<th scope="col">확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="11">공통</th>
+							<th scope="row" class="ta-l">주계약 및 특약별 보험료 설명</th><!-- 9.25 수정 -->
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">주계약 및 특약 담보내용, 보험금 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">보험료 납입기간 및 보험기간 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">보험회사 명칭, 보험상품 종목 및 명칭 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">청약철회 관련 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">지급한도, 면책&middot;감액지급 사항 등 보험금 지급제한조건 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">고지의무 및 통지의무 위반의 효과 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">계약 취소, 무효 관련 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">해약환급금 관련 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">분쟁조정절차 관련 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">보험설계사(개인대리점)의 모집경력 조회 관련 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="rowgroup">해약환급금<br>미지급상품</th>
+							<th scope="row" class="ta-l">해약시 해약환급금 미지급 사실 및 동일한 보장내용으로는 해약환급금을 지급하는 상품 관련 설명</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th>변액보험</th>
+							<th scope="row" class="ta-l">변액보험 표준계약권유준칙 이행여부</th>
+							<td><input type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 class="h3-tit-st01">보험계약 중요내용 이해여부 확인</h3>
+				<table class="tb-data dform square01">
+					<caption>보험계약 중요내용 이해여부 확인</caption>
+					<colgroup>
+						<col style="width:80%">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">점검항목</th>
+							<th scope="col">확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="ta-l">계약자의 보험계약 중요사항 이해여부 확인(서명 등)</th>
+							<td><input type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 class="h3-tit-st01">안내자료 제공</h3>
+				<table class="tb-data dform square01">
+					<caption>안내자료 제공</caption>
+					<colgroup>
+						<col style="width:80%">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">점검항목</th>
+							<th scope="col">확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="ta-l">상품설명서 제공</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">보험계약청약서 부본 제공</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">보험약관 제공</th>
+							<td><input type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 class="h3-tit-st01">고령계약자 보호(만 65세 이상)</h3>
+				<table class="tb-data dform square01">
+					<caption>고령계약자 보호(만 65세 이상)</caption>
+					<colgroup>
+						<col style="width:80%">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">점검항목</th>
+							<th scope="col">확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="ta-l">고령층 보험상품 계약 시 지정인 알림서비스 안내 여부</th>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th scope="row" class="ta-l">지정대리청구제도 안내 여부</th>
+							<td><input type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 class="h3-tit-st01">장애인 대상 판매시</h3>
+				<table class="tb-data dform square01">
+					<caption>장애인 대상 판매시</caption>
+					<colgroup>
+						<col style="width:80%">
+						<col style="width:20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">점검항목</th>
+							<th scope="col">확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="ta-l">장애인 고객 응대지침(매뉴얼) 준수 여부(내규)</th>
+							<td><input type="checkbox"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="btn-box">
+					<button type="button" class="mbtn btn-st10 w240">작성문서 확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04" >청약확정</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

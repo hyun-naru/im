@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>모바일청약 진행대상(FC)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap ">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>모바일청약 진행대상(FC)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="search">
+				<ul>
+					<li>
+						<label for="date">계약일자</label>
+						<div class="checkBox-st01"><!-- 9.18 수정 -->
+							<input type="radio" name="date" id="date_1" checked=""><label for="date_1">당일</label>
+							<input type="radio" name="date" id="date_2"><label for="date_2">3일</label>
+							<input type="radio" name="date" id="date_3"><label for="date_3">1주</label>
+							<input type="radio" name="date" id="date_4"><label for="date_4">기간</label>
+						</div>
+					</li>
+					<li class="none"><!-- 직접입력 라디오버튼 선택되었을 경우 노출 : none 삭제-->
+						<label for="date_2" class="ui-hidden-accessible">기간입력</label>
+						<div class="picker-box">
+							<input type="tel" class="inp-wrap" id="ipt_sDt" data-name="picker" placeholder="시작일 입력">
+							<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+							<span class="dash">~</span>
+							<input type="tel" class="inp-wrap" id="ipt_eDt" data-name="picker2" placeholder="종료일 입력">
+							<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker2">
+						</div>
+					</li>
+					<li>
+						<label for="sort">청약구분</label>
+						<select class="select" id="sort">
+							<option>전체</option>
+						</select>
+						<label for="state">진행상태</label><!-- 9.25 수정 -->
+						<select class="select" id="state"><!-- 9.25 수정 -->
+							<option>전체</option>
+						</select>
+					</li>
+				</ul>
+				<div class="btnArea">
+					<button class="lbtn-search" type="submit">검색</button>
+				</div>
+			</div>
+			
+
+			<div>
+				<h2 class="blind">검색결과 영역</h2>
+
+				<!-- 검색 전 문구
+				<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+				<!-- 검색 후 문구
+				<div class="no-data">검색결과가 없습니다.</div>-->
+
+				<p class="result-txt">총 <span class="count">5</span>건이 검색되었습니다.</p>
+				<ul class="link-list-st01 dform circle01">
+					<li>
+						<div class="tit-h2">
+							<input type="radio" id="ra1" name="ra">
+							<label for="ra1">
+								<span class="pro-num">5160100021 / 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<button type="button" class="sbtn status-03 ico-arr-w">청약확정</button>
+								<!--
+									대기중 : status-14 상태값 추가 10.06
+									미작성 : status-18
+									작성완료 : status-19
+									청약확정 : status-03
+									입금완료 : status-20
+									승인완료 : status-16
+								-->
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">계약일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">433,980 원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<div class="tit-h2">
+							<input type="radio" id="ra2" name="ra">
+							<label for="ra2">
+								<span class="pro-num">5160100021 / 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<button type="button" class="sbtn status-18 ico-arr-w">미작성</button>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">계약일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">433,980 원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<div class="tit-h2">
+							<input type="radio" id="ra3" name="ra">
+							<label for="ra3">
+								<span class="pro-num">5160100021 / 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<button type="button" class="sbtn status-19 ico-arr-w">작성완료</button>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">계약일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">433,980 원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<div class="tit-h2">
+							<input type="radio" id="ra4" name="ra">
+							<label for="ra4">
+								<span class="pro-num">5160100021 / 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<button type="button" class="sbtn status-20 ico-arr-w">입금완료</button>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">계약일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">433,980 원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li><!-- 10.6 대기중 추가 -->
+						<div class="tit-h2">
+							<input type="radio" id="ra5" name="ra">
+							<label for="ra5">
+								<span class="pro-num">5160100021 / 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<button type="button" class="sbtn status-14 ico-arr-w">대기중</button>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">계약일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">433,980 원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li><!-- 10.30 승인완료 추가 -->
+						<div class="tit-h2">
+							<input type="radio" id="ra5" name="ra">
+							<label for="ra5">
+								<span class="pro-num">5160100021 / 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<button type="button" class="sbtn status-16 ico-arr-w">승인완료</button>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">계약일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">433,980 원</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04" >작성진행</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

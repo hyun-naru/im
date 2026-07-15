@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">청약서<span class="step">(<em>2</em>/3)</span></h3>
+			</div>
+			
+			<div class="contract-info">
+				<!-- 초회보험료 납입 정보 -->
+				<div class="cont3">
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">초회보험료 납입 정보</h3>	<!-- 9.16 수정 -->
+					</div>
+					<ul class="write-st02"><!-- 9.15 수정 -->
+						<li>
+							<label for="la01-01">납입방법</label>
+							<div class="checkBox-st01">
+								<input type="radio" id="la01-01-01" name="la01-01"  checked><label for="la01-01-01">자동인출</label><!-- 9.16 수정 -->
+								<input type="radio" id="la01-01-02" name="la01-01"><label for="la01-01-02">방문</label>
+							</div>
+						</li>
+						<!-- 즉시이체인 경우 -->
+						<li>
+							<label for="la01-02">은행명</label>
+							<div>
+								<input type="text" class="inp-wrap" id="la01-02" placeholder="은행선택" disabled>
+								<button class="sbtn-search-g">찾기</button>
+							</div>
+						</li>
+						<li>
+							<label for="la01-03">계좌번호</label>
+							<div>
+								<input type="text" class="inp-wrap" id="la01-03" placeholder="-없이 숫자만 입력하세요" disabled>
+								<button class="sbtn-5 bdr-st01">확인</button><!-- 9.16 수정 -->
+							</div>
+						</li>
+						<!-- //즉시이체인 경우 -->
+					</ul>
+					<p class="ico-txt-st01">본인 명의 계좌만 가능합니다.</p>
+				</div>
+				<!-- //조회보험료 납입 정보 -->
+				<!-- 계속보험료 납입 정보 -->
+				<div class="cont3">
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">계속보험료 납입 정보</h3>	
+					</div>
+					<ul class="write-st02"><!-- 9.15 수정 -->
+						<li>
+							<label for="la02-01">예금주명</label>
+							<div>
+								<select id="la02-01" class="select">
+									<option>홍길동</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="la02-02">계약자와의 관계</label>
+							<div>
+								<select id="la02-02" class="select">
+									<option>본인</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="la02-03">은행명</label>
+							<div>
+								<input type="text" class="inp-wrap" id="la02-03" placeholder="은행선택">
+								<button class="sbtn-search-g">찾기</button>
+							</div>
+						</li>
+						<li>
+							<label for="la02-04">계좌번호</label>
+							<div>
+								<input type="text" class="inp-wrap" id="la02-04" placeholder="-없이 숫자만 입력하세요" />
+								<button class="sbtn-5 bdr-st01">확인</button><!-- 9.16 수정 -->
+								<span class="bank-ok none">계좌번호확인 완료</span><!-- 계좌번호확인 완료시에만 노출 none 삭제-->
+							</div>
+						</li>
+						<li>
+							<label for="la02-05">수금일자</label>
+							<div class="checkBox-st01">
+								<input type="radio" id="la02-05-01" name="la02-05" checked><label for="la02-05-01">5</label>
+								<input type="radio" id="la02-05-02" name="la02-05"><label for="la02-05-02">10</label>
+								<input type="radio" id="la02-05-03" name="la02-05"><label for="la02-05-03">15</label>
+								<input type="radio" id="la02-05-04" name="la02-05"><label for="la02-05-04">20</label>
+								<input type="radio" id="la02-05-05" name="la02-05"><label for="la02-05-05">25</label>
+							</div>
+						</li>
+						<li class="dform square01">
+							<label for="chk2"><input type="checkbox" id="chk2" name="chk2">입금방법 자동인출계좌와 동일</label>
+						</li>
+					</ul>
+				</div>
+				<!-- //계속보험료 납입 정보 -->
+				<!-- 반환계좌 정보 -->
+				<div class="cont3">
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">반환계좌 정보</h3>	
+					</div>
+					<ul class="write-st02"><!-- 9.15 수정 -->
+						<li>
+							<label for="la03-01">은행명</label>
+							<div>
+								<input type="text" class="inp-wrap" id="la03-01" placeholder="은행선택">
+								<button class="sbtn-search-g">찾기</button>
+							</div>
+						</li>
+						<li>
+							<label for="la03-02">계좌번호</label>
+							<div>
+								<input type="text" class="inp-wrap" id="la03-02" placeholder="-없이 숫자만 입력하세요">
+								<button class="sbtn-5 bdr-st01">확인</button><!-- 9.16 수정 -->
+								<span class="bank-ok none">계좌번호확인 완료</span><!-- 계좌번호확인 완료시에만 노출 -->
+							</div>
+						</li>
+						<li class="dform square01">
+							<label><input type="checkbox">입금방법 자동인출계좌와 동일</label>
+						</li>
+					</ul>
+					<p class="ico-txt-st01">반환계좌는 초회보험료 납입계좌로만 지정 가능합니다.</p><!-- 9.16 추가 -->
+				</div>
+				<!-- //반환계좌 정보 -->
+			</div>
+
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04" disabled>다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>자료실</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>자료실</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn2 btn-myfolder" title="my자료갯수">10</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_tab 고정영역 -->
+	<div>
+		<ul class="tab col-4" id="tabDepth_1">
+			<li class="on"><button data-code="10">상품안내장</button></li>
+			<li><button data-code="20">인포슈랑스</button></li>
+			<li><button data-code="30">니즈자료</button></li>
+			<li><button data-code="40">기타</button></li>
+		</ul>
+	</div>
+
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+		<div class="cont1">
+			<ul class="stab" id="tabDepth_2">
+				<li class="on"><button>종신/정기</button></li>
+				<li><button>변액</button></li>
+				<li><button>건강/간병</button></li>
+				<li><button>저축/연금</button></li>
+			</ul>
+		</div>
+
+		<div class="myfolder-noimage"><!-- 2018-05-31 여기부터 하단 전체 확인 필요 -->
+			<ul class="dform square02" id="rfrcList">
+				<li>
+					<label for="la-1">
+						<p class="subject">
+							<input id="la-1" type="checkbox" />라이프라트너유니버셜종신보험무배당1711
+						</p>
+					</label>
+				</li>
+				<li>
+					<label for="la-2">
+						<span class="ico-myfolder30">Hot</span>
+						<p class="subject">
+							<input id="la-2" type="checkbox" />글제
+						</p>
+					</label>
+				</li>
+				<li>
+					<label for="la-3">
+					<span class="ico-myfolder40">Best</span>
+						<p class="subject">
+							<input id="la-3" type="checkbox" />라이프라트너유니버셜종신보험무배당1711라이프라트너유니버셜종신보험무배당1711라이프라트너유니버셜종신보험무배당1711라이프라트너유니버셜종신보험무배당1711라이프라트너유니버셜종신보험무배당1711라이프라트너유니버셜종신보험무배당1711라이프라트너유니버셜종신보험무배당1711
+						</p>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 목록 선택 시 disabled 삭제 -->
+			<button class="lbtn btn-st03" disabled data-fn="preview">미리보기</button>
+			<button class="lbtn btn-st03 none" disabled data-fn="detailView">상세보기</button>
+			<button class="lbtn btn-st01" disabled data-fn="sendSMS">고객공유</button>
+			<button class="lbtn btn-st02" disabled data-fn="saveMyRfrc">My자료담기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

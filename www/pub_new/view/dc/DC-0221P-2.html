@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전자청약 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 2018-05-14(전체적으로 비교필요) -->
+<div class="d-wrap dc-0221">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>전자청약 입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div>
+		<div class="d-step">
+			<h2>4. 계약 전 알릴 의무사항</h2>
+			<p class="d-step-status">
+				<span>1</span> / <span>2</span> / <span>3</span> / <span class="on">4</span> / <span>5</span>
+			</p>
+		</div>
+		<div class="d-step3 border-b"><!-- 2018-05-14 -->
+			<ol><!-- 현재 class="on" / 과거 class="check" -->
+				<li class="check"><span>1</span></li>
+				<li class="check"><span>2</span></li>
+				<li class="on"><span>3</span></li>
+				<li class="last"><span>3</span></li>
+				<li class="none"><span>4</span></li>
+			</ol>
+		</div>
+	</div>
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+
+		<div class="cont1">
+			<ol class="qaBox">
+				<li>
+					<p class="qaBox-q">7 (기능적 장애) 현재 눈, 코, 귀, 언어, 씹는기능, 정신 또는 신경기능에 장애가 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q7-1"><input id="Q7-1" name="Q7" type="radio" checked />예</label>
+						<label for="Q7-2"><input id="Q7-2" name="Q7" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la2-1">장애원인</label>
+								<div class="checkBox-st01">
+									<input id="la2-1-1" name="la2" type="radio" checked /><label for="la2-1-1">예</label>
+									<input id="la2-1-2" name="la2" type="radio" /><label for="la2-1-2">아니오</label>
+								</div>
+							</li>
+							<li>
+								<label for="la2-2">장애내용</label>
+								<div>
+									<input id="la2-2" class="inp-wrap" type="text" />
+								</div>
+							</li>
+							<li>
+								<label for="la2-3" class="fc-f9f9f9">장애내용2</label>
+								<div>
+									<input id="la2-3" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li>
+					<p class="qaBox-q">8 (신체적 장애) 현재 팔 , 다리 , 손(손가락포함), 발(발가락포함), 척추에 손실 또는 변형으로 인한 외관상 신체의 장애가 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q8-1"><input id="Q8-1" name="Q8" type="radio" checked />예</label>
+						<label for="Q8-2"><input id="Q8-2" name="Q8" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la3-1">장애원인</label>
+								<div class="checkBox-st01">
+									<input id="la3-1-1" name="la3" type="radio" checked /><label for="la3-1-1">예</label>
+									<input id="la3-1-2" name="la3" type="radio" /><label for="la3-1-2">아니오</label>
+								</div>
+							</li>
+							<li>
+								<label for="la3-2">장애내용</label>
+								<div>
+									<input id="la3-2" class="inp-wrap" type="text" />
+								</div>
+							</li>
+							<li>
+								<label for="la3-3" class="fc-f9f9f9">장애내용2</label>
+								<div>
+									<input id="la3-3" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+ 
+				<li>
+					<p class="qaBox-q">9 현재 운전을 하고 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q9-1"><input id="Q9-1" name="Q9" type="radio" checked />예</label>
+						<label for="Q9-2"><input id="Q9-2" name="Q9" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la4-1">승용차</label>
+								<div class="dform square02">
+									<label for="la4-1-1"><input id="la4-1-1" name="la4-1" type="radio" checked />영업용</label>
+									<label for="la4-1-2"><input id="la4-1-2" name="la4-1" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-2">승합차</label>
+								<div class="dform square02">
+									<label for="la4-2-1"><input id="la4-2-1" name="la4-2" type="radio" checked />영업용</label>
+									<label for="la4-2-2"><input id="la4-2-2" name="la4-2" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-3">화물차</label>
+								<div class="dform square02">
+									<label for="la4-3-1"><input id="la4-3-1" name="la4-3" type="radio" checked />영업용</label>
+									<label for="la4-3-2"><input id="la4-3-2" name="la4-3" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-4">오토바이<br /><span class="stxt">(50cc미만포함)</span></label>
+								<div class="dform square02">
+									<label for="la4-4-1"><input id="la4-4-1" name="la4-4" type="radio" checked />영업용</label>
+									<label for="la4-4-2"><input id="la4-4-2" name="la4-4" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-5">기계</label>
+								<div class="dform square02">
+									<label for="la4-5-1"><input id="la4-5-1" name="la4-5" type="radio" checked />건설기계</label>
+									<label for="la4-5-2"><input id="la4-5-2" name="la4-5" type="radio" />농기계</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-6">기타</label>
+								<div class="dform square02">
+									<label for="la4-6-1"><input id="la4-6-1" name="la4-6" type="radio" checked />기타</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-7" class="fc-f9f9f9">기타 내용입력</label>
+								<div>
+									<input id="la4-7" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+ 
+				<li>
+					<p class="qaBox-q">10 최근 1년 이내에 다음과 같은 취미를 자주 반복적으로 하고 있거나 관련 자격증을 가지고 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q10-1"><input id="Q10-1" name="Q10" type="radio" checked />예</label>
+						<label for="Q10-2"><input id="Q10-2" name="Q10" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02"><!-- 2018-05-14 오후 / 2018-05-11 -->
+							<li>
+								<label for="Q10-1-1">빈도</label>
+								<div>
+									<input id="la10-1-1" class="inp-wrap w70" type="tel" /><span class="won">년간</span>
+								</div>
+								<label for="Q10-1-2" class="dash ta-r">월</label>
+								<div>
+									<input id="la10-1-2" class="inp-wrap w70" type="tel" /><span class="won">회</span>
+								</div>
+							</li>
+							<li>
+								<label for="Q10-1-3">자격증 명칭</label>
+								<div>
+									<input id="la10-1-3" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+						<ul class="dform square01">
+							<li>
+								<label for="Q10-chk1"><input id="Q10-chk1" name="Q10-chk1" type="checkbox" />스쿠버다이빙</label>
+							</li>
+							<li>
+								<label for="Q10-chk2"><input id="Q10-chk2" name="Q10-chk1" type="checkbox" />행글라이딩, 패러글라이딩</label>
+							</li>
+							<li>
+								<label for="Q10-chk3"><input id="Q10-chk3" name="Q10-chk1" type="checkbox" />스카이다이빙</label>
+							</li>
+							<li>
+								<label for="Q10-chk4"><input id="Q10-chk4" name="Q10-chk1" type="checkbox" />수상스키</label>
+							</li>
+							<li>
+								<label for="Q10-chk5"><input id="Q10-chk5" name="Q10-chk1" type="checkbox" />자동차, 오토바이 경주</label>
+							</li>
+							<li>
+								<label for="Q10-chk6"><input id="Q10-chk6" name="Q10-chk1" type="checkbox" />번지점프</label>
+							</li>
+							<li>
+								<label for="Q10-chk7"><input id="Q10-chk7" name="Q10-chk1" type="checkbox" />빙벽 , 암벽등반</label>
+							</li>
+							<li>
+								<label for="Q10-chk8"><input id="Q10-chk8" name="Q10-chk1" type="checkbox" />제트스키</label>
+							</li>
+							<li>
+								<label for="Q10-chk9"><input id="Q10-chk9" name="Q10-chk1" type="checkbox" />래프팅</label>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li>
+					<p class="qaBox-q">11 부업 또는 겸업, 계절적으로 종사하는 업무가 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q11-1"><input id="Q11-1" name="Q11" type="radio" checked />예</label>
+						<label for="Q11-2"><input id="Q11-2" name="Q11" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la11-1">업무명</label>
+								<div>
+									<input id="la11-1" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+ 
+				<li>
+					<p class="qaBox-q">12 향후 3개월 이내에 다음과 같은 해외위험지역으로 출국할 예정이 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q12-1"><input id="Q12-1" name="Q12" type="radio" checked />예</label>
+						<label for="Q12-2"><input id="Q12-2" name="Q12" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la12-1">지역</label>
+								<div>
+									<input id="la12-1" class="inp-wrap" type="text" />
+								</div>
+							</li>
+							<li><!-- 2018-05-03 / 2018-05-04 -->
+								<label for="la12-2">출국일</label>
+								<div>
+									<input id="la12-2" class="inp-wrap" type="tel" placeholder="출국일 입력" />
+									<input type="date" class="sbtn-calendar" title="달력보기" />
+								</div>
+							</li>
+							<li><!-- 2018-05-03 / 2018-05-04 -->
+								<label for="la12-3">귀국일</label>
+								<div>
+									<input id="la12-3" class="inp-wrap" type="tel" placeholder="귀국일 입력" />
+									<input type="date" class="sbtn-calendar" title="달력보기" />
+								</div>
+							</li>
+							<li>
+								<label for="la12-4">목적</label>
+								<div>
+									<input id="la12-4" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

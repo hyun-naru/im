@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전자청약 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 2018-05-14(전체적으로 비교필요)-->
+<div class="d-wrap dc-0221">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>전자청약 입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div><!-- 간편심사 전용 -->
+		<div class="d-step">
+			<h2>4. 계약 전 알릴 의무사항(간편심사용)</h2>
+			<p class="d-step-status">
+				<span>1</span> / <span>2</span> / <span>3</span> / <span class="on">4</span> / <span>5</span>
+			</p>
+		</div>
+		<div class="d-step3 border-b"><!-- 2018-05-14 -->
+			<ol><!-- 현재 class="on" / 과거 class="check" -->
+				<li class="check"><span>1</span></li><!-- dc-0320P-0링크 -->
+				<li class="on"><span>2</span></li><!-- 마지막 항목 class="last" -->
+			</ol>
+		</div>
+	</div>
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+		<div class="qaBox-txt-info">다음 각 항목의 질문사항에 대하여 해당란에 (v)표시를 하시기 바랍니다.</div>
+
+		<div class="cont1">
+			<ol class="qaBox">
+				<li>
+					<p class="qaBox-q">1. 최근 3 개월 이내에 의사로부터 진찰 또는 검사를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q1-1"><input id="Q1-1" name="Q1" type="radio" checked />예</label>
+						<label for="Q1-2"><input id="Q1-2" name="Q1" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="dform square02">
+							<li>
+								<label for="Q1-chk1"><input id="Q1-chk1" name="Q1-chk1" type="checkbox" />입원 필요 소견</label>
+								<button class="sprite-link link-05">안내</button>
+								<!-- 레이어팝업 영역 -->
+								<div class="dpop-layer2 ">
+									<div class="dpop-container">
+										<div class="info-box ">
+											<h2 class="info-tit">필요소견이란</h2>
+											<div class="info-con">의사로부터 진단서 또는 소견서 또는 진료기록부 등에 기재한 경우를 말합니다.</div>
+										</div>
+									</div>
+								</div>
+								<!--// 레이어팝업 영역 -->
+							</li>
+							<li>
+								<label for="Q1-chk2"><input id="Q1-chk2" name="Q1-chk1" type="checkbox" />수술 필요 소견</label>
+								<button class="sprite-link link-05">안내</button>
+								<!-- 레이어팝업 영역 -->
+								<div class="dpop-layer2 ">
+									<div class="dpop-container">
+										<div class="info-box ">
+											<h2 class="info-tit">필요소견이란</h2>
+											<div class="info-con">의사로부터 진단서 또는 소견서 또는 진료기록부 등에 기재한 경우를 말합니다.</div>
+										</div>
+									</div>
+								</div>
+								<!--// 레이어팝업 영역 -->
+							</li>
+							<li>
+								<label for="Q1-chk3"><input id="Q1-chk3" name="Q1-chk1" type="checkbox" />추가검사(재검사) 필요 소견</label>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li>
+					<p class="qaBox-q">2 최근 2년 이내에 질병이나 사고로 인하여 다음과 같은 의료행위를 받은 사실이 있습니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q2-1"><input id="Q2-1" name="Q2" type="radio" checked />예</label>
+						<label for="Q2-2"><input id="Q2-2" name="Q2" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="dform square02">
+							<li>
+								<label for="Q1-chk1"><input id="Q1-chk1" name="Q1-chk1" type="checkbox" />입원</label>
+							</li>
+							<li><!-- 2018-05-15 -->
+								<label for="Q1-chk2"><input id="Q1-chk2" name="Q1-chk1" type="checkbox" />수술<span class="stxt">(제왕절개포함)</span></label>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li>
+					<p class="qaBox-q">3 최근 5년 이내에 의사로부터 진찰 또는 검사를 통하여 암으로 "진단"받거나 암으로 "입원 또는 수술"을 받은 적이 있습니까?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q3-1"><input id="Q3-1" name="Q3" type="radio" checked />예</label>
+						<label for="Q3-2"><input id="Q3-2" name="Q3" type="radio" />아니오</label>
+					</p>
+					<p class="cont1 fs-26">* 암에는 악성신생물, 백혈병 및 기타 혈액종양이 포함됩니다.</p>
+				</li>
+
+				<li>
+					<p class="qaBox-q">4 현재 운전을 하고 있습니까 ?</p>
+					<p class="qaBox-a dform circle01">
+						<label for="Q9-1"><input id="Q9-1" name="Q9" type="radio" checked />예</label>
+						<label for="Q9-2"><input id="Q9-2" name="Q9" type="radio" />아니오</label>
+					</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la4-1">승용차</label>
+								<div class="dform square02">
+									<label for="la4-1-1"><input id="la4-1-1" name="la4-1" type="radio" checked />영업용</label>
+									<label for="la4-1-2"><input id="la4-1-2" name="la4-1" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-2">승합차</label>
+								<div class="dform square02">
+									<label for="la4-2-1"><input id="la4-2-1" name="la4-2" type="radio" checked />영업용</label>
+									<label for="la4-2-2"><input id="la4-2-2" name="la4-2" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-3">화물차</label>
+								<div class="dform square02">
+									<label for="la4-3-1"><input id="la4-3-1" name="la4-3" type="radio" checked />영업용</label>
+									<label for="la4-3-2"><input id="la4-3-2" name="la4-3" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-4">오토바이<br /><span class="stxt">(50cc미만포함)</span></label>
+								<div class="dform square02">
+									<label for="la4-4-1"><input id="la4-4-1" name="la4-4" type="radio" checked />영업용</label>
+									<label for="la4-4-2"><input id="la4-4-2" name="la4-4" type="radio" />자가용</label>
+								</div>
+							</li>
+							<li><!-- 2018-05-14 -->
+								<label for="la4-5">기계</label>
+								<div class="dform square02">
+									<label for="la4-5-1"><input id="la4-5-1" name="la4-5" type="radio" checked />건설기계</label>
+									<label for="la4-5-2"><input id="la4-5-2" name="la4-5" type="radio" />농기계</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-6">기타</label>
+								<div class="dform square02">
+									<label for="la4-6-1"><input id="la4-6-1" name="la4-6" type="radio" checked />기타</label>
+								</div>
+							</li>
+							<li>
+								<label for="la4-7" class="fc-f9f9f9">기타 내용입력</label>
+								<div>
+									<input id="la4-7" class="inp-wrap" type="text" />
+								</div>
+							</li>
+						</ul>
+					</div>
+					<p class="cont1 fs-26">* 기타에 해당하는 경우 차종을 구체적으로 기재하고, 둘 이상의 차량을 운전하거나 하나의 차량을 둘 이상의 목적으로 사용하는 경우 해당 사항을 모두 기재하십시오.</p>
+				</li>
+			</ol>
+
+			<p class="qaBox-txt">아래사항은 사실과 다르게 알릴 경우 보험가입이 거절될 수 있습니다.</p>
+			<ol class="qaBox">
+				<li>
+					<p class="qaBox-q">5 월 소득(계약자 기준)</p>
+					<div class="qaBox-ex">
+						<ul class="write-st02">
+							<li>
+								<label for="la13-1">월평균</label>
+								<div>
+									<input id="la13-1" class="inp-wrap" type="text" /><span class="won">만원</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ol>
+
+			<ul class="bul-list-st01 boxlist">
+				<li>청약하신 상품은 "간편심사" 상품으로 유병력자 또는 연령제한 등 일반보험에 가입하기 어려운 피보험자를 대상으로 합니다.</li>
+				<li>간편심사란 의적결함 및 연령제한으로 인하여 보험시장에서 소외되고 있는 유병력자나 고령자 등의 계약심사 및 건강검진의 부담을 줄여 보험에 가입할 수 있도록 표준체에 비하여 간소화된 계약전 알릴의무 항목을 활용하여 계약심사 과정을 간소화함을 의미합니다.</li>
+				<li>이 상품은 일반보험 대비 보험료가 할증되어 있습니다. 의사의 건강검진을 받거나 일반계약심사를 할 경우 이 보험보다 저렴한 일반보험에 가입할 수 있습니다. 다만, 일반보험의 경우 건강상태나 가입나이에 따라 가입이 제한될 수 있으며 보장하는 담보에는 차이가 있을 수 있습니다.</li>
+				<li>계약자 및 피보험자는 계약전 알릴 의무에도 불구하고 고의 또는 중대한 과실로 중요한 사항에 대하여 사실과 다르게 알린 경우에는 회사가 별도로 정하는 방법에 따라 계약을 해지하거나 보장을 제한할 수 있으며, 계약을 해지하는 경우에는 해지환급금이 지급됩니다.</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

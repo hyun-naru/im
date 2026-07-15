@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>유지율 조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap cm-0140">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>유지율 조회</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-04-04 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label for="sel_cntStart">회차수</label>
+				<select id="sel_cntStart" class="select" title="시작회차">
+					<!-- <option>2</option>
+					<option>|</option>
+					<option>25</option> -->
+				</select>
+				<span class="dash">~</span>
+				<select id="sel_cntEnd" class="select flex" title="종료회차">
+					<!-- <option>2</option>
+					<option>|</option>
+					<option>25</option> -->
+				</select>
+			</li>
+			<li>
+				<label for="sel_bcsemnGubun">유지율</label>
+				<select id="sel_bcsemnGubun" class="select w50">
+					<option value="01">해당</option>
+					<option value="12">확정</option>
+				</select>
+				<label for="ipt_month">해당월</label><!-- 2018-05-03 / 2018-05-04 -->
+				<input id="ipt_month" class="inp-wrap" type="tel" month data-name="picker1" data-id="ipt_month" placeholder="해당월 입력" />
+				<input type="month" class="sbtn-calendar" data-name="picker1" data-id="ipt_month" title="달력보기" />
+			</li>
+			<li>
+				<label for="sel_sctn">기준</label>
+				<select id="sel_sctn" class="select">
+					<option value="01">계약고</option>
+					<option value="02">환산보험료</option>
+					<option value="03">월납기준보험료</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" type="submit" id="btn_srch">검색</button>
+	</div>
+
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구
+		<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+		<!-- 검색 후 문구
+		<div class="no-data">검색결과가 없습니다.</div>-->
+
+		<div>
+			<dl class="jungsan" id="resultList">
+				<dt>2-4회 정산 <span>목표 <em>80%</em></span></dt>
+				<dd>
+					<span class="stit">모집고</span>
+					<span class="swon"><em class="bold" id="MOZIP_AMT_IQA1">999,999,999</em>원</span>
+					<span class="sper" id="UZI_RT_IQA1">99.9%</span>
+				</dd>
+				<dd>
+					<span class="stit">유지고</span>
+					<span class="swon"><em class="bold" id="UZI_AMT_IQA1">999,999,999</em>원</span>
+					<span class="sper" id="UZI_RT_IQA1_EXPR">↑99.9%</span>
+				</dd>
+			</dl>
+			<div class="btnArea">
+				<button class="search-toggle" id="btn_cntByDtl"><span class="pad_r3">회차별 상세</span></button>
+			</div>
+
+			<div id="toggle-con">
+				<h3 class="ui-hidden-accessible">회차별 상세목록</h3>
+				<ul class="link-list-st01" id="resultDtlList">
+					<li>
+						<dl class="jungsan">
+							<dt>2회 정산 <span>목표 <em>80%</em></span></dt>
+							<dd>
+								<span class="stit">모집고</span>
+								<span class="swon"><em class="bold" id="MOZIP_AMT_IQA">999,999,999</em>원</span>
+								<span class="sper" id="UZI_RT_IQA">99.9%</span>
+							</dd>
+							<dd>
+								<span class="stit">유지고</span>
+								<span class="swon"><em class="bold" id="UZI_AMT_IQA">999,999,999</em>원</span>
+								<span class="sper" id="UZI_RT_IQA_EXPR">↓99.9%</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="jungsan">
+							<dt>3회 정산 <span>목표 <em>80%</em></span></dt>
+							<dd>
+								<span class="stit">모집고</span>
+								<span class="swon"><em class="bold">999,999,999</em>원</span>
+								<span class="sper">99.9%</span>
+							</dd>
+							<dd>
+								<span class="stit">유지고</span>
+								<span class="swon"><em class="bold">999,999,999</em>원</span>
+								<span class="sper">↓99.9%</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="jungsan">
+							<dt>4회 정산 <span>목표 <em>80%</em></span></dt>
+							<dd>
+								<span class="stit">모집고</span>
+								<span class="swon"><em class="bold">999,999,999</em>원</span>
+								<span class="sper">99.9%</span>
+							</dd>
+							<dd>
+								<span class="stit">유지고</span>
+								<span class="swon"><em class="bold">999,999,999</em>원</span>
+								<span class="sper">↓99.9%</span>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!--// fullpop 영역 -->
+
+</body>
+</html>

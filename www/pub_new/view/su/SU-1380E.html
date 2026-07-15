@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">금융소비자 불이익 사항 우선 설명 확인서<span class="step">(<em>1</em>/2)</span></h3><!-- 9.16 수정 -->
+			</div>
+
+			<div class="subscribe-wrap">
+				<div class="top-info"><!-- 9.16 수정 -->
+					<span class="ico-txt-st01">본 확인서는 금융감독원의 [금융소비자보호 모범규준]및 [예금자보호법]에 따라 금융소비자에게 적합한 상품을 구매권유(만65세 이상인 자, 은퇴자, 주부 등에게 손실위험 등 상품설명 강화 및 예금자보호 안내)하기 위함입니다.</span><!-- 9.22수정 -->
+				</div>
+				<div class="subscribe-cont">
+					<ul class="write-st04 line-list">
+						<li>
+							<label class="label-txt">만 65세 이상인 자, 은퇴자, 주부 등에 해당되는지 여부를  금융회사에서 정보 수집하는 것에 동의하십니까?<br>
+							동의하실 경우 상품의 주요 특성에 대한 설명에 앞서 <em>금융 소비자의 불이익 사항과 예금자보호*에 대해 [우선적]으로 설명</em> 받으실 수 있습니다.
+							</label>
+							<div class="checkBox-st01">
+								<input type="radio" id="la01-01" name="la01-01" checked=""><label for="la01-01">동의</label>
+								<input type="radio" id="la01-02" name="la01-01"><label for="la01-02">동의하지 않음</label><!-- 9.16 수정 -->
+							</div>
+						</li>
+						<li>
+							<label class="label-txt">다음 중 어느 항목에 해당하십니까?</label>
+							<div class="checkBox-st01 col-02">
+								<ul>
+									<li><input type="radio" id="la02-01" name="la02-01" checked=""><label for="la02-01">만 65세 이상</label></li>
+									<li><input type="radio" id="la02-02" name="la02-01"><label for="la02-02">은퇴자</label></li>
+									<li><input type="radio" id="la02-03" name="la02-01"><label for="la02-03">주부</label></li>
+									<li><input type="radio" id="la02-04" name="la02-01"><label for="la02-04">우선 설명 요청 고객</label></li>
+								</ul>
+							</div>
+						</li>
+						<li><!-- 9.18 추가 -->
+							<dl class="dl-st01">
+								<dt>금융소비자의 불이익 사항(보험상품의 거래)</dt>
+								<dd>
+									<ul class="bul-list-st04">
+										<li>납입하신 보험료는 <em>보장을 위한 보험료와 계약체결비용 및 계약관리비용이 차감된 후</em> 적립보험료로 운용됩니다.</li>
+										<li>중도해지할 경우 계약자적립금에서 계약체결비용 및 계약관리비용 해당액을 차감하는 경우가 있기 때문에 <em>해지환급금은 납입보험료보다 적거나 없을 수 있습니다.</em></li>
+										<li>변액보험의 경우 실적배당형 상품으로 투자원금과 이자전액이 보장 또는 보호되지 않으며 <em>운용실적에 따라 원금손실이 발생</em>할 수 있습니다.</li>
+										<li>계약자 및 피보험자는 청약서상의 자필서명란에 반드시 본인이 자필서명을 하셔야 하며 계약전 알릴의무사항에 대한 고지를 아니할 경우 위험보장이 제한되거나 보장되지 않을 수 있습니다.</li>
+									</ul>
+								</dd>
+								<dt>예금자 보호 한도</dt>
+								<dd>
+									<ul class="bul-list-st04">
+										<li>본인이 가입하는 금융상품의 예금자보호여부 및 보호한도(해약환급금 또는 만기시 보험금이나 사고보험금)에 기타 지급금을 합하여 1인당 5천만원)에 대하여 설명듣고 이해하였습니다.</li>
+									</ul>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<label for="la03-01" class="label-txt">금융소비자의 불이익 사항, 예금자보호한도에 대하여 「우선적으로 설명」들으셨습니까?</label><!-- 9.25 수정 -->
+							<div class="gapil-box gapil-only"><!-- 10.12 수정 -->
+								<span class="gapil"><label for="la03-01">우선적으로 설명 들었음</label><input type="text" class="ipt" id="la03-01"></span>
+								<!-- 9.22 추가 : 가필 레이어팝업 --><!-- 10.26 수정 -->
+								<div class="dpop-layer2 gapil-layer">
+									<div class="dpop-container">
+										<div class="gapil-cont">
+											<span class="gapil"><label>우선적으로 설명 들었음</label><input type="text" class="ipt"></span>
+										</div>
+										<div class="dpop-footer">
+											<button class="mbtn-2 btn-st21">취소</button>
+											<button class="mbtn-2 btn-st01">확인</button>
+										</div>
+									</div>
+								</div>
+								<!-- //가필 레이어팝업 -->
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

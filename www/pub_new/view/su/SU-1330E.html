@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<link rel="stylesheet" type="text/css" href="../../../css/swiper.min.css">
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/swiper.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">보험계약 이동에 따른 비교안내확인서<span class="step">(<em>2</em>/3)</span></h3>
+			</div>
+			
+			<div class="subscribe-wrap">
+				<div class="top-info">
+					<h4 class="compare-tit">타사 보험계약 비교설명표</h4><!-- 9.16 수정 -->
+				</div>
+				<div class="compare-cont swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><!-- 9.18 수정 -->
+							<strong class="sort-tit">상품명</strong>
+							<dl class="dl-list">
+								<dt>신규계약</dt>
+								<dd>
+									마음 든든 유니버셜 종신보험(무)1940 (보증비용부과형)_가산형_기본형
+								</dd>
+								<dt>기존계약</dt>
+								<dd>
+									마음 든든 유니버셜 종신보험(무)1940 (보증비용부과형)_가산형_기본형
+								</dd>
+							</dl>
+						</div>
+						<div class="swiper-slide">
+							<strong class="sort-tit">보험료, 보험기간</strong>
+							<dl class="dl-list">
+								<dt>신규계약</dt>
+								<dd>
+									내용
+								</dd>
+								<dt>기존계약</dt>
+								<dd><!-- 9.25 수정 -->
+									<input type="text" class="inp-wrap dis-block">
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="paging-control">
+						<button class="swiper-button-prev btn-prev">이전</button>
+						<div class="swiper-pagination paging-count"></div>
+						<button class="swiper-button-next btn-next">다은</button>
+					</div>
+				</div>
+
+				<p class="desc-txt">각 상품의 장단점을 정확히 설명하시기 바랍니다.<br>(계약자에게 유리한 내용만 설명하는 행위 금지)</p><!-- 9.18 추가 -->
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04" disabled>다음</button><!-- 9.16 수정 -->
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+
+<script type="text/javascript">
+	//Initialize Swiper
+	var swiper = new Swiper('.compare-cont', {
+		pagination : '.compare-cont .swiper-pagination',
+		paginationType:'fraction',
+		spaceBetween : 25,
+		prevButton:'.compare-cont .swiper-button-prev',
+		nextButton:'.compare-cont .swiper-button-next',
+		
+		onInit: function(swiper){
+
+			$('.compare-cont .swiper-slide').each(function(idx, obj){
+				$(obj).attr('aria-hidden' , true);
+				$('.compare-cont .swiper-slide').eq(swiper.activeIndex).attr('aria-hidden' , false);
+			});
+		},
+		onTransitionEnd : function(swiper){
+			$('.compare-cont .swiper-slide').each(function(idx, obj){
+				$(obj).attr('aria-hidden' , true);
+				$('.compare-cont .swiper-slide').eq(swiper.activeIndex).attr('aria-hidden' , false);
+				
+			});
+		}
+	});
+</script>
+
+</body>
+</html>

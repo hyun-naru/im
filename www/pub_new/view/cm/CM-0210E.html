@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>콜센터 익일해약접수 조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>콜센터 익일해약접수 조회</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-05-25 / 2018-05-15 -->
+	<div class="search">
+		<ul class="dform circle01">
+			<li>
+				<label for="la1-1" class="label-txt w55">접수일</label>
+					<label for="weekOne"><input id="weekOne" type="radio" name="period" value="d_7" checked />1주</label>
+					<label for="weekTwo"><input id="weekTwo" type="radio" name="period" value="d_14" />2주</label>
+					<label for="month"><input id="month" type="radio" name="period" value="m_1" />한달</label>
+					<label for="period"><input id="period" type="radio" name="period" value="slct" />기간</label>
+			</li>
+			<li class="none" id="toggleDate"><!-- 기간 라디오버튼 선택되었을 경우 노출 -->
+				<label for="stDate" class="label-txt w55">기간입력</label>
+				<input id="stDate" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
+				<input id="endDate" class="inp-wrap" type="tel" placeholder="종료일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" />
+			</li>
+			<li>
+				<label for="slctTeamNm" class="w55">구분</label>
+				<select id="slctTeamNm" class="select flex w100p">
+					<option>팀 선택</option>
+					<option value="1">1팀</option>
+					<option value="2">2팀</option>
+					<option value="3">3팀</option>
+				</select>
+				<select id="isrncPlnnr" class="select flex w100p">
+					<option>설계사 선택</option>
+					<option value="la">라다리</option>
+					<option value="bro">라다리 동생</option>
+					<option value="sis">라다리 누나</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button type="button" id="search" class="lbtn-search">검색</button>
+	</div>
+
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none" id="beforeSearch">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none" id="afterSearch">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt" id="resultCnt">총 5건이 검색되었습니다.</p>
+			<ul class="link-list-st01">
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당</span>
+						</a>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">고객명</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">접수번호</span>
+								<span class="scon">10686</span>
+							</li>
+							<li class="fl-none">
+								<span class="stit">접수일시</span><!-- 2018-05-09 -->
+								<span class="scon">2018.03.05 00:00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">고객명</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">접수번호</span>
+								<span class="scon">10686</span>
+							</li>
+							<li class="fl-none">
+								<span class="stit">접수일시</span><!-- 2018-05-09 -->
+								<span class="scon">2018.03.05 00:00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!--// fullpop 영역 -->
+
+</body>
+</html>

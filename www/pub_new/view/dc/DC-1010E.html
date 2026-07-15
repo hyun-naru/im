@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>DGB생명</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<!-- 10.28 수정
+				<h1 class="logo">DGB생명</h1>
+			-->
+			<h1>신규 설계지원</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="notice-txt">
+				<p class="icoTxt">설계지원을 요청한 FC를 검색(입력)하세요.</p><!-- 9.15 수정 --><!-- 9.25 수정 --><!-- 10.05 수정 -->
+			</div>
+			<div class="write-list-box">
+				<ul class="write-st04">
+					<li>
+						<label for="planner">FC</label><!-- 9.25 수정 -->
+						<div class="search-box">
+							<input type="text" class="inp-wrap" id="planner" disabled>
+							<button class="sbtn-search-g">찾기</button>
+						</div>
+					</li>
+					<li>
+						<label for="auth-tel">휴대전화</label>
+						<div class="pdb-n">
+							<input type="tel" class="inp-wrap" id="auth-tel" placeholder="휴대번호를 '-'없이 입력해주세요." value="010-1234-1234">
+						</div>
+						<div class="btnArea">
+							<button type="button" class="lbtn-bdr-1 bdr-st06">설계지원 확인 및 휴대폰 인증</button><!-- 9.15 수정 -->
+						</div>
+						<label for="auth-number">인증번호</label>
+						<div class="auth-num-box">
+							<span class="flex">
+								<input type="number" class="inp-wrap" id="auth-number" value="123456">
+								<span class="ceti-time">03:00</span>
+							</span>
+							<button type="button" class="mbtn-bdr-1 bdr-st01 w105">요청</button>
+							<!-- 재요청시
+							<button class="sbtn-5 btn-st23 w105">재요청</button> 
+							-->
+						</div>
+						<div class="btnArea pab_15">
+							<button type="button" class="mbtn-2 btn-st11">인증하기</button>
+						</div>	
+						<p class="notice-txt-st02">DGB생명에 등록된 휴대폰 번호로 인증됩니다.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+
+</body>
+</html>

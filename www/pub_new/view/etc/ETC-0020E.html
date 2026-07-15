@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>사고보험금청구</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>사고보험금 청구</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div>
+		<div class="d-step">
+			<h2>3. 청구정보입력</h2>
+			<p class="d-step-status">
+				<span>1</span> / <span>2</span> / <span class="on">3</span> / <span>4</span> / <span>5</span>
+			</p>
+		</div>
+	</div>
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="">
+		<h2 class="titArea-st01">사고보험금 신청종류 : 자녀보험금 접수</h2>
+	</div>
+
+
+	<!-- body_스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<div class="input-div-new">
+			<ul class="toggle">
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">피보험자/수익자 정보</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<ul class="form-write mar-tp-1">
+							<li class="cols-2">
+								<label>피보험자</label>
+								<div class="ta-r bold">홍만득(20161212)</div>
+							</li>
+							<li class="cols-2 mar-bt-1">
+								<label>수익자</label>
+								<div class="ta-r bold">홍길동(19771023)</div>
+							</li>
+							<li>
+								<label for="la-1">수익자 송금계좌</label>
+								<div class="checkBox-st01">
+									<input type="radio" name="ra2" id="ra2_1" checked /><label for="ra2_1">기존등록계좌</label>
+									<input type="radio" name="ra2" id="ra2_5" /><label for="ra2_5">신규계좌</label>
+								</div>
+								<!-- 기존등록계좌 일 경우 -->
+								<div class="radio-wrap">
+									<div>
+										<select id="la-1" class="select">
+											<option>국민은행 / 7788010418****</option>
+										</select>
+									</div>
+								</div>
+								<div class="radio-wrap mar-bt-1">
+									<div class="blue-bulet">사고보험금은 자동이체계좌 및 직접입력을 통한 계좌 확인만으로도 출금이 가능합니다.</div>
+								</div>
+								<!-- //기존등록계좌 일 경우 -->
+								<!-- 신규계좌 일 경우 -->
+								<div class="radio-wrap">
+									<ul class="form-write">
+										<li>
+											<label for="la-2">예금주(생년월일)</label>
+											<div>
+												<input id="la-2" type="text" class="inp-wrap" value="홍길동(771111)" title="예금주 생년월일 입력" disabled/>
+											</div>
+										</li>
+										<li class="mar-tp-1">
+											<label for="la-3">은행명</label>
+											<div>
+												<select id="la-3" class="select w100p">
+													<option>은행선택</option>
+												</select>
+											</div>
+										</li>
+										<li class="mar-tp-1">
+											<label class="la-4">계좌번호</label>
+											<div class="mar-bt-1">
+												<input id="la-4" type="tel" class="inp-wrap" placeholder="-없이 입력" title="계좌번호 입력"/>
+												<button type="button" class="sbtn-search">확인</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //신규계좌 일 경우 -->
+							</li>
+							<li class="mar-tp-1">
+								<label for="la-5">지급(지연)내역 안내</label>
+								<div class="checkBox-st01">
+									<input type="radio" name="ra3" id="ra3_1" checked /><label for="ra3_1">미신청</label>
+									<input type="radio" name="ra3" id="ra3_2" /><label for="ra3_2">우편</label>
+									<input type="radio" name="ra3" id="ra3_3" /><label for="ra3_3">이메일</label>
+									<input type="radio" name="ra3" id="ra3_4" /><label for="ra3_4">팩스</label>
+								</div>
+								<!-- 우편 일 경우 - none삭제 -->
+								<div class="radio-wrap none">
+									<ul class="form-write">
+										<li>
+											<div>
+												<input id="la-4" type="tel" class="inp-wrap" value="서울 은평구 불광로 14길 10-4 ***********"/>
+												<button type="button" class="sbtn-search">찾기</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //우편 일 경우 -->
+
+								<!-- 이메일 일 경우 - none삭제 -->
+								<div class="radio-wrap none">
+									<ul class="form-write">
+										<li>
+											<div>
+												<input id="lab6" class="inp-wrap" type="text" value=""/>
+												<span class="dash">@</span>
+												<select class="select" title="도메인선택">
+													<option selected>직접입력</option>
+													<option>gmail.com</option>
+												</select>
+											</div>
+											<div>
+												<input id="lab61" class="inp-wrap " type="text" value="mail.com"/>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //이메일 일 경우 -->
+
+								<!-- 팩스 일 경우 - none삭제 -->
+								<div class="radio-wrap">
+									<ul class="form-write">
+										<li>
+											<div>
+												<input class="inp-wrap w70" type="tel" /><span class="dash">-</span>
+												<input class="inp-wrap" type="tel" /><span class="dash">-</span>
+												<input class="inp-wrap" type="tel" />
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="radio-wrap mar-bt-1">
+									<div class="blue-bulet">보험금 접수 및 지급 등에 관한 SMS 안내는 자동으로 발송됩니다.</br></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<!-- 청구세부내용 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">청구세부내용</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<ul class="form-write mar-tp-1">
+							<li>
+								<label for="la-1" class="label-ti">발생원인</label>
+								<div class="checkBox-st01">
+									<input type="radio" name="ra20" id="ra20_1" checked /><label for="ra20_1">질병</label>
+									<input type="radio" name="ra20" id="ra20_2" /><label for="ra20_2">일반재해</label>
+									<input type="radio" name="ra20" id="ra20_3" /><label for="ra20_3">교통재해</label>
+								</div>
+
+								<!-- 일반재해 일 경우 -->
+								<div class="radio-wrap">
+									<ul class="form-write">
+										<li>
+											<label for="la-2" class="label-ti">사고내용 (0/200)</label>
+											<div>
+												<textarea class="inp-wrap"></textarea>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //일반재해 일 경우 -->
+							</li>
+							<li>
+								<label for="la-5" class="label-ti">청구내용</label>
+								<div class="mar-bt-1">
+									<ul class="dform square01 cols-3">
+										<li><label for="chk20-1"><input type="checkbox" id="chk20-1" />골절진단</label></li>
+										<li><label for="chk20-2"><input type="checkbox" id="chk20-2" />입원</label></li>
+										<li><label for="chk20-3"><input type="checkbox" id="chk20-3" />수술</label></li>
+										<li><label for="chk20-4"><input type="checkbox" id="chk20-4" />통원</label></li>
+										<li><label for="chk20-5"><input type="checkbox" id="chk20-5" />실손의료비</label></li>
+									</ul>
+								</div>
+								<!-- 실손의료비 일 경우 - none삭제 -->
+								<div class="radio-wrap mar-bt-1">
+									<label for="la-2" class="label-ti">실손의료비 청구시 항목</label>
+									<ul class="form-write">
+										<li>
+											<label>병명</label>
+											<div>
+												<input type="text" class="inp-wrap" value=""/>
+											</div>
+										</li>
+										<li>
+											<label>타사가입여부</label>
+											<div class="checkBox-st01">
+												<input type="radio" name="ra2" id="ra2_1" checked /><label for="ra2_1">예</label>
+												<input type="radio" name="ra2" id="ra2_5" /><label for="ra2_5">아니오</label>
+											</div>
+										</li>
+										<li>
+											<label>보험회사명</label>
+											<div>
+												<input type="text" class="inp-wrap" value=""/>
+											</div>
+										</li>
+										<li>
+											<label>의료급여 수급권자 여부</label>
+											<div class="checkBox-st01">
+												<input type="radio" name="ra2" id="ra2_1" checked /><label for="ra2_1">예</label>
+												<input type="radio" name="ra2" id="ra2_5" /><label for="ra2_5">아니오</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="radio-wrap">
+									<div class="blue-bulet">피보험자가 실손의료비보험을 가입하신 경우, 보험료 할인대상여부 확인 후 재안내 해 드립니다.</div>
+								</div>
+							</li>
+							<li>
+								<label for="la-5" class="label-ti">사고(발병)일시</label>
+								<div class="hbox jc mar-bt-1"><!-- 2018-05-03 / 2018-05-04 -->
+									<input type="tel" class="inp-wrap flex w100p" value="" placeholder="사고일 입력"/>
+									<input type="date" class="sbtn-calendar" title="달력보기" />
+									<input type="time" class="inp-wrap flex w100p" value="" placeholder="시간 입력"/>
+								</div>
+								<div class="radio-wrap mar-bt-1">
+									<ul class="bul-list-st01">
+										<li>모바일을 통한 사고보험금 접수 시 가접수단계로 이관되어 청구가능내역 등을 확인한 후 접수가 완료됩니다.(접수완료시 SMS안내)</li>
+										<li>청구하신 보험금은 지급사유가 인정될 경우 접수한 날로부터 3영업일 이내(단, 지급사유의 확인이 필요한 경우 10영업일 이내)에 지급하여 드립니다</li>
+										<li>보험금 지급이 지연될 경우, 신청하신 안내방법에 따라 그 사유 및 예상 지급일을 안내드리며, 해당 약관에 따라 지연이자를 지급하여 드립니다.(보험금 심사/조사 업무 중 일부는 위탁업체를 통해 처리될 수 있습니다.)</li>
+										<li class="fc-blue">보험사기(허위입원, 고의사고, 사고조작, 피해과장 등)는 범죄이며, 보험사기방지 특별법에 의거 10년 이하의 징역이나 5천만원 이하의 벌금에 처해질 수 있습니다.</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<!-- 개인(신용)정보 처리에 관한 동의 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">개인(신용)정보 처리에 관한 동의</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<div class="cont1">
+							<h3 class="h3-st03">소비자 권익보호에 관한 사항</h3>
+							<div class="borderbox-st01">본 동의를 거부하시는 경우, 보험금청구 관련 서비스가일부 제한될 수 있고 본 동의서에 의한 개인(신용)정보조회는 귀하의 신용등급에 영향을 주지 않습니다.</div>
+
+							<h3 class="h3-st03 mar-tp-1">개인(신용) 정보의 수집·이용에 관한 동의사항</h3>
+							<div class="borderbox-st01">
+								<p class="mar-bt-1 text-blue">당사 및 당사 업무수탁자는 [개인정보보호법] 및 [신용정보의 이용 및 보호에 관한 법률] 에 따라 귀하의 개인(신용)정보를 다음과 같이 수집ㆍ이용하고자 합니다. 이에 대하여 동의하십니까?</p>
+								<strong>개인(신용)정보의 수집·이용 목적</strong>
+								<ul class="bul-list-st01">
+									<li>보험금 지급·심사(보험금 청구서류 접수대행 서비스포함) 및 보험사고조사(보험사기 조사 포함), 보험금지급 관련 민원처리 및 분쟁대응</li>
+									<li>금융거래(보험료 및 보험금 등 출ㆍ수납을 위한 금융거래신청, 자동이체 등 접수) 관련업무</li>
+								</ul>
+								<strong>수집·이용할 개인(신용)정보의 내용</strong>
+								<ul class="bul-list-st01">
+									<li>개인식별정보(성명, 주민등록번호, 외국인등록번호, 운전면허증번호, 주소, 직업, 전화번호, 전자우편주소등), 계좌정보</li>
+									<li>보험사고조사(보험사기조사포함) 및 손해사정 업무수행과 관련하여 취득한 개인(신용)정보[경찰, 공공기관, 의료기관 등 으로부터 본인의 위임을 받아 취득한 각종조사서, 증명서, 진료기록 등에 포함된 개인(신용)정보포함]</li>
+								</ul>
+								<strong>개인(신용)정보의 보유·이용기간</strong>
+								<ul class="bul-list-st01">
+									<li>수집·이용 동의일로부터 거래 종료 후 5년 까지(단, 거래 종료 후 5년이 경과한 후 에는 보험금지급, 금융사고조사, 보험사기방지ㆍ적발, 민원처리, 법령상의무이행을 위한 경우에 한하여 보유ㆍ이용하며, 별도 보관)</li>
+								</ul>
+								<div class="dform square02 ta-r border-t pat_20">
+									<label class="check-st02"><input type="checkbox">동의합니다.</label>
+								</div>
+							</div>
+
+							<h3 class="h3-st03  mar-tp-1">개인(신용)정보 조회목적</h3>
+							<div class="borderbox-st01">
+								<p class="mar-bt-1 text-blue">당사 및 당사 업무수탁자는 [신용정보의 이용 및 보호에 관한 법률] 에 따라 귀하의 개인(신용)정보를 다음과 같이 신용정보집중기관 및 보험요율산출기관으로부터 조회하고자 합니다. 이에 대하여 동의하십니까?</p>
+								<strong class="matb_1">개인(신용)정보의 수집·이용 목적</strong>
+								<div class="blue-bulet2">보험금지급·심사(보험금 청구 서류 접수대행 서비스 포함) 및 보험사고조사(보험사기조사 포함)</div>
+
+								<strong class="matb_1">조회할 개인(신용)정보</strong>
+								<div class="blue-bulet2">보험계약정보, 보험금지급 관련정보(사고정보포함), 질병 및 상해관련 정보</div>
+
+								<strong>조회 동의 유효기간 및 조회자(개인(신용)정보를 제공 받는자)의 개인(신용)정보의 보유·이용기간</strong>
+								<div class="blue-bulet2">수집·이용 동의일로부터 거래 종료 후 5년 까지(단, 거래 종료 후 5년이 경과한 후 에는 보험금지급, 금융사고조사, 보험사기방지ㆍ적발, 민원처리, 법령상의무이행을 위한 경우에 한하여 보유ㆍ이용하며, 별도 보관)</div>
+								<div class="dform square02 ta-r border-t pat_20">
+									<label class="check-st02"><input type="checkbox">동의합니다.</label>
+								</div>
+							</div>
+
+
+							<h3 class="h3-st03 mar-tp-1">개인(신용) 정보의 제공에 관한 사항</h3>
+							<div class="borderbox-st01">
+								<p class="mar-bt-1 text-blue">당사는 [개인정보보호법] 및 [신용정보의 이용 및 보호에 관한 법률]에 따라 귀하의 개인(신용)정보를 다음과 같이 제3자에게 제공하고자 합니다. 이에 대하여 동의하십니까?</p>
+								<strong>개인(신용)정보를 제공받는 자</strong>
+								<ul class="bul-list-st01">
+									<li>신용정보집중기관 :  한국신용정보원 등 신용정보 집중기관</li>
+									<li>공공기관 등 : 금융위원회, 국토해양부, 금융감독원, 보험요율 산출기관 등 공공기관, 법령 상 업무수행기관(위탁사업자 포함)</li>
+									<li>보험회사 등 : 생명보험사, 손해보험사, 국내·국외 보험사, 공제사업자, 체신관서(우체국보험), 금융거래관련 계좌개설금융기관, 금융결제원</li>
+									<li>업무수탁자 등 : 보험금지급·심사 및 보험사고 조사 등에 필요한 업무를 위탁받은 자(보험사고 조사업체, 손해사정업체, 의료기관, 의사, 변호사, 위탁콜센터, 우편물 발송대행업체 등)</li>
+								</ul>
+								<strong>개인(신용)정보를 제공받는 자의 이용목적</strong>
+								<ul class="bul-list-st01">
+									<li>신용정보집중기관 : 보험계약 및 보험금지급관련 정보의 집중관리 및 활용 등 신용정보집중기관의 업무 </li>
+									<li>공공기관 등 : 보험업법 및 자동차손해배상보장법(자동차보험에 한함) 등 법령에 따른 업무수행(위탁업무 포함)</li>
+									<li>보험회사 등 : 보험사고조사(보험사기 조사 포함) 및 손해사정서비스 등 계약이행에 필요한 업무, 보험금청구서류 접수대행 서비스, 진료비심사, 의료심사 및 자문</li>
+									<li>금융거래 업무 (보험료 및 보험금 등 출·수납)</li>
+								</ul>
+								<strong>제공할 개인(신용)정보의 내용</strong>
+								<ul class="bul-list-st01">
+									<li>[1. 개인(신용)정보의 수집·이용에 관한 사항]의 정보내용(단, 각 제공받는 자의 이용 목적을 위해 필요한 정보에 한함)</li>
+								</ul>
+								<strong>제공받는 자의 개인(신용)정보 보유·이용기간</strong>
+								<ul class="bul-list-st01 mar-bt-1">
+									<li>개인(신용)정보를 제공받는 자의 이용목적을 달성할 때까지 (최대 거래 종료 후 5년까지)</li>
+									<div class="text-sm">※ 각 제공대상기관 및 이용목적의 구체적인 정보는 당사 홈페이지[http://dgbfnlife.com]에서 확인할 수 있습니다.</div>
+								</ul>
+								<div class="dform square02 ta-r border-t pat_20">
+									<label class="check-st02"><input type="checkbox">동의합니다.</label>
+								</div>
+							</div>
+
+
+							<h3 class="h3-st03 mar-tp-1">고유식별정보의 처리에 관한 사항</h3>
+							<div class="borderbox-st01">당사 및 당사 업무수탁자는 「개인정보보호법」 및 「신용 정보의 이용 및 보호에 관한 법률」에 따라 상기의 개인(신용)정보에 대한 개별 동의사항에 대하여 다음과 같이 귀하의 민감정보(질병·상해정보)  및 고유식별정보(주민등록번호·외국인등록번호)를 처리(수집·이용, 조회, 제공)하고자 합니다. 이에 동의하십니까?</div>
+
+							<div class="borderbox-st01 ">
+								<strong>주민등록번호, 외국인등록번호, 운전면허증번호 처리</strong>
+								<div class="dform square02 ta-r pat_20">
+									<label class="check-st02"><input type="checkbox">동의합니다.</label>
+								</div>
+							</div>
+
+							<div class="borderbox-st01 ">
+								<strong>질병, 상해정보 처리</strong>
+								<div class="dform square02 ta-r  pat_20">
+									<label class="check-st02"><input type="checkbox">동의합니다.</label>
+								</div>
+							</div>
+
+							<div class="borderbox-st01 mat_20">
+								<p>본인은 다른 법정대리인(친권자)1인과 합의하에 공동으로 친권을 행사합니다.</p>
+								<p class="mt10 right pat_20"><strong>2018년 1월 15일 홍길동</strong></p>
+								<div class="dform square02 ta-r pat_20">
+									<label class="check-st02"><input type="checkbox">동의합니다.</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<!-- 필요서류첨부 -->
+				<li>
+					<div class="toggle-header">
+						<h2 class="title">필요서류첨부</h2>
+						<button type="button" class="btn-toggle">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<ul class="form-write">
+							<li>
+								<h3 class="h3-st03">첨부파일</h3>
+								<div>
+									<button class="flex ico-cam">사진촬영</button>
+									<button class="flex ico-gallery">갤러리</button>
+								</div>
+
+								<p class="fc-blue mat_20">현재개수 : <strong>12</strong>/20,  현재용량 : <strong>19MB</strong>/20MB</p>
+								<ol class="file-list">
+									<li>
+										<span class="file-name">201802040003abcd201802040003abcd20180ㅁㅇㄻㅇㄻㅇㄹ</span>
+										<button class="del-list">파일삭제</button>
+									</li>
+									<li>
+										<span class="file-name">201802040003abcd201802040003abcd20180ㅁㅇㄻㅇㄻㅇㄹ</span>
+										<button class="del-list">파일삭제</button>
+									</li>
+									<li>
+										<span class="file-name">201802040003abcd201802040003abcd20180ㅁㅇㄻㅇㄻㅇㄹ</span>
+										<button class="del-list">파일삭제</button>
+									</li>
+								</ol>
+								<div class="radio-wrap">
+									<ul class="bul-list-st01">
+										<li>LTE나 3G 등 이통통신의 종량제 데이터 전송을 사용하실 경우 데이터 이용료가 부과됩니다.</li>
+										<li> WI-FI 등 과금이 되지 않는 무선인터넷을 이용하시면, 요금을 절약하실 수 있습니다.</li>
+										<li>첨부파일은 최대 20개까지 등록 가능합니다.
+											<ul class="list-dash">
+												<li>최대용량 : 20MB</li>
+												<li>지원 확장자 : JPG, JPEG, JPE, JFIF, GIF, TIF, TIFF, BMP, DIB, PNG, PDF</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</html>

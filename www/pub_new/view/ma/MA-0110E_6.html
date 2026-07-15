@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>간편비밀번호 등록</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>간편비밀번호 등록</h1>
+			<button class="lbtn btn-back">이전</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="login-wrap bg-st01">
+				<section class="loginBox">
+					<h2 class="login-txt1 ico-chk">한예슬 님의 간편 비밀번호가<br>등록 되었습니다.</h2>
+					<div class="login-setup-txt success">
+						<span class="ico-idpw">간편 비밀번호</span>
+						<p class="txt">등록하신 간편 비밀번호로<br>로그인 하실 수 있습니다.</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04">확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+
+<!-- 레이어팝업 영역: none 을 없애면 보입니다. -->
+<div class="dim-layer none" id="layerPwdStandard">
+	<div class="dimBg"></div>
+	<div class="dpop-layer ma-0130">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>비밀번호 기준</h1>
+				<button class="btn-pop-close" data-id="btnLayerClose">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<h3 class="h3-st01">비밀번호 유효성 체크 규칙</h3>
+				<ul class="bul-list-st01">
+					<li>자리수:영문자+숫자 혼용 10~20자</li>
+				</ul>
+			
+				<h3 class="h3-st01">유효하지 않은 규칙</h3>
+				<ul class="bul-list-st01">
+					<li>사용자ID와 동일한 비밀번호</li>
+					<li>반복문자, 알파벳순 또는 연속된 자판 배열로 된 비밀번호</li>
+					<li>문자 또는 숫자만으로 구성된 비밀번호</li>
+					<li>과거에 사용했던 비밀번호(2차 이력체크)</li>
+				</ul>
+				<h3 class="h3-st01">비밀번호 변경주기 : 90일</h3>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st01" data-id="btnLayerClose">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 레이어팝업 영역 -->
+
+</body>
+</html>

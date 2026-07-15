@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>변액보험 적합성 심사 결과</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/jquery/ui.js"></script>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>변액보험 적합성 심사 결과</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div class="blueBox-st01">
+		<ul class="bul-list-st01 rbox-st01">
+			<li>
+				<span class="stit2">점수</span>
+				<span class="scon2" id="CU-0070P_score">77<em>점</em></span>
+			</li>
+			<li>
+				<span class="stit2">보험상품 성향</span>
+				<span class="scon2 fc-blue" id="CU-0070P_insrncTndncy">저축∙연금형</span>
+			</li>
+			<li>
+				<span class="stit2">투자성향</span>
+				<span class="scon2 fc-red" id="CU-0070P_invstTndncy">변액보험 부적합형</span><!-- 2018-05-14 -->
+			</li>
+		</ul>
+	</div>
+
+	<!-- body_스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div>
+			<ul class="toggle" id="CU0070Pul_toggle">
+				<li>
+					<div class="toggle-header on">
+						<div class="title"><h2>추천 보험상품</h2></div>
+						<button type="button" class="btn-toggle on" name="CU-0070P_clickToggleProd">더보기</button>
+					</div>
+					<div class="toggle-con">
+						<h3 class="h3-tit">저축형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<!-- status-02 -->
+										<span class="swrap status-02" name="CU-0070P_saving_recommend_off-02">자산증식</span>
+										<span class="swrap status-02" name="CU-0070P_saving_recommend_off-02">목돈자금 마련</span>
+									</li>
+									<li>
+										<!-- status-01 -->
+										<span class="stit">추천</span>
+										<span class="swrap status-03" name="CU-0070P_saving_recommend_off-01">변액 유니버셜(적립형)</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">연금형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01"><!-- dimed일경우 status-off-01, status-off-02로 교체  -->
+									<li>
+										<span class="stit">성향</span>
+										<span class="swrap status-off-02 ">노후대비</span>
+										<span class="swrap status-off-02">목돈자금 마련</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<span class="swrap status-off-01">변액 연금</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">연금형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<!-- status-02 -->
+										<span class="swrap status-02" name="CU-0070P_pension_recommend-off-02">노후대비</span>
+										<span class="swrap status-02" name="CU-0070P_pension_recommend-off-02">목적자금 마련</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<!--  status-03 -->
+										<span class="swrap status-03" name="CU-0070P_pension_recommend-off-01">변액 연금</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">보장형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<!--  status-02 -->
+										<span class="swrap status-02" name="CU-0070P_guarantee_recommend-off-02">사망,질병 등을 대비한 보장자산 마련</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<!-- status-03 -->
+										<span class="swrap status-03" name="CU-0070P_guarantee_recommend-off-01">변액 CI,변액종신,변액유니버셜(보장형)</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li id="CU-0070P_spclAccntFund">
+					<div class="toggle-header">
+						<div class="title"><h2>추천 특별계정 펀드</h2></div>
+						<button type="button" class="btn-toggle" name="CU-0070P_clickToggleFund">더보기</button>
+					</div>
+					<div class="toggle-con" style="display:none;">
+						<h3 class="h3-tit">위험회피형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<span class="swrap status-02">원금손실 X</span>
+										<span class="swrap status-02">예ㆍ적금 수익률</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<span class="swrap status-03">채권형 100%</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">안정추구형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<span class="swrap status-02">원금손실 최소</span>
+										<span class="swrap status-02">안정적 수익</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<span class="swrap status-03">채권형 70% 이상</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">위험중립형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<span class="swrap status-02">원금손실 인식</span>
+										<span class="swrap status-02">금리보다 높은 수익률</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<span class="swrap status-03">채권형 70% 미만</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">적극투자형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<span class="swrap status-02">원금손실 감내</span>
+										<span class="swrap status-02">높은 수익률</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<span class="swrap status-03">채권형 50% 미만</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h3 class="h3-tit">위험선호형</h3>
+						<ul class="card-list-st01">
+							<li>
+								<ul class="bul-list-st01">
+									<li>
+										<span class="stit">성향</span>
+										<span class="swrap status-02">위험자산 투자의향</span>
+										<span class="swrap status-02">아주 높은 수익률</span>
+									</li>
+									<li>
+										<span class="stit">추천</span>
+										<span class="swrap status-03">채권형 30% 미만</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st01" id="CU-0070P_resultClose">확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(피보험자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(피보험자)</h1><!-- 9.25 수정-->
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">계약전 알릴의무 사항<span class="step">(<em>1</em>/3)</span></h3><!-- 9.16 수정 -->
+			</div>
+			<div class="subscribe-wrap">
+				<div class="subscribe-cont">
+					<p class="txt">상기 질문사항(1번~6번)중 “ 예”를 체크하신 것이 있습니다.<br>병명 등의 상세정보를 입력해 주시기 바랍니다.(3개까지)</p>
+					
+					<div class="tab-add full">
+						<ul class="list">
+							<li class="on">
+								<button type="button" class="rtab"><span>병력1</span></button>
+								<button type="button" class="del"><span>삭제</span></button>
+							</li>
+							<li>
+								<button type="button" class="rtab"><span>병력2</span></button>
+								<button type="button" class="del"><span>삭제</span></button>
+							</li>
+						</ul>
+						<button type="button" class="rtab-add"><span>탭추가</span></button>
+					</div>
+					<div class="tab-cont">
+						<ul class="write-st02">
+							<li>
+								<label for="la-1" class="label-txt">병명</label>
+								<div>
+									<input type="text" id="la-1" class="inp-wrap">
+								</div>
+							</li>
+							<li>
+								<label for="la-2-1" class="label-txt">치료시작일</label>
+								<div>
+									<input type="tel" id="la-2-1" class="inp-wrap" placeholder="시작일 입력">
+									<input type="date" class="sbtn-calendar" title="달력보기">
+								</div>
+							</li>
+							<li>
+								<label for="la-2-2" class="label-txt">치료종료일</label>
+								<div>
+									<input type="tel" id="la-2-2" class="inp-wrap" placeholder="종료일 입력">
+									<input type="date" class="sbtn-calendar" title="달력보기">
+								</div>
+							</li>
+							<li>
+								<label for="la-6" class="label-txt">치료/수술내용</label>
+								<div>
+									<input type="text" id="la-6" class="inp-wrap">
+								</div>
+							</li>
+							<li>
+								<label for="la-7" class="label-txt">치료구분</label>
+								<div class="checkBox-st01">
+									<input type="radio" id="la-7-1" name="la-7"><label for="la-7-1">입원</label>
+									<input type="radio" id="la-7-2" name="la-7"><label for="la-7-2">통원</label>
+								</div>
+							</li>
+							<li>
+								<label for="la-3" class="label-txt">치료병원</label>
+								<div>
+									<input type="text" id="la-3" class="inp-wrap">
+								</div>
+							</li>
+							<li>
+								<label for="la-4" class="label-txt">재발경험</label>
+								<div class="checkBox-st01">
+									<input type="radio" id="la-4-1" name="la-4"><label for="la-4-1">있다</label><!-- 9.16 수정 -->
+									<input type="radio" id="la-4-2" name="la-4"><label for="la-4-2">없다</label>
+								</div>
+							</li>
+							<li>
+								<label for="la-5" class="label-txt">완치여부</label>
+								<div class="checkBox-st01">
+									<input type="radio" id="la-5-1" name="la-5"><label for="la-5-1">예</label>
+									<input type="radio" id="la-5-2" name="la-5"><label for="la-5-2">아니오</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

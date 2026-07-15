@@ -1,0 +1,209 @@
+@charset "utf-8";
+@import "font.css";
+@import "d-lite_reset.css";
+@import "d-lite_common.css";
+@import "d-lite_layout.css";
+@import "d-lite_content.css";
+@import "d-lite_pop.css";
+@import "d-lite_dcNew.css"; /* 2026 dcNew ui개선용 스타일 */
+
+/*
+  CSS order:
+  1. clear/display/position/z-index/overflow/float
+  2. width/height
+  3. margin/padding
+  4. color/font/line-height/text/letter-spacing/vertical-align/white-spacing/word-spacing
+  5. etc
+  6. border/background
+*/
+
+/* ========== page indicator 2018-05-31 ========== */
+.page_loading.dim-layer{z-index:800;position:fixed;top:0;left:0;width:100%;height:100%;}
+.page_loading.dim-layer .dimBg{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.8;}
+.page_loading .loading-layer{z-index:10;display:block;position:absolute;top:50%;left:50%;width:16rem;height:12rem;margin-left:-8rem;margin-top:-6rem;text-align:center;}
+.page_loading .loading-layer p{padding:.5rem 0;color:#fff;font-size:1.4rem;text-align:center;}
+.page_loading .loading-layer img{width:8rem;height:8rem;margin-bottom:1rem;text-align:center;}
+
+/* ========== page indicator2 ========== */
+@keyframes lds-double-ring{
+	0%{-webkit-transform:rotate(0);transform:rotate(0);}
+	100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+}
+@-webkit-keyframes lds-double-ring{
+	0%{-webkit-transform:rotate(0);transform:rotate(0);}
+	100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+}
+@keyframes lds-double-ring_reverse{
+	0%{-webkit-transform:rotate(0);transform:rotate(0);}
+	100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);}
+}
+@-webkit-keyframes lds-double-ring_reverse{
+	0%{-webkit-transform:rotate(0);transform:rotate(0);}
+	100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);}
+}
+.lds-double-ring{margin:.8rem auto 2.2rem;}
+.lds-double-ring div{position:absolute;width:22rem;height:22rem;top:0;left:-1rem;border-radius:50%;border:1.2rem solid #000;border-color:#0f9077 transparent #0f9077 transparent;-webkit-animation:lds-double-ring 1.5s linear infinite;animation:lds-double-ring 1.5s linear infinite;}
+.lds-double-ring div:nth-child(2){width:19rem;height:19rem;top:1.5rem;left:.8rem;border-color:transparent #02ddbb transparent #02ddbb;-webkit-animation:lds-double-ring_reverse 1.5s linear infinite;animation:lds-double-ring_reverse 1.5s linear infinite;}
+.lds-double-ring{width:6rem !important;height:6rem !important;-webkit-transform:translate(-3rem, -3rem) scale(0.3) translate(3rem, 3rem);transform:translate(-3rem, -3rem) scale(0.3) translate(3rem, 3rem);}
+
+
+/* 로그인설정안내 */
+.header-img{width:100%;padding:.5rem 12rem 0 0;background:url('../img/img-ma0030p-03.png') no-repeat right 0;background-size:11rem;}
+.header-img p{margin-top:.5rem;padding:0;color:#010101;font-size:1.6rem;line-height:1.4;text-align:left;}
+.header-img .stxt{color:inherit;font-size:1.2rem;text-align:inherit;}
+.header-img p em{color:#0f9077;}
+
+.login-cont{overflow:hidden;position:relative;background:#f2fcfa}
+.login-wrap{padding:6rem 1.5rem 0;}
+.loginBox{width:100%;padding:0 3rem;}
+.loginBox ul{width:100%;}
+.loginBox li{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:justify;-webkit-box-align:center;}
+.loginBox li > *{display:block;}
+.loginBox li ~ li{margin-top:1rem;}
+.loginBox li label{display:inline-block;width:9.8rem;color:#444;font-size:1.4rem;}
+.loginBox li .btn-sms{display:inline-block;width:8.8rem;height:2.9rem;margin-right:1rem;color:#202020;font-size:1.3rem;text-align:center;border:.1rem solid #e6e6e6;border-radius:.3rem;background-color:#eee;}
+.loginBox li .inp-wrap2{width:100%;height:4rem;padding:0 1.5rem;line-height:4rem;color:#777;font-size:1.5rem;text-align:left;border:.1rem solid #cff0ea;border-radius:.5rem;background-color:#ff;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;}
+.loginBox li .inp-wrap2:focus{background-color:#fff;}
+.loginBox li .inp-wrap2:disabled{background-color:transparent !important;}
+.loginBox .lbtn{width:100%;border:none !important;border-radius:.5rem;}
+.loginBox .lbtn:disabled{background-color:#e6e6e6 !important;opacity:1;}
+.loginBox .id-save{margin-top:1.5rem;}
+.loginBox .id-save label{font-size:1.4rem;}
+
+.loginBox .error-txt{margin:1.5rem 0 2.5rem;color:#fa910a;font-size:1.4rem;text-align:center;}
+
+/* login-other-way */
+.login-other-way{overflow:hidden;position:absolute;right:1.5rem;bottom:-11.6rem;left:1.5rem;border-radius:3.5rem 3.5rem 0 0;background:#fff;box-shadow:.1rem .7rem 1.5rem 0rem rgba(16,51,104,.3);transition:bottom .5s}
+.login-other-way .btn-other{width:100%;height:4rem;}
+.login-other-way .btn-other span{display:inline-block;position:relative;padding-right:1.5rem;color:#777;font-size:1.2rem;}
+.login-other-way .btn-other span:after{content:"";display:inline-block;position:absolute;top:.4rem;right:0;width:.6rem;height:1rem;vertical-align:middle;background:url("../img_new/sprite-arrow-240813.png") no-repeat -1.5rem 0;background-size:5rem auto;transform:rotate(-90deg);transition:all .5s}
+.login-other-way .other-way{border-top:.1rem solid #cff0ea;}
+.login-other-way ul{display:flex;}
+.login-other-way ul li{flex:1;position:relative;}
+.login-other-way ul li + li:before{content:"";display:block;position:absolute;top:50%;left:0;margin-top:-.8rem;width:.1rem;height:1.6rem;background:#cff0ea}
+.login-other-way ul li button{display:block;width:100%;height:11.5rem;text-align:center;background:transparent}
+.login-other-way ul li button:before{content:"";display:block;width:5.25rem;height:5.2rem;margin:0 auto .5rem;background:url("../img_new/sprite-auth-way-240813.png") no-repeat;background-size:11rem auto;}
+.login-other-way ul li button.finger:before{background-position:right -15.6rem;}
+.login-other-way ul li button.simple:before{background-position:0 0;}
+.login-other-way ul li button.idpw:before{background-position:0 -20.7rem;}
+.login-other-way ul li button.kakao:before{background-position:right 0;}
+.login-other-way ul li button.toss:before{background-position:right -20.7rem;}
+.login-other-way ul li button span{color:#555;text-align:inherit;}
+.login-other-way.open{bottom:0;}
+.login-other-way.open .btn-other{height:3rem;}
+.login-other-way.open .btn-other span:after{transform:rotate(90deg);}
+
+
+
+/* 로그인방법 선택 */
+.login-setting{margin-bottom:.5rem;padding:3rem 1.5rem;background:#fff;border:.1rem solid #e3e3e3;}
+.login-setting ul{display:flex;}
+.login-setting ul li{flex:1}
+.login-setting ul li ~ li{margin-left:.75rem}
+.login-setting ul li a{display:block;padding-top:2rem;min-height:13.4rem;text-align:center;border:.1rem solid #e3e3e3;border-radius:.5rem;background:#fff;box-shadow:0 0 1rem 0 rgba(41,51,104,.1)}
+.login-setting ul li a:before{content:"";display:block;width:5.25rem;height:5.2rem;margin:0 auto .5rem;background:url("../img_new/sprite-auth-way-240813.png") no-repeat;background-size:11rem auto;}
+.login-setting ul li a span{color:#555;line-height:1.35}
+.login-setting ul li.on a{border:.2rem solid #0f9077;}
+.login-setting ul li.on a span{color:#0f9077;font-weight:500;}
+
+.login-setting ul li .simple:before{background-position:0 0;}
+.login-setting ul li .finger:before{background-position:right -15.6rem;}
+.login-setting ul li .idpwd:before{background-position:0 -20.8rem;}
+
+
+/* 인증방법 선택 */
+.certi-setting{width:100%;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:justify;-webkit-box-align:center;}
+.certi-setting > * {display:block;}
+.certi-setting li{position:relative;width:100%;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;background-color:#fff;}
+.certi-setting li + li{margin-left:.5rem;}
+.certi-setting li input[type=radio]{position:absolute;top:-4px;left:-4px;background:none;}
+.certi-setting li input[type=radio]:checked{display:inline-block;background:url("../img/sprite-chk.png") no-repeat -2rem 0;background-position:-2rem 0 !important;background-size:6rem;}
+.certi-setting li input[type=radio]:checked + label{border:.1rem solid #136d5d;}
+.certi-setting li label{display:inline-block;width:100%;height:7rem;padding:4.7rem 0 0;color:#000;font-size:1.2rem;text-align:center;border:1px solid #eee;}
+.certi-setting label:before{content:"";position:absolute;left:50%;margin-left:-1.5rem;display:inline-block;width:4rem;height:3rem;background:url('../img/sprite-dc0191.png') no-repeat;background-size:6rem;}
+.certi-setting label.sms:before{top:.8rem;height:4rem;background-position:0 -12.5rem;}
+.certi-setting label.iden:before{top:1.2rem;background-position:0 -10rem;}
+
+.certi-setting label.jumin:before, .certi-setting label.car:before, .certi-setting label.forin:before{top:1.5rem;height:3.5rem;}
+.certi-setting label.jumin:before{height:2.5rem;background-position:0 0;}
+.certi-setting label.car:before{height:2.5rem;background-position:0 -2.5rem;}
+.certi-setting label.forin:before{background-position:0 -5rem;}
+
+/*20180705 추가*/
+
+.mar-tp-1 {
+    margin-top: 1rem;
+}
+
+.mar-bt-1 {
+    margin-bottom: 1rem;
+}
+.text-right {
+	text-align: right;
+}
+
+.label-ti {
+	line-height:4rem;
+	font-weight:bold;
+}
+
+.text-blue {
+	color:#4f8e6b;
+}
+.text-sm {
+	font-size:1.2rem;
+}
+
+.input-div-new .checkBox-st01 input[type=radio] {
+	position: relative;
+    top: 0px;
+    z-index: 0;
+}
+
+.w96 {width: 96px !important;}
+
+.text-sm-07 { font-size: 1.5rem; padding: 1rem 0; color: #028468;}
+/*문구추가*/
+.credit-txt-2 {line-height: 1.8rem; padding: 1rem; border: 1px solid #ddd; margin-bottom: 1rem;}
+.credit-txt-2 p { padding: 0.5rem 0;}
+.credit-txt-2 h2 {font-weight: bold;padding-bottom: 0.3rem;padding-top: .5rem;}
+span.txt-blue2 {color:#136d5d; font-weight:bold;}
+.credit-txt-2 .txt-red {color:#ec692c; font-weight:bold;}
+ol.sm-ol {padding-left: 1rem;}
+
+span.sign-txt {text-align: center; width: 100%; display: block; color: #028468; cursor: pointer;}
+
+
+/* === 가입내역탭추가 190122===*/
+.con-list li {display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:justify;/*-webkit-box-align:center;*/ border-bottom: 1px solid #ececec; padding:0.7rem 0.3rem;}
+/* .con-list li.vbox {display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;} */
+/* .con-list li.vbox > * {width:100%; margin-bottom:1rem;} */
+.con-list li:last-child {border-bottom: none; }
+.con-list li > * {display:block;} 
+.con-list li *  {vertical-align: initial;line-height: 1.3/* 두줄데이터 */} 
+.con-list li > *:last-child {text-align:right; margin-left: 1rem; -webkit-box-flex:1} 
+.con-list-st01 > li {background:#fff;border: 1px solid #dadada;margin-bottom:1rem;} 
+.con-list-st01 .on .con-head + .con-body{border-top:1px solid #d2d2d2;}
+.con-list-st01 .con-head .con-list > li:first-child > */*:first-of-type*//*, .con-list-wrap .con-list > li:first-child > **//*:first-of-type*/ {color:#000;}
+.con-list-st01 .con-head .con-list > li:last-child {padding-bottom:0;}
+.con-list-st01 .con-head, .con-list-wrap > .tit-st02{padding: 1rem ;}
+.con-list-st01 .con-body/*, .con-list-wrap > .tit-st02 + **/{padding: 1rem;} /* con-list 기준 */
+.con-list li {display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:justify;/*-webkit-box-align:center;*/ border-bottom: 1px solid #ececec; padding:0.7rem 0.3rem;}
+/* ========== sprite-accodian03  ========= */
+
+
+/* ======================================================================================= 
+	app download page
+========================================================================================== */
+.app-download header{border-bottom:.1rem solid #136d5d !important;}
+.app-download .d-cont{background-color:#fff !important;}
+.app-download .txt-wrap{width:100%;line-height:1.4;padding:6rem 0 3.5rem;font-size:1.5rem;text-align:center;border-bottom:.1rem solid #ddd;}
+.app-download .txt1{color:#000;font-size:inherit;}
+.app-download .txt2{padding:3.5rem 0 0;color:#0f9077;font-size:inherit;}
+.app-download .btn-wrap{padding:5rem 0 0;}
+.app-download .btn-wrap a{width:100%;height:4rem;line-height:4rem;margin:1rem 0 0;color:#fff;font-size:1.5rem;text-align:center;border-radius:.3rem;}
+.app-download .btn-wrap .btn-android{background-color:#66cc33;}
+.app-download .btn-wrap .btn-ios{background-color:#0f9077;}
+.app-download .btn-wrap a span{display:inline-block;padding-left:2.5rem;color:inherit;font-size:inherit;}
+.app-download .btn-wrap .btn-android span{background:url('../img/ico-android.png') 0 center no-repeat;background-size:2rem;}
+.app-download .btn-wrap .btn-ios span{background:url('../img/ico-ios.png') 0 center no-repeat;background-size:2rem;}

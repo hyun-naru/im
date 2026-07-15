@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>사고보험금 접수</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body class="etc-0011e">
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>사고보험금 접수</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div>
+		<div class="d-step">
+			<h2>2. 사전체크</h2>
+			<p class="d-step-status">
+				<span>1</span> / <span class="on">2</span> / <span>3</span> / <span>4</span> / <span>5</span>
+			</p>
+		</div>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<p class="cont1 fc-blue">사고보험금 접수를 위해 아래 내용을 확인해 주세요.</p>
+		<ul class=" write-st04">
+			<li>
+				<label for="la-01">사고보험금 신청종류를 선택해 주세요.</label>
+				<div class="checkBox-st01">
+					<input id="ra1_1" name="ra1" type="radio" /><label for="ra1_1">본인보험금 접수</label>
+					<input id="ra1_2" name="ra1" type="radio" checked /><label for="ra1_2">자녀보험금 접수</label>
+				</div>
+			</li>
+			<!-- 본인보험금 접수일 경우 -->
+			<li>
+				<label for="la-02">피보험자, 수익자가 모두 본인입니까? </label>
+				<div class="checkBox-st01">
+					<input id="ra2_1" name="ra2" type="radio" /><label for="ra2_1">예</label>
+					<input id="ra2_2" name="ra2" type="radio" checked /><label for="ra2_2">아니오</label>
+				</div>
+			</li>
+			<!-- //본인보험금 접수일 경우 -->
+
+			<!-- 자녀보험금 접수일 경우 -->
+			<li>
+				<label for="la-02">본인이 수익자이십니까? </label>
+				<div class="checkBox-st01">
+					<input id="ra2_1" name="ra2" type="radio" /><label for="ra2_1">예</label>
+					<input id="ra2_2" name="ra2" type="radio" checked /><label for="ra2_2">아니오</label>
+				</div>
+				<p class="txt-desc">자녀보험금 접수는 부모 중 1인(본인)이 수익자이고,미성년 자녀가 피보험자인 경우에 접수할 수 있습니다.(성년 기준은 만 19세)</p>
+			</li>
+			<li>
+				<label for="la-03">미성년자가 피보험자입니까?(성년기준은 만19세)</label>
+				<div class="checkBox-st01">
+					<input id="ra3_1" name="ra3" type="radio" checked /><label for="ra3_1">예</label>
+					<input id="ra3_2" name="ra3" type="radio" /><label for="ra3_2">아니오</label>
+				</div>
+				<ul class="dform circle01"><!-- 위 문항 답이 예일 경우에만 노출 -->
+					<li><label for="la03-1"><input type="radio" name="la03-1" id="la03-1"/>홍만득(2016.12.12)</label></li>
+					<li><label for="la03-2"><input type="radio" name="la03-1" id="la03-2"/>홍만득(2016.12.12)</label></li>
+					<li><label for="la03-3"><input type="radio" name="la03-1" id="la03-3"/>홍만득(2016.12.12)</label></li>
+				</ul>
+			</li>
+			<!-- //자녀보험금 접수일 경우 -->
+			<li>
+				<label for="la-04">청구금액이 100만원 이하입니까?</label>
+				<div class="checkBox-st01">
+					<input id="ra4_1" name="ra4" type="radio" /><label for="ra4_1">예</label>
+					<input id="ra4_1" name="ra4" type="radio" checked /><label for="ra4_2">아니오</label>
+				</div>
+			</li>
+			<li>
+				<ul class="bul-list-st01 borderbox bg_fff">
+					<li>필요 시 추가 서류 제출을 요청드릴 수 있습니다.</li>
+					<li>단체보험에 대한 보험금 청구 시에는 재직증명서 제출을 요청 드릴 수 있습니다.</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객 상세</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/jquery/ui.js"></script>
+</head>
+<body>
+
+<!-- 레이어팝업 영역 -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="layer2" class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>적합성 진단 불원 확인(유형 확인)</h1>
+				<button class="btn-pop-close" name="CU-0050P_closePop">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<ol class="qa-list2">
+					<li>
+						<label for="CU-0050P_resultChkAnsw1" class="dform square01"><input id="CU-0050P_resultChkAnsw1" type="radio" name="CU-0050P_chkAnsw" value="1"/>전.현직 보험업 종사자(임직원,보험계리사,보험설계사, 손해사정사 등)</label>
+					</li>
+					<li>
+						<label for="CU-0050P_resultChkAnsw2" class="dform square01"><input id="CU-0050P_resultChkAnsw2" type="radio" name="CU-0050P_chkAnsw" value="2"/>금융회사에서 5년 이상 근무한 자(보험업법 시행령 제6조의 2 제2조 2항에 규정하는 회사</label>
+					</li>
+					<li>
+						<label for="CU-0050P_resultChkAnsw3" class="dform square01"><input id="CU-0050P_resultChkAnsw3" type="radio" name="CU-0050P_chkAnsw" value="3"/>비금융기관(일반기업)에서는 재무 또는 회계분야헤서 5년 이상 근무한 자.</label>
+					</li>
+					<li>
+						<label for="CU-0050P_resultChkAnsw4" class="dform square01"><input id="CU-0050P_resultChkAnsw4" type="radio" name="CU-0050P_chkAnsw" value="4"/>금융투자상품(변액보험 포함)을 1회이상 거래한 경험이 있는 자</label>
+					</li>
+				</ol>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st21" name="CU-0050P_closePop">취소</button>
+				<button class="mbtn-2 btn-st01" id="CU-0050P_submit">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 레이어팝업 영역 -->
+
+
+
+</html>

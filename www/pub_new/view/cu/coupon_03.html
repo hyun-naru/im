@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객상세</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<link rel="stylesheet" type="text/css" href="../../../css/coupon.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+
+
+
+
+<script>
+	$(document).ready(function(){
+	// 쿠폰 바텀시트
+		$(".coupon").click(function(){
+			$(".bottom-sheet, .dimmed").addClass('open')
+		});
+		$(".bottom-sheet .close, .dimmed").click(function(){
+			$("#popup, .dimmed").removeClass('open')
+		});
+		
+	// 쿠폰함 풀팝업
+		$(".coupon.box").click(function(){
+			$(".fullpop-wrap").show();
+		});
+		$(".fullpop-wrap .btn-pop-close, .fullpop-wrap .close").click(function(){
+			$(".fullpop-wrap").hide();
+		});
+
+	// 쿠폰사용알림
+		$("#use").click(function(){
+			$("#pop-use").show();
+			});
+		$("#cancel").click(function(){
+			$("#pop-use").hide();
+		});
+	});
+</script>
+</head>
+<body>
+
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>쿠폰</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+
+
+
+
+	 <div class="d-scroll">
+		<div class="d-cont">
+			<ul class="tab col-3">
+				<li><button type="button" onclick="location.href='coupon_01.html'">쿠폰받기</button></li>
+				<li><button type="button" onclick="location.href='coupon_02.html'">내쿠폰함</button></li>
+				<li class="on"><button type="button" onclick="location.href='coupon_03.html'">사용완료</button></li>
+			</ul>
+
+			<div class="tab-cont">
+				<div class="detail-cont">
+					<div class="cont">
+						<ul class="coupon-wrap">
+							<li>
+								<a href="#" class="coupon inactive">
+									<div class="thumb">
+										<span><img src="../../../img_new/thumb-01.png"></span>
+									</div>
+									<div class="text">
+										<dl>
+											<dt>
+												<span>iM뱅크 앱 전용 할인권</span>
+												<div class="title">전국투어 어린이뮤지컬 특별할인</div>
+											</dt>
+											<dd>
+												<div class="date"><span>2025.02.06 ~ 2025.03.31</span><em class="d-day">D-11</em></div>
+											</dd>
+										</dl>
+										<div class="state active"><span class="complete">완료</span></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="coupon inactive">
+									<div class="thumb">
+										<span><img src="../../../img_new/thumb-01.png"></span>
+									</div>
+									<div class="text">
+										<dl>
+											<dt>
+												<span>iM뱅크 앱 전용 할인권</span>
+												<div class="title">전국투어 어린이뮤지컬 특별할인</div>
+											</dt>
+											<dd>
+												<div class="date"><span>2025.02.06 ~ 2025.03.31</span><em class="d-day">D-11</em></div>
+											</dd>
+										</dl>
+										<div class="state active"><span class="expire">만료</span></div>
+									</div>
+								</a>
+							</li>
+						</ul> 
+					</div>
+				</div>
+			</div>
+		
+
+			 <div class="bottom-sheet" id="popup">
+				<div class="header">
+					<a href="coupon_02.html" class="coupon">
+						<div class="thumb">
+							<img src="../../../img_new/tossP_logo.png">
+						</div>
+						<div class="text">
+							<dl>
+								<dt>
+									<span>iM뱅크 앱 전용 할인권</span>
+									<div class="title">전국투어 어린이뮤지컬 특별할인특별할인특별할인특별할인특별할인</div>
+								</dt>
+								<dd>
+									<!-- <span>경품지급 2025</span> -->
+									<div class="date"><span class="date">2025.02.06 ~ 2025.03.31</span><em class="d-day">D-11</em></div>
+								</dd>
+							</dl>
+							<div class="state"><span></span></div>
+						</div>
+					</a>
+				</div>
+				<div class="cont">
+					<div class=""><a href="#" class="test">1111111111</a></div>
+					<div class="desc">
+						<div class="title">새해맞이 적립쿠폰 왔설</div>
+						<p>
+							[대상고객]<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+							- 가입대상 : 개인<br>
+						</p>
+					</div>
+				</div>
+				<div class="close">
+					<button class="btn-pop-close">닫기</button>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+
+
+
+			
+
+		</div>
+	</div> 
+
+
+	
+</div>
+<!--// 화면 영역 -->
+</body>
+</html>

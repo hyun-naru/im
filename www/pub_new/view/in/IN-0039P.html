@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>고객조회</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<fieldset>
+		<legend>검색항목 영역</legend>
+		<div class="blueBox-st01">
+			<ul class="search">
+				<li>
+					<select class="select" title="고객상태" id="IN-0039P_csStgSecd">
+						<option value="">전체</option>
+						<option value="01">잠재</option>
+						<option value="02">가망</option>
+						<option value="03">계약</option>
+					</select>
+					<input class="inp-wrap" type="search" placeholder="이름을 입력하세요." id="IN-0039P_custNm">
+					<button class="sbtn-search-w" id="IN-0039P_search">검색</button>
+				</li>
+			</ul>
+		</div>
+	</fieldset>
+	
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="fullpop-cont bg-st02 d-scroll" id="infntScrll"><!-- 2018-05-15 -->
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none" id="IN-0039P_beforeSearch">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none" id="IN-0039P_afterSearch">검색 결과가 없습니다.</div>
+
+		<div id="IN-0039P_result">
+			<p class="result-txt">총 <span id="IN-0039P_cnt"></span>명이 검색되었습니다.</p>
+			<ul class="link-list-st01" id="IN-0039P_custList">
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="name">홍달수일이삼</span>
+							<span class="age ibtn-link">(44/남)</span><!-- 2018-05-15 -->
+						</a>
+						<p class="tit-h2-con">
+							<span class="status-02">등록</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">고객동의여부</span>
+								<span class="scon">○</span>
+							</li>
+							<li>
+								<span class="stit">유효기간</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01 btn-pop-close" id="IN-0039P_popClose">닫기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

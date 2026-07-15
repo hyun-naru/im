@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가상계좌 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>가상계좌 입력</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- header  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont1">
+			<ul class="write-st02">
+				<li>
+					<label for="la-1">은행선택</label>
+					<div class="hbox jc"><!-- 2018-04-04 -->
+						<select id="la-1" class="select flex w100p">
+							<option>국민은행</option>
+						</select>
+						<button class="btn-find">검색</button>
+						<button class="sbtn-5 btn-st02">생성</button>
+					</div>
+				</li>
+				<li>
+					<label for="la-2">가상계좌번호</label>
+					<div>
+						<input id="la-2" type="tel" class="inp-wrap"/>
+					</div>
+				</li>
+			</ul>
+			<p class="write-desc fc-blue">* 금일 23시까지만 유효합니다.</p>
+		</div>
+		<div class="cont1 border-t">
+			<div class="bul-list-st01 boxlist">
+				<h3>가상계좌 입금안내</h3>
+				<ul>
+					<li>가상계좌 발급시간 : <span class="fc-blue">00:00 ~ 20:00</span></li>
+					<li>가상계좌 입금시간 : <span class="fc-blue">00:00 ~ 23:00</span></li>
+				</ul>
+				<p class="stxt">(단, 은행 사정으로 인한 입금 제한이 있을 수 있습니다.)</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer">
+			<button class="lbtn btn-st01" >확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

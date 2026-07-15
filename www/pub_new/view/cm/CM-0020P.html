@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>계약상세</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 레이어팝업 영역 -->
+<div class="dim-layer none" id="CM0020P_dimLayer1">
+	<div class="dimBg"></div>
+	<div class="dpop-layer2">
+		<div class="dpop-container">
+			<div class="info-box">
+				<dl>
+					<dt>
+						<span class="stit">기납입 보험료</span>
+						<span class="scon fc-orange"><em id="CM0020P_l1_prevPyprm">3,500,000</em>원</span>
+					</dt>
+					<dd>
+						<span class="stit">기본 보험료</span>
+						<span class="scon fc-black"><em id="CM0020P_l1_pyprm">2,500,000</em>원</span>
+					</dd>
+					<dd>
+						<span class="stit">추가 보험료</span>
+						<span class="scon fc-blue"><em id="CM0020P_l1_adPrem">1,000,000</em>원</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 레이어팝업 영역 -->
+
+<!-- fullpop 영역 -->
+<div class="fullpop-wrap cm-0020">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>계약상세</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div>
+		<div class="blueBox-st01 productT">
+			<dl>
+				<dt>
+					<span class="status-01" id="CM0020P_ctrStcd">유지</span><!-- 상태: 유지, 미결, 실효, 시효, 소멸, 부활입력, 연체 -->
+					<span id="CM0020P_prdnm">라이프파트너플러스변액유니버셜종신보험</span>
+				</dt>
+				<dd>
+					<span class="stit">증권번호</span>
+					<span class="scon" id="CM0020P_plyno">123456789012</span>
+				</dd>
+				<dd>
+					<span class="stit">계약일</span>
+					<span class="scon" id="CM0020P_ctymd">2018.02.27</span>
+				</dd>
+			</dl>
+		</div>
+		<div class="scroll-tab3" id="CM0020P_scrollTab">
+			<button class="on">상품내역</button>
+			<button>납입내역</button>
+			<button>보장내역</button>
+			<button>자동이체사항</button>
+			<button>펀드비율</button>
+		</div>
+	</div>
+
+	<!-- body_스크롤영역 -->
+	<!-- tab_01)상품내역 -->
+	<div class="fullpop-cont d-scroll bg-st02" id="CM0020P_divTab1" name="CM0020P_divTab">
+		<div class="btn-group">
+			<h2 class="blue-bulet">기본정보</h2>
+			<button class="pos-ar mbtn-gray" id="CM0020P_btn_CsRelation">계약관계자 상세</button>
+		</div>
+		<div class="mat_20"><!-- 2018-05-15 -->
+			<ul class="line-list-st01 bg_fff">
+				<li>
+					<label>계약자</label>
+					<p class="ta-r"><span class="name" id="CM0020P_pohdCsNam">홍길동우리는</span></p>
+				</li>
+				<li>
+					<label>피보험자</label>
+					<p class="ta-r"><span class="name" id="CM0020P_maipsnCsNam">홍길동우리는</span></p>
+				</li>
+				<!-- <li>
+					<label>종피보험자</label>
+					<p class="ta-r"><span class="name" id="CM0020P_ctMnPlarNam">홍길동우리는</span></p>
+				</li> -->
+			</ul>
+			<ul class="line-list-st01 bg_fff">
+				<li>
+					<label>보험료</label>
+					<p>
+						<span id="CM0020P_pycycCod">월납</span>
+						<em class="fc-01" id="CM0020P_pyprm">150,000</em>원
+					</p>
+				</li>
+				<li>
+					<label>환산성적</label>
+					<p><span id="CM0020P_convFtpr">150,000</span> 원</p>
+				</li>
+				<li>
+					<label>기납입보험료
+						<a href="javascript:" class="sprite-link link-05" id="CM0020P_btn_help">도움말</a>
+					</label>
+					<p>
+						<em class="fc-01" id="CM0020P_prevPyprm">3,150,000</em>원
+					</p>
+				</li>
+				<li>
+					<label>납입기간</label>
+					<p id="CM0020P_pypd">2018.05.15</p>
+				</li>
+				<li>
+					<label>납입방법</label>
+					<p>
+						<span id="CM0020P_ctmnMetdCod">자동이체</span>
+						<em class="fc-01" id="CM0020P_ctmnMetd">(25일)</em>
+					</p>
+				</li>
+				<li>
+					<label>최종납입월</label>
+					<p>
+						<span id="CM0020P_lastPymYymm">2020년 10월</span>
+						<em class="fc-01" id="CM0020P_lastPymNumtm">(15/120)</em>
+					</p>
+				</li>
+			</ul>
+			<ul class="line-list-st01 bg_fff">
+				<li>
+					<label>해약환급금</label>
+					<p>
+						<em class="fc-01" id="CM0020P_basSrdrRf">2,150,000</em>원
+					</p>
+				</li>
+				<li>
+					<label>약대가능금액</label>
+					<p>
+						<em class="fc-01" id="CM0020P_plycdLonAmt">2,150,000</em>원
+					</p>
+				</li>
+				<li>
+					<label>기약대금액</label>
+					<p>
+						<span id="CM0020P_lonAmt">2,150,000</span>원
+					</p>
+				</li>
+				<li>
+					<label>대출정상이율</label>
+					<p id="CM0020P_inctlnNomlApplRte">5.5%</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--// tab_01)상품내역 끝 -->
+
+
+	<!-- tab_02)납입내역 -->
+	<div class="fullpop-cont d-scroll bg-st02 none" id="CM0020P_divTab2" name="CM0020P_divTab">
+		<div class="cont">
+			<div class="pro-gunwon">
+				<p class="gun">총 <em id="CM0020P_gspreCnt">00</em>건</p>
+				<p class="won">총 납입보험료 <em id="CM0020P_totGspre">999,999,999</em>원</p>
+			</div>
+
+			<ul class="list-st02" id="CM0020P_resultUDQ03">
+				<li>
+					<div class="areaL">
+						<p>2017.11월분</p>
+						<p>10회</p>
+					</div>
+					<div class="areaR">
+						<p class="bold">보험료 <em>999,999,999</em>원</p>
+						<p class="fs-28">2017.11.05 입금</p>
+					</div>
+				</li>
+				<li>
+					<div class="areaL">
+						<p>2017.11월분</p>
+						<p>10회</p>
+					</div>
+					<div class="areaR">
+						<p class="bold">보험료 <em>999,999,999</em>원</p>
+						<p class="fs-28">2017.11.05 입금</p>
+					</div>
+				</li>
+				<li>
+					<div class="areaL">
+						<p>2017.11월분</p>
+						<p>10회</p>
+					</div>
+					<div class="areaR">
+						<p class="bold">보험료 <em>999,999,999</em>원</p>
+						<p class="fs-28">2017.11.05 입금</p>
+					</div>
+				</li>
+				<li>
+					<div class="areaL">
+						<p>2017.11월분</p>
+						<p>10회</p>
+					</div>
+					<div class="areaR">
+						<p class="bold">보험료 <em>999,999,999</em>원</p>
+						<p class="fs-28">2017.11.05 입금</p>
+					</div>
+				</li>
+			</ul>
+			<div class="btn-more none" id="CM0020P_btnMoreUDQ03">
+				<button>더보기(5개씩)</button>
+			</div>
+		</div>
+	</div>
+	<!--// tab_02)납입내역 -->
+
+
+	<!-- tab_03)보장내역 -->
+	<div class="fullpop-cont d-scroll bg-st02 none" id="CM0020P_divTab3" name="CM0020P_divTab">
+		<div class="cont1">
+			<h2 class="h2-st03">주계약</h2>
+			<table class="tb-data">
+				<caption>보험별 주계약 지급사유 및 지급금액</caption>
+				<thead>
+					<tr>
+						<th scope="cols" class="w20p">구분</th>
+						<th scope="cols">지급사유</th>
+						<th scope="cols" class="w20p">지급금액</th>
+					</tr>
+				</thead>
+				<tbody id="CM0020P_resultUDQ06_main">
+					<tr>
+						<th>사망보험금</th>
+						<td>CI케어보험금 보장개시일 이후 중대한 질병, 중대한수술 또는 장기요양상태에 해당하는  CI 케어보험금의 지급사유가 발생 한후 사망하였을 때</td>
+						<td>200만원 + 가산보험금</td>
+					</tr>
+					<tr>
+						<th>CI케어 보험금</th>
+						<td>제1보험기간 중 CI케어보험금 보장개시일 이후에 최초로 중 대한 질병으로 진단확정 받거나 중대한 수술을 받았을때 또는보험기간(종신) 중 CI케어보험금 보장개시 이후에 장기요양상태가 되었을 때</td>
+						<td>800만원 </td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 class="h2-st03">특약</h2>
+			<table class="tb-data">
+				<caption>보험별 특약 지급사유 및 지급금액</caption>
+				<thead>
+					<tr>
+						<th scope="cols" class="w20p">구분</th>
+						<th scope="cols">지급사유</th>
+						<th scope="cols" class="w20p">지급금액</th>
+					</tr>
+				</thead>
+				<tbody id="CM0020P_resultUDQ06_sub">
+					<tr>
+						<th>(무)수술 보장Ⅱ 특약순수 보장형(수술비)</th>
+						<td>피보험자(보험대상자)가 보험기간 중 질병 또는 재해로 인하여 그 치료를 직접적인 목적으로 수술분류표에서 정하는 수술을 받았을 때(수술 1회당)</td>
+						<td>1종 : 5만원, 2종 : 15만원, 3종 : 25만원, 4종 : 50만원, 5종:150만원</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--// tab_03)보장내역 -->
+
+
+	<!-- tab_04)자동이체사항 -->
+	<div class="fullpop-cont d-scroll bg-st02 none" id="CM0020P_divTab4" name="CM0020P_divTab">
+		<div class="cont1">
+			<h2 class="h2-st04">자동이체사항</h2>
+			<table class="tb-data">
+				<caption>보험별 자동이체사항</caption>
+				<thead>
+					<tr>
+						<th scope="cols">이체구분</th>
+						<th scope="cols">보험계약</td>
+						<th scope="cols">보험계약<br />대출이자</td>
+					</tr>
+				</thead>
+				<tbody id="CM0020P_resultUDQ11">
+					<tr>
+						<th scope="rows">신청구분</th>
+						<td id="CM0020P_trsfApplSecdNam"></td>
+						<td id="CM0020P_trsfApplSecdNam2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">은행</th>
+						<td id="CM0020P_bankNam"></td>
+						<td id="CM0020P_bankNam2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">계좌번호</th>
+						<td id="CM0020P_ackNum"></td>
+						<td id="CM0020P_ackNum2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">예금주</th>
+						<td id="CM0020P_owacNam"></td>
+						<td id="CM0020P_owacNam2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">희망월</th>
+						<td id="CM0020P_trsfHopYymm"></td>
+						<td id="CM0020P_trsfHopYymm2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">희망일</th>
+						<td id="CM0020P_trsfHpdyCod"></td>
+						<td id="CM0020P_trsfHpdyCod2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">처리일자</th>
+						<td id="CM0020P_trsfApplYmd"></td>
+						<td id="CM0020P_trsfApplYmd2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">처리지점</th>
+						<td id="CM0020P_inpBrcdNam"></td>
+						<td id="CM0020P_inpBrcdNam2"></td>
+					</tr>
+					<tr>
+						<th scope="rows">처리자</th>
+						<td id="CM0020P_inpNam"></td>
+						<td id="CM0020P_inpNam2"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="cont1">
+			<h2 class="h2-st04">카드이체사항</h2>
+			<table class="tb-data">
+				<caption>보험별 카드이체사항</caption>
+				<thead>
+					<tr>
+						<th scope="cols">이체구분</th>
+						<th scope="cols">보험계약</td>
+					</tr>
+				</thead>
+				<tbody id="CM0020P_resultUDQ12">
+					<tr>
+						<th scope="rows">신청구분</th>
+						<td id="CM0020P_cardApplSecd"></td>
+					</tr>
+					<tr>
+						<th scope="rows">카드사</th>
+						<td id="CM0020P_crdcoNam"></td>
+					</tr>
+					<tr>
+						<th scope="rows">카드번호</th>
+						<td id="CM0020P_crcdno"></td>
+					</tr>
+					<tr>
+						<th scope="rows">카드종류</th>
+						<td id="CM0020P_cardType"></td>
+					</tr>
+					<tr>
+						<th scope="rows">카드회원명</th>
+						<td id="CM0020P_cardUsrNam"></td>
+					</tr>
+					<tr>
+						<th scope="rows">유효기간</th>
+						<td id="CM0020P_cardValdPrid"></td>
+					</tr>
+					<tr>
+						<th scope="rows">희망일</th>
+						<td id="CM0020P_UDQ12_trsfHpdyCod"></td>
+					</tr>
+					<tr>
+						<th scope="rows">희망월</th>
+						<td id="CM0020P_UDQ12_trsfHopYymm"></td>
+					</tr>
+					<tr>
+						<th scope="rows">처리일자</th>
+						<td id="CM0020P_UDQ12_clmYmd"></td>
+					</tr>
+					<tr>
+						<th scope="rows">처리지점</th>
+						<td id="CM0020P_UDQ12_ctmnBrcd"></td>
+					</tr>
+					<tr>
+						<th scope="rows">처리자</th>
+						<td id="CM0020P_UDQ12_cmcorNum"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--// tab_04)자동이체사항 -->
+
+
+	<!-- tab_05)펀드비율 -->
+	<div class="fullpop-cont d-scroll bg-st02 none" id="CM0020P_divTab5" name="CM0020P_divTab">
+		<div class="cont">
+			<div class="h2-group">
+				<h2 class="h2-st04">펀드편입비율</h2>
+				<button class="sbtn-4 btn-st02" id="CM0020P_btnFundRate">펀드기간별 수익율</button>
+			</div>
+			<ul class="link-list-st01" id="CM0020P_resultFundIQY">
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-stit">채권형</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">기준가</span>
+								<span class="scon">99,990,000원</span>
+							</li>
+							<li>
+								<span class="stit">편입비율</span>
+								<span class="scon">120%</span>
+							</li>
+							<li>
+								<span class="stit">적립금</span>
+								<span class="scon">9,999,990만원</span>
+							</li>
+							<li>
+								<span class="stit">적립비율</span>
+								<span class="scon">50%</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-stit">글로벌멀티에셋자산배분형</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">기준가</span>
+								<span class="scon">99,990,000원</span>
+							</li>
+							<li>
+								<span class="stit">편입비율</span>
+								<span class="scon">120%</span>
+							</li>
+							<li>
+								<span class="stit">적립금</span>
+								<span class="scon">9,999,990만원</span>
+							</li>
+							<li>
+								<span class="stit">적립비율</span>
+								<span class="scon">50%</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-stit">글로벌멀티에셋자산배분형</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">기준가</span>
+								<span class="scon">99,990,000원</span>
+							</li>
+							<li>
+								<span class="stit">편입비율</span>
+								<span class="scon">120%</span>
+							</li>
+							<li>
+								<span class="stit">적립금</span>
+								<span class="scon">9,999,990만원</span>
+							</li>
+							<li>
+								<span class="stit">적립비율</span>
+								<span class="scon">50%</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<p>
+							<span class="pro-stit">글로벌멀티에셋자산배분형</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">기준가</span>
+								<span class="scon">99,990,000원</span>
+							</li>
+							<li>
+								<span class="stit">편입비율</span>
+								<span class="scon">120%</span>
+							</li>
+							<li>
+								<span class="stit">적립금</span>
+								<span class="scon">9,999,990만원</span>
+							</li>
+							<li>
+								<span class="stit">적립비율</span>
+								<span class="scon">50%</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--// tab_05)펀드비율 -->
+	
+</div>
+<!--// fullpop 영역 -->
+
+</body>
+</html>

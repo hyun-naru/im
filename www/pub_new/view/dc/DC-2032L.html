@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>알릴고지 불러오기</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>알릴고지 불러오기</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll dcNew">
+		<div class="fullpop-cont">
+			<div class="search">
+				<ul>
+					<li>
+						<label for="date_2">선심사일자</label>
+						<div class="picker-box mg-n">
+							<input type="tel" class="inp-wrap" id="ipt_sDt" data-name="picker" placeholder="시작일 입력">
+							<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+							<span class="dash">~</span>
+							<input type="tel" class="inp-wrap" id="ipt_eDt" data-name="picker2" placeholder="종료일 입력">
+							<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker2">
+						</div>
+					</li>
+					<li>
+						<label for="selC01">선심사상태</label>
+						<select class="select" id="selC01">
+							<option>전체</option>
+						</select>
+					</li>
+				</ul>
+				<div class="btnArea">
+					<button class="lbtn-search" type="submit">검색</button>
+				</div>
+			</div>
+			<div>
+				<h2 class="blind">검색결과 영역</h2>
+
+				<!-- 검색 전 문구
+				<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+				<!-- 검색 후 문구
+				<div class="no-data">검색결과가 없습니다.</div>-->
+
+				<p class="result-txt">총 <span class="count">2</span>건이 검색되었습니다.</p>
+				<div class="cont1">
+					<article class="pro-covenant mat-n ">
+						<div class="header pal_15 par_15" style="min-height:0rem">
+							<ul class="link-list-st01 dform square02 pdt-n w100p">
+								<li class="bg-st02 pd-n border-n">
+									<div class="tit-h2 pd-n webBox-align_s">
+										<input id="chk1" type="checkbox" checked="">
+										<label for="chk1">
+											<span class="Advance-stit par_n">당당한인생종신보험 무배당 2601(해약환급금 일부지급형)</span>
+										</label>
+									</div>
+								</li>
+							</ul>   
+						</div>
+						<ul class="list-limit border-bn">
+							<li class="maL-n">
+								<em class="label-title">설계일자</em>
+								<p class="label-vale fc_000 fw_500">2026.05.10</p>
+							</li>
+							<li>
+								<span class="separator">|</span>
+							</li>
+							<li class="maL-n">
+								<em class="label-title">선심사결과</em>
+								<p class="label-vale fc-3868e2 fw_500">인수</p>
+							</li>
+						</ul>
+					</article>
+					<article class="pro-covenant">
+						<div class="header pal_15 par_15" style="min-height:0rem">
+							<ul class="link-list-st01 dform square02 pdt-n w100p">
+								<li class="bg-st02 pd-n border-n">
+									<div class="tit-h2 pd-n webBox-align_s">
+										<input id="chk2" type="checkbox">
+										<label for="chk2">
+											<span class="Advance-stit par_n">당당한인생종신보험 무배당 2601(해약환급금 일부지급형)</span>
+										</label>
+									</div>
+								</li>
+							</ul>   
+						</div>
+						<ul class="list-limit border-bn">
+							<li class="maL-n">
+								<em class="label-title">설계일자</em>
+								<p class="label-vale fc_000 fw_500">2026.05.10</p>
+							</li>
+							<li>
+								<span class="separator">|</span>
+							</li>
+							<li class="maL-n">
+								<em class="label-title">선심사결과</em>
+								<p class="label-vale fc-3868e2 fw_500">인수</p>
+							</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st04" >선택</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>주소입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>주소입력</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_tab 고정영역 -->
+	<div>
+		<ul class="tab">
+			<li class="on" id="CU-0040P_roadTab"><button>도로명주소</button></li>
+			<li id="CU-0040P_postTab"><button>지번주소</button></li>
+		</ul>
+		<!-- searchBox 2018-05-03 -->
+		<div class="search tab-wrap" id="CU-0040P_roadBar">
+			<ul class="tab-con" id="tab-con1">
+				<li>
+					<input class="inp-wrap" type="text" placeholder="읍,면,동을 입력하세요." />
+					<button class="sbtn-search" type="submit">검색</button>
+				</li>
+			</ul>
+
+			<ul class="tab-con" id="tab-con2">
+				<li>
+					<select class="select flex" id="CU-0040P_selectSi">
+						<option>서울</option>
+					</select>
+					<select class="select flex" id="CU-0040P_selectEubMyun">
+						<option></option>
+					</select>
+				</li>
+				<li>
+					<input class="inp-wrap" type="text" id="CU-0040P_eubMyunDong_road" placeholder="도로명" /><!-- 2018-05-23 -->
+					<input class="inp-wrap" type="number" number id="CU-0040P_strStrcMNum" placeholder="건물번호 - 숫자" />
+					<button class="sbtn-search" id="CU-0040P_roadSearch" >검색</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- body_tabcontents 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색결과 전
+		<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div> -->
+		<!-- 검색결과 후
+		<div class="no-data">검색결과가 없습니다.</div> -->
+
+		<div>
+			<p class="result-txt">총 5건이 검색되었습니다.</p>
+			<ul class="chk-list2 dform circle01">
+				<li>
+					<input id="radio1_1" name="radio1" type="radio"/><label for="radio1_1">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 국립환경연구원</label>
+				</li>
+				<li>
+					<input id="radio1_2" name="radio1" type="radio"/><label for="radio1_2">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_3" name="radio1" type="radio"/><label for="radio1_3">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_4" name="radio1" type="radio"/><label for="radio1_4">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_5" name="radio1" type="radio"/><label for="radio1_5">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_6" name="radio1" type="radio"/><label for="radio1_6">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_6" name="radio1" type="radio"/><label for="radio1_6">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_6" name="radio1" type="radio"/><label for="radio1_6">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+				<li>
+					<input id="radio1_6" name="radio1" type="radio"/><label for="radio1_6">우편번호 03367 서울 은평구 불광동(불광1동) 건물명 미성아파트</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="addressBox">
+			<p>
+				<input class="inp-wrap" type="text" title="상세주소입력" placeholder="상세주소를 입력하세요." />
+				<button class="btn-st02">변환</button>
+			</p>
+			<ul class="address_con">
+				<li><em>지번주소</em>서울 은평구 불광1동 248번지 미성아파트 102</li>
+				<li><em>도로명주소</em>서울 은평구 통일로 780 102(불광동,미성파아트)</li>
+			</ul>
+		</div>
+		<div class="fullpop-footer"><!-- 입력완료 시 disabled삭제 -->
+			<button class="lbtn btn-st01" disabled>확인</button><!-- 2018-05-08 -->
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

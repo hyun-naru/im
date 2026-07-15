@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>DGB생명</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<!-- 10.28 수정
+				<h1 class="logo">DGB생명</h1>
+			-->
+			<h1>신규 설계지원</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="notice-txt">
+				<p class="icoTxt">설계를 진행할 고객을 입력해주세요.</p>
+			</div>
+			<div class="cont3">
+				<ul class="write-st02"><!-- 9.15 수정 -->
+					<li><!-- 9.15 추가 -->
+						<label for="sort">고객분류</label>
+						<div class="checkBox-st01">
+							<input id="sort-01" type="radio" name="sort">
+							<label for="sort-01">기존고객</label><!-- 10.5 수정 -->
+							<input id="sort-02" type="radio" name="sort">
+							<label for="sort-02">가상고객</label>
+						</div>
+					</li>
+					<li><!-- 9.15 수정 -->
+						<label for="planner" class="va-t">계약자</label><!-- 9.25 수정 -->
+						<div class="search-box">
+							<input type="text" class="inp-wrap" id="planner" value="홍길동(42세,남)" disabled>
+							<button class="sbtn-search-g">찾기</button>
+						</div>
+						<div class="dform square02 dis-inb">
+							<input type="checkbox" id="same" checked><label for="same" class="label-txt02 dis-inb">계약자와 피보험자 동일</label>
+						</div>
+					</li>
+					<li><!-- 9.15 수정 -->
+						<label for="auth-tel">피보험자</label>
+						<div class="search-box">
+							<input type="text" class="inp-wrap" id="planner" value="홍길동(42세,남)" disabled>
+							<button class="sbtn-search-g">찾기</button>
+						</div>
+					</li>
+				</ul>
+				<p class="notice-txt-st02 mat_15">DGB생명에 고객등록을 완료한 고객만 진행이 가능합니다.</p><!-- 9.15 수정 -->
+				<p class="notice-txt-st02">변액상품 설계는 계약자의 적합성 진단결과가 있어야 합니다.</p><!-- 10.28 추가 -->
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">설계지원 진행하기</button><!-- 9.15 수정 -->
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+
+</body>
+</html>

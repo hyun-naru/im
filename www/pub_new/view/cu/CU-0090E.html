@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객동의 목록조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>고객동의 목록조회</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul class="dform circle01">
+			<li>
+				<label class="label-txt">기준</label>
+				<div class="checkBox-st01">
+					<input type="radio" name="agree-date" id="chk1_1" checked=""><label for="chk1_1">동의일</label>
+					<input type="radio" name="agree-date" id="chk1_2"><label for="chk1_2">동의만료일</label>
+				</div>
+			</li>
+			<li>
+				<label class="label-txt">기간</label>
+				<div class="checkBox-st01">
+					<input type="radio" name="date" id="chk2_1"><label for="chk2_1">1주일</label>
+					<input type="radio" name="date" id="chk2_2"><label for="chk2_2">1개월</label>
+					<input type="radio" name="date" id="chk2_3"><label for="chk2_3">3개월</label>
+					<input type="radio" name="date" id="chk2_4"  checked=""><label for="chk2_4">직접입력</label>
+				</div>
+			</li>
+			<li><!-- 직접입력 라디오버튼 선택되었을 경우 노출 -->
+				<label class="ui-hidden-accessible">기간입력</label>
+				<div class="picker-box">
+					<input id="ipt_sDt" class="inp-wrap" type="tel" date data-name="picker" placeholder="시작일 입력" value="2020.03.10">
+					<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker" /><span class="dash">~</span>
+					<input id="ipt_eDt"  class="inp-wrap" type="tel" date data-name="picker2" placeholder="종료일 입력"  value="2020.05.05"/>
+					<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker2" />
+				</div>
+			</li>
+			<li>
+				<label class="label-txt">인증방법</label>
+				<div class="checkBox-st01">
+					<input type="radio" name="way" id="chk3_1"><label for="chk3_1">전체</label>
+					<input type="radio" name="way" id="chk3_2"><label for="chk3_2">ARS</label>
+					<input type="radio" name="way" id="chk3_3"><label for="chk3_3">휴대폰</label>
+					<input type="radio" name="way" id="chk3_4"  checked=""><label for="chk3_4">신분증</label>
+				</div>
+			</li>
+			<li>
+				<label for="selCsStgSecd" class="label-txt">고객</label>
+				<select class="select flex0 w70" id="selCsStgSecd">
+					<option>이름</option>
+				</select>
+				<input class="inp-wrap" type="text" id="edtCsNam" placeholder="이름을 입력하세요." maxlength="20"/>
+			</li>
+		</ul>
+		<div class="btnArea">
+			<button class="lbtn-search" id="btn_srch">검색</button>
+		</div>
+	</div>
+	
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<!-- 검색 전 문구 -->
+		<div class="no-data none">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt">정보동의현황 <span id="listCnt">0</span>건</p>
+			<ul class="link-list-st01 dform circle01" id="resultList">
+				<li>
+					<div class="tit-h2">
+						<input id="ra1" type="radio" name="ra1" />
+						<label for="ra1">
+							<span class="name">홍달수</span>
+							<span class="age">(44/남)</span>
+							<span class="no">10391589</span>
+						</label>
+						<p class="tit-h2-con">
+							<span class="status-14">미등록</span>
+							<span class="status-04">M-ARS</span>
+							<!--
+								상태값 
+								미등록, 미결 : status-14
+								미작성 : status-15
+								완료  : status-03
+								M-ARS : status-04
+							-->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="data-list-st01 col-02">
+							<li>
+								<span class="stit">등록일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="stit">동의만료일</span>
+								<span class="scon">2018.02.25</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="ra1" type="radio" name="ra1" />
+						<label for="ra1">
+							<span class="name">홍달수</span>
+							<span class="age">(44/남)</span>
+							<span class="no">10391589</span>
+						</label>
+						<p class="tit-h2-con">
+							<span class="status-03">완료</span>
+							<span class="status-04">M-ARS</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="data-list-st01 col-02">
+							<li>
+								<span class="stit">등록일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="stit">동의만료일</span>
+								<span class="scon">2018.02.25</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st22" id="btn_csReg" >고객등록</button>
+			<button class="lbtn btn-st04" id="btn_dtlView" disabled>상세보기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

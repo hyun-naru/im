@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>Self UnderWriting</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 알림팝업 영역  -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="alertP-1" class="alert-layer">
+		<div class="alert-container">
+			<div class="alert-head"><!-- 헤드 타이틀 없을시  alert-head-none -->
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>10대 질병(고혈압 제외)과 관련하여 의료행위를 받은 사실이 있다면 Self UnderWriting 진행이 불가합니다.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st02">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //알림팝업 영역  -->
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>Self UnderWriting</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>10대 질병 설문</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span>3</span>
+			<span>4</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont bg-st01">
+			<div class="cont3 bg-st02 mat-n">
+				<ul class="bul-list-st02">
+					<li>최근 5년 이내에 아래 10대 질병으로 의사로부터 진찰 또는 검사를 통하여 다음과 같은 의료 행위를 받은 사실이 있다면 모두 표기해주세요.</li>
+					<li><em>(고혈압을 제외한)</em>10대 질병과 관련하여 의료행위를 받은 사실이 있다면 Self UnderWriting의 진행이 불가합니다.</li>
+				</ul>
+			</div>
+			
+			<div class="cont3">
+				<h3 class="h3-tit-ico01">10대 질병</h3>
+				<ul class="chk-list-st01 col-2 dform square02">
+					<li><input type="checkbox" id="la1-1"><label for="la1-1">암</label></li>
+					<li><input type="checkbox" id="la1-2"><label for="la1-2">백혈병</label></li>
+					<li><input type="checkbox" id="la1-3"><label for="la1-3">고혈압</label></li>
+					<li><input type="checkbox" id="la1-4"><label for="la1-4">협심증</label></li>
+					<li><input type="checkbox" id="la1-5"><label for="la1-5">심근경색</label></li>
+					<li><input type="checkbox" id="la1-6"><label for="la1-6">심장판막증</label></li>
+					<li><input type="checkbox" id="la1-7"><label for="la1-7">간경화증</label></li>
+					<li><input type="checkbox" id="la1-8"><label for="la1-8">뇌졸중증(뇌출혈,뇌경색)</label></li>
+					<li><input type="checkbox" id="la1-9"><label for="la1-9">당뇨병</label></li>
+					<li><input type="checkbox" id="la1-10"><label for="la1-10">에이즈(AIDS) 및 HIV보균</label></li>
+				</ul>
+				
+				<dl class="dl-st01 mat_40"><!-- 9.17 수정 -->
+					<dt>의료행위란</dt>
+					<dd>질병확정진단, 질병의심소견, 치료, 입원, 수술, 투약한 경우를 말합니다.</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

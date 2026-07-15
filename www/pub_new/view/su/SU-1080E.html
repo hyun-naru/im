@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 세금우대가능 알림팝업 영역  -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="alertP-1" class="alert-layer">
+		<div class="alert-container">
+			<div class="alert-head"><!-- 헤드 타이틀 없을시  alert-head-none -->
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>세금우대가능 금액이 0원입니다.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 세금우대가능 알림팝업 영역 -->
+
+<!-- 청약저장 클릭시 안내메세지 영역  -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="alertP-1" class="alert-layer">
+		<div class="alert-container">
+			<div class="alert-head"><!-- 헤드 타이틀 없을시  alert-head-none -->
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>청약 저장이 완료되었습니다.</p>
+				<p>(증권번호 : 519090001495)</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 청약저장 클릭시 안내메세지 영역 -->
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>기타정보</h2><!-- 9.15 수정 -->
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span class="on">5</span>
+			<span class="on">6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-insure">
+				<ul class="toggle">
+					<li>
+						<div class="toggle-header">
+							<div class="title">
+								마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과
+							</div>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<div class="cont">
+								<ul class="data-list-st01">
+									<li>
+										<span class="stit">월납기준보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+									<li>
+										<span class="stit">할인후 보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="contract-info">
+				<div class="cont3">
+					<!-- 9.15 삭제
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">기타정보</h3>
+					</div>
+					-->
+
+					<ul class="write-st02"><!-- 9.15 수정-->
+						<li>
+							<label for="lab6-1">헬스케어<br>서비스</label><!-- 9.15 수정-->
+							<div class="checkBox-st01">
+								<input type="radio" id="ra6-1-1" name="ra6-1" checked><label for="ra6-1-1">신청</label>
+								<input type="radio" id="ra6-1-2" name="ra6-1"><label for="ra6-1-2">미신청</label>
+							</div>
+						</li>
+						<!-- 9.22 장애인 전용보험 su-1010 이동-->
+						<li>
+							<label for="lab6-6">해피콜 종류</label>
+							<div class="checkBox-st01">
+								<input type="radio" id="lab6-6-1" name="lab6-6" checked><label for="lab6-6-1">모바일</label>
+								<input type="radio" id="lab6-6-2" name="lab6-6"><label for="lab6-6-2">전화</label>
+							</div>
+						</li>
+						<!-- 해피콜 모바일시 노출 -->
+						<li class="low-dep">
+							<label for="lab6-7">휴대폰</label>
+							<div class="tel-box"><!-- 9.15 수정 --><!-- 9.25 수정 -->
+								<input type="tel" class="inp-wrap" value="010" disabled>
+								<input type="tel" class="inp-wrap" value="2020" disabled>
+								<input type="tel" class="inp-wrap"  value="0000" disabled>
+							</div>
+						</li>
+						<!-- //해피콜 모바일시 노출 -->
+						<li>
+							<label for="lab6-8">통화가능시간</label>
+							<div>
+								<input type="tel" class="inp-wrap w70" value="15">
+								<span class="dash">~</span>
+								<input type="tel" class="inp-wrap w70" value="17">
+								<span class="dash">시</span>
+							</div>
+						</li>
+						<li>
+							<label for="lab6-9">모집경로</label>
+							<div>
+								<select id="lab6-9" class="select w100p">
+									<option>설계사 본인 및 가족</option>
+								</select>
+							</div>
+						</li>
+						<li><!-- 9.15 수정 -->
+							<label for="lab6-10">세금우대금액</label>
+							<div class="dform square02"><!-- 9.15 수정 -->
+								<button class="mbtn-bdr-1 bdr-st01 w90">확인</button>
+								<input type="tel" class="inp-wrap maL-6" id="lab6-10"><span class="dash">원</span>
+							</div>
+						</li>
+						<li>
+							<label for="lab6-11">세금우대 적용</label>
+							<div class="checkBox-st01">
+								<input type="radio" id="lab6-11-1" name="lab6-11" checked><label for="lab6-11-1">적용</label>
+								<input type="radio" id="lab6-11-2" name="lab6-11"><label for="lab6-11-2">미적용</label>
+							</div>
+						</li>
+						<li>
+							<label for="lab6-12">의료급여<br>수금권자 유무</label><!-- 9.15 수정 -->
+							<div class="checkBox-st01">
+								<input id="lab6-12-1" type="radio" name="lab8-6" checked /><label for="lab6-12-1">예</label>
+								<input id="lab6-12-2" type="radio" name="lab8-6" /><label for="lab6-12-2">아니오</label>
+							</div>
+						</li>
+						<li><!-- 9.15 수정 -->
+							<label for="lab6-13">선납횟수</label>
+							<span class="label-desc ico-txt-st01">최대 선납횟수는 6회입니다.</span>
+							<div class="checkBox-st01">
+								<button class="sbtn-minus">ㅡ</button>
+								<input type="tel" id="lab6-13" class="inp-wrap" value="0">
+								<button class="sbtn-plus">＋</button>
+								<button  class="mbtn-bdr-1 bdr-st01 maL-6 w90">조회</button><!-- 9.25 클래스 추가 -->
+							</div>
+							<div class="txt-desc">선납횟수는 필수 입력사항이 아닙니다.</div>
+						</li>
+						<li><!-- 9.15 수정 -->
+							<label for="lab6-14" class="va-t">의무납입기간</label>
+							<div><!-- 9.22 수정 -->
+								<input type="tel" class="inp-wrap" value="24">
+								<span class="sub">개월</span>
+							</div>
+							<div class="txt-desc dis-block">선납횟수는 선택 입력사항입니다.</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>적합성 진단</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>적합성 진단</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치 이동  -->
+	<div class="d-step">
+		<h2>서명하기</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+
+			<div class="sign-cont">
+				<ul class="bul-list-st02">
+					<li>적합성 진단을 위해 고객님의 성명/서명을 작성하는 것에 동의하십니까?</li>
+				</ul>
+				<div class="sign-chk-btn">
+					<input type="checkbox" id="sign-chk">
+					<label for="sign-chk">네. 동의합니다.</label>
+				</div>
+			</div>
+
+			<div class="cont1 bg-st01">
+				<div class="sign-area">
+					<span class="sign-tit">(성명/이름/NAME)</span>
+					<div class="sign-box">
+						<span class="bg-sign">이서진</span>
+					</div>
+					<button type="button" class="btn-reset"><span>초기화</span></button>
+				</div>
+
+				<div class="sign-area">
+					<span class="sign-tit">(서명/날인/SIGN)</span>
+					<div class="sign-box"></div>
+					<button type="button" class="btn-reset"><span>초기화</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

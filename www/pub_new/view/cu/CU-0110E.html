@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>고객동의 승인</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>고객동의 승인</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역  -->
+	<div class="search">
+		<ul>
+			<li>
+				<select class="select" id="selAuthMetdCod">
+					<option>종류 선택</option>
+					<option>전체</option>
+					<option>ARS</option>
+					<option>ARS+전자서식</option>
+				</select>
+				<p>
+					<input class="inp-wrap" type="text" id="edtCsNam" placeholder="설계사를 입력하세요." maxlength="20" disabled/>
+					<button class="sbtn-search-w" id="btn_srchFc">찾기</button>
+				</p>
+			</li>
+			<li class="cols-2">
+				<select class="select" id="selChnCod" name="selChnCod">
+					<option>채널 선택</option>
+					<option>FC</option>
+					<option>GA</option>
+				</select>
+				<select class="select" id="selHqCod">
+					<option>센터 선택</option>
+				</select>
+			</li>
+			<li class="cols-2">
+				<select class="select" id="selBzGrpCod">
+					<option>지역단 선택</option>
+				</select>
+				<select class="select none" id="selBrCod">
+					<option>지점 선택</option>
+				</select>
+				<select class="select" id="selPlarNum">
+					<option>FC 선택</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" type="submit" id="btn_srch">검색</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt">
+				고객동의 승인대기 목록 <span id="listCnt">0</span>건
+				<button class="btn-gray fl-r" id="btn_selAll">전체선택</button>
+			</p>
+			<ul class="link-list-st01 dform square02" id="resultList">
+				<li>
+					<div class="tit-h2">
+						<input id="chk1" type="checkbox" disabled />
+						<label for="chk1">
+							<span class="name">홍달수일이삼</span>
+							<span class="age">(44/남)</span>
+						</label>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">등록일</span><!-- 2018-05-03 -->
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="scon">ARS</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="chk2" type="checkbox" />
+						<label for="chk2">
+							<span class="name">홍달수일이삼</span>
+							<span class="age">(44/남)</span>
+						</label>
+						<p class="tit-h2-con">
+							<button class="document">문서확인</button>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">등록일</span><!-- 2018-05-03 -->
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="scon">ARS+전자서식</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="chk2" type="checkbox" />
+						<label for="chk2">
+							<span class="name">홍달수일이삼</span>
+							<span class="age">(44/남)</span>
+						</label>
+						<p class="tit-h2-con">
+							<button class="document">문서확인</button>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">등록일</span>
+								<span class="scon">2018.02.10</span>
+							</li>
+							<li>
+								<span class="scon">ARS+전자서식</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- hidden시 class="none"추가 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" id="btn_cfrm" disabled>승인하기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

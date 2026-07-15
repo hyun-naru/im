@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약보완 진행현황</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap ">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약보완 진행현황</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="search">
+				<ul>
+					<li>
+						<label for="date">조회기간</label>
+						<div class="checkBox-st01">
+							<input type="radio" name="date" id="date_1"><label for="date_1">1주일</label>
+							<input type="radio" name="date" id="date_2"><label for="date_2">1개월</label>
+							<input type="radio" name="date" id="date_3"><label for="date_3">3개월</label>
+							<input type="radio" name="date" id="date_4"><label for="date_4">직접입력</label>
+						</div>
+					</li>
+					<li class="none"><!-- 직접입력 라디오버튼 선택되었을 경우 노출 -->
+						<label for="date_2" class="ui-hidden-accessible">기간입력</label>
+						<div class="picker-box">
+							<input type="tel" class="inp-wrap" id="ipt_sDt" data-name="picker" placeholder="시작일 입력">
+							<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+							<span class="dash">~</span>
+							<input type="tel" class="inp-wrap" id="ipt_eDt" data-name="picker2" placeholder="종료일 입력">
+							<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker2">
+						</div>
+					</li>
+					<li>
+						<label for="sort">진행상태</label>
+						<div class="checkBox-st01">
+							<input type="radio" name="sort" id="sort_1"><label for="sort_1">전체</label>
+							<input type="radio" name="sort" id="sort_2"><label for="sort_2">진행중</label>
+							<input type="radio" name="sort" id="sort_3"><label for="sort_3">완료</label>
+						</div>
+					</li>
+				</ul>
+				<div class="btnArea">
+					<button class="lbtn-search" type="submit">검색</button>
+				</div>
+			</div>
+
+			<div>
+				<h2 class="blind">검색결과 영역</h2>
+
+				<!-- 검색 전 문구
+				<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+				<!-- 검색 후 문구
+				<div class="no-data">검색결과가 없습니다.</div>-->
+				<p class="result-txt">총 <span class="count">5</span>건이 검색되었습니다.</p>
+				<ul class="link-list-st01 dform circle01"><!-- 10.12 전체 수정 -->
+					<li>
+						<div class="tit-h2">
+							<input type="radio" id="ra1" name="ra">
+							<label for="ra1">
+								<span class="pro-num">5160100021 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<span class="status-ico-01">진행중</span>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">발송일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보완사유</span>
+									<span class="scon">서류보완</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+
+					<li>
+						<div class="tit-h2">
+							<input type="radio" id="ra2" name="ra">
+							<label for="ra2">
+								<span class="pro-num">5160100021 전자청약</span>
+								<span class="pro-stit">마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과</span>
+							</label>
+							<p class="tit-h2-con">
+								<span class="status-ico-03">완료</span>
+							</p>
+						</div>
+						<article class="link-list-con">
+							<ul class="data-list-st01 col-02">
+								<li>
+									<span class="stit">발송일</span>
+									<span class="scon">2018.02.10</span>
+								</li>
+								<li>
+									<span class="stit">보완사유</span>
+									<span class="scon">서류보완</span>
+								</li>
+								<li>
+									<span class="stit">계약자</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li>
+									<span class="stit">피보험자</span>
+									<span class="scon">홍길동</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st02">재발송</button>
+			<button class="lbtn btn-st04">상세</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

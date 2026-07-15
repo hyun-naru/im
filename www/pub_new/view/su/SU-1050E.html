@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>FATCA</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span class="on">5</span>
+			<span>6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-insure">
+				<ul class="toggle">
+					<li>
+						<div class="toggle-header">
+							<div class="title">
+								마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과
+							</div>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<div class="cont">
+								<ul class="data-list-st01">
+									<li>
+										<span class="stit">월납기준보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+									<li>
+										<span class="stit">할인후 보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="contract-info">
+				<div class="cont3">
+					<!-- 9.15 삭제
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">FATCA</h3>
+					</div>
+					--> 
+
+					<ol class="no-list-st01">
+						<li>
+							<h3 class="dep-tit1"><span class="no">01</span>고객 인적사항</h3>
+							<ul class="write-st02">
+								<li>
+									<label for="la5-1">국적</label>
+									<div>
+										<select id="la5-1" class="select w100p">
+											<option>한국</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="dep-tit1"><span class="no">02</span>해외 거주자여부 확인</h3>
+							<ul class="dep2-list write-st02">
+								<li>
+									<h4 class="dep-tit2">미국세법상 미국인에 해당합니까?</h4><!-- 9.15 수정 -->
+									<div class="checkBox-st01">
+										<input type="radio" id="la4-2-1" name="la4-2"/><label for="la4-2-1">예</label>
+										<input type="radio" id="la4-2-2" name="la4-2"/><label for="la4-2-2">아니오</label>
+									</div>
+								</li>
+							
+								<li>
+									<h4 class="dep-tit2">'예'인 경우 해당되는 사항을 체크하십시오.</h4>
+									<div class="checkBox-st01 flex-type">
+										<input type="radio" id="la4-3-1" name="la4-3"><label for="la4-3-1">미국시민권자<br />(이중국적자포함)</label>
+										<input type="radio" id="la4-3-2" name="la4-3"><label for="la4-3-2">미국영주권자</label>
+										<input type="radio" id="la4-3-3" name="la4-3"><label for="la4-3-3">미국거주자</label>
+									</div>
+								</li>
+							
+								<li>
+									<h4 class="dep-tit2">대한민국 이외의 조세목적상 해외 거주지가 있습니까?</h4>
+									<div class="checkBox-st01">
+										<input type="radio" id="la4-4-1" name="la4-4"><label for="la4-4-1">예</label>
+										<input type="radio" id="la4-4-2" name="la4-4"><label for="la4-4-2">아니오</label>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="dep-tit-box">
+								<h3 class="dep-tit1"><span class="no">03</span>납세자 정보</h3>
+								<span class="right-txt"><button class="sbtn-5 btn-st02">거주지 국가 추가</button></span>
+							</div>	
+							<ul class="dep2-list write-st02">
+								<li>
+									<label for="la4-5">성(Surname)</label>
+									<div>
+										<input type="text" id="la4-5" class="inp-wrap" />
+									</div>
+								</li>
+								<li>
+									<label for="la4-6">명(Given name)</label>
+									<div>
+										<input type="text" id="la4-6" class="inp-wrap" />
+									</div>
+								</li>
+							
+								<li>
+									<label for="la4-7">거주지국가1</label>
+									<div>
+										<select id="la4-7" class="select w100p">
+											<option>선택하세요.<option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la4-9">영문주소1</label>
+									<div>
+										<input type="text"id="la4-9" class="inp-wrap" />
+									</div>
+								</li>
+								<li>
+									<label for="">납세자번호1</label>
+									<div class="checkBox-st01">
+										<input type="radio" id="la4-11-1" name="la4-11-1"><label for="la4-11-1" class="w50p">유</label>
+										<input type="radio" id="la4-11-2" name="la4-11-1"><label for="la4-11-2" class="w50p">무</label>
+									</div>
+								</li>
+								<li>
+									<label for="la4-11-3">(TIN):SSN or ITIN</label>
+									<div>
+										<input type="text" class="inp-wrap" id="la4-11-3">
+									</div>
+								</li>
+								<li class="flex-none">
+									<label for="la4-12">미기재사유</label>
+									<div class="dform square01">
+										<label for="la4-12-1"><input type="radio" id="la4-12-1" name="la4-12" />미발급국가</label>
+										<label for="la4-12-2"><input type="radio" id="la4-12-2" name="la4-12" />미요구국가</label>
+										<label for="la4-12-3"><input type="radio" id="la4-12-3" name="la4-12" />미취득</label>
+										<label for="la4-12-4"><input type="radio" id="la4-12-4" name="la4-12" />기타</label>
+										<input type="text" class="inp-wrap">
+									</div>
+								</li>
+							
+								<li>
+									<label for="la4-13">거주지국가2</label>
+									<div>
+										<select id="la4-13" class="select w100p">
+											<option>선택하세요.<option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="la4-14">영문주소2</label>
+									<div>
+										<input type="text" class="inp-wrap" id="la4-14">
+									</div>
+								</li>
+								<li>
+									<label for="la4-15-1">납세자번호2</label>
+									<div class="checkBox-st01">
+										<input type="radio" id="la4-15-1" name="la4-15"><label for="la4-15-1" class="w50p">유</label>
+										<input type="radio" id="la4-15-2" name="la4-15"><label for="la4-15-2" class="w50p">무</label>
+									</div>
+								</li>
+								<li>
+									<label for="la4-16-1">(TIN):SSN or ITIN</label>
+									<div>
+										<input type="text" class="inp-wrap" id="la4-16-1">
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ol>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

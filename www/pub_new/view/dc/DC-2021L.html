@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입조건 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 화면영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>마이플랜저장</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="fullpop-cont d-scroll">
+		<div class="cont1">	
+			<ul class="write-st04">
+				<!-- <li>-- 2018-05-04 --
+					<label class="GA-h3">플랜 구분</label>
+					<div class="checkBox-st01">
+						<input type="radio" name="ra3" id="ra3_1" /><label for="ra3_1">추천플랜</label>
+						<input type="radio" name="ra3" id="ra3_2" /><label for="ra3_2">마이플랜</label>
+					</div>
+				</li>				 -->
+				<li>
+					<label class="GA-h3" for="sel4">플랜유형</label>
+					<!-- 2026 dcNew 수정 -->
+					<div class="d-lite_chipfilter type02">
+						<div class="chipitem">
+							<input type="checkbox" id="item21" class="chipinput" name="filter02" />
+							<label for="item21" class="chiplabel">사망</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="item22" class="chipinput" name="filter02" />
+							<label for="item22" class="chiplabel">암</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="item23" class="chipinput" name="filter02" />
+							<label for="item23" class="chiplabel">뇌심</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="item24" class="chipinput" name="filter02" />
+							<label for="item24" class="chiplabel">입원/수술</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="item25" class="chipinput" name="filter02" />
+							<label for="item25" class="chiplabel">치매</label>
+						</div>
+						<div class="chipitem">
+							<input type="checkbox" id="item26" class="chipinput" name="filter02" />
+							<label for="item26" class="chiplabel">기타</label>
+						</div>
+					</div>
+					<!-- //2026 dcNew 수정 -->
+				</li>
+				<li>
+					<label class="GA-h3 essential" for="sel4">플랜명</label>
+					<div class="pab_10">
+						<input id="sel4" class="inp-wrap GA-Advance-Payment-M" type="tel" value="마음든든플러스유니버셜종신보험_20260401001"/>
+					</div>
+					<div class="dform square02" style="padding: 0rem 0rem 2rem;">
+						<label for="Co1-2" class="maL-5"><input id="Co1-2" type="checkbox" checked="" disabled="">상품명+날짜로 저장</label>
+					</div>
+				</li>
+				<!-- 연금전환이 [예]일 경우 노출 -->
+				<li>
+					<label class="GA-h3" for="label2">플랜상세</label>
+					<div>
+						<textarea id="addr" class="inp-wrap">서울특별시 은평구 역말로 4길 6-22 청운빌라 302호
+						</textarea>
+						<!-- <input id="label2" class="inp-wrap " type="tel"/> -->
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 입력완료 시 disabled삭제 -->
+			<button class="lbtn btn-st01">저장</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>유지계약 조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>유지계약 조회</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label class="la-txt">회차수</label>
+				<select id="sel_cntStart" class="select" title="시작회차">
+					<option>2</option>
+					<option>|</option>
+					<option>25</option>
+				</select>
+				<span class="dash">~</span>
+				<select id="sel_cntEnd"  class="select" title="종료회차">
+					<option>2</option>
+					<option>|</option>
+					<option>25</option>
+				</select>
+			</li>
+			<li>
+				<label class="la-txt">마감월</label>
+				<input id="ipt_month" class="inp-wrap" type="tel" month data-name="picker" placeholder="월 입력" />
+				<input type="month" class="sbtn-calendar" title="달력보기" data-name="picker"/>
+				
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" type="submit" id="btn_srch">검색</button>
+	</div>
+
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt">총 <span id="totCnt">0</span>건이 검색되었습니다.</p>
+			<ul class="link-list-st01" id="resultList">
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<a href="#" class="btn-gray">상세</a>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">상태</span>
+								<span class="scon">정상</span>
+							</li>
+							<li>
+								<span class="stit">환산P 모집</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">환산P 유지</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">회차 대상</span>
+								<span class="scon">00</span>
+							</li>
+							<li>
+								<span class="stit">회차 유지</span>
+								<span class="scon">00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<a href="#" class="btn-gray">상세</a>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">상태</span>
+								<span class="scon">정상</span>
+							</li>
+							<li>
+								<span class="stit">환산P 모집</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">환산P 유지</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">회차 대상</span>
+								<span class="scon">00</span>
+							</li>
+							<li>
+								<span class="stit">회차 유지</span>
+								<span class="scon">00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<p class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</p>
+						<p class="tit-h2-con">
+							<a href="#" class="btn-gray">상세</a>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">상태</span>
+								<span class="scon">정상</span>
+							</li>
+							<li>
+								<span class="stit">환산P 모집</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">환산P 유지</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">회차 대상</span>
+								<span class="scon">00</span>
+							</li>
+							<li>
+								<span class="stit">회차 유지</span>
+								<span class="scon">00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<a href="#" class="btn-gray">상세</a>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">상태</span>
+								<span class="scon">정상</span>
+							</li>
+							<li>
+								<span class="stit">환산P 모집</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">환산P 유지</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">회차 대상</span>
+								<span class="scon">00</span>
+							</li>
+							<li>
+								<span class="stit">회차 유지</span>
+								<span class="scon">00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<a href="#" class="btn-gray">상세</a>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">상태</span>
+								<span class="scon">정상</span>
+							</li>
+							<li>
+								<span class="stit">환산P 모집</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">환산P 유지</span>
+								<span class="scon">000,000</span>
+							</li>
+							<li>
+								<span class="stit">회차 대상</span>
+								<span class="scon">00</span>
+							</li>
+							<li>
+								<span class="stit">회차 유지</span>
+								<span class="scon">00</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!--// fullpop 영역 -->
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>설계사검색</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap" id="CU0111L">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>설계사검색</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label for="CU-0111L_selChnCod" class="label-txt">채널선택</label>
+				<select id="CU-0111L_selChnCod" class="select">
+					<option value='00'>전체</option>
+					<option value="10">FC채널</option>
+					<option value="30">GA채널</option>
+				</select>
+			</li>
+			<li>
+				<label for="CU-0111L_edtInqVl" class="label-txt">설계사명</label>
+				<input id="CU-0111L_edtInqVl" class="inp-wrap flex" type="text" placeholder="설계사 이름을 입력하세요." maxlength="20"/>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" id="CU-0111L_btn_srch">검색</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt">총 <span id="CU-0111L_listCnt">2</span>건이 검색되었습니다.</p>
+			<ul class="link-list-st01" id="CU-0111L_resultList">
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="name">홍달수일이삼</span>
+							<span class="age ibtn-link">(AA013169)</span><!-- 2018-05-15 -->
+						</a>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">본부</span>
+								<span class="scon">FC센터</span>
+							</li>
+							<li>
+								<span class="stit">지역단</span>
+								<span class="scon">FC직할</span>
+							</li>
+							<li>
+								<span class="stit">지점</span>
+								<span class="scon">FC직할지점</span>
+							</li>
+							<li>
+								<span class="stit">위촉일</span>
+								<span class="scon">2018.03.02</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="name">홍달수일이삼</span>
+							<span class="age ibtn-link">(AA013169)</span><!-- 2018-05-15 -->
+						</a>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02">
+							<li>
+								<span class="stit">본부</span>
+								<span class="scon">대경FC센터</span>
+							</li>
+							<li>
+								<span class="stit">지역단</span>
+								<span class="scon">대경FC직할</span>
+							</li>
+							<li>
+								<span class="stit">지점</span>
+								<span class="scon">대구</span>
+							</li>
+							<li>
+								<span class="stit">위촉일</span>
+								<span class="scon">2016.11.18</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

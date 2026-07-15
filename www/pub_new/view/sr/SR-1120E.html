@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>보완문서 작성</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>보완문서 작성</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="fullpop-cont">
+			<div class="notice-txt btm-line">
+				<p class="icoTxt ta-l">다음 각 항목의 질문사항에 대하여 해당란에 (v)표시를 하시기 바랍니다.</p>
+			</div>
+			<div class="cont1">
+				<ol class="qaBox">
+					<li>
+						<p class="qaBox-q"><span class="no">01</span>최근 3 개월 이내에 의사로부터 진찰 또는 검사(건강검진 포함)를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까?</p>
+						<p class="qaBox-a checkBox-st01">
+							<input type="radio" id="Q1-1" name="Q1"><label for="Q1-1">예</label>
+							<input type="radio" id="Q1-2" name="Q1"><label for="Q1-2">아니오</label>
+						</p>
+						<div class="qaBox-ex"><!-- 히든 class="none" -->
+							<ul class="dform square02">
+								<li>
+									<label for="Q1-chk1"><input type="checkbox" id="Q1-chk1" name="Q1-chk1">질병확정진단</label>
+								</li>
+								<li>
+									<label for="Q1-chk2"><input type="checkbox" id="Q1-chk2" name="Q1-chk1">질병의심소견</label>
+									<button class="sprite-link link-05">안내</button>
+									<!-- 레이어팝업 영역 -->
+									<div class="dpop-layer2 none">
+										<div class="dpop-container">
+											<div class="info-box ">
+												<h2 class="info-tit">'질병의심소견'이란</h2>
+												<div class="info-con">의사로부터 진단서 또는 소견서를 발급받은 경우를 말합니다.</div>
+											</div>
+											<button type="button" class="btn-pop-close">닫기</button>
+										</div>
+									</div>
+									<!--// 레이어팝업 영역 -->
+								</li>
+								<li>
+									<label for="Q1-chk3"><input type="checkbox" id="Q1-chk3" name="Q1-chk1">치료</label>
+								</li>
+								<li>
+									<label for="Q1-chk4"><input type="checkbox" id="Q1-chk4" name="Q1-chk1">입원</label>
+								</li>
+								<li>
+									<label for="Q1-chk5"><input type="checkbox" id="Q1-chk5" name="Q1-chk1">수술<span class="stxt">(제왕절개포함)</span></label>
+								</li>
+								<li>
+									<label for="Q1-chk6"><input type="checkbox" id="Q1-chk6" name="Q1-chk1">투약</label>
+									<button class="sprite-link link-05">안내</button>
+									<!-- 레이어팝업 영역 -->
+									<div class="dpop-layer2 none">
+										<div class="dpop-container">
+											<div class="info-box ">
+												<h2 class="info-tit">'투약'이란</h2>
+												<div class="info-con">의사가 환자에게 약을 처방하는 행위를 말하는 것으로 실제로 약을 구입하지 않았어도 기재해야 합니다 </div>
+											</div>
+											<button type="button" class="btn-pop-close">닫기</button>
+										</div>
+									</div>
+									<!--// 레이어팝업 영역 -->
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<p class="qaBox-q"><span class="no">02</span>최근 3개월 이내에 마약을 사용하거나 혈압강하제, 신경안정제, 수면제, 각성제(흥분제), 진통제 등 약물을 상시 복용한 사실이 있습니까?
+						<button class="sprite-link link-05">안내</button></p>
+						<!-- 레이어팝업 영역 -->
+						<div class="dpop-layer2 none">
+							<div class="dpop-container">
+								<div class="info-box ">
+									<h2 class="info-tit">'혈압강하제'란</h2>
+									<div class="info-con">혈압을 내리게 하는 의약품을 말합니다.</div>
+									<h2 class="info-tit">'각성제'란</h2>
+									<div class="info-con">신경계를 흥분시켜 잠이 오는 것을 억제하는 의약품을 말합니다.</div>
+								</div>
+								<button type="button" class="btn-pop-close">닫기</button>
+							</div>
+						</div>
+						<!--// 레이어팝업 영역 -->
+						<p class="qaBox-a checkBox-st01">
+							<input type="radio" id="Q2-1" name="Q2"><label for="Q2-1">예</label>
+							<input type="radio" id="Q2-2" name="Q2"><label for="Q2-2">아니오</label>
+						</p>
+					</li>
+
+					<li>
+						<p class="qaBox-q"><span class="no">03</span>최근 1년 이내에 의사로부터 진찰 또는 검사를 통하여 추가검사(재검사)를 받은 사실이 있습니까 ?</p>
+						<p class="qaBox-a checkBox-st01">
+							<input type="radio" id="Q3-1" name="Q3"><label for="Q3-1">예</label>
+							<input type="radio" id="Q3-2" name="Q3"><label for="Q3-2">아니오</label>
+						</p>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer">
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

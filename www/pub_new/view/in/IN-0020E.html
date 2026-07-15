@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>My보장진단</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>My보장진단</h1><!-- 2018-05-09 -->
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label class="label-txt" for="searchTxtSctn">분석대상자</label>
+				<input class="inp-wrap" type="text" id="searchTxtSctn" placeholder="이름을 입력하세요." />
+				<button class="sbtn-search-w" id="searchBtn">찾기</button>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" id="search">검색</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="titArea-st01">요약분석
+			<button class="sbtn-5 btn-st02" id="detailCont">상세분석</button>
+		</h2>
+
+		<div>
+			<ul class="tab col-3">
+				<li class="on" id="familyTab"><button>가족보장</button></li>
+				<li id="lifeTab"><button>생활보장</button></li>
+				<li id="medicalTab"><button>의료보장</button></li>
+			</ul>
+		</div>
+
+		<!-- 가족보장영역 -->
+		<div class="mat_20">
+			<ul class="line-list-st02" id="family">
+				<li>
+					<h3 class="tit-st01">일반사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:13%;">13%</span>
+						</p>
+						<span class="per">13%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 15,000만원</span>
+						<span><em class="barcolor graph-bar1">일반사망 영역</em>현재 2,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">암사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:31%;">31%</span>
+						</p>
+						<span class="per">31%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 15,000만원</span>
+						<span><em class="barcolor graph-bar2">암사망 영역</em>현재 4,700만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">재해사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:10%;">10%</span>
+						</p>
+						<span class="per">10%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 20,000만원</span>
+						<span><em class="barcolor graph-bar3">재해사망 영역</em>현재 2,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">재해장해</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:10%;">10%</span>
+						</p>
+						<span class="per">10%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 20,000만원</span>
+						<span><em class="barcolor graph-bar4">일반사망 영역</em>현재 2,000만원</span>
+					<p>
+				</li>
+				<li><!-- 2018-03-21 -->
+					<h3 class="tit-st01">일반사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar5" style="width:0%;">0%</span>
+						</p>
+						<span class="per">0%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 15,800만원</span>
+						<span><em class="barcolor graph-bar5">일반사망 영역</em>현재 0만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 가족보장영역 -->
+
+		<!-- 생활보장영역 -->
+		<div class="mat_20 none">
+			<ul class="line-list-st02" id="life">
+				<li>
+					<h3 class="tit-st01">일반사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">암사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar2">암사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">재해사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">재해사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">일반사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar4">일반사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 생활보장영역 -->
+
+		<!-- 의료보장영역 -->
+		<div class="mat_20 none">
+			<ul class="line-list-st02" id="medical">
+				<li>
+					<h3 class="tit-st01">일반사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar1" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar1">일반사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">암사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar2" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar2">암사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">재해사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar3" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar3">재해사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+				<li>
+					<h3 class="tit-st01">일반사망</h3>
+					<div class="graphArea2">
+						<p class="barbg">
+							<span class="graph-bar4" style="width:80%;">80%</span>
+						</p>
+						<span class="per">80%</span>
+					</div>
+					<p class="list-scon">
+						<span><em class="barcolor barbg">표준영역</em>표준 5,000만원</span>
+						<span><em class="barcolor graph-bar4">일반사망 영역</em>현재 4,000만원</span>
+					<p>
+				</li>
+			</ul>
+		</div>
+		<!--// 의료보장영역 -->
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st02" id="sendSns">고객전달하기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

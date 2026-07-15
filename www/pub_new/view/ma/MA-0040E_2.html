@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>로그인</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 알림팝업 영역  2018-04-12 -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="alertP-1" class="alert-layer none"><!-- 로그인오류 -->
+		<div class="alert-container">
+			<div class="alert-head">
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>없는 사원번호 입니다.</p>
+				<p>다시 입력하시기 바랍니다.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="alertP-2" class="alert-layer  none"><!-- 비밀번호 오류 시 -->
+		<div class="alert-container">
+			<div class="alert-head">
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>비밀번호 입력 1회 오류 입니다.</p>
+				<p>다시 입력하시기 바랍니다.</p>
+				<p>5회 오류 시에는 로그인 잠금 설정이 진행됩니다.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="alertP-3" class="alert-layer  none"><!-- 비밀번호 5회 오류 시 -->
+		<div class="alert-container">
+			<div class="alert-head">
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>비밀번호 입력 5회 오류 입니다.</p>
+				<p>로그인 잠금 설정이 되었습니다.</p>
+				<p>본인 인증 이후에 다시 시도해 주세요.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">본인인증</button>
+				<button class="mbtn-2 btn-st02">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 알림팝업 영역 -->
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1 class="logo">DGB생명</h1>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont login-cont">
+		<div class="login-wrap">
+			<section class="loginBox">
+				<h2 class="login-txt1 ico-user">지문인증</h2>
+				<div class="finger-login">
+					<button class="ico-finger">지문인식</button>
+					<button class="lbtn btn-st11">로그인</button>
+				</div>
+			</section>
+			
+			<!-- 다른 방법 -->
+			<div class="login-other-way">
+				<button type="button" class="btn-other"><span>다른 방법으로 로그인</span></button>
+				<div class="other-way">
+					<ul>
+						<li>
+							<button type="button" class="idpw">
+								<span>ID/PW</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="simple">
+								<span>간편 비밀번호</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //다른 방법 -->
+
+			<!-- 지문인식 센서 팝업 -->
+			<div class="finger-sensor none">
+				<div class="sensor-box">
+					<span class="sensor">지문감지</span>
+					<p class="txt">손가락을 지문인식 센서에 올려주세요.</p>
+					<button class="btn-pop-close">닫기</button>
+				</div>
+			</div>
+			<!-- //지문인식 센서 팝업 -->
+		</div>
+	</div>
+</div>
+<!--// 화면 영역 -->
+
+<script>
+	$(function(){
+		$(document).on("click", ".login-other-way .btn-other",function(){
+			var txt=$(this).children("span");
+			$(this).parent().toggleClass("open");
+			if(!$(".login-other-way").hasClass("open")){
+				txt.text("다른 방법으로 로그인");
+			}else{
+				txt.text("닫기");
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

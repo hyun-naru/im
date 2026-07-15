@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>해피콜현황조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>해피콜현황조회</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-05-03 / 2018-05-04 -->
+		<div class="search">
+			<ul>
+				<li class="dform circle01">
+					<label class="label-txt">계약일</label>
+					<label for="radio_01"><input type="radio" name="radio" id="radio_01" />1주</label>
+					<label for="radio_02"><input type="radio" name="radio" id="radio_02" />2주</label>
+					<label for="radio_03"><input type="radio" name="radio" id="radio_03" />한달</label>
+					<label for="radio_04"><input type="radio" name="radio" id="radio_04" checked />기간</label>
+				</li>
+				<li><!-- 기간설정이 선택되었을 경우 노출 -->
+					<label for="la-3" class="label-txt w60">기간설정</label>
+					<input id="la-3" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+					<input type="date" class="sbtn-calendar" title="달력보기" />
+					<span class="dash">~</span>
+					<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
+					<input type="date" class="sbtn-calendar" title="달력보기" />
+				</li>
+				<li>
+					<label for="la-2" class="label-txt w60">유형/상태</label>
+					<select id="la-2" class="select">
+						<option selected>전체</option>
+						<option>콜센터</option>
+						<option>모바일</option>
+					</select>
+					<!-- 콜센터 선택 시 -->
+					<select class="select none">
+						<option>전체</option>
+						<option>미진행</option>
+						<option>미완료</option>
+						<option>완료</option>
+						<option>미진행+미완료</option>
+						<option>5회미완료</option>
+					</select>
+					<!-- 모바일 선택 시 -->
+					<select class="select none">
+						<option>전체</option>
+						<option>진행중</option>
+						<option>미완료</option>
+						<option>완료</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div class="btnArea">
+			<button class="lbtn-search" type="submit">검색</button>
+		</div>
+
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="ui-hidden-accessible">해피콜현황 검색결과</h2>
+
+		<!-- 검색 전 문구
+		<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+		<!-- 검색 후 문구
+		<div class="no-data">검색결과가 없습니다.</div>-->
+
+		<div>
+			<p class="result-txt">총 5건이 검색되었습니다.</p>
+
+			<p class="cont1 lineheight_14"><!-- 2018-05-09 -->
+				<span class="bul-status-02">진행상태</span>표기는 해당 계약의 해피콜 진행상태이며, <span class="status-02">상세현황</span>표기는 계약자,피보험자별 개별상세현황입니다.
+			</p>
+			<ul class="link-list-st01">
+				<li>
+					<div class="tit-h2">
+						<a href="#" class="link-go">
+							<span class="pro-num">(콜센터)123456789012</span>
+							<span class="pro-stit">프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con"><!--  bul-status-01:미진행 / bul-status-02:미완료 / bul-status-03:5회미완료 / bul-status-04:완료  -->
+							<span class="bul-status-02">미완료</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01">
+							<li>
+								<span class="stit w120">계약자(피보험자)</span>
+								<span class="scon">홍길동(홍길동)</span>
+							</li>
+							<li>
+								<span class="stit w120">계약일</span>
+								<span class="scon">2018.04.06</span>
+							</li>
+							<li>
+								<span class="stit w120">모바일가능여부</span>
+								<span class="scon">Y <button class="sbtn-type02 pos-a-r">알림톡발송 </button></span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a href="#" class="link-go">
+							<span class="pro-num">(콜센터)123456789012</span>
+							<span class="pro-stit">프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<span class="bul-status-04">완료</span>
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01">
+							<li>
+								<span class="stit w120">계약자(피보험자)</span>
+								<span class="scon">홍길동(김말순)</span>
+							</li>
+							<li>
+								<span class="stit w120">계약일</span>
+								<span class="scon">2018.02.12</span>
+							</li>
+							<li>
+								<span class="stit w120">완료일</span>
+								<span class="scon">2018.04.23 <button class="sbtn-type02 pos-a-r" disabled>알림톡발송 </button></span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a href="#" class="link-go">
+							<span class="pro-num">(모바일)123456789012</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con"><!-- bul-status-01:미진행,진행중 / bul-status-02:미완료 / bul-status-03:5회미완료 / bul-status-04:완료  -->
+							<span class="status-02">진행중</span><span class="bul-status-02">진행중</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01">
+							<li>
+								<span class="stit w120">계약자(피보험자)</span>
+								<span class="scon">홍길동(김말순)</span>
+							</li>
+							<li>
+								<span class="stit w120">계약일</span>
+								<span class="scon">2018.02.12</span>
+							</li>
+							<li>
+								<span class="stit w120">최종발송일</span>
+								<span class="scon">2018.02.12<button class="sbtn-type01 pos-a-r">발송이력</button></span>
+							</li>
+							<li>
+								<span class="stit w120">유효기간</span>
+								<span class="scon">2018.02.12 <button class="sbtn-type02 pos-a-r">알림톡발송</button></span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a href="#" class="link-go">
+							<span class="pro-num">(모바일)123456789012</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<span class="status-02">완료</span><span class="bul-status-04">완료</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01">
+							<li>
+								<span class="stit w120">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit w120">계약일</span>
+								<span class="scon">2018.02.12</span>
+							</li>
+							<li>
+								<span class="stit w120">최종발송일</span>
+								<span class="scon">2018.02.12 <button class="sbtn-type01 pos-a-r">발송이력</button></span>
+							</li>
+							<li>
+								<span class="stit w120">완료일</span>
+								<span class="scon">2018.02.12 <button class="sbtn-type02 pos-a-r" disabled>알림톡발송</button></span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">(모바일)123456789012</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+						<p class="tit-h2-con">
+							<span class="status-02">오류완료</span><span class="bul-status-03">미완료</span><!-- 2018-05-09 -->
+						</p>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01">
+							<li>
+								<span class="stit w120">피보험자</span>
+								<span class="scon">김말순</span>
+							</li>
+							<li>
+								<span class="stit w120">계약일</span>
+								<span class="scon">2018.02.12</span>
+							</li>
+							<li>
+								<span class="stit w120">최종발송일</span>
+								<span class="scon">2018.02.12 <button class="sbtn-type01 pos-a-r">발송이력</button></span>
+							</li>
+							<li>
+								<span class="stit w120">유효기간</span>
+								<span class="scon">2018.02.12 <button class="sbtn-type02 pos-a-r">알림톡발송</button></span>
+							</li>
+						</ul>
+					<article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!--// fullpop 영역 -->
+
+</body>
+</html>

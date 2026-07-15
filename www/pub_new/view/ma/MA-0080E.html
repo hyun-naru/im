@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>로그인(간편비밀번호)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<style>
+	.loginBox .lbtn { width: 100%;border: 1px solid #0c9aff;}
+	.bg-st02 { background-color: #ffffff !important;}
+	.cont4 {background-color: #f2f2f2 !important;}
+	.loginBox .lbtn {border: 1px solid #0c9aff !important;}
+	.lbtn {box-shadow: none;}
+
+</style>
+</head>
+<body>
+
+<!-- 알림팝업 영역 none -->
+<div class="dim-layer none">
+	<div class="dimBg"></div>
+	<div id="alertP-2" class="alert-layer none"><!-- 비밀번호 오류 시 -->
+		<div class="alert-container">
+			<div class="alert-head">
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>비밀번호 입력 1회 오류 입니다.</p>
+				<p>다시 입력하시기 바랍니다.</p>
+				<p>3회 오류 시에는 로그인 잠금 설정이 진행됩니다.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="alertP-3" class="alert-layer none"><!-- 비밀번호 5회 오류 시 -->
+		<div class="alert-container">
+			<div class="alert-head">
+				<h1>알림</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="alert-conts d-scroll">
+				<p>비밀번호 입력 3회 오류 입니다.</p>
+				<p>로그인 잠금 설정이 되었습니다.</p>
+				<p>본인 인증 이후에 다시 시도해 주세요.</p>
+			</div>
+
+			<div class="alert-footer">
+				<button class="mbtn-2 btn-st01">본인인증</button>
+				<button class="mbtn-2 btn-st02">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// 알림팝업 영역 -->
+
+
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>PIN로그인</h1>
+			<span class="lbtn logo">DGB생명</span>
+			<button class="rbtn btn-txt">재설정</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+	<!-- 20180723 추가 -->
+		<div class="cont4 bg-st02">
+			<ul class="login-setting"><!-- 선택설정인 경우 li에 class="on"추가 -->
+				<li data-path="idpwd"><a href="javascript:void(0);" class="idpwd">ID/PW<br>로그인</a></li>
+				<li data-path="simple" class="on"><a href="javascript:void(0);" class="simple">PIN<br>로그인</a></li>
+				<li data-path="finger"><a href="javascript:void(0);" class="finger">지문<br>로그인</a></li>
+			</ul>
+		</div>
+	<!--//20180723 추가-->
+		<div class="cont2">
+			<section class="loginBox">
+				<p class="login-txt1 img_password">간편비밀번호를 인증하여 주시거나 등록하여<br /> 주시기 바랍니다.</p>
+
+				<div class="loginBtn_area">
+					<button class="lbtn btn-st04">등록/변경하기</button>
+					<button class="lbtn btn-st08">인증하기</button>
+				</div>
+			</section>
+
+			<ul class="bul-list-st01">
+				<li>DGB생명 지문인증은 <span class="fc-blue">금융결제원 바이오 인증 앱</span>을 설치 후 간편비밀번호를 등록하셔야만 이용 가능합니다.</li>
+				<li>인증 등록 가능한 휴대폰에서만 간편비밀번호 로그인을 이용할 수 있습니다.</li>
+			</ul>
+
+			<!-- <section class="loginBox">
+				<p class="login-txt1">간편 비밀번호 6자리 입력</p>
+				<input type="password" class="inp-box" id="pwd" maxlength="6" placeholder="비밀번호 입력" readOnly/>
+				<p class="login-link1"><a href="javascript:void(0)" class="circle_link2" id="btnSimpleForgot">혹시 비밀번호를 잊으셨나요?</a></p>
+			</section> -->
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<div class="ico_siren">비밀번호 3번 이상 오류 시 잠금 설정됩니다.</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

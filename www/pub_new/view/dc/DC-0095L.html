@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입제안 이력 복사</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>가입제안 이력 복사</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-05-09 / 2018-05-04 / 2018-05-03 -->
+	<div class="search">
+		<ul class="dform circle01">
+			<li>
+				<label>설계일</label>
+				<label for="radio_01" ><input id="radio_01" type="radio" name="radio" />1주</label>
+				<label for="radio_02" ><input id="radio_02" type="radio" name="radio" />2주</label>
+				<label for="radio_03" ><input id="radio_03" type="radio" name="radio" />한달</label>
+				<label for="radio_04" ><input id="radio_04" type="radio" name="radio" checked />기간</label>
+			</li>
+			<li>
+				<label for="la-4" class="w60">기간입력</label>
+				<input id="la1-4" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
+				<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
+				<input type="date" class="sbtn-calendar" title="달력보기" />
+			</li>
+			<li>
+				<label for="lab1" class="w60">고객명</label>
+				<input id="lab1" class="inp-wrap" type="text" placeholder="고객명을 입력하세요."/>
+			</li>
+			<li>
+				<label for="sel1" class="w60">상품구분</label>
+				<select id="sel1" class="select">
+					<option>상품구분 선택</option>
+					<option>전체</option>
+					<option>보장성(확정)</option>
+					<option>보장성(연동)</option>
+					<option>보장성(변액)</option>
+					<option>저축성(확정)</option>
+					<option>저축성(연동)</option>
+					<option>저축성(변액)</option>
+					<option>연금(확정)</option>
+					<option>연금(연동)</option>
+					<option>연금(변액)</option>
+				</select>
+			</li>
+			<li>
+				<label for="sel2" class="w60">대표상품</label>
+				<select id="sel2" class="select">
+					<option>대표상품 선택</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search" type="submit">검색</button>
+	</div>
+
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구
+		<div class="no-data">검색조건을 입력하고 검색을 진행해 주세요.</div>-->
+		<!-- 검색 후 문구
+		<div class="no-data">검색결과가 없습니다.</div>-->
+
+		<div class="cont">
+			<p class="result-txt">총 5건이 검색되었습니다.</p>
+			<ul class="link-list-st01 dform circle01">
+				<li>
+					<div class="tit-h2">
+						<input id="ra2_1" type="radio" name="ra2" />
+						<label for="ra2_1">
+							<span class="pro-stit">프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당</span>
+						</label>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">제안일</span>
+								<span class="scon">2018.02.10 00:00</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">999,999,999원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<input id="ra2_2" type="radio" name="ra2" />
+						<label for="ra2_2">
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</label>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">제안일</span>
+								<span class="scon">2018.02.10 00:00</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">999,999,999원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" disabled>복사하기</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

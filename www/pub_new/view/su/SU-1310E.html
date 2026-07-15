@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">보험계약 이동에 따른 비교안내확인서<span class="step">(<em>1</em>/3)</span></h3>
+			</div>
+
+			<div class="subscribe-wrap">
+				<div class="top-info">
+					<p class="ico-txt-st01">반드시 비교설명을 받으세요.</p>
+					<div class="txt">보험계약 이동시 나이, 위험률의 증가 등에 따른 보험료 인상, 계약 초기 사업비 공제에 따른 해약환급금 과소지급 등의 손해발생 가능성이 있으니 계약자께서는 반드시 비교설명을 받으시기 바랍니다.</div>
+				</div>
+				<div class="subscribe-cont">
+					<ol class="no-list-st01">
+						<li>
+							<div class="dep-tit1"><span class="no">01</span>고객님께서는 직전 <em>1개월 이내에 소멸한 보험계약(타사계약 포함)</em>이 있거나 동 계약 체결 후 <em>향후 1개월이내 소멸예정인 계약(타사계약 포함)</em>이 있습니까?</div>
+							<div class="checkBox-st01">
+								<input type="radio" name="ra1" id="sort1-1" checked=""><label for="sort1-1">예, 있습니다.</label>
+								<input type="radio" name="ra1" id="sort1-2"><label for="sort1-2">아니오, 없습니다.</label>
+							</div>
+						</li>
+						<li>
+							<div class="dep-tit1"><span class="no">1-1</span>'예'인 경우 <em>새로운 보험계약 체결 후 기존 보험계약을 소멸시 손해가 발생할 가능성</em>을 알고 계십니까?
+							<p class="s-txt">(있으면 '예', 없으면 '아니오'라고 선택해주시기 바랍니다.)</p></div>
+							<div class="checkBox-st01">
+								<input type="radio" name="ra1-1" id="ra1-1-1" checked=""><label for="ra1-1-1">예</label>
+								<input type="radio" name="ra1-1" id="ra1-1-2"><label for="ra1-1-2">아니오</label>
+							</div>
+						</li>
+						<li>
+							<div class="dep-tit1"><span class="no">02</span>고객님께서는 직전 <em>6개월 이내에 소멸한 보험계약(타사계약 포함)</em>이 있거나 동 계약 체결 후 <em>향후 6개월 이내 소멸예정인 계약(타사계약 포함)</em>이 있습니까?</div>
+							<div class="checkBox-st01">
+								<input type="radio" name="ra2" id="sort2-1" checked=""><label for="sort2-1">예, 있습니다.</label>
+								<input type="radio" name="ra2" id="sort2-2"><label for="sort2-2">아니오, 없습니다.</label>
+							</div>
+						</li>
+					</ol>
+
+					<div class="full-cont bg-st02">
+						<ol class="fnote-list">
+							<li><!-- 9.16 수정 -->
+								<span class="no">주1)</span>타사의 보험계약일 경우 다음의 타사 보험계약 비교설명표 작성.<br>당사의 비교안내 대상계약이 있는 경우 첨부의 보험계약 비교안내자료를 설명
+								<p class="desc">타사 보험계약 비교설명표는 모집종사자가 작성하되, 별도 설명 자료가 있는 경우 해당자료 첨부</p>
+							</li>
+							<li>
+								<span class="no">주2)</span>소멸(또는 소멸예정인)된 <em>기존계약</em>과 <em>신계약의 모집종사자가 동일</em>한 경우 <em>기존계약이 타사의 계약이더라도</em> 비교설명표를 <em>반드시 작성</em>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04" disabled>다음</button><!-- 9.16 수정 -->
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

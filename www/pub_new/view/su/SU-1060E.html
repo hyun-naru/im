@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>펀드정보</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span class="on">5</span>
+			<span>6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-insure">
+				<ul class="toggle">
+					<li>
+						<div class="toggle-header">
+							<div class="title">
+								마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과
+							</div>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<div class="cont">
+								<ul class="data-list-st01">
+									<li>
+										<span class="stit">월납기준보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+									<li>
+										<span class="stit">할인후 보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="contract-info">
+				<div class="cont3">
+					<div class="tit-box"><!-- 9.15 수정 -->
+						<!-- <h3 class="h3-tit-st01">펀드정보</h3> 9.15 삭제 -->
+						<div class="add-txt">
+							<span class="ico-txt-st01">펀드비율의 합은 100%입니다.</span>
+						</div>
+					</div>
+
+					<ul class="write-st02 dform square02">
+						<li>
+							<label for="la6-1" class="w60p"><input type="checkbox" id="la6-1">채권형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="채권형비율 입력" disabled><span class="dash">%</span> <!-- 9.15 수정 -->
+							</div>
+						</li>
+						<li>
+							<label for="la6-2" class="w60p"><input type="checkbox" id="la6-2">안정성장형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="안정성장형비율 입력" disabled><span class="dash">%</span> <!-- 9.15 수정 -->
+							</div>
+						</li>
+						<li>
+							<label for="la6-3" class="w60p"><input type="checkbox" id="la6-3">주식성장형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="주식성장형비율 입력" disabled><span class="dash">%</span>
+							</div>
+						</li>
+						<li>
+							<label for="la6-4" class="w60p"><input type="checkbox" id="la6-4">인덱스성장형</label><!-- 9.15 수정 -->
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="인덱스성장형비율 입력" disabled><span class="dash">%</span><!-- 9.15 수정 -->
+							</div>
+						</li>
+						<li>
+							<label for="la6-5" class="w60p"><input id="la6-5" type="checkbox">글로벌주식성장형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="글로벌주식성장형비율 입력" disabled><span class="dash">%</span>
+							</div>
+						</li>
+						<li>
+							<label for="la6-6" class="w60p"><input type="checkbox"  id="la6-6">글로벌채권형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="글로벌채권형비율 입력"  disabled><span class="dash">%</span>
+							</div>
+						</li>
+						<li>
+							<label for="la6-7" class="w60p"><input type="checkbox" id="la6-7">글로벌인덱스형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="글로벌인덱스형비율 입력"  disabled><span class="dash">%</span>
+							</div>
+						</li>
+						<li>
+							<label for="la6-8" class="w60p"><input type="checkbox" id="la6-8">글로벌베스트셀렉션형</label>
+							<div>
+								<input type="tel" class="inp-wrap ta-r" title="글로벌베스트셀렉션형비율 입력" disabled><span class="dash">%</span>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="cont3">
+					<div class="tit-box flex-box">
+						<h3 class="h3-tit-st01">펀드운용옵션</h3><!-- 9.15 수정 -->
+						<div class="add-txt">
+							<span class="ico-txt-st01">펀드운용옵션 및 적합성 관련<br>항목은 필수 입력사항이 아닙니다.</span>
+						</div>
+					</div>
+					<ul class="write-st02">
+						<li>
+							<label class="w60p" for="la6-9-1">펀드자동재분배</label>
+							<div>
+								<select id="la6-9-2" class="select w100p">
+									<option>신청안함</option>
+									<option>12개월</option>
+									<option>6개월</option>
+									<option>3개월</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label class="w60p" for="la6-9-2">추가보험료 포함</label>
+							<div class="checkBox-st01">
+								<input type="radio" name="la6-9-2" id="la6-9-2-1" checked /><label for="la6-9-2-1">예</label>
+								<input type="radio" name="la6-9-2" id="la6-9-2-2" /><label for="la6-9-2-2">아니오</label>
+							</div>
+						</li>
+						<li>
+							<label class="w60p" for="la6-9-3">평균분할투자</label>
+							<div>
+								<select id="la6-9-3" class="select w100p" disabled>
+									<option>신청안함</option>
+								</select>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="cont3">
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">적합성진단결과</h3>
+					</div>
+					<ul class="write-st02">
+						<li>
+							<label class="w60p" for="la6-9-4">투자성향</label>
+							<div>
+								<input type="text" class="inp-wrap ta-r" value="위험선호형" disabled>
+							</div>
+						</li>
+						<li>
+							<label class="w60p" for="la6-9-5">부적합 보험계약 체결</label>
+							<div class="checkBox-st01">
+								<input type="radio" name="la6-9-5" id="la6-9-5-1" checked /><label for="la6-9-5-1">예</label>
+								<input type="radio" name="la6-9-5" id="la6-9-5-2" /><label for="la6-9-5-2">아니오</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

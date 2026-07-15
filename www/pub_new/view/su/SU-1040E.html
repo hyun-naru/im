@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약정보입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약정보입력</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- d-step  -->
+	<div class="d-step">
+		<h2>개인정보 이용동의</h2>
+		<p class="d-step-status"><!-- 9.15 스탭 수정 -->
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+			<span>6</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="contract-insure">
+				<ul class="toggle">
+					<li>
+						<div class="toggle-header">
+							<div class="title">
+								마음 든든 유니버셜 매월생활비 주는 암보험(무) 1511[갱신형] 보증비용 부과
+							</div>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con">
+							<div class="cont">
+								<ul class="data-list-st01">
+									<li>
+										<span class="stit">월납기준보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+									<li>
+										<span class="stit">할인후 보험료</span>
+										<span class="scon">1,200,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="contract-info">
+				<div class="cont3">
+					<!-- 9.15 삭제
+					<div class="tit-box">
+						<h3 class="h3-tit-st01">개인정보 이용동의</h3>	
+					</div>
+					-->
+					<ol class="no-list-st01">
+						<li>
+							<h3 class="dep-tit1"><span class="no">01</span>계약체결 및 이행 등을 위한 개인신용정보 수집·이용, 조회, 제공 동의</h3><!-- 9.15 수정 -->
+							<ul class="write-st02">
+								<li class="align-r">
+									<div class="checkBox-st01 dis-inb w50p">
+										<input type="checkbox" id="la3-1-1" name="la3-1"/><label for="la3-1-1">동의함</label>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="dep-tit1"><span class="no">02</span>상품소개를 위한 동의사항 </h3>
+							<ol class="dep2-list">
+								<li>
+									<div class="dep-tit-box">
+										<h4 class="dep-tit2">(1) 개인(신용)정보 수집·이용에 관한 동의</h4>
+										<span class="right-txt"><input type="tel" class="inp-wrap maL-10 w70"/><span class="dash">년</span></span>
+									</div>
+									<ul class="write-st02">
+										<li>
+											<div class="checkBox-st01">
+												<input type="checkbox" id="la3-2-1" name="la3-2" /><label for="la3-2-1">전체</label>
+												<input type="checkbox" id="la3-2-2" name="la3-2" /><label for="la3-2-2">계약자</label>
+												<input type="checkbox" id="la3-2-3" name="la3-2" /><label for="la3-2-3">피보험자</label>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="dep-tit-box">
+										<h4 class="dep-tit2">(2) 개인(신용)정보 제공에 관한 동의</h4>
+										<span class="right-txt"><input type="tel" class="inp-wrap maL-10 w70"><span class="dash">년</span></span>
+									</div>
+									<ul class="write-st02">
+										<li>
+											<div class="checkBox-st01">
+												<input type="checkbox" id="la3-3-1" name="la3-3"><label for="la3-3-1">전체</label>
+												<input type="checkbox" id="la3-3-2" name="la3-3"><label for="la3-3-2">계약자</label>
+												<input type="checkbox" id="la3-3-3" name="la3-3"><label for="la3-3-3">피보험자</label>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h4 class="dep-tit2">(3) 상품소개를 위한 가입권유 연락방식(중복가능)</h4>
+									<div class="add-select-list dform square02">
+										<ul>
+											<li><input type="checkbox" id="chk3_1_1"><label for="chk3_1_1">전체</label></li>
+											<li><input type="checkbox" id="chk3_1_2"><label for="chk3_1_2">전화</label></li>
+											<li><input type="checkbox" id="chk3_1_3"><label for="chk3_1_3">SMS</label></li>
+											<li><input type="checkbox" id="chk3_1_4"><label for="chk3_1_4">이메일</label></li>
+											<li><input type="checkbox" id="chk3_1_5"><label for="chk3_1_5">우편</label></li>
+										</ul>
+									</div>
+								</li>
+							</ol>
+						</li>
+						<li>
+							<h3 class="dep-tit1"><span class="no">03</span>보험계약자 사망 시 상속인 등 승계인이 보험수익자 지정, 변경권을 행사함</h3>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-5-1" type="radio" name="la3-5" /><label for="la3-5-1">동의함</label>
+										<input id="la3-5-2" type="radio" name="la3-5" /><label for="la3-5-2">동의안함</label>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="dep-tit1"><span class="no">04</span>통신수단을 이용한 철회 및 해지요청 동의</h3>
+							<ul class="write-st02">
+								<li>
+									<div class="checkBox-st01">
+										<input id="la3-6-1" type="radio" name="la3-6"/><label for="la3-6-1">동의함</label>
+										<input id="la3-6-2" type="radio" name="la3-6"/><label for="la3-6-2">동의안함</label>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

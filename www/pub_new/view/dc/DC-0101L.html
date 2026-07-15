@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>펀드/연금정보</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>펀드/연금정보</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_tab 고정영역 -->
+	<div>
+		<ul class="tab">
+			<li class="on"><button>펀드비율</button></li>
+			<li><button>연금사항</button></li>
+		</ul>
+	</div>
+
+	<!-- body_tabcontents 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont1">
+			<!-- tab12_펀드비율 contents -->
+			<ul class="write-st02 dform square02">
+				<li>
+					<label class="w60p"><input type="checkbox" />채권형</label>
+					<div>
+						<input title="채권형비율 입력" class="inp-wrap ta-r" type="tel" /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />안정성장형</label>
+					<div>
+						<input title="안정성장형비율 입력" class="inp-wrap ta-r" type="tel" /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />주식성장형</label>
+					<div>
+						<input title="주식성장형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />인텍스성장형</label>
+					<div>
+						<input title="인텍스성장형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />글로벌주식성장형</label>
+					<div>
+						<input title="글로벌주식성장형비율 입력" class="inp-wrap ta-r" type="tel"  disabled /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />글로벌채권형</label>
+					<div>
+						<input title="글로벌채권형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />글로벌인덱스형</label>
+					<div>
+						<input title="글로벌인덱스형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+					</div>
+				</li>
+				<li>
+					<label class="w60p"><input type="checkbox" />글로벌베스트셀렉션형</label>
+					<div>
+						<input title="글로벌베스트셀렉션형비율 입력" class="inp-wrap ta-r" type="tel" disabled /><span class="dash">%</span>
+					</div>
+				</li>
+				<li class="border-t"><!-- 2018-05-14 -->
+					<label class="w60p bold">펀드합계</label>
+					<div>
+						<input class="inp-wrap ta-r" type="tel" value="100" disabled /><span class="dash">%</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" disabled >확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

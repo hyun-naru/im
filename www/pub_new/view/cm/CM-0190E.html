@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>익일해약접수 조회</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>익일해약접수 조회</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 -->
+	<div class="search">
+		<ul>
+			<li>
+				<label for="slctDate">기준일</label>
+				<input id="slctDate" class="inp-wrap" type="tel" date data-id="stDate" data-name="picker1" placeholder="기준일 입력" />
+				<input type="date" class="sbtn-calendar" data-name="picker1" title="달력보기" />
+				<button class="sbtn-search"id="btnDate">검색</button>
+			</li>
+		</ul>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="d-cont d-scroll">
+		<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+		<!-- 검색 전 문구 -->
+		<div class="no-data none" id="beforeSearch">검색조건을 입력하고 검색을 진행해 주세요.</div>
+		<!-- 검색 후 문구 -->
+		<div class="no-data none" id="afterSearch">검색결과가 없습니다.</div>
+
+		<div>
+			<p class="result-txt" id="totCnt">총 0건이 검색되었습니다.</p>
+			<ul class="link-list-st01" id="resultList">
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당프리미엄건강보험 무배당</span>
+						</a>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">계약일</span>
+								<span class="scon">2018.03.05</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">000,000,000원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+				<li>
+					<div class="tit-h2">
+						<a class="link-go" href="#">
+							<span class="pro-num">5160100021</span>
+							<span class="pro-stit">프리미엄건강보험 무배당</span>
+						</a>
+					</div>
+					<article class="link-list-con">
+						<ul class="bul-list-st01 col-02"><!-- 2018-05-09 -->
+							<li>
+								<span class="stit">계약일</span>
+								<span class="scon">2018.03.05</span>
+							</li>
+							<li>
+								<span class="stit">계약자</span>
+								<span class="scon">홍길동</span>
+							</li>
+							<li>
+								<span class="stit">보험료</span>
+								<span class="scon">000,000,000원</span>
+							</li>
+							<li>
+								<span class="stit">피보험자</span>
+								<span class="scon">홍길동</span>
+							</li>
+						</ul>
+					<article>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!--// fullpop 영역 -->
+
+</body>
+</html>

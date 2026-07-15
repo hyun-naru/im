@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전체메뉴</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!--  화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>로그인 설정</h1>
+			<button class="lbtn btn-back">이전</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+<!--side-menu-->
+<div class="side-menu-wrap open"><!-- open -->
+	<div class="side-menu-bg"></div>
+	<div class="side-menu">
+		<div class="side-menu-header">
+			<div class="button-section">
+				<button class="btn-home">홈으로</button>
+				<button class="btn-logout">로그아웃</button>
+				<button class="btn-speed">속도체크</button>
+			</div>
+			<button type="button" class="btn-close-side">닫기</button>
+		</div>
+
+		<div class="side-menu-con">
+			<ol class="depth-1">
+				<li class="menu-1">
+					<a data-in="#" class="sidebtn">고객관리</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">고객관리</p>
+							<ol class="depth-3">
+								<li><a data-in="cu/CU-0010E">고객조회</a></li>
+								<li><a data-in="cu/CU-0090E">고객동의목록조회</a></li>
+								<li><a data-in="cu/CU-0100P">고객등록</a></li>
+								<li id="custConfirm"><a data-in="cu/CU-0110E">고객동의승인</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-2">
+					<a data-in="#" class="sidebtn">계약관리</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">계약관리</p>
+							<ol class="depth-3">
+								<li><a data-in="cm/CM-0010E">계약조회</a></li>
+								<li><a data-in="cm/CM-0070E">신계약현황</a></li>
+								<li><a data-in="cm/CM-0090E">수금대상건별조회</a></li>
+								<li><a data-in="cm/CM-0110E">수금현황조회</a></li>
+								<li><a data-in="cm/CM-0120E">유지계약조회</a></li>
+								<li><a data-in="cm/CM-0140E">유지율조회</a></li>
+								<li><a data-in="cm/CM-0150E">연체계약조회</a></li>
+								<li><a data-in="cm/CM-0170E">실효계약조회</a></li>
+								<li><a data-in="cm/CM-0190E">익일해약접수조회</a></li>
+								<li><a data-in="cm/CM-0210E">콜센터익일해약접수조회</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-3">
+					<a data-in="#" class="sidebtn">가입제안/<br />청약</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">가입제안</p>
+							<ol class="depth-3">
+								<li><a data-in="dc/DC-0010E">가입제안처리</a></li>
+								<li><a data-in="dc/DC-0120E">가입제안이력조회</a></li>
+								<li><a data-in="dc/DC-0183E">실손보상중복가입조회</a></li> 
+							</ol>
+						</li>
+						<li>
+							<p class="depth-3-tit">청약</p>
+							<ol class="depth-3">
+								<li><a data-in="dc/DC-0141E">모바일청약진행목록</a></li>
+								<li><a data-in="dc/DC-0130E">청약진행현황</a></li>
+								<li><a data-in="dc/DC-0160E">모바일청약승인</a></li>
+								<li><a data-in="dc/DC-0182E" data-type="notYet">저가형상해보험청약</a></li>
+								<li><a data-in="dc/DC-0380E">해피콜현황조회</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-4">
+					<a data-in="#" class="sidebtn">보장분석</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">보장분석</p>
+							<ol class="depth-3">
+								<li><a data-in="in/IN-0010E">My보장진단</a></li>
+								<li><a data-in="in/IN-0010E">My위험클리닉</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-5">
+					<a data-in="#" class="sidebtn">전자서류<br />전송</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">전자서류전송</p>
+							<ol class="depth-3">
+								<li><a data-in="dc/DC-0400E">전자서류발송</a></li>
+								<li><a data-in="dc/DC-0420E">전자서류진행현황</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-6">
+					<a data-in="#" class="sidebtn">사고보험금</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">사고보험금</p>
+							<ol class="depth-3">
+								<li><a data-in="etc/ETC-0010E" data-type="notYet">사고보험금접수</a></li>
+								<li><a data-in="etc/ETC-0030E" data-type="notYet">사고보험금청구진행현황</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-7">
+					<a data-in="#" class="sidebtn">기타</a>
+					<ol class="depth-2">
+						<li>
+							<p class="depth-3-tit">기타</p>
+							<ol class="depth-3">
+								<li><a data-in="etc/ETC-0050E">자료실</a></li>
+								<li><a data-in="etc/ETC-0130E">전자FAX번호 발급</a></li>
+								<!-- <li><a data-in="etc/ETC-0140E">타켓고객 관리</a></li> -->
+								<li><a data-in="ma/MA-0170L">공지사항</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="menu-8"><!-- 2018-05-15 -->
+					<a data-in="#">로그인설정</a>
+				</li>
+			</ol>
+		</div>
+	</div>
+</div>
+<!--//side-menu-->
+		</div>
+	</header>
+	<!-- //header -->
+
+		<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll">
+	</div>
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

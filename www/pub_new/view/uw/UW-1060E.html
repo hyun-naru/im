@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>Self UnderWriting</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>Self UnderWriting</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="search">
+				<ul class="dform circle01">
+					<li>
+						<label class="label-txt">신청일자</label>
+						<div class="checkBox-st01">
+							<input type="radio" name="agree-date" id="chk1_1"><label for="chk1_1">1주일</label>
+							<input type="radio" name="agree-date" id="chk1_2"><label for="chk1_2">2주일</label>
+							<input type="radio" name="agree-date" id="chk1_3"><label for="chk1_3">3주일</label>
+							<input type="radio" name="agree-date" id="chk1_4" checked=""><label for="chk1_4">1달</label>
+						</div>
+					</li>
+					<li>
+						<label for="selCsStgSecd" class="label-txt">질병종류</label>
+						<select class="select" id="selCsStgSecd">
+							<option>전체</option>
+						</select>
+					</li>
+					<li>
+						<label for="selCsStgSecd2" class="label-txt">고객명</label>
+						<input type="text" class="inp-wrap" id="edtCsNam" placeholder="이름을 입력하세요." value="홍길동">
+					</li>
+				</ul>
+				<div class="btnArea">
+					<button class="lbtn-search" id="btn_srch">검색</button>
+				</div>
+			</div>
+			
+			<div class="search-result">
+				<h2 class="ui-hidden-accessible">검색결과 영역</h2>
+
+				<!-- 검색 전 문구 -->
+				<div class="no-data none">검색조건을 입력하고 검색을 진행해 주세요.</div>
+				<!-- 검색 후 문구 -->
+				<div class="no-data none">검색결과가 없습니다.</div>
+				
+				<ul class="link-list-st01">
+					<li>
+						<div class="tit-h2">
+							<a href="#" class="link-go">
+								<span class="stit">SelfUW(10001)</span>
+								<span class="more">상세</span>
+							</a>
+						</div>
+						<article class="link-list-con">
+							<ul class="bul-list-st01 col-02">
+								<li>
+									<span class="stit">진행일</span>
+									<span class="scon">2018.02.12</span>
+								</li>
+								<li>
+									<span class="stit">고객명</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li class="full"><!-- 9.17 추가 -->
+									<span class="stit">질병</span>
+									<span class="scon">고혈압, 당뇨</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<div class="tit-h2">
+							<a href="#" class="link-go">
+								<span class="stit">SelfUW(100002)</span>
+								<span class="more">상세</span>
+							</a>
+						</div>
+						<article class="link-list-con">
+							<ul class="bul-list-st01 col-02">
+								<li>
+									<span class="stit">진행일</span>
+									<span class="scon">2018.02.12</span>
+								</li>
+								<li>
+									<span class="stit">고객명</span>
+									<span class="scon">홍길동</span>
+								</li>
+								<li class="full"><!-- 9.17 추가 -->
+									<span class="stit">질병</span>
+									<span class="scon">고혈압</span>
+								</li>
+							</ul>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

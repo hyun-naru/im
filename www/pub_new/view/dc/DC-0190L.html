@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>SMS인증</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>SMS인증</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_tabcontents 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont1">
+			<ul class="write-st04">
+				<li>
+					<label for="sel1">통신사</label>
+					<div>
+						<select class="select">
+							<option>SKT</option>
+							<option>KT</option>
+							<option>LG U+</option>
+							<option>기타</option>
+						</select>
+					</div>
+				</li>
+				<li>
+					<label for="sel2">알뜰폰</label>
+					<div>
+						<select class="select">
+							<option>SKT알뜰폰</option>
+							<option>KT알뜰폰</option>
+							<option>LG U+ 알뜰폰</option>
+						</select>
+					</div>
+				</li>
+				<li>
+					<label for="sel3">연락처</label>
+					<div class="pdb_0">
+						<input type="tel" id="sel4" class="inp-wrap flex" placeholder="휴대폰 번호를 '-'없이 입력해주세요."/>
+					</div>
+				</li>
+			</ul>
+			<div class="btnArea"><!-- 리스트선택시 disabled삭제 -->
+				<button class="mbtn-2 btn-st02">인증번호 발송</button>
+			</div>
+
+			<ul class="write-st04 mat_80">
+				<li>
+					<label for="sel4">인증번호를 입력하세요.</label>
+					<div>
+						<input type="tel" id="sel4" class="inp-wrap flex" placeholder="인증번호 6자리"/>
+						<button class="sbtn-5 btn-st01">재발송</button>
+						<button class="sbtn-5 btn-st02">확인</button>
+					</div>
+					<p class="ceti-time">00:00</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st01" >확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

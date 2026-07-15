@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입금액 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+
+<!-- 레이어팝업 영역: none 을 없애면 보입니다. -->
+<div class="dim-layer">
+	<div class="dimBg"></div>
+	<div id="layer1" class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>가입금액입력</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="dpop-conts">
+				<ul class="write-st04">
+					<li>
+						<label for="label1">가입금액 <span class="label-desc">최소 2,000만원 ~ 최대 10,000만원</span></label>
+						<div>
+							<input id="label1" class="inp-wrap ta-r" type="tel"/><span class="dash">만원</span>
+							<button class="sbtn-5 btn-st02">확인</button>
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+			<p class="popL-desc ta-r">가입금액 증감액 100만원</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- fullpopup 화면영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>가입조건 입력</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+		<div class="cont2">
+			<ul class="write-st04">
+				<li>
+					<label for="label1">가입금액</label>
+					<div>
+						<input id="label1" class="inp-wrap ta-r" type="tel"/><span class="dash">만원</span>
+					</div>
+				</li>
+				<li>
+					<label for="sel1">보험기간</label>
+					<div>
+						<select id="sel1" class="select flex">
+							<option>80</option>
+						</select>
+						<span class="dash">세</span>
+					</div>
+				</li>
+				<li>
+					<label for="label2">연금전환신청나이</label>
+					<div>
+						<input id="label2" class="inp-wrap ta-r" type="tel"/><span class="dash">세</span>
+					</div>
+				</li>
+				<li>
+					<label for="sel4">거치기간</label>
+					<div>
+						<select id="sel4" class="select flex">
+							<option>80</option>
+						</select>
+						<span class="dash">세</span>
+					</div>
+				</li>
+				<li>
+					<label for="sel3">납입1기간</label>
+					<div>
+						<select id="sel3" class="select flex">
+							<option>0</option>
+						</select>
+						<span class="dash">년</span>
+					</div>
+				</li>
+				<li>
+					<label>납입주기</label>
+					<div class="checkBox-st01">
+						<input type="radio" name="ra2" id="ra2_1" checked /><label for="ra2_1">월</label>
+						<input type="radio" name="ra2" id="ra2_2" /><label for="ra2_2">3개월</label>
+						<input type="radio" name="ra2" id="ra2_3" /><label for="ra2_3">6개월</label>
+						<input type="radio" name="ra2" id="ra2_4" /><label for="ra2_4">년</label>
+						<input type="radio" name="ra2" id="ra2_5" /><label for="ra2_5">일시</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 입력완료 시 disabled삭제 -->
+			<button class="lbtn btn-st01" disabled>확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

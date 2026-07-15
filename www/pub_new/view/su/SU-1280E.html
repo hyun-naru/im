@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(피보험자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(피보험자)</h1><!-- 9.25 수정-->
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">계약전 알릴의무 사항<span class="step">(<em>1</em>/3)</span></h3>
+			</div>
+			<div class="subscribe-wrap">
+				<div class="top-info"><!-- 9.16 수정 -->
+					<p class="ico-txt-st01">다음 각 항목의 질문사항에 대하여 해당란에 (v)표시를 하시기 바랍니다.</p>
+					<p class="ico-txt-st01">아래사항은 사실과 다르게 알릴 경우 보험가입이 거절될 수 있습니다.</p>
+				</div>
+				<div class="subscribe-cont">
+					<ol class="qaBox">
+						<li><!-- 9.18 수정 -->
+							<p class="qaBox-q"><span class="no">1</span>최근 3 개월 이내에 치매, 알츠하이머, 파킨슨병, 뇌졸중증, 외상성 뇌손상, 기억상실, 인지능력 상실, 노쇠(노령으로 인한 정신장애), 언어장애, 행동장애, 마비증세로 의사로부터 진찰 또는 검사<button class="sprite-link link-05" tooltip data-name="tip00">안내</button>를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까?</p>
+							<!-- 9.18 추가레이어팝업 영역 -->
+							<div class="dpop-layer2 none" tooltip data-name="tip00">
+								<div class="dpop-container">
+									<div class="info-box ">
+										<h2 class="info-tit">여기서 "진찰 또는 검사" 란</h2>
+										<div class="info-con">건강검진을 포함합니다.</div>
+									</div>
+									<button type="button" class="btn-pop-close">닫기</button>
+								</div>
+							</div>
+							<!--// 레이어팝업 영역 -->
+							<p class="qaBox-a checkBox-st01">
+								<input type="radio" id="Q1-1" name="Q1" value="1" data-id="SIMP_DCLO_YN_1"><label for="Q1-1">예</label>
+								<input type="radio" id="Q1-2" name="Q1" value="0" data-id="SIMP_DCLO_YN_1"><label for="Q1-2">아니오</label>
+							</p>
+							<div class="qaBox-ex" id="Q1_ex">
+								<ul class="dform square02">
+									<li>
+										<label for="Q1-chk1"><input type="checkbox" id="Q1-chk1" name="Q1_ex" value="01">질병확정진단</label>
+									</li>
+									<li>
+										<label for="Q1-chk2"><input type="checkbox" id="Q1-chk2" name="Q1_ex" value="02">질병의심소견</label>
+										<button class="sprite-link link-05" tooltip data-name="tip01">안내</button>
+										<!-- 레이어팝업 영역 -->
+										<div class="dpop-layer2 none" tooltip data-name="tip01">
+											<div class="dpop-container">
+												<div class="info-box ">
+													<h2 class="info-tit">질병의심소견이란</h2>
+													<div class="info-con">의사로부터 진단서 또는 소견서를 발급받은 경우를 말합니다.</div>
+												</div>
+												<button type="button" class="btn-pop-close">닫기</button>
+											</div>
+										</div>
+										<!--// 레이어팝업 영역 -->
+									</li>
+									<li>
+										<label for="Q1-chk3"><input type="checkbox" id="Q1-chk3" name="Q1_ex" value="03">치료</label>
+									</li>
+									<li>
+										<label for="Q1-chk4"><input type="checkbox" id="Q1-chk4" name="Q1_ex" value="04">입원</label>
+									</li>
+									<li>
+										<label for="Q1-chk5"><input type="checkbox" id="Q1-chk5" name="Q1_ex" value="05">수술</label>
+									</li>
+									<li>
+										<label for="Q1-chk6"><input type="checkbox" id="Q1-chk6" name="Q1_ex" value="06">투약</label>
+										<button class="sprite-link link-05" tooltip data-name="tip02">안내</button>
+										<!-- 레이어팝업 영역 -->
+										<div class="dpop-layer2 none" tooltip data-name="tip02">
+											<div class="dpop-container">
+												<div class="info-box ">
+													<h2 class="info-tit">투약이란</h2>
+													<div class="info-con">의사가 환자에게 약을 처방하는 행위를 말하는 것으로 실제로 약을 구입하지 않았어도 기재해야 합니다.</div>
+												</div>
+												<button type="button" class="btn-pop-close">닫기</button>
+											</div>
+										</div>
+										<!--// 레이어팝업 영역 -->
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<p class="qaBox-q"><span class="no">2</span>최근 5년 이내에 기억상실, 인지능력 상실, 노쇠(노령으로 인한 정신장애), 언어장애, 행동장애, 마비증세로 의사로부터 진찰 또는 검사를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까?</p>
+							<p class="qaBox-a checkBox-st01">
+								<input type="radio" id="Q2-1" name="Q2" value="1" data-id="SIMP_DCLO_YN_2"><label for="Q2-1">예</label>
+								<input type="radio" id="Q2-2" name="Q2" value="0" data-id="SIMP_DCLO_YN_2"><label for="Q2-2">아니오</label>
+							</p>
+							<div class="qaBox-ex " id="Q2_ex">
+								<ul class="dform square02">
+									<li>
+										<label for="Q2-chk1"><input type="checkbox" id="Q2-chk1" name="Q2_ex" value="01">입원</label>
+									</li>
+									<li>
+										<label for="Q2-chk2"><input type="checkbox" id="Q2-chk2" name="Q2_ex" value="02">수술</label><!-- 9.16 -->
+									</li>
+									<li><!-- 9.18 수정 -->
+										<label for="Q2-chk3"><input type="checkbox" id="Q2-chk3" name="Q2_ex" value="03">계속하여<button class="sprite-link link-05"  tooltip data-name="tip03">안내</button> 7일이상 치료</label>
+										<div class="dpop-layer2 none" tooltip data-name="tip03">
+											<div class="dpop-container">
+												<div class="info-box ">
+													<h2 class="info-tit">여기서 "계속하여" 란</h2>
+													<div class="info-con">같은 원인으로 치료 시작 후 완료일까지 실제 치료, 투약 받은 일수를 말합니다.</div>
+												</div>
+												<button type="button" class="btn-pop-close">닫기</button>
+											</div>
+										</div>
+									</li>
+									<li><!-- 9.18 수정 -->
+										<label for="Q2-chk4"><input type="checkbox" id="Q2-chk4" name="Q2_ex" value="04">계속하여<button class="sprite-link link-05" tooltip data-name="tip04">안내</button> 30일 이상 투약</label>
+										<div class="dpop-layer2 none" tooltip data-name="tip04">
+											<div class="dpop-container">
+												<div class="info-box ">
+													<h2 class="info-tit">여기서 "계속하여" 란</h2>
+													<div class="info-con">같은 원인으로 치료 시작 후 완료일까지 실제 치료, 투약 받은 일수를 말합니다.</div>
+												</div>
+												<button type="button" class="btn-pop-close">닫기</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<p class="qaBox-q"><span class="no">3</span>최근 5년 이내에 아래 10대 질병으로 의사로부터 진찰 또는 검사를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까?</p>
+							<p class="qaBox-a checkBox-st01">
+								<input type="radio" id="Q3-1" name="Q3" value="1" data-id="SIMP_DCLO_YN_3"><label for="Q3-1">예</label>
+								<input type="radio" id="Q3-2" name="Q3" value="0" data-id="SIMP_DCLO_YN_3"><label for="Q3-2">아니오</label>
+							</p>
+							<div class="qaBox-ex " id="Q3_ex">
+								<ul class="dform square02">
+									<li>
+										<label for="Q3-chk1"><input type="checkbox" id="Q3-chk1" name="Q3_ex" value="01">질병확정진단</label>
+									</li>
+									<li>
+										<label for="Q3-chk2"><input type="checkbox" id="Q3-chk2" name="Q3_ex" value="02">치료</label>
+									</li>
+									<li>
+										<label for="Q3-chk3"><input type="checkbox" id="Q3-chk3" name="Q3_ex" value="03">입원</label>
+									</li>
+									<li>
+										<label for="Q3-chk4"><input type="checkbox" id="Q3-chk4" name="Q3_ex" value="04">수술</label>
+									</li>
+									<li>
+										<label for="Q3-chk5"><input type="checkbox" id="Q3-chk5" name="Q3_ex" value="05">투약</label>
+									</li>
+								</ul>
+								<p class="desc-txt">"10대 질병" : (1)뇌졸중증(뇌경색/뇌출혈) (2)치매 (3)알츠하이머병 (4)파킨슨병 (5)외상성 뇌손상 (6)암 (7)백혈병 (8)고혈압 (9)당뇨병 (10)심근경색증</p>
+							</div>
+						</li>
+
+						<li class="" id="ghextraQa01">
+							<p class="qaBox-q mab-10 pal_n">계약전 알릴의무 사항의 질문 사항중 "예"인 경우 병명, 치료기간, 치료내용, 치료병원, 재발경험, 완치여부를 기재하여 주십시오.</p>
+					
+							<div class="tab-add full">
+								<ul class="list">
+									<li class="on">
+										<button type="button" class="rtab"><span>병력1</span></button>
+										<button type="button" class="del"><span>삭제</span></button>
+									</li>
+									<li>
+										<button type="button" class="rtab"><span>병력2</span></button>
+										<button type="button" class="del"><span>삭제</span></button>
+									</li>
+								</ul>
+								<button type="button" class="rtab-add"><span>탭추가</span></button>
+							</div>
+							<div class="tab-cont">
+								<ul class="write-st02">
+									<li>
+										<label for="la-1" class="label-txt">병명</label>
+										<div>
+											<input type="text" id="la-1" class="inp-wrap">
+										</div>
+									</li>
+									<li><!-- 2018-05-03 / 2018-05-04 -->
+										<label for="la-2-1" class="label-txt">치료기간</label>
+										<div>
+											<input type="tel" id="la-2-1" class="inp-wrap" placeholder="시작일 입력">
+											<input type="date" class="sbtn-calendar" title="달력보기">
+											<span class="dash">~</span>
+											<input type="tel" id="la-2-2" class="inp-wrap" placeholder="종료일 입력">
+											<input type="date" class="sbtn-calendar" title="달력보기">
+										</div>
+									</li>
+									<li><!-- 2018-05-21 -->
+										<label for="la-6" class="label-txt">치료내용</label>
+										<div>
+											<input type="text" id="la-6" class="inp-wrap">
+										</div>
+									</li>
+									<li>
+										<label for="la-3" class="label-txt">치료병원</label>
+										<div>
+											<input type="text" id="la-3" class="inp-wrap">
+										</div>
+									</li>
+									<li>
+										<label for="la-4" class="label-txt">재발경험</label>
+										<div class="checkBox-st01">
+											<input type="radio" id="la-4-1" name="la-4"><label for="la-4-1">예</label>
+											<input type="radio" id="la-4-2" name="la-4"><label for="la-4-2">아니오</label>
+										</div>
+									</li>
+									<li>
+										<label for="la-5" class="label-txt">완치여부</label>
+										<div class="checkBox-st01">
+											<input type="radio" id="la-5-1" name="la-5"><label for="la-5-1">예</label>
+											<input type="radio" id="la-5-2" name="la-5"><label for="la-5-2">아니오</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>신분증인증</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head agree">
+			<h1>신분증인증</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="fullpop-cont">
+			<div class="box-gray ta-c">
+				<p class="stxt02">본인확인을 위해 주민등록증 또는 운전면허증<br>원본을 준비하세요.</p>
+			</div>
+			<div class="cont3">
+				<div class="id-card">
+					<button type="button" class="btn-camera"><span>신분증 촬영</span></button>
+				</div>
+
+				<ul class="write-st02">
+					<li>
+						<label for="la1-1" class="label-txt">신원확인증</label>
+						<div>
+							<select class="select">
+								<option value="">주민등록증</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label for="la1-2" class="label-txt">발급일자</label>
+						<div>
+							<input type="text" class="inp-wrap" id="la1-2" value="2020.01.05">
+							<input type="date" class="sbtn-calendar" title="달력보기">
+						</div>
+					</li>
+					<li>
+						<label for="la1-3" class="label-txt">주민등록번호</label>
+						<div>
+							<input type="text" class="inp-wrap" id="la3-8" value="770612-1******">
+						</div>
+					</li>
+					<li>
+						<label for="la1-3" class="label-txt">진위여부</label>
+						<div class="unity-chk-box">
+							<button class="sbtn-5 btn-st10 ico-chk">진위체크</button>
+							<span class="inp-wrap unity">일치</span>
+							<!--
+							<span class="inp-wrap no-unity">불일치</span>
+							-->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

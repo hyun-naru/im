@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>전자청약 입력</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>전자청약 입력</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<div>
+		<div class="d-step">
+			<h2>2. 작성대상 문서 확인</h2>
+			<p class="d-step-status"><!-- 2018-03-19 -->
+				<span>1</span> / <span class="on">2</span> / <span>3</span> / <span>4</span> / <span>5</span> / <span>6</span>
+			</p>
+		</div>
+	</div>
+
+	<!-- body 스크롤영역 -->
+	<div class="d-cont d-scroll bg-st02">
+		<!-- 조회후 -->
+		<div class="pro-title2">
+			<p>라이프 파트너 플러스 변액 유니버셜 종신보험(무) 1701 할인형 1종 (기본형)라이프 파트너 플러스 변액 유니버셜 종신보험(무) 1701 할인형 1종 (기본형)라이프 파트너 플러스 변액 유니버셜 종신보험(무) 1701 할인형 1종 (기본형)라이프 파트너 플러스 변액 유니버셜 종신보험(무) 1701 할인형 1종 (기본형)</p>
+			<div class="wonbox">
+				<span>월보험료</span>
+				<span class="won"><em>120,000</em>원</span>
+			</div>
+		</div>
+		<div class="cont1"><!-- 2018-05-14 순서변경 -->
+			<h3 class="h3-st02">부본전달방법</h3>
+			<ul class="write-st04">
+				<li class="checkBox-st01">
+					<div>
+						<input id="ra1_1" name="ra1" type="radio" /><label for="ra1_1">모바일</label>
+						<input id="ra1_2" name="ra1" type="radio" checked /><label for="ra1_2">이메일</label>
+					</div>
+				</li>
+				<!-- 2018-05-16 모바일인경우 -->
+				<li>
+					<div>
+						<select class="select" disabled>
+							<option>010</option>
+						</select>
+						<input class="inp-wrap" type="tel" value="0000" maxlength="4" disabled />
+						<input class="inp-wrap" type="tel" value="0000"maxlength="4" disabled />
+					</div>
+				</li>
+				<!-- 이메일인경우 -->
+				<li>
+					<div>
+						<input class="inp-wrap" type="email" title="아이디입력" /><span class="dash">@</span><input class="inp-wrap" type="email" title="도메인주소입력" /><button class="sbtn-search">적용</button>
+					</div>
+				</li>
+			</ul>
+
+			<h3 class="h3-st02">전자서명 작성 목록</h3>
+			<div class="ico-docu-list">
+				<ul>
+					<li>보험계약 청약서</li>
+					<li>계약전 알림의무 사항</li>
+					<li>상품설명서</li>
+					<li>금융소비자불이익사항 우선설명확인서</li>
+					<li>보험계약이동에 따른 비교안내 확인서</li>
+					<li>FATCA 확인서</li>
+					<li>변액적합성</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+			<button class="lbtn btn-st02">이전</button>
+			<button class="lbtn btn-st01">다음</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

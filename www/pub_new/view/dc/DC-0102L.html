@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>주계약 시뮬레이션</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+</head>
+<body>
+
+<!-- fullpopup 영역 -->
+<div class="fullpop-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="fullpop-head">
+			<h1>주계약 시뮬레이션</h1>
+			<button class="lbtn btn-pop-close">닫기</button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- body_searchBox 고정영역 2018-04-27  -->
+	<div class="search search-bg-box">
+		<ul class="bg-darkblue">
+			<li>
+				<label>현재 주계약 가입금액</label>
+				<p class="scon"><em>5,000</em> <span class="won">만원</span></p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label for="la1-1" class="w125">주계약 가입금액(1안)</label>
+				<input id="la1-1" class="inp-wrap ta-r" type="tel" value="10,000,000,000" />
+				<span class="won">원</span>
+			</li>
+			<li>
+				<label for="la1-2" class="w125">가입기간</label>
+				<select id="la1-2" class="select">
+					<option>10</option>
+				</select>
+				<span class="won">년</span>
+			</li>
+		</ul>
+		<ul class="border-t">
+			<li>
+				<label for="la2-1" class="w125">주계약 가입금액(2안)</label>
+				<input id="la2-1" class="inp-wrap ta-r" type="tel" value="10,000,000,000" />
+				<span class="won">만원</span>
+			</li>
+			<li>
+				<label for="la2-2" class="w125">가입기간</label>
+				<select id="la2-2" class="select">
+					<option>10</option>
+				</select>
+				<span class="won">년</span>
+			</li>
+		</ul>
+	</div>
+	<!-- 연금,저축보험의 경우 노출 2018-04-27 -->
+	<div class="search search-bg-box">
+		<ul class="bg-darkblue">
+			<li>
+				<label>현재 보험료</label>
+				<p class="scon"><em>5,000</em> <span class="won">만원</span></p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label for="la-1" class="w80">보험료(1안)</label>
+				<input id="la-1" class="inp-wrap ta-r" type="tel" />
+				<span class="won">원</span>
+			</li>
+			<li>
+				<label for="la2-2" class="w80">가입기간</label>
+				<select id="la2-2" class="select">
+					<option>10</option>
+				</select>
+				<span class="won">년</span>
+			</li>
+		</ul>
+		<ul class="border-t">
+			<li>
+				<label for="la-2" class="w80">보험료(2안)</label>
+				<input id="la-2" class="inp-wrap ta-r" type="tel" />
+				<span class="won">만원</span>
+			</li>
+			<li>
+				<label for="la2-2" class="w80">가입기간</label>
+				<select id="la2-2" class="select">
+					<option>10</option>
+				</select>
+				<span class="won">년</span>
+			</li>
+		</ul>
+	</div>
+	<div class="btnArea">
+		<button class="lbtn-search btn-st03">보험료 비교하기</button>
+	</div>
+
+	<!-- body_resultBox 스크롤영역 -->
+	<div class="fullpop-cont d-scroll bg-st02">
+
+		<div class="space-st02"><!-- 2018-04-04 -->
+			<ul class="chk-list3 dform circle01">
+				<li>
+					<label for="ra1" class="areaL">
+						<input id="ra1" type="radio" name="ra" />
+						<span class="name">현재</span>
+					</label>
+					<div class="areaR">
+						<ul>
+							<li>
+								<label class="stit w50">주계약</label><!-- 2018-04-27 -->
+								<!-- <label class="stit w50">가입금액</label>연금,저축보험의 경우 노출 -->
+								<input class="inp-wrap scon2" type="tel" value="10,000,000,000" disabled />
+								<span class="won">만원</span>
+							</li>
+							<li>
+								<p class="stit w50">보험료</p><!-- 2018-04-27 -->
+								<input class="inp-wrap scon2" type="tel" value="10,000,000,000" disabled />
+								<span class="won">원</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label for="ra2" class="areaL">
+						<input id="ra2" type="radio" name="ra" />
+						<span class="name">1안</span>
+					</label>
+					<div class="areaR">
+						<ul>
+							<li>
+								<label class="stit w50">주계약</label><!-- 2018-04-27 -->
+								<!-- <label class="stit">가입금액</label>연금,저축보험의 경우 노출 -->
+								<input class="inp-wrap scon2" type="tel" value="10,000,000,000" disabled />
+								<span class="won">만원</span>
+							</li>
+							<li>
+								<p class="stit w50">보험료</p><!-- 2018-04-27 -->
+								<input class="inp-wrap scon2" type="tel" value="10,000,000,000" disabled />
+								<span class="won">원</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label for="ra3" class="areaL">
+						<input id="ra3" type="radio" name="ra" />
+						<span class="name">2안</span>
+					</label>
+					<div class="areaR">
+						<ul>
+							<li>
+								<label class="stit w50">주계약</label><!-- 2018-04-27 -->
+								<!-- <label class="stit">가입금액</label>연금,저축보험의 경우 노출 -->
+								<input class="inp-wrap scon2" type="tel" value="10,000,000,000" disabled />
+								<span class="won">만원</span>
+							</li>
+							<li>
+								<p class="stit w50">보험료</p><!-- 2018-04-27 -->
+								<input class="inp-wrap scon2" type="tel" value="10,000,000,000" disabled />
+								<span class="won">원</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="fullpop-footer"><!-- 2018-04-04 -->
+			<button class="lbtn btn-st01" >확인</button>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!--// fullpopup 영역 -->
+
+</body>
+</html>

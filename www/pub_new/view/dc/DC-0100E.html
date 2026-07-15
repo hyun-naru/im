@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>가입제안</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 피보험자선택  -->
+<div id="layer2" class="dim-layer none"><!-- 레이어팝업 노출 none class 삭제 -->
+	<div class="dimBg"></div>
+	<div class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>피보험자선택</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<ol class="pop-list01">
+					<li>
+						<label for="radio1_1" class="dform circle01"><input id="radio1_1" type="radio" name="radio1"/>이름(나이/성별)</label>
+					</li>
+					<li>
+						<label for="radio1_2" class="dform circle01"><input id="radio1_2" type="radio" name="radio1"/>이름(나이/성별)</label>
+					</li>
+					<li>
+						<label for="radio1_3" class="dform circle01"><input id="radio1_3" type="radio" name="radio1"/>이름(나이/성별)</label>
+					</li>
+					<li>
+						<label for="radio1_4" class="dform circle01"><input id="radio1_4" type="radio" name="radio1"/>이름(나이/성별)</label>
+					</li>
+					<li>
+						<label for="radio1_5" class="dform circle01"><input id="radio1_5" type="radio" name="radio1"/>이름(나이/성별)</label>
+					</li>
+				</ol>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st21">취소</button>
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 보험료계산결과 -->
+<div id="layer2" class="dim-layer none"><!-- 레이어팝업 노출 none class 삭제 -->
+	<div class="dimBg"></div>
+	<div id="layer1" class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>보험료 계산결과</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<ul class="pop-list02">
+					<li>
+						<span class="stit">초회 보험료</span>
+						<span class="scon"><em>145,000</em>원</span>
+					</li>
+					<li>
+						<span class="stit">할인 보험료</span>
+						<span class="scon"><em>145,000</em>원</span>
+					</li>
+					<li>
+						<span class="stit">할인 후 보험료</span>
+						<span class="scon"><em>145,000</em>원</span>
+					</li>
+				</ul>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 2018-05-28 환산보험료 -->
+<div id="layer3" class="dim-layer none"><!-- 레이어팝업 노출 none class 삭제 -->
+	<div class="dimBg"></div>
+	<div id="layer1" class="dpop-layer">
+		<div class="dpop-container">
+			<div class="dpop-head">
+				<h1>환산  보험료</h1>
+				<button class="btn-pop-close">닫기</button>
+			</div>
+
+			<div class="dpop-conts d-scroll">
+				<ul class="pop-list02">
+					<li>
+						<span class="scon"><em>145,000,000,000</em>원</span>
+					</li>
+				</ul>
+			</div>
+			<div class="dpop-footer">
+				<button class="mbtn-2 btn-st01">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>가입제안</h1>
+			<button class="lbtn btn-back">홈으로</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+<pre></pre>
+	<!-- fixed -->
+	<div class="grayBox-st01">
+		<ul class="cus-box02">
+			<li>
+				<button class="sprite-link link-01"><!-- 가상고객일경우 링크삭제_disabled -->
+					<div class="tit-h2">
+						<label class="stxt">계약자</label>
+						<p>
+							<span class="name">홍달수일이삼</span>
+							<span class="age-s">(44/남)</span>
+						</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="sprite-link link-02"><!-- 가상고객일경우 링크삭제_disabled -->
+					<div class="tit-h2">
+						<label class="stxt">피보험자</label>
+						<p>
+							<span class="name">홍달수일이삼</span>
+							<span class="age-s">(44/남)</span>
+						</p>
+					</div>
+				</button>
+			</li>
+			<li class="btn-box">
+				<button class="sprite-link link-03">정보변경</button>
+			</li>
+		</ul>
+	</div>
+
+	<!-- body-상품선택 전 -->
+	<div class="d-cont d-scroll dc-0070e none"><!-- 2018-05-11 -->
+		<div class="cont1">
+			<div class="btn-list">
+				<button>상품을 선택하세요</button>
+				<button>유사한 고객의 가입제안<br />이력을 선택하세요</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- body-상품선택 후 -->
+	<div class="d-cont dc-0100e">
+		<div class="pro-title "><!-- 2018-05-11 / 2018-05-08 -->
+			<button class="btn-edit">라이프 파트너 플러스 변액 유니버셜 종신보험(무) 1701 할인형 1종 (기본형)라이프 파트너 플러스 변액 유니버셜 종신보험(무) 1701 할인형 1종 (기본형)</button>
+			<div class="wonbox">
+				<label>월 보험료(일시납)</label>
+				<p class="won"><em>99,999,999,000</em>원</p>
+			</div>
+		</div>
+		<div class="d-scroll">
+			<div class="cont1">
+				<div class="pro-cov1">
+					<ul class="pro-cov1-t">
+						<li>
+							<label>합계 보험료<button class="ibtn-won">환산보험료 보기</button></label>
+							<em>999,000</em>원
+						</li>
+						<li>
+							<label>할인 보험료</label>
+							<em>99,999,999,000</em>원
+						</li>
+					</ul>
+					<ul class="pro-cov1-b">
+						<li>
+							<label>상령일 후 예상보험료</label>
+							<p><em>99,999,999,000</em>원</p>
+						</li>
+						<li>
+							<label>보험나이 변경일</label>
+							<p><em>2018.02.08</em></p>
+						</li>
+					</ul>
+				</div>
+
+				<article class="pro-covenant">
+					<div class="header"><!-- 2018-05-16  주계약: bulet01 -->
+						<h3 class="bulet01">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십(기본형)</h3>
+					</div>
+					<ul class="list">
+						<li>
+							<label>가입금액</label>
+							<span class="fc-blue">999,999<em>만원</em></span>
+						</li>
+						<li>
+							<label>보험기간</label>
+							<span>100<em>년</em></span>
+						</li>
+						<li>
+							<label>납입기간</label>
+							<span>일시납</span>
+						</li>
+					</ul>
+					<div class="premium">
+						<label>보험료</label>
+						<div>
+							<p class="fs-point02">99,999,999,000원</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="pro-covenant ">
+					<div class="header"><!-- 2018-05-16  선택: bulet03,bulet05 -->
+						<h3 class="bulet03">정기특약 순수보장형</h3>
+						<button class="btn-gray">수정</button>
+					</div>
+					<ul class="list">
+						<li>
+							<label>가입금액</label>
+							<span class="fc-blue">999,999<em>만원</em></span>
+						</li>
+						<li>
+							<label>보험기간</label>
+							<span>80<em>년</em></span>
+						</li>
+						<li>
+							<label>납입기간</label>
+							<span>5<em>년</em></span>
+						</li>
+					</ul>
+					<div class="premium">
+						<label>보험료</label>
+						<div>
+							<p class="fs-point02">42,800원</p>
+							<p>상령일 후 45,000원</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="pro-covenant">
+					<div class="header"><!-- 2018-05-16  의무: bulet02,bulet04 -->
+						<h3 class="bulet02">재해사망특약(무) 순수보장형</h3>
+						<button class="btn-gray">수정</button>
+					</div>
+					<ul class="list">
+						<li>
+							<label>가입금액</label>
+							<span class="fc-blue">500<em>년</em></span>
+						</li>
+						<li>
+							<label>보험기간</label>
+							<span>종신</span>
+						</li>
+						<li>
+							<label>납입기간</label>
+							<span>5<em>년</em></span>
+						</li>
+					</ul>
+					<div class="premium">
+						<label>보험료</label>
+						<div>
+							<p class="fs-point02">42,800원</p>
+							<p>상령일 후 45,000원</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<!-- footer 고정영역 -->
+		<footer>
+			<div class="d-footer"><!-- 리스트선택시 disabled삭제 -->
+				<button class="lbtn btn-st01" >보험료계산</button>
+				<button class="lbtn btn-st02" >전산심사</button>
+				<button class="lbtn btn-st10" >청약입력</button>
+			</div>
+		</footer>
+		<!-- //footer -->
+		<div class="floating-open"><!-- 2018-05-03  -->
+			<button>메뉴열기</button>
+		</div>
+		<!-- 플루팅메뉴 2018-05-03 -->
+		<div id="floating-layer" class="dim-layer none">
+			<div class="dimBg"></div>
+			<div class="floating-menu">
+				<ul>
+					<li>
+						<button><span>생활자금<br />선지급</span></button>
+					</li>
+					<li>
+						<button><span>펀드정보</span></button>
+					</li>
+					<li>
+						<button><span>주계약<br />시뮬레이션</span></button>
+					</li>
+					<li>
+						<button><span>중도인출</span></button>
+					</li>
+					<li>
+						<button><span>추가납입</span></button>
+					</li>
+					<li class="close">
+						<button>메뉴닫기</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<!--// 화면 영역 -->
+
+</body>
+</html>

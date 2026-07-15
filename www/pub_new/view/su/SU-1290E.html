@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1>
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- d-step 10.26 위치 이동 -->
+	<div class="d-step">
+		<h2>청약서류 작성</h2>
+		<p class="d-step-status">
+			<span class="on">1</span>
+			<span class="on">2</span>
+			<span class="on">3</span>
+			<span class="on">4</span>
+			<span>5</span>
+		</p>
+	</div>
+	<!-- //d-step  -->
+
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont">
+			<div class="title-step">
+				<h3 class="tit">상품설명서<span class="step">(<em>1</em>/2)</span></h3>
+			</div>
+			<div class="subscribe-wrap">
+				<div class="top-info">
+					<p class="ico-txt-st01">청약문서를 확인하신 후, 아래의 내용을 작성해주세요.<br>(대상 항목을 클릭하시면 덧쓰기 작성이 가능합니다.)</p><!-- 9.18 수정 --><!-- 9.25 수정 -->
+				</div>
+				<div class="subscribe-cont">
+					<dl class="dl-list"><!-- 9.25 전체수정 -->
+						<dt>청약문서 확인</dt>
+						<dd>
+							<div class="dform square02">
+								<input type="checkbox" id="chk1" checked>
+								<label for="chk1" class="stit">상품설명서</label>
+							</div>
+							<span class="chk-complt">확인완료</span><!-- 문서확인 완료후 노출 -->
+						</dd>
+					</dl>
+				</div>
+
+				<div class="subscribe-cont">
+					<div class="gapil-box">
+						보험모집자 (<span class="gapil"><label>김태희</label><input type="text" class="ipt"></span>)(으)로부터 상품설명서에 대한 내용을 교부받아 
+						(<span class="gapil"><label>설명듣고 이해</label><input type="text" class="ipt"></span>)하였습니다. 또한 본인이 가입하는 보험계약의 예금자보호 여부 및 보호한도(해지환급금(또는 만기시 보험금이나 사고보험금)에 기타지급금을 합하여 1인당 5천만원)에 대하여 설명듣고 이해하였음을 확인합니다.
+						<!-- 9.22 추가 : 가필 레이어팝업 --><!-- 10.26 수정 -->
+						<div class="dpop-layer2 gapil-layer">
+							<div class="dpop-container">
+								<div class="gapil-cont">
+									<span class="gapil"><label>김태희</label><input type="text" class="ipt"></span>
+								</div>
+								<div class="dpop-footer">
+									<button class="mbtn-2 btn-st21">취소</button>
+									<button class="mbtn-2 btn-st01">확인</button>
+								</div>
+							</div>
+						</div>
+						<!-- //가필 레이어팝업 -->
+					</div>
+				</div>
+
+				<!-- 저해지환급형 상품인 경우 추가 보여줌 (상품설명서 하단 영역) -->
+				<div class="subscribe-cont none" id="divLowHaejiLi">
+					<div class="gapil-box">보험계약자 (<span class="gapil"><label>홍길동</label><input type="text" class="ipt"></span>)은 위 내용에 대해 비교확인 하였습니다. 본인 보험료 (<span class="gapil"><label>납입기간 중 중도해지시</label><input type="text" class="ipt"></span>)일반형 대비 해지환급금이 (<span class="gapil"><label>50%</label><input type="text" class="ipt"></span>)인 (<span class="gapil"><label>저해지환급형</label><input type="text" class="ipt"></span>) 을 선택하였습니다. 다만 저해지환급형은 보험료 납입 및 납입기간이 완료된 이후 해지시 해지환급금이 일반형과 동일하여 환급률은 일반형보다 높습니다. 상기 비교사항을 충분히 (<span class="gapil"><label>이해</label><input type="text" class="ipt"></span>)하고 계약을 체결하였습니다.</div>
+				</div>
+				<!-- //저해지환급형 상품인 경우 추가 보여줌 (상품설명서 하단 영역) -->
+
+				<!-- GMAB 미보증형 상품가입시 주요내용 설명확인서 -->
+				<div class="subscribe-cont none" id="divGMAB">
+					<ul class="bul-list-st02">
+						<li><p>본 상품은 예금자보호법에 적용되지 않는 투자형 보험상품입니다.</p></li>
+						<li><p>본 상품은 최저연금 적립금 보증이 부여되지 않은 상품으로 연금게시시점의 계약자 적립금이 납입한 보험료보다 적을 수 있습니다.</p></li>
+						<li><p>본 상품은 투자형 상품이므로 주식시장의 하락, 채권수익률 변동 등에 따라 원금손실 리스크가 있습니다.</p></li>
+						<li><p>계약자가 취약금융소비자에 해당하는 경우 우선 설명 사항</p></li>
+					</ul>
+					<div class="gapil-box mat_10">
+						본인은 상시 사실에 대한 설명을 (<span class="gapil"><label>듣고 이해하였음</label><input type="text" class="ipt"></span>)
+					</div>
+				</div>
+				<!-- //GMAB 미보증형 상품가입시 주요내용 설명확인서 -->
+			</div>
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04">다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+</body>
+</html>
