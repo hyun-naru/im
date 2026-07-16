@@ -27,7 +27,7 @@ body{position:relative;min-height:100%;line-height:1;color:#555;}
 	.ma-0010e .d-cont{background-image:url('../img/bg-intro.png');background-repeat:no-repeat;background-position:0 bottom;background-size:100% 10.3rem;}
 }
 
-*{word-break:break-word;letter-spacing:-0.05rem;font-size:1.5rem;font-family:'NotoSans','Roboto',sans-serif;}
+*{word-break:break-word;letter-spacing:-0.05rem;font-size:1.5rem;font-family:'Roboto','NotoSans',sans-serif;}
 
 .ui-hidden-accessible{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);}
 .cont{background:#fff}
