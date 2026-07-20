@@ -34,79 +34,166 @@
 	<div class="d-scroll dcNew">
 		<div class="fullpop-cont">
 			<div class="cont1">
-				<article class="pro-covenant mat-n">
+				<article class="pro-covenant cheking-pro">
 					<div class="toggle">
-						<div class="header toggle-header pat_5 on">	
-							<ul class="titBox link-list-st01 pdt-n">
-								<li class="bg-st02 pd-n border-n">
+						<div class="header toggle-header on">	
+							<ul class="titBox link-list-st01">
+								<li class="bg-st02">
 									<div class="flexJcSb">
 										<div>
 											<span class="status-05">필수</span>
 											<span class="status-03">답변완료</span>
 										</div>
 									</div>
-									<div class="tit-h2 pd-n mat_10">
-										<span class="Advance-stit par_n">[A00] 콜레라, 장티푸스 등 감염병 질환</span>
+									<div class="tit-h2">
+										<span class="Advance-stit">[A00] 콜레라, 장티푸스 등 감염병 질환</span>
 									</div>
 								</li>
 							</ul>
 							<button type="button" class="btn-toggle">더보기</button>
 						</div>
-						<div class="toggle-con" style="display: block;">
-							<ul class="write-st02 bg-st01 pad-20">
-								<li>
-									<label for="la01-01">완치여부</label>
-									<div class="checkBox-st01">
-										<input type="radio" id="la01-01-01" name="la01-01"><label for="la01-01-01">예</label>
-										<input type="radio" id="la01-01-02" name="la01-01"><label for="la01-01-02">아니오</label>
-									</div>
-								</li>
-								<li>
-									<label for="la01-02">재발유무</label>
-									<div class="checkBox-st01">
-										<input type="radio" id="la01-02-01" name="la01-02"><label for="la01-02-01">있다</label>
-										<input type="radio" id="la01-02-02" name="la01-02"><label for="la01-02-02">없다</label>
-									</div>
-								</li>
-								<li>
-									<label for="la01-03">진단여부</label>
-									<div>
-										<select id="la01-03" class="select" disabled>
-											<option>질병확정진단</option>
-										</select>
-									</div>
-								</li>
-								<li>
-									<label for="la01-04">최종사고일자</label>
-									<div>
-										<input type="tel" class="inp-wrap" id="la01-04" value="2020.01.05" data-name="picker" disabled>
-										<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
-									</div>
-								</li>
-								<li class="d-lite_flex flexAiCt">
-									<label for="la01-05" class="w25p">경과기간(월)</label>
-									<input type="tel" id="la01-05" class="inp-wrap w50" style="min-width: 5rem;" value="5" disabled><span class="maL-5 fc_000">개월</span>
-									<label for="la01-06" class="w15p maL-10">청구건수</label>
-									<input type="tel" id="la01-06" class="inp-wrap w50 maL-5" style="min-width: 5rem;" value="5" disabled><span class="maL-5 fc_000">건</span>
-								</li>
-							</ul>
-							<div class="bg-st01 pad-20 border-t">
+						<div class="toggle-con bg-st01" style="display: block;">
+							<div>
+								<ul class="bul-list-st03 type02 col-wrap">
+									<li>
+										<span class="stit">수술횟수</span>
+										<span class="scon">N회</span>
+									</li>
+									<li>
+										<span class="stit">입원일수</span>
+										<span class="scon">N일</span>
+									</li>
+									<li>
+										<span class="stit">입원횟수</span>
+										<span class="scon">N회</span>
+									</li>
+									<li>
+										<span class="stit">통원횟수</span>
+										<span class="scon">N회</span>
+									</li>
+									<li>
+										<span class="stit">최종사고일</span>
+										<span class="scon">2026.05.10</span>
+									</li>
+									<li>
+										<span class="stit">경과기간</span>
+										<span class="scon">N개월</span>
+									</li>
+									<li>
+										<span class="stit">청구건수</span>
+										<span class="scon">N회</span>
+									</li>
+								</ul>
+								<!-- <ul class="write-agree">
+									<li>
+										<label>완치여부</label>
+										<div class="checkBox-st01">
+											<input type="radio" id="la01-01-01" name="la01-01"><label for="la01-01-01">예</label>
+											<input type="radio" id="la01-01-02" name="la01-01"><label for="la01-01-02">아니오</label>
+										</div>
+									</li>
+									<li>
+										<label>재발유무</label>
+										<div class="checkBox-st01">
+											<input type="radio" id="la01-02-01" name="la01-02"><label for="la01-02-01">있다</label>
+											<input type="radio" id="la01-02-02" name="la01-02"><label for="la01-02-02">없다</label>
+										</div>
+									</li>
+									<li>
+										<label for="la01-03">진단여부</label>
+										<div>
+											<select id="la01-03" class="select">
+												<option>질병확정진단</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<label for="la01-04">치료내용</label>
+										<div>
+											<select id="la01-04" class="select">
+												<option>질병확정진단</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<label for="la01-05">수술일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-05" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>
+									<li>
+										<label for="la01-06">수술횟수</label>
+										<div>
+											<input type="tel" id="la01-06" class="inp-wrap" value="5"><span class="fc_000">회</span>
+										</div>
+									</li>
+									<li>
+										<label for="la01-05">입원일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-05" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>
+									<li>
+										<label for="la01-06">입원횟수</label>
+										<div>
+											<input type="tel" id="la01-06" class="inp-wrap" value="5"><span class="fc_000">회</span>
+										</div>
+									</li>
+									<li>
+										<label for="la01-05">통원일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-05" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>
+									<li>
+										<label for="la01-06">통원횟수</label>
+										<div>
+											<input type="tel" id="la01-06" class="inp-wrap" value="5"><span class="fc_000">회</span>
+										</div>
+									</li>
+									<li>
+										<label for="la01-07">최종사고일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-07" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>	
+									<li class="row-flex">
+										<div>											
+											<label for="la01-08">경과기간(월)</label>
+											<div>
+												<input type="tel" id="la01-08" class="inp-wrap" value="5"><span class="fc_000">개월</span>
+											</div>
+										</div>
+										<div>											
+											<label for="la01-09">청구건수</label>
+											<div>
+												<input type="tel" id="la01-09" class="inp-wrap" value="5"><span class="fc_000">건</span>
+											</div>
+										</div>
+									</li>
+								</ul> -->
+							</div>
+							<div>
 								<label for="la02-01" class="fs-28">질병부위가 어느쪽입니까?</label>
 								<div class="mat_20 add-select-list">
-									<ul class="dform square02">
-										<li><input type="radio" id="la02-01_01" name="la02-01"><label for="la02-01_01">왼쪽</label></li>
-										<li><input type="radio" id="la02-01_02" name="la02-01"><label for="la02-01_02">오른쪽</label></li>
-									</ul>
+									<select id="la02-01" class="select">
+										<option>오른쪽</option>
+										<option>왼쪽</option>
+									</select>
 								</div>
 							</div>
 						</div>
 					</div>
 				</article>
-				<article class="pro-covenant">
+				<article class="pro-covenant cheking-pro">
 					<div class="toggle">
-						<div class="header toggle-header pat_5">	
-							<ul class="titBox link-list-st01 pdt-n">
-								<li class="bg-st02 pd-n border-n">
+						<div class="header toggle-header on">	
+							<ul class="titBox link-list-st01">
+								<li class="bg-st02">
 									<div class="flexJcSb">
 										<div>
 											<span class="status-04">추가</span>
@@ -122,63 +209,137 @@
 							<button type="button" class="btn-toggle">더보기</button>
 						</div>
 						<div class="toggle-con">
-							<ul class="write-st02 bg-st01 pad-20">
-								<li>
-									<label for="la03-01">완치여부</label>
-									<div class="checkBox-st01">
-										<input type="radio" id="la03-01-01" name="la03-01"><label for="la03-01-01">예</label>
-										<input type="radio" id="la03-01-02" name="la03-01"><label for="la03-01-02">아니오</label>
-									</div>
-								</li>
-								<li>
-									<label for="la03-02">재발유무</label>
-									<div class="checkBox-st01">
-										<input type="radio" id="la03-02-01" name="la03-02"><label for="la03-02-01">있다</label>
-										<input type="radio" id="la03-02-02" name="la03-02"><label for="la03-02-02">없다</label>
-									</div>
-								</li>
-								<li>
-									<label for="la03-03">진단여부</label>
-									<div>
-										<select id="la03-03" class="select" disabled>
-											<option>질병확정진단</option>
-										</select>
-									</div>
-								</li>
-								<li>
-									<label for="la03-04">치료일자</label>
-									<div>
-										<input type="tel" class="inp-wrap" id="la03-04" value="2020.01.05" data-name="picker">
-										<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
-									</div>
-								</li>
-								<li>
-									<label for="la03-07">치료횟수</label>
-									<div class="d-lite_flex flexAiCt">
-										<input type="tel" class="inp-wrap align-r" id="la03-07" value="1" data-name="picker"><span class="maL-5 fc_000">회</span>
-									</div>
-								</li>
-								<li>
-									<label for="la03-08">최종사고일자</label>
-									<div>
-										<input type="tel" class="inp-wrap" id="la03-08" value="2020.01.05" data-name="picker">
-										<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
-									</div>
-								</li>
-								<li class="d-lite_flex flexAiCt">
-									<label for="la03-05" class="w25p">경과기간(월)</label>
-									<input type="tel" id="la03-05" class="inp-wrap w50" style="min-width: 5rem;" value="5"><span class="maL-5 fc_000">개월</span>
-									<label for="la03-06" class="w15p maL-10">청구건수</label>
-									<input type="tel" id="la03-06" class="inp-wrap w50 maL-5" style="min-width: 5rem;" value="5"><span class="maL-5 fc_000">건</span>
-								</li>
-							</ul>
-							<div class="bg-st01 pad-20 border-t">
-								<label for="la04-01" class="fs-28">질병부위가 어느쪽입니까?</label>
+							<div>
+								<!-- <ul class="bul-list-st03 type02 col-wrap">
+									<li>
+										<span class="stit">수술횟수</span>
+										<span class="scon">N회</span>
+									</li>
+									<li>
+										<span class="stit">입원일수</span>
+										<span class="scon">N일</span>
+									</li>
+									<li>
+										<span class="stit">입원횟수</span>
+										<span class="scon">N회</span>
+									</li>
+									<li>
+										<span class="stit">통원횟수</span>
+										<span class="scon">N회</span>
+									</li>
+									<li>
+										<span class="stit">최종사고일</span>
+										<span class="scon">2026.05.10</span>
+									</li>
+									<li>
+										<span class="stit">경과기간</span>
+										<span class="scon">N개월</span>
+									</li>
+									<li>
+										<span class="stit">청구건수</span>
+										<span class="scon">N회</span>
+									</li>
+								</ul> -->
+								<ul class="write-agree">
+									<li>
+										<label>완치여부</label>
+										<div class="checkBox-st01">
+											<input type="radio" id="la01-01-01" name="la01-01"><label for="la01-01-01">예</label>
+											<input type="radio" id="la01-01-02" name="la01-01"><label for="la01-01-02">아니오</label>
+										</div>
+									</li>
+									<li>
+										<label>재발유무</label>
+										<div class="checkBox-st01">
+											<input type="radio" id="la01-02-01" name="la01-02"><label for="la01-02-01">있다</label>
+											<input type="radio" id="la01-02-02" name="la01-02"><label for="la01-02-02">없다</label>
+										</div>
+									</li>
+									<li>
+										<label for="la01-03">진단여부</label>
+										<div>
+											<select id="la01-03" class="select">
+												<option>질병확정진단</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<label for="la01-04">치료내용</label>
+										<div>
+											<select id="la01-04" class="select">
+												<option>질병확정진단</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<label for="la01-05">수술일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-05" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>
+									<li>
+										<label for="la01-06">수술횟수</label>
+										<div>
+											<input type="tel" id="la01-06" class="inp-wrap" value="5"><span class="fc_000">회</span>
+										</div>
+									</li>
+									<li>
+										<label for="la01-05">입원일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-05" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>
+									<li>
+										<label for="la01-06">입원횟수</label>
+										<div>
+											<input type="tel" id="la01-06" class="inp-wrap" value="5"><span class="fc_000">회</span>
+										</div>
+									</li>
+									<li>
+										<label for="la01-05">통원일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-05" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>
+									<li>
+										<label for="la01-06">통원횟수</label>
+										<div>
+											<input type="tel" id="la01-06" class="inp-wrap" value="5"><span class="fc_000">회</span>
+										</div>
+									</li>
+									<li>
+										<label for="la01-07">최종사고일자</label>
+										<div>
+											<input type="tel" class="inp-wrap" id="la01-07" value="2020.01.05" data-name="picker">
+											<input type="date" class="sbtn-calendar" title="달력보기" data-name="picker">
+										</div>
+									</li>	
+									<li class="row-flex">
+										<div>											
+											<label for="la01-08">경과기간(월)</label>
+											<div>
+												<input type="tel" id="la01-08" class="inp-wrap" value="5"><span class="fc_000">개월</span>
+											</div>
+										</div>
+										<div>											
+											<label for="la01-09">청구건수</label>
+											<div>
+												<input type="tel" id="la01-09" class="inp-wrap" value="5"><span class="fc_000">건</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<label for="la02-01" class="fs-28">질병부위가 어느쪽입니까?</label>
 								<div class="mat_20 add-select-list">
-									<ul class="dform square02">
-										<li><input type="radio" id="la04-01_01" name="la04-01"><label for="la04-01_01">왼쪽</label></li>
-										<li><input type="radio" id="la04-01_02" name="la04-01"><label for="la04-01_02">오른쪽</label></li>
-									</ul>
+									<select id="la02-01" class="select">
+										<option>오른쪽</option>
+										<option>왼쪽</option>
+									</select>
 								</div>
 							</div>
 						</div>

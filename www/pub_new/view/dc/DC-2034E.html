@@ -24,7 +24,7 @@
 	<div class="d-step">
 		<h2>고지문항 작성</h2>
 		<div class="pos-ar">
-			<button class="sbtn-3 btn-st04">고지불러오기</button>
+			<button class="sbtn-3 btn-st02">고지불러오기</button>
 		</div>
 	</div>
 	<!-- body 스크롤영역 -->
@@ -230,6 +230,113 @@
 								</li>
 							</ul>
 						</div>
+						<ul class="toggle type02">
+							<li>
+								<div class="toggle-header on">
+									<h3 class="title">질병 상세정보
+										<span class="tit_num">총 <em>3</em> 건</span>
+									</h3>
+									<div class="pos-ar">
+										<button class="sbtn-3 btn-st02">질병추가</button>
+									</div>
+									<button type="button" class="btn-toggle">더보기</button>
+								</div>
+								<div class="toggle-con" id="qa-dis" style="display: block;">
+									<div class="cont3">
+										<ul class="bx-data-list">
+											<li>
+												<div class="item">
+													<div class="bx-top flexJcSb flexAiCt">
+														<div>
+															<span class="status-05">필수</span>
+															<button class="txt_link">[M543] 요통</button>
+														</div>
+													</div>
+													<div class="bx-info">
+														<ul class="bul-list-st03 col-02 type02">
+															<li class="w100p flexJcSb">
+																<div class="stit">치료기간</div>
+																<div class="scon">2025.01.01 ~ 2025.12.20</div>
+															</li>
+															<li>
+																<div class="stit">재발유무</div>
+																<div class="scon">있다</div>
+															</li>
+															<li>
+																<div class="stit">완치여부</div>
+																<div class="scon">예</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<div class="bx-top flexJcSb flexAiCt">
+														<div>
+															<span class="status-04">추가</span>
+															<button class="txt_link">[M543] 당뇨</button>
+														</div>
+														<button class="trash_btn">삭제</button>
+													</div>
+													<div class="bx-info">
+														<ul class="bul-list-st03 col-02 type02">
+															<li class="w100p flexJcSb">
+																<div class="stit">치료기간</div>
+																<div class="scon">2025.01.01 ~ 2025.12.20</div>
+															</li>
+															<li class="w100p flexJcSb">
+																<div class="stit">치료내용</div>
+																<div class="scon">수술(입원, 통원 포함)</div>
+															</li>
+															<li>
+																<div class="stit">재발유무</div>
+																<div class="scon">있다</div>
+															</li>
+															<li>
+																<div class="stit">완치여부</div>
+																<div class="scon">예</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="item">
+													<div class="bx-top flexJcSb flexAiCt">
+														<div>
+															<span class="status-04">추가</span>
+															<button class="txt_link">[M543] 어깨 염좌</button>
+														</div>
+														<button class="trash_btn">삭제</button>
+													</div>
+													<div class="bx-info">
+														<ul class="bul-list-st03 col-02 type02">
+															<li class="w100p flexJcSb">
+																<div class="stit">치료기간</div>
+																<div class="scon">2025.01.01 ~ 2025.12.20</div>
+															</li>
+															<li class="w100p flexJcSb">
+																<div class="stit">치료내용</div>
+																<div class="scon">수술(입원, 통원 포함)</div>
+															</li>
+															<li>
+																<div class="stit">재발유무</div>
+																<div class="scon">있다</div>
+															</li>
+															<li>
+																<div class="stit">완치여부</div>
+																<div class="scon">예</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</li>
 
 					<li id="qa-num06" data-type="text-only">
@@ -237,31 +344,31 @@
 						<div class="qaBox-a">
 							<ul class="write-st02">
 								<li class="full">
-									<label for="la06-0">근무처</label>
+									<label for="la06-0" class="star">근무처</label>
 									<div>
 										<input type="text" id="la06-0" class="inp-wrap chk-main">
 									</div>
 								</li>
-								<li class="flexJcSb">
-									<div class="d-lite_flex flexAiCt">
-										<label for="la06-1" class="w80p">근무지역</label>
+								<li class="towline">
+									<div>
+										<label for="la06-1" class="star">근무지역</label>
 										<div>
 											<input type="text" id="la06-1" class="inp-wrap chk-main">
 										</div>
 									</div>
-									<div class="d-lite_flex flexAiCt">
-										<label for="la06-2" class="w80p align-c">업종</label>
+									<div>
+										<label for="la06-2" class="star">업종</label>
 										<div>
 											<input type="text" id="la06-2" class="inp-wrap chk-main">
 										</div>
 									</div>
 								</li>
 								<li class="full">
-									<label for="la06-3">취급하는 업무</label>
+									<label for="la06-3" class="star">취급하는 업무</label>
 									<div>
 										<input type="text" id="la06-3" class="inp-wrap chk-main">
+										<p class="desc-txt">(구체적으로 기재하여 주십시오)</p>
 									</div>
-									<p class="desc-txt">(구체적으로 기재하여 주십시오)</p>
 								</li>
 							</ul>
 						</div>
@@ -294,14 +401,12 @@
 						</p>
 						<div class="qaBox-ex"><!-- 히든 class="none" -->
 							<ul class="write-st02 d-half" data-sub-type="mix-match">
-								<!-- 9.18 삭제 
 								<li>
-									<label for="la7-0">차종</label>
+									<label for="la7-0" class="star">운전 차종</label>
 									<div class="dform square02 etc">
 										<input type="text" id="la7-0" class="inp-wrap">
 									</div>
 								</li>
-								-->
 								<li class="sub-group">
 									<label for="la7-1">승용차</label>
 									<div class="dform square02">
@@ -370,17 +475,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk1" name="Q9-chk1"><label for="Q9-chk1">스쿠버다이빙</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-1-1">빈도</label>
+											<label for="Q9-1-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-1-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-1-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-1-2" class="dash ta-r">월</label>
+											<label for="Q9-1-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-1-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-1-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-1-3">자격증 명칭</label>
+											<label for="Q9-1-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-1-3" class="inp-wrap chk-sub">
 											</div>
@@ -391,17 +496,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk2" name="Q9-chk1"><label for="Q9-chk2">행글라이딩, 패러글라이딩</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-2-1">빈도</label>
+											<label for="Q9-2-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-2-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-2-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-2-2" class="dash ta-r">월</label>
+											<label for="Q9-2-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-2-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-2-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-2-3">자격증 명칭</label>
+											<label for="Q9-2-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-2-3" class="inp-wrap chk-sub">
 											</div>
@@ -412,17 +517,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk3" name="Q9-chk1"><label for="Q9-chk3">스카이다이빙</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-3-1">빈도</label>
+											<label for="Q9-3-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-3-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-3-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-3-2" class="dash ta-r">월</label>
+											<label for="Q9-3-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-3-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-3-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-3-3">자격증 명칭</label>
+											<label for="Q9-3-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-3-3" class="inp-wrap chk-sub">
 											</div>
@@ -433,17 +538,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk4" name="Q9-chk1"><label for="Q9-chk4">수상스키</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-4-1">빈도</label>
+											<label for="Q9-4-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-4-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-4-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-4-2" class="dash ta-r">월</label>
+											<label for="Q9-4-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-4-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-4-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-4-3">자격증 명칭</label>
+											<label for="Q9-4-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-4-3" class="inp-wrap chk-sub">
 											</div>
@@ -454,17 +559,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk5" name="Q9-chk1"><label for="Q9-chk5">자동차, 오토바이 경주</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-5-1">빈도</label>
+											<label for="Q9-5-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-5-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-5-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-5-2" class="dash ta-r">월</label>
+											<label for="Q9-5-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-5-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-5-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-5-3">자격증 명칭</label>
+											<label for="Q9-5-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-5-3" class="inp-wrap chk-sub">
 											</div>
@@ -475,17 +580,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk6" name="Q9-chk1"><label for="Q9-chk6">번지점프</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-6-1">빈도</label>
+											<label for="Q9-6-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-6-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-6-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-6-2" class="dash ta-r">월</label>
+											<label for="Q9-6-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-6-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-6-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-6-3">자격증 명칭</label>
+											<label for="Q9-6-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-6-3" class="inp-wrap chk-sub">
 											</div>
@@ -496,17 +601,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk7" name="Q9-chk1"><label for="Q9-chk7">빙벽 , 암벽등반</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-7-1">빈도</label>
+											<label for="Q9-7-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-7-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-7-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-7-2" class="dash ta-r">월</label>
+											<label for="Q9-7-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-7-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-7-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-7-3">자격증 명칭</label>
+											<label for="Q9-7-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-7-3" class="inp-wrap chk-sub">
 											</div>
@@ -517,17 +622,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk8" name="Q9-chk1"><label for="Q9-chk8">제트스키</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-8-1">빈도</label>
+											<label for="Q9-8-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-8-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-8-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-8-2" class="dash ta-r">월</label>
+											<label for="Q9-8-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-8-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-8-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-8-3">자격증 명칭</label>
+											<label for="Q9-8-3" class="star">자격증 명칭</label>
 											<div>
 												<input type="text" id="Q9-8-3" class="inp-wrap chk-sub">
 											</div>
@@ -538,17 +643,17 @@
 									<input type="checkbox" class="chk-sub" id="Q9-chk9" name="Q9-chk1"><label for="Q9-chk9">래프팅</label>
 									<ul class="write-st02 low-dep">
 										<li>
-											<label for="Q9-9-1">빈도</label>
+											<label for="Q9-9-1" class="star">빈도</label>
 											<div>
-												<input type="tel" id="Q9-9-1" class="inp-wrap ta-r w70 chk-sub"><span class="won">년간</span>
+												<input type="tel" id="Q9-9-1" class="inp-wrap ta-r w60 chk-sub"><span class="won">년간</span>
 											</div>
-											<label for="Q9-9-2" class="dash ta-r">월</label>
+											<label for="Q9-9-2" class="dash ta-r star">월</label>
 											<div>
-												<input type="tel"id="Q9-9-2" class="inp-wrap ta-r w70 chk-sub"><span class="won">회</span>
+												<input type="tel"id="Q9-9-2" class="inp-wrap ta-r w60 chk-sub"><span class="won">회</span>
 											</div>
 										</li>
 										<li>
-											<label for="Q9-9-3">자격증 명칭</label>
+											<label for="Q9-9-3" class="star">자격증 명칭</label>
 											<div>
 												<input id="Q9-9-3" class="inp-wrap chk-sub" type="text">
 											</div>
@@ -568,7 +673,7 @@
 						<div class="qaBox-ex">
 							<ul class="write-st02">
 								<li>
-									<label for="la10-1">업무명</label>
+									<label for="la10-1" class="star">업무명</label>
 									<div>
 										<input type="text" id="la10-1" class="inp-wrap chk-sub">
 									</div>
@@ -585,29 +690,26 @@
 							<input type="radio" class="chk-main" id="Q11-2" name="Q11" data-ans="N"><label for="Q11-2">아니오</label>
 						</p>
 						<div class="qaBox-ex">
-							<ul class="write-st02">
-								<li><!-- 2018-05-03 / 2018-05-04 -->
-									<label for="la11-1">출국예정일</label>
+							<ul class="write-st02 sm-label">
+								<li class="towline">
+									<label for="la11-1" class="star">기간</label>
 									<div>
 										<input type="tel" id="la11-1" class="inp-wrap chk-sub" placeholder="출국일 입력">
 										<input type="date" class="sbtn-calendar" title="달력보기">
 									</div>
-								</li>
-								<li><!-- 2018-05-03 / 2018-05-04 -->
-									<label for="la11-2">귀국예정일</label>
 									<div>
 										<input type="tel" id="la11-2" class="inp-wrap chk-sub" placeholder="귀국일 입력">
 										<input type="date" class="sbtn-calendar" title="달력보기">
 									</div>
 								</li>
 								<li>
-									<label for="la11-3">지역</label>
+									<label for="la11-3" class="star">지역</label>
 									<div>
 										<input type="text" id="la11-3" class="inp-wrap chk-sub">
 									</div>
 								</li>
 								<li>
-									<label for="la11-4">목적</label>
+									<label for="la11-4" class="star">목적</label>
 									<div>
 										<input type="text" id="la11-4" class="inp-wrap chk-sub">
 									</div>
@@ -621,7 +723,7 @@
 						<div class="qaBox-a">
 							<ul class="write-st02">
 								<li>
-									<label for="la12-1">월 평균</label>
+									<label for="la12-1" class="star">월 평균</label>
 									<div>
 										<input type="tel" id="la12-1" class="inp-wrap chk-main"><span class="won">만원</span>
 									</div>
@@ -638,16 +740,18 @@
 						</p>
 						<div class="qaBox-ex">
 							<ul class="write-st02">
-								<li>
-									<label for="la13-1">음주횟수<span class="stxt">(주)</span></label>
+								<li class="towline type02">
 									<div>
-										<input type="tel" id="la13-1" class="inp-wrap chk-sub"><span class="won">회</span>
+										<label for="la13-1" class="star">주</label>
+										<div>
+											<input type="tel" id="la13-1" class="inp-wrap chk-sub"><span class="won">회</span>
+										</div>
 									</div>
-								</li>
-								<li>
-									<label for="la13-2">음주량<br><span class="stxt">(소주기준1회)</span></label>
 									<div>
-										<input type="tel" id="la13-2" class="inp-wrap chk-sub"><span class="won">병</span>
+										<label for="la13-2" class="star">1회</label>
+										<div>
+											<input type="tel" id="la13-2" class="inp-wrap chk-sub"><span class="won">병</span>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -663,13 +767,13 @@
 						<div class="qaBox-ex">
 							<ul class="write-st02">
 								<li>
-									<label for="la14-1">흡연량<span class="stxt">(1일)</span></label>
+									<label for="la14-1" class="star">흡연량<span class="stxt">(1일)</span></label>
 									<div>
 										<input type="tel" id="la14-1" class="inp-wrap chk-sub"><span class="won">개피</span>
 									</div>
 								</li>
 								<li>
-									<label for="la14-2">흡연기간<br><span class="stxt">(과거부터 현재)</span></label>
+									<label for="la14-2" class="star">흡연기간<br><span class="stxt">(과거부터 현재)</span></label>
 									<div>
 										<input type="tel" id="la14-2" class="inp-wrap chk-sub"><span class="won">년간</span>
 									</div>
@@ -681,17 +785,18 @@
 					<li id="qa-num15" data-type="tel-only">
 						<p class="qaBox-q"><span class="no">15</span>체격</p>
 						<div class="qaBox-a">
-							<ul class="write-st02 col-2">
-								<li>
-									<label for="la15-1">키</label>
+							<ul class="write-st02">
+								<li class="towline type02">
 									<div>
-										<input type="tel" id="la15-1" class="inp-wrap chk-main"><span class="won">cm</span>
+
+										<label for="la15-1" class="star">키</label>
+										<input type="tel" id="la15-1" class="inp-wrap chk-main">
+										<span class="won">cm</span>									
 									</div>
-								</li>
-								<li>
-									<label for="la15-2">몸무게</label>
 									<div>
-										<input type="tel" id="la15-2" class="inp-wrap chk-main"><span class="won">kg</span>
+										<label for="la15-2" class="star">몸무게</label>
+										<input type="tel" id="la15-2" class="inp-wrap chk-main">
+										<span class="won">kg</span>
 									</div>
 								</li>
 							</ul>
@@ -708,19 +813,19 @@
 						<div class="qaBox-ex">
 							<ul class="write-st02">
 								<li>
-									<label for="la16-1">회사명</label>
+									<label for="la16-1" class="star">회사명</label>
 									<div>
 										<input type="text" id="la16-1" class="inp-wrap chk-sub">
 									</div>
 								</li>
 								<li>
-									<label for="la16-2">건수</label>
+									<label for="la16-2" class="star">건수</label>
 									<div>
 										<input type="tel" id="la16-2" class="inp-wrap chk-sub"><span class="won">건</span>
 									</div>
 								</li>
 								<li>
-									<label for="la16-3">보험료(월)</label>
+									<label for="la16-3" class="star">보험료(월)</label>
 									<div>
 										<input type="tel" id="la16-3" class="inp-wrap chk-sub"><span class="won">원</span>
 									</div>
@@ -835,31 +940,31 @@
 						<div class="qaBox-a">
 							<ul class="write-st02">
 								<li class="full">
-									<label for="easyla04-0">근무처</label>
+									<label for="easyla04-0" class="star">근무처</label>
 									<div>
 										<input type="text" id="easyla04-0" class="inp-wrap chk-main">
 									</div>
 								</li>
-								<li class="flexJcSb">
-									<div class="d-lite_flex flexAiCt">
-										<label for="easyla04-1" class="w80p">근무지역</label>
+								<li class="towline">
+									<div>
+										<label for="easyla04-1" class="star">근무지역</label>
 										<div>
 											<input type="text" id="easyla04-1" class="inp-wrap chk-main">
 										</div>
 									</div>
-									<div class="d-lite_flex flexAiCt">
-										<label for="easyla04-2" class="w80p align-c">업종</label>
+									<div>
+										<label for="easyla04-2" class="star">업종</label>
 										<div>
 											<input type="text" id="easyla04-2" class="inp-wrap chk-main">
 										</div>
 									</div>
 								</li>
 								<li class="full">
-									<label for="easyla04-3">취급하는 업무</label>
+									<label for="easyla04-3" class="star">취급하는 업무</label>
 									<div>
 										<input type="text" id="easyla04-3" class="inp-wrap chk-main">
+										<p class="desc-txt">(구체적으로 기재하여 주십시오)</p>
 									</div>
-									<p class="desc-txt">(구체적으로 기재하여 주십시오)</p>
 								</li>
 							</ul>
 						</div>
@@ -872,6 +977,12 @@
 						</p>
 						<div class="qaBox-ex"><!-- 히든 class="none" -->
 							<ul class="write-st02 d-half" data-sub-type="mix-match">
+								<li>
+									<label for="la7-0" class="star">운전 차종</label>
+									<div class="dform square02 etc">
+										<input type="text" id="la7-0" class="inp-wrap">
+									</div>
+								</li>
 								<li class="sub-group">
 									<label for="easyla5-1">승용차</label>
 									<div class="dform square02">
@@ -931,7 +1042,7 @@
 						<div class="qaBox-a">
 							<ul class="write-st02">
 								<li>
-									<label for="easyla07-1">월 평균</label>
+									<label for="easyla07-1" class="star">월 평균</label>
 									<div>
 										<input type="tel" id="easyla07-1" class="inp-wrap chk-main"><span class="won">만원</span>
 									</div>
@@ -1098,31 +1209,31 @@
 						<div class="qaBox-a">
 							<ul class="write-st02">
 								<li class="full">
-									<label for="alzhla04-0">근무처</label>
+									<label for="alzhla04-0" class="star">근무처</label>
 									<div>
 										<input type="text" id="alzhla04-0" class="inp-wrap chk-main">
 									</div>
 								</li>
-								<li class="flexJcSb">
-									<div class="d-lite_flex flexAiCt">
-										<label for="alzhla04-1" class="w80p">근무지역</label>
+								<li class="towline">
+									<div>
+										<label for="alzhla04-1" class="star">근무지역</label>
 										<div>
 											<input type="text" id="alzhla04-1" class="inp-wrap chk-main">
 										</div>
 									</div>
-									<div class="d-lite_flex flexAiCt">
-										<label for="alzhla04-2" class="w80p align-c">업종</label>
+									<div>
+										<label for="alzhla04-2" class="star">업종</label>
 										<div>
 											<input type="text" id="alzhla04-2" class="inp-wrap chk-main">
 										</div>
 									</div>
 								</li>
 								<li class="full">
-									<label for="alzhla04-3">취급하는 업무</label>
+									<label for="alzhla04-3" class="star">취급하는 업무</label>
 									<div>
 										<input type="text" id="alzhla04-3" class="inp-wrap chk-main">
+										<p class="desc-txt">(구체적으로 기재하여 주십시오)</p>
 									</div>
-									<p class="desc-txt">(구체적으로 기재하여 주십시오)</p>
 								</li>
 							</ul>
 						</div>
@@ -1131,113 +1242,6 @@
 				</ol>
 				<!-- //치매형 -->
 			</div>
-			<ul class="toggle type02">
-				<li>
-					<div class="toggle-header on">
-						<h3 class="title">질병 상세정보
-							<span class="tit_num">총 <em>3</em> 건</span>
-						</h3>
-						<div class="pos-ar">
-							<button class="sbtn-3 btn-st02">질병추가</button>
-						</div>
-						<button type="button" class="btn-toggle">더보기</button>
-					</div>
-					<div class="toggle-con" id="qa-dis" style="display: block;">
-						<div class="cont3">
-							<ul class="bx-data-list">
-								<li>
-									<div class="item">
-										<div class="bx-top flexJcSb flexAiCt">
-											<div>
-												<span class="status-05">필수</span>
-												<button class="txt_link">[M543] 요통</button>
-											</div>
-										</div>
-										<div class="bx-info">
-											<ul class="bul-list-st03 col-02 type02">
-												<li class="w100p flexJcSb">
-													<div class="stit">치료기간</div>
-													<div class="scon">2025.01.01 ~ 2025.12.20</div>
-												</li>
-												<li>
-													<div class="stit">재발유무</div>
-													<div class="scon">있다</div>
-												</li>
-												<li>
-													<div class="stit">완치여부</div>
-													<div class="scon">예</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="item">
-										<div class="bx-top flexJcSb flexAiCt">
-											<div>
-												<span class="status-04">추가</span>
-												<button class="txt_link">[M543] 당뇨</button>
-											</div>
-											<button class="trash_btn">삭제</button>
-										</div>
-										<div class="bx-info">
-											<ul class="bul-list-st03 col-02 type02">
-												<li class="w100p flexJcSb">
-													<div class="stit">치료기간</div>
-													<div class="scon">2025.01.01 ~ 2025.12.20</div>
-												</li>
-												<li class="w100p flexJcSb">
-													<div class="stit">치료내용</div>
-													<div class="scon">수술(입원, 통원 포함)</div>
-												</li>
-												<li>
-													<div class="stit">재발유무</div>
-													<div class="scon">있다</div>
-												</li>
-												<li>
-													<div class="stit">완치여부</div>
-													<div class="scon">예</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="item">
-										<div class="bx-top flexJcSb flexAiCt">
-											<div>
-												<span class="status-04">추가</span>
-												<button class="txt_link">[M543] 어깨 염좌</button>
-											</div>
-											<button class="trash_btn">삭제</button>
-										</div>
-										<div class="bx-info">
-											<ul class="bul-list-st03 col-02 type02">
-												<li class="w100p flexJcSb">
-													<div class="stit">치료기간</div>
-													<div class="scon">2025.01.01 ~ 2025.12.20</div>
-												</li>
-												<li class="w100p flexJcSb">
-													<div class="stit">치료내용</div>
-													<div class="scon">수술(입원, 통원 포함)</div>
-												</li>
-												<li>
-													<div class="stit">재발유무</div>
-													<div class="scon">있다</div>
-												</li>
-												<li>
-													<div class="stit">완치여부</div>
-													<div class="scon">예</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</li>
-			</ul>
 		</div>
 	</div>
 
@@ -1246,8 +1250,8 @@
 		<div class="d-footer dcNew">
 			<span href="#" class="insurance w44p"><button class="lbtn btn-st02">임시저장</button></span>
 			<button class="lbtn btn-st01">선심사</button>
-			<div class="floating-open">
-				<button onclick="checkQaStatus('floating-count_normal')">답변현황</button> <!-- 일반형 -->
+			<div class="floating-open txt">
+				<button onclick="checkQaStatus('floating-count_normal')"><span>1</span><span class="slid">/</span><span>16</span></button> <!-- 일반형 -->
 				<!-- <button onclick="checkQaStatus('floating-count_easy')">답변현황</button> --> <!-- 간편형 -->
 				<!-- <button onclick="checkQaStatus('floating-count_alzh')">답변현황</button> -->  <!-- 치매형 -->
 			</div>

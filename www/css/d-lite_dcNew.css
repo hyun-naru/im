@@ -512,6 +512,9 @@ background-size: 100% auto;
 	margin: 0;
 	border: none;
 }
+.pro-covenant.cheking-pro .link-list-st01 .preResult-tit {
+	margin-bottom: .6rem;
+}
 .pro-covenant.cheking-pro .link-list-st01 .tit-h2 {
 	padding: 0;
 	display: flex;
@@ -541,11 +544,177 @@ background-size: 100% auto;
 	padding: 0;
 	font-size: 1.4rem;
 }
-.pro-covenant.cheking-pro .header.type02 .tit-r span.Advance-num {
-	font-family: 'Roboto', 'NotoSans', sans-serif;
-}
+.pro-covenant.cheking-pro .toggle .toggle-con,
 .pro-covenant.cheking-pro .list-limit {
 	border-radius: 0 0 .5rem .5rem;
+}
+.pro-covenant.cheking-pro .list-limit.col {
+	flex-direction: column;
+}
+.pro-covenant.cheking-pro .list-limit.col > .border-t {
+	width: 100%;
+	margin-top: 1rem;
+	padding-top: 1rem;
+}
+.pro-covenant.cheking-pro .header.type02.oneline .Advance-stit {
+	display: block;
+	font-weight: 500;
+}
+.pro-covenant.cheking-pro .header.type02.oneline + .list-limit {
+	font-size: 1.4rem;
+}
+
+.pro-covenant.cheking-pro .toggle {
+	margin-top: 0;
+}
+.pro-covenant.cheking-pro .toggle .tit-h2 {
+	margin-top: 1rem;
+}
+.pro-covenant.cheking-pro .toggle .toggle-con {
+	padding: 0 1.5rem;
+}
+.pro-covenant.cheking-pro .toggle .toggle-con > div {
+	padding: 1.5rem 0;
+}
+.pro-covenant.cheking-pro .toggle .toggle-con > div + div {
+	border-top: .1rem solid #e3e3e3;
+}
+.write-agree li,
+.write-agree li.row-flex > div {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+}
+.write-agree li > label,
+.write-agree li.row-flex div:first-child > label {
+	min-width: 8rem;
+	flex-shrink: 0;
+    width: max-content;	
+}
+.write-agree li:not(.row-flex) > div,
+.write-agree li.row-flex > div > div {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	width: 100%;
+}
+.write-st02.sm-label li > div:has(.sbtn-calendar),
+.write-agree li > div:has(.sbtn-calendar) {
+	gap: 0;
+}
+.write-agree li > div.checkBox-st01 label ~ label{
+	margin-left: 0;
+}
+.box-cont .data-list-st01:not(.col-wrap) li .stit,
+.write-agree li > div:not(:has(input[type="radio"])) > label,
+.write-agree li > div span {
+	display: contents;
+	flex-shrink: 0;
+    width: max-content;	
+}
+.write-agree li.row-flex > div:last-child {
+	flex: 1 1 74% ;
+}
+.write-agree li.row-flex .inp-wrap {
+	min-width: auto;
+}
+.write-agree li + li {
+	margin-top: 1rem;
+}
+
+.qaBox li:has(.toggle) {
+	padding-bottom: 0;
+	border: 0;
+}
+.qaBox li .toggle {
+	margin: 2rem -1.5rem 0;
+}
+.qaBox .write-st02 .towline {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+}
+.qaBox label.star::after {
+	padding-left: 2px;
+	display: inline-block;
+	content: '*';
+	color: #f2303c;
+}
+.qaBox .write-st02 .towline > div {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+.qaBox .write-st02 .towline:not(.type02) > div:first-child label {
+	width: 8.5rem;
+}
+.qaBox .write-st02 .towline > div > div {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	width: 100%;
+}
+.write-st02 > li.towline div .won {
+	width: auto !important;
+	flex-shrink: 0;
+    width: max-content;	
+}
+.qaBox .qaBox-ex .write-st02.sm-label > li > label,
+.qaBox .write-st02 .dform.square01 label,
+.qaBox .qaBox-ex .write-st02.d-half .dform.square02.etc > *,
+.qaBox .write-st02 .towline > div label {
+	flex-shrink: 0;
+    width: max-content;	
+}
+.qaBox .qaBox-a li:has(.desc-txt) label {
+	vertical-align: top;
+	line-height: 3.5rem;
+}
+.qaBox .qaBox-a li > div:has(.desc-txt) {
+	display: flex;
+	flex-direction: column;
+}
+.qaBox .qaBox-a .data-list-st01.col-wrap li:before {
+	top: 1.2rem;
+}
+.qaBox .qaBox-ex .dform.square01 label.dash {
+	padding-left: 1rem;
+}
+.qaBox .qaBox-ex .dform.square01 .write-st02.low-dep .inp-wrap {
+	min-width: auto;
+}
+.qaBox .qaBox-ex .write-st02.sm-label > li  {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+.qaBox .qaBox-ex .write-st02.sm-label > li > label {
+	width: 4rem;
+	display: inline-flex;
+}
+.qaBox .qaBox-ex .write-st02.sm-label > li > div {
+	width: 100%;
+}
+.toggle.line-ty {
+	margin-top: 0;
+}
+.toggle.line-ty .toggle-header.sum .title-box {
+	margin: 0 -1.5rem 1.5rem;
+	padding: 0 1.5rem;
+	border-bottom: .1rem solid #E0E0E0;
+}
+.toggle.line-ty .toggle-header.sum .notice-txt {
+	line-height: 1;
+	padding: 0 0 1.5rem;
+}
+.contract-insure .toggle.line-ty > li .toggle-con {
+	border: none;;
+}
+.toggle.line-ty > li .toggle-con .pro-covenant.cheking-pro:first-child {
+	margin-top: 0;
 }
 .dcNew .GA-Advance-PaymentList{
 	display: flex;
@@ -683,6 +852,27 @@ background-size: 100% auto;
 }
 .dcNew .floating-open button:before{
 	right: 0.8rem;
+}
+
+.dcNew .floating-open.txt {
+	min-width: 5.6rem;
+}
+.dcNew .floating-open.txt button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .2rem;
+	font-size: 1.8rem;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	text-indent: 0;
+}
+.dcNew .floating-open.txt button span.slid {
+	font-size: 1.2rem;
+}
+.dcNew .floating-open.txt button::before{
+	display: none;
 }
 .dcNew .dim-layer{
 	z-index: 1100;
@@ -1319,16 +1509,46 @@ background-size: 100% auto;
 	max-width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	gap: 1rem;
 	padding-left: 1.5rem;
 }
 .data-list-st01.col-wrap li:before {
 	content:"";position: absolute; left: 0; top: .2rem; width:.1rem;height:1.1rem;background:#e3e3e3;
 }
+
+.data-list-st01.col-wrap li label,
 .data-list-st01.col-wrap li span {
 	flex-shrink: 0;
     width: max-content;
-	font-family: 'Roboto', 'NotoSans', sans-serif;
+}
+.bul-list-st03.col-wrap {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:flex-start;
+	gap: 0 1.5rem;
+}
+.bul-list-st03.col-wrap li {
+	margin-top: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.5rem;
+	flex-basis: calc(50% - 0.8rem);
+    flex-grow: 1;
+    max-width: 100%;
+    width: auto !important;
+}
+.bul-list-st03.col-wrap li {
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	flex-basis: calc(50% - 0.8rem);
+}
+.bul-list-st03.col-wrap li span {
+	flex-shrink: 0;
+    width: max-content;
+	font-size: 1.5rem;
 }
 /* data-list-st01 col-mix */
 .data-list-st01.col-mix{

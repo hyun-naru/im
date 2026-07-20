@@ -35,7 +35,7 @@
 					<div class="info-cont">
 						<ul class="data-list-st01">
 							<li>
-								<span class="stit w20p">선심사일자</span>
+								<span class="stit">선심사일자</span>
 								<span class="scon">2026.01.10 13:00 (청약유효일자 : 2026.01.15)</span>
 							</li>
 						</ul>
@@ -50,7 +50,7 @@
 					<div class="info-cont">
 						<ul class="data-list-st01">
 							<li>
-								<span class="stit w20p">선심사일자</span>
+								<span class="stit">선심사일자</span>
 								<span class="scon">2026.01.10 13:00</span>
 							</li>
 						</ul>
@@ -97,42 +97,97 @@
 					<li><button type="button">상품별심사결과</button></li>
 				</ul>
 			</div>
-			<div class="cont3 tab-cont"> <!-- 탭 내용 비활성화class: none -->
-				<article class="pro-covenant">
-					<div class="header">
-						<ul class="link-list-st01 dform square02 pdt-n w100p">
-							<li class="bg-st02 pd-n border-n">
-								<span>1234567891</span>
-								<div class="tit-h2 pd-n w100p">
-									<span class="Advance-stit fw_500">심사 결과 내용 노출</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<ul class="list-limit ">
-						<li class="maL-n">
-							심사 처리결과 인수로 확정<br/>
-							처리 상세 내용입니다.
-						</li>
-					</ul>
-				</article>
-				<article class="pro-covenant">
-					<div class="header">
-						<ul class="link-list-st01 dform square02 pdt-n w100p">
-							<li class="bg-st02 pd-n border-n">
-								<span>1234567891</span>
-								<div class="tit-h2 pd-n w100p">
-									<span class="Advance-stit fw_500">심사 결과 내용 노출</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<ul class="list-limit ">
-						<li class="maL-n">
-							심사 처리결과 인수로 확정
-						</li>
-					</ul>
-				</article>
+			<div class="tab-cont"> <!-- 탭 내용 비활성화class: none -->				
+				<ul class="toggle mat-n">
+					<li>
+						<div class="toggle-header on">
+							<h3 class="title">질병사전심사</h3>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con" id="qa-dis" style="display: block;">
+							<div class="cont3">
+								<article class="pro-covenant">
+									<div class="header">
+										<ul class="link-list-st01 dform square02 pdt-n w100p">
+											<li class="bg-st02 pd-n border-n">
+												<div class="tit-h2 pd-n w100p">
+													<span class="Advance-stit fw_500">심사 결과 내용 노출</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<ul class="list-limit ">
+										<li class="maL-n">
+											심사 처리결과 인수로 확정<br/>
+											처리 상세 내용입니다.
+										</li>
+									</ul>
+								</article>
+								<article class="pro-covenant">
+									<div class="header">
+										<ul class="link-list-st01 dform square02 pdt-n w100p">
+											<li class="bg-st02 pd-n border-n">
+												<div class="tit-h2 pd-n w100p">
+													<span class="Advance-stit fw_500">심사 결과 내용 노출</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<ul class="list-limit ">
+										<li class="maL-n">
+											심사 처리결과 인수로 확정
+										</li>
+									</ul>
+								</article>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="toggle-header">
+							<h3 class="title">EUS Rule 판정</h3>
+							<button type="button" class="btn-toggle">더보기</button>
+						</div>
+						<div class="toggle-con" id="qa-dis">
+							<div class="cont3">
+								<article class="pro-covenant">
+									<div class="header">
+										<ul class="link-list-st01 dform square02 pdt-n w100p">
+											<li class="bg-st02 pd-n border-n">
+												<span>1234567891</span>
+												<div class="tit-h2 pd-n w100p">
+													<span class="Advance-stit fw_500">심사 결과 내용 노출</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<ul class="list-limit ">
+										<li class="maL-n">
+											심사 처리결과 인수로 확정<br/>
+											처리 상세 내용입니다.
+										</li>
+									</ul>
+								</article>
+								<article class="pro-covenant">
+									<div class="header">
+										<ul class="link-list-st01 dform square02 pdt-n w100p">
+											<li class="bg-st02 pd-n border-n">
+												<span>1234567891</span>
+												<div class="tit-h2 pd-n w100p">
+													<span class="Advance-stit fw_500">심사 결과 내용 노출</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<ul class="list-limit ">
+										<li class="maL-n">
+											심사 처리결과 인수로 확정
+										</li>
+									</ul>
+								</article>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</div>
 			<div class="cont3 tab-cont"> <!-- 탭 내용 비활성화class: none -->
 				<div class="box-bg-st01 align-l mab-20">
@@ -143,7 +198,7 @@
 						</li>
 						<li>
 							<span class="stit">초회 보험료</span>
-							<span class="scon"><em>320,000원</em></span>
+							<span class="scon">320,000원</span>
 						</li>
 					</ul>
 					<ul class="data-list-st01 border-t mat_20 pat_20">
@@ -153,104 +208,110 @@
 						</li>
 					</ul>
 				</div>
-				<article class="pro-covenant">
-					<div class="header">
-						<ul class="link-list-st01 dform square02 pdt-n w100p">
-							<li class="bg-st02 pd-n border-n">
-								<strong class="preResult-tit blue">표준인수</strong>
-								<div class="tit-h2 pd-n w100p pat_5">
+				<article class="pro-covenant cheking-pro">
+					<div class="header type02 fw500">
+						<ul class="link-list-st01 dform square02">
+							<li class="bg-st02">
+								<strong class="preResult-tit blue">인수</strong>
+								<div class="tit-h2">
 									<span class="Advance-stit fw_500">마음든든플러스플러스플러스유니버셜종신보험 1종 (기본형)</span>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<ul class="list-limit data-list-st01 col-02">
-						<li>
-							<span class="stit">가입금액</span>
-							<span class="scon">2,000 만원</span>
-						</li>
-						<li>
-							<span class="stit">보험기간</span>
-							<span class="scon">99 년</span>
-						</li>
-						<li>
-							<span class="stit">납입기간</span>
-							<span class="scon">7 년</span>
-						</li>
-						<li>
-							<span class="stit">보험료</span>
-							<span class="scon">274,800 원</span>
-						</li>
-						<li class="full border-t pat_15">
-							상세 결과 내용 노출
-						</li>
-					</ul>
+					<div class="list-limit col">
+						<div class="flex-wrap-item">
+							<ul class="data-list-st01 col-wrap">
+								<li>
+									<span class="stit">가입금액</span>
+									<span class="scon">2,000 만원</span>
+								</li>
+								<li>
+									<span class="stit">보험기간</span>
+									<span class="scon">99 년</span>
+								</li>
+								<li>
+									<span class="stit">납입기간</span>
+									<span class="scon">7 년</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">274,800 원</span>
+								</li>
+							</ul>
+						</div>
+						<div class="border-t">상세 결과 내용 노출</div>
+					</div>
 				</article>
-				<article class="pro-covenant">
-					<div class="header">
-						<ul class="link-list-st01 dform square02 pdt-n w100p">
-							<li class="bg-st02 pd-n border-n">
+				<article class="pro-covenant cheking-pro">
+					<div class="header type02 fw500">
+						<ul class="link-list-st01 dform square02">
+							<li class="bg-st02">
 								<strong class="preResult-tit pink">불가</strong>
-								<div class="tit-h2 pd-n w100p pat_5">
+								<div class="tit-h2">
 									<span class="Advance-stit fw_500">마음든든플러스플러스플러스유니버셜종신보험 1종 (기본형)</span>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<ul class="list-limit data-list-st01 col-02">
-						<li>
-							<span class="stit">가입금액</span>
-							<span class="scon">2,000 만원</span>
-						</li>
-						<li>
-							<span class="stit">보험기간</span>
-							<span class="scon">99 년</span>
-						</li>
-						<li>
-							<span class="stit">납입기간</span>
-							<span class="scon">7 년</span>
-						</li>
-						<li>
-							<span class="stit">보험료</span>
-							<span class="scon">274,800 원</span>
-						</li>
-						<li class="full border-t pat_15">
-							상세 결과 내용 노출
-						</li>
-					</ul>
+					<div class="list-limit col">
+						<div class="flex-wrap-item">
+							<ul class="data-list-st01 col-wrap">
+								<li>
+									<span class="stit">가입금액</span>
+									<span class="scon">2,000 만원</span>
+								</li>
+								<li>
+									<span class="stit">보험기간</span>
+									<span class="scon">99 년</span>
+								</li>
+								<li>
+									<span class="stit">납입기간</span>
+									<span class="scon">7 년</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">274,800 원</span>
+								</li>
+							</ul>
+						</div>
+						<div class="border-t">상세 결과 내용 노출</div>
+					</div>
 				</article>
-				<article class="pro-covenant">
-					<div class="header">
-						<ul class="link-list-st01 dform square02 pdt-n w100p">
-							<li class="bg-st02 pd-n border-n">
-								<strong class="preResult-tit orange">심사문의</strong>
-								<div class="tit-h2 pd-n w100p pat_5">
+				<article class="pro-covenant cheking-pro">
+					<div class="header type02 fw500">
+						<ul class="link-list-st01 dform square02">
+							<li class="bg-st02">
+								<strong class="preResult-tit orange">인심사</strong>
+								<div class="tit-h2">
 									<span class="Advance-stit fw_500">마음든든플러스플러스플러스유니버셜종신보험 1종 (기본형)</span>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<ul class="list-limit data-list-st01 col-02">
-						<li>
-							<span class="stit">가입금액</span>
-							<span class="scon">2,000 만원</span>
-						</li>
-						<li>
-							<span class="stit">보험기간</span>
-							<span class="scon">99 년</span>
-						</li>
-						<li>
-							<span class="stit">납입기간</span>
-							<span class="scon">7 년</span>
-						</li>
-						<li>
-							<span class="stit">보험료</span>
-							<span class="scon">274,800 원</span>
-						</li>
-						<li class="full border-t pat_15">
-							상세 결과 내용 노출
-						</li>
-					</ul>
+					<div class="list-limit col">
+						<div class="flex-wrap-item">
+							<ul class="data-list-st01 col-wrap">
+								<li>
+									<span class="stit">가입금액</span>
+									<span class="scon">2,000 만원</span>
+								</li>
+								<li>
+									<span class="stit">보험기간</span>
+									<span class="scon">99 년</span>
+								</li>
+								<li>
+									<span class="stit">납입기간</span>
+									<span class="scon">7 년</span>
+								</li>
+								<li>
+									<span class="stit">보험료</span>
+									<span class="scon">274,800 원</span>
+								</li>
+							</ul>
+						</div>
+						<div class="border-t">상세 결과 내용 노출</div>
+					</div>
 				</article>
 			</div>
 		</div>
