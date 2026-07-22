@@ -54,12 +54,12 @@
 				<div class="cont3">
 					<ul class="bx-data-list drag-drop_list">
 						<li class="drag_item">
-							<div class="item">
-								<div class="bx-top flexJcSb flexAiCt">
+							<div class="item drag_item_btn" role="button" tabindex="0">
+								<div class="bx-top">
 									<div class="w90p">
 										<strong class="fc_000">50세 남 순환계 플랜</strong>
 									</div>
-									<button class="drag_btn">순서변경</button>
+									<span class="drag_btn">순서변경</span>
 								</div>
 								<div class="bx-info">
 									<ul class="data-list-st01 col-mix">
@@ -80,12 +80,12 @@
 							</div>
 						</li>
 						<li class="drag_item">
-							<div class="item">
-								<div class="bx-top flexJcSb flexAiCt">
+							<div class="item drag_item_btn" role="button" tabindex="0">
+								<div class="bx-top">
 									<div class="w90p">
 										<strong class="fc_000">50세 남 순환계 플랜 마음든든플러스유니버설종신기본형</strong>
 									</div>
-									<button class="drag_btn">순서변경</button>
+									<span class="drag_btn">순서변경</span>
 								</div>
 								<div class="bx-info">
 									<ul class="data-list-st01 col-mix">
@@ -106,12 +106,12 @@
 							</div>
 						</li>
 						<li class="drag_item">
-							<div class="item">
-								<div class="bx-top flexJcSb flexAiCt">
+							<div class="item drag_item_btn" role="button" tabindex="0">
+								<div class="bx-top">
 									<div class="w90p">
 										<strong class="fc_000">50세 남 순환계 플랜</strong>
 									</div>
-									<button class="drag_btn">순서변경</button>
+									<span class="drag_btn">순서변경</span>
 								</div>
 								<div class="bx-info">
 									<ul class="data-list-st01 col-mix">
@@ -134,15 +134,15 @@
 					</ul>
 				</div>
 			</div>
-			<div class="cont3 tab-cont"> <!-- 탭 내용 비활성화class: none -->
+			<div class="cont3 tab-cont none"> <!-- 탭 내용 비활성화class: none -->
 				<ul class="bx-data-list drag-drop_list">
 					<li class="drag_item">
-						<div class="item">
-							<div class="bx-top flexJcSb flexAiCt">
+						<div class="item drag_item_btn" role="button" tabindex="0">
+							<div class="bx-top">
 								<div class="w90p">
 									<strong class="fc_000">50세 남 순환계 플랜</strong>
 								</div>
-								<button class="drag_btn">순서변경</button>
+								<span class="drag_btn">순서변경</span>
 							</div>
 							<div class="bx-info">
 								<ul class="data-list-st01 col-mix">
@@ -163,12 +163,12 @@
 						</div>
 					</li>
 					<li class="drag_item">
-						<div class="item">
-							<div class="bx-top flexJcSb flexAiCt">
+						<div class="item drag_item_btn" role="button" tabindex="0">
+							<div class="bx-top">
 								<div class="w90p">
 									<strong class="fc_000">50세 남 순환계 플랜 마음든든플러스유니버설종신기본형</strong>
 								</div>
-								<button class="drag_btn">순서변경</button>
+								<span class="drag_btn">순서변경</span>
 							</div>
 							<div class="bx-info">
 								<ul class="data-list-st01 col-mix">
@@ -189,12 +189,12 @@
 						</div>
 					</li>
 					<li class="drag_item">
-						<div class="item">
-							<div class="bx-top flexJcSb flexAiCt">
+						<div class="item drag_item_btn" role="button" tabindex="0">
+							<div class="bx-top">
 								<div class="w90p">
 									<strong class="fc_000">50세 남 순환계 플랜</strong>
 								</div>
-								<button class="drag_btn">순서변경</button>
+								<span class="drag_btn">순서변경</span> 
 							</div>
 							<div class="bx-info">
 								<ul class="data-list-st01 col-mix">
@@ -232,32 +232,33 @@
 </div>
 <!--// fullpopup 영역 -->
 
-<script>
-function dragDropListAction(){
-	let longPressTimer;
+<script>function dragDropListAction(){
+    let longPressTimer;
     let isDragging = false;
     let $draggedItem = null;
     let $currentList = null;
     let startY = 0;
 
-    // 1. 롱프레스(오래 누르기) 감지 시작
-    $(document).on('touchstart mousedown', '.drag_btn', function(e) {
+    // 1. 롱프레스 감지
+    $(document).on('touchstart mousedown', '.drag_item_btn', function(e) {
+        // 우클릭 제외
+        if (e.type === 'mousedown' && e.which !== 1) return;
+
         const event = e.originalEvent.touches ? e.originalEvent.touches[0] : e;
         const $btn = $(this);
         
         $draggedItem = $btn.closest('.drag_item');
         $currentList = $btn.closest('.drag-drop_list');
-        
-        startY = event.pageY;
+        startY = event.clientY; // pageY 대신 뷰포트 기준 clientY 사용 권장
 
         longPressTimer = setTimeout(function() {
             isDragging = true;
             $draggedItem.addClass('dragging'); 
-            $('body').css('overflow', 'hidden'); // PC 버전 스크롤 방지
-        }, 500); 
+            $('body').css('touch-action', 'none'); // 모바일 전용 스크롤 방지
+        }, 200);
     });
 
-    // 2. 누르고 있다가 떼거나 움직였을 때 타이머 취소 및 원복
+    // 2. 터치/마우스 해제 시 원복
     $(document).on('touchend mouseup touchcancel', function() {
         clearTimeout(longPressTimer);
         
@@ -269,49 +270,49 @@ function dragDropListAction(){
             
             $draggedItem = null;
             $currentList = null;
-            $('body').css('overflow', ''); 
+            $('body').css('touch-action', ''); 
         }
     });
 
-    // 3. 드래그 중 실시간 위치 계산 및 순서 변경 (PC 마우스 커버용)
+    // 3. PC 마우스 움직임 처리
     $(document).on('mousemove', function(e) {
         if (!isDragging || !$draggedItem || !$currentList) {
-            if (Math.abs(e.pageY - startY) > 10) clearTimeout(longPressTimer);
+            if ($draggedItem && Math.abs(e.clientY - startY) > 10) {
+                clearTimeout(longPressTimer);
+            }
             return;
         }
-        handleDragMove(e.pageY);
+        handleDragMove(e.clientY);
     });
 
-    // [모바일 방어] 
+    // 4. 모바일 터치 움직임 처리
     document.addEventListener('touchmove', function(e) {
         if (isDragging) {
-            // 드래그 중일 때는 모바일 기본 스크롤 무시
-            e.preventDefault(); 
-            
-            const touchY = e.touches[0].pageY;
+            e.preventDefault(); // 스크롤 차단
+            const touchY = e.touches[0].clientY;
             handleDragMove(touchY);
         } else {
-            // 롱프레스 도중(드래그 전)에 손가락이 스크롤되려고 위아래로 많이 움직이면 롱프레스 취소
-            if ($draggedItem && Math.abs(e.touches[0].pageY - startY) > 10) {
+            if ($draggedItem && Math.abs(e.touches[0].clientY - startY) > 10) {
                 clearTimeout(longPressTimer);
             }
         }
     }, { passive: false });
 
-
-    // 위치 정렬 공통 로직 함수화
-    function handleDragMove(currentY) {
+    // 5. 위치 변경 핵심 계산 로직 (스크롤 영역 보정 완료)
+    function handleDragMove(clientY) {
+        // 현재 활성화된(보이는) 리스트의 자식들만 탐색
         const $siblings = $currentList.find('.drag_item').not($draggedItem);
         let $nextSibling = null;
         
         $siblings.each(function() {
             const $sibling = $(this);
             const box = $sibling[0].getBoundingClientRect();
-            const siblingCenterY = window.scrollY + box.top + box.height / 2;
+            // 스크롤 위치와 상관없이 뷰포트(clientY) 기준으로만 정확한 중앙점 계산
+            const siblingCenterY = box.top + box.height / 2;
 
-            if (currentY < siblingCenterY) {
+            if (clientY < siblingCenterY) {
                 $nextSibling = $sibling;
-                return false; 
+                return false; // jQuery each 루프 탈출
             }
         });
 
@@ -322,7 +323,7 @@ function dragDropListAction(){
         }
     }
 
-	// 순서 정렬 완료 후 처리할 함수
+    // 순서 변경 완료 이벤트
     function onDragComplete($list) {
         console.log("순서 변경 완료된 리스트 객체:", $list);
     }

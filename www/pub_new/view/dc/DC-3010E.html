@@ -35,43 +35,53 @@
 			</li>
 			<li>
 				<label for="la1-2" class="label-txt">등록일자</label>
-				<input id="la1-2" class="inp-wrap" type="tel" placeholder="시작일 입력" />
-				<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
-				<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
-				<input type="date" class="sbtn-calendar" title="달력보기" />
+				<div class="picker-box maL-n">
+					<input id="la1-2" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+					<input type="date" class="sbtn-calendar" title="달력보기" />
+					<span class="dash">~</span>
+					<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
+					<input type="date" class="sbtn-calendar" title="달력보기" />
+				</div>
 			</li>
 			<li>
 				<label for="text1" class="label-txt">플랜명</label>
 				<input id="text1" class="inp-wrap" type="text" title="플랜명" placeholder="플랜명을 입력하세요." />
 			</li>
 			<li>
-				<label for="filter04" class="label-txt">플랜명</label>
-				<div class="xScroll">
-					<div class="d-lite_chipfilter">
-						<div class="chipitem">
-							<input type="checkbox" id="type03item00" class="chipinput" name="filter04" />
-							<label for="type03item00" class="chiplabel">전체</label>
+				<label for="filter04" class="label-txt">플랜유형</label>
+        		<div class="tab_case">
+					<div class="GA-Advance-PaymentList">
+						<div class="d-lite_chipfilter type02">
+							<div class="chipitem">
+								<input type="checkbox" id="type03item00" class="chipinput" name="filter04" />
+								<label for="type03item00" class="chiplabel">전체</label>
+							</div>
+							<div class="chipitem">
+								<input type="checkbox" id="type03item01" class="chipinput" name="filter04" />
+								<label for="type03item01" class="chiplabel">사망</label>
+							</div>
+							<div class="chipitem">
+								<input type="checkbox" id="type03item02" class="chipinput" name="filter04" />
+								<label for="type03item02" class="chiplabel">암</label>
+							</div>
+							<div class="chipitem">
+								<input type="checkbox" id="type03item03" class="chipinput" name="filter04" />
+								<label for="type03item03" class="chiplabel">뇌심</label>
+							</div>
+							<div class="chipitem">
+								<input type="checkbox" id="type03item04" class="chipinput" name="filter04" />
+								<label for="type03item04" class="chiplabel">입원수술</label>
+							</div>
+							<div class="chipitem">
+								<input type="checkbox" id="type03item05" class="chipinput" name="filter04" />
+								<label for="type03item05" class="chiplabel">치매</label>
+							</div>
+							<div class="chipitem">
+								<input type="checkbox" id="type03item06" class="chipinput" name="filter04" />
+								<label for="type03item06" class="chiplabel">기타</label>
+							</div>
 						</div>
-						<div class="chipitem">
-							<input type="checkbox" id="type03item01" class="chipinput" name="filter04" />
-							<label for="type03item01" class="chiplabel">사망</label>
-						</div>
-						<div class="chipitem">
-							<input type="checkbox" id="type03item02" class="chipinput" name="filter04" />
-							<label for="type03item02" class="chiplabel">암</label>
-						</div>
-						<div class="chipitem">
-							<input type="checkbox" id="type03item03" class="chipinput" name="filter04" />
-							<label for="type03item03" class="chiplabel">뇌심</label>
-						</div>
-						<div class="chipitem">
-							<input type="checkbox" id="type03item04" class="chipinput" name="filter04" />
-							<label for="type03item04" class="chiplabel">입원수술</label>
-						</div>
-						<div class="chipitem">
-							<input type="checkbox" id="type03item05" class="chipinput" name="filter04" />
-							<label for="type03item05" class="chiplabel">치매</label>
-						</div>
+						<button type="button" class="Up_btn"></button>
 					</div>
 				</div>
 			</li>

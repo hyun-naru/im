@@ -29,28 +29,28 @@
 		<ul>
 			<li class="dform circle01">
 				<label for="la1-1" class="label-txt">조회기간</label>
-				<div class="checkBox-st01">
-					<input id="ra-01" type="radio" name="ra" />
-					<label for="ra-01">1주</label>
-					<input id="ra-02" type="radio" name="ra" />
-					<label for="ra-02">2주</label>
-					<input id="ra-03" type="radio" name="ra" />
-					<label for="ra-03">한달</label>
-					<input id="ra-04" type="radio" name="ra" checked />
-					<label for="ra-04">기간</label>
+				<div class="line-two">
+					<div class="checkBox-st01">
+						<input id="ra-01" type="radio" name="ra" />
+						<label for="ra-01">1주</label>
+						<input id="ra-02" type="radio" name="ra" />						
+						<label for="ra-02">2주</label>
+						<input id="ra-03" type="radio" name="ra" />
+						<label for="ra-03">한달</label>
+						<input id="ra-04" type="radio" name="ra" checked />
+						<label for="ra-04">기간</label>
+					</div>
+					<div class="picker-box">
+						<input id="la1-2" class="inp-wrap" type="tel" placeholder="시작일 입력" />
+						<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
+						<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
+						<input type="date" class="sbtn-calendar" title="달력보기" />
+					</div>
 				</div>
-			</li>
-			<li class=""><!-- 기간 라디오버튼 선택되었을 경우 노출 -->
-				<label for="la1-2" class="label-txt">기간입력</label>
-				<input id="la1-2" class="inp-wrap" type="tel" placeholder="시작일 입력" />
-				<input type="date" class="sbtn-calendar" title="달력보기" /><span class="dash">~</span>
-				<input class="inp-wrap" type="tel" placeholder="종료일 입력" />
-				<input type="date" class="sbtn-calendar" title="달력보기" />
 			</li>
 			<li>
 				<label for="sel1" class="label-txt">상품구분</label>
 				<select id="sel1" class="select">
-					<option>상품구분 선택</option>
 					<option>전체</option>
 					<option>보장성(확정)</option>
 					<option>보장성(연동)</option>
@@ -62,12 +62,12 @@
 					<option>연금(연동)</option>
 					<option>연금(변액)</option>
 				</select>
-				<input class="inp-wrap" type="text" title="고객명" placeholder="고객명을 입력하세요." />
+				<input class="inp-wrap" type="text" title="고객명" placeholder="고객명 검색" />
 			</li>
 			<li>
 				<label for="sel2" class="label-txt">대표상품</label>
 				<select id="sel2" class="select">
-					<option>대표상품 선택</option>
+					<option>전체</option>
 				</select>
 			</li>
 		</ul>
@@ -90,15 +90,15 @@
 				<p class="result-txt">총 5건이 검색되었습니다.</p>
 				<!-- 2026 dcNew 수정 -->
 				<div class="cont3">
-					<article class="pro-covenant mat-n ">
-						<div class="header pal_15 par_15" style="min-height:0rem">
-							<ul class="link-list-st01 dform square02 pdt-n w100p">
-								<li class="bg-st02 pd-n border-n">
-									<div class="flexJcC gap10 flexAiCt mab-5">
+					<article class="pro-covenant cheking-pro">
+						<div class="header type02">
+							<ul class="link-list-st01 dform square02">
+								<li class="bg-st02">
+									<div class="flexJcSb gap10 flexAiCt">
 										<p class="preResult-tit blue">표준인수</p>
 										<span class="status-02">출력이력 O</span>
 									</div>
-									<div class="tit-h2 pd-n webBox-align_s">
+									<div class="tit-h2">
 										<input id="chk1" type="checkbox" checked="">
 										<label for="chk1">
 											<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험 1종(기본형)플랜명 노출</span>
@@ -107,35 +107,39 @@
 								</li>
 							</ul>   
 						</div>
-						<ul class="list-limit border-bn data-list-st01 col-02">
-							<li>
-								<em class="stit">설계일자</em>
-								<span class="scon">2026.05.10</p>
-							</li>
-							<li>
-								<em class="stit">보험료</em>
-								<span class="scon">274,800 원</p>
-							</li>
-							<li>
-								<em class="stit">계약자</em>
-								<span class="scon">홍길동</p>
-							</li>
-							
-							<li>
-								<em class="stit">피보험자</em>
-								<span class="scon">홍길동</p>
-							</li>
-						</ul>
+						<div class="list-limit">
+							<div class="flex-wrap-item">
+								<ul class="data-list-st01 col-wrap">
+									<li>
+										<em class="stit">설계일자</em>
+										<span class="scon">2026.05.10</p>
+									</li>
+									<li>
+										<em class="stit">보험료</em>
+										<span class="scon">274,800 원</p>
+									</li>
+									<li>
+										<em class="stit">계약자</em>
+										<span class="scon">홍길동</p>
+									</li>
+									
+									<li>
+										<em class="stit">피보험자</em>
+										<span class="scon">홍길동</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</article>
-					<article class="pro-covenant">
-						<div class="header pal_15 par_15" style="min-height:0rem">
-							<ul class="link-list-st01 dform square02 pdt-n w100p">
-								<li class="bg-st02 pd-n border-n">
-									<div class="flexJcC gap10 flexAiCt mab-5">
+					<article class="pro-covenant cheking-pro">
+						<div class="header type02">
+							<ul class="link-list-st01 dform square02">
+								<li class="bg-st02">
+									<div class="flexJcSb gap10 flexAiCt">
 										<p class="preResult-tit orange">표준체미달인수</p>
 										<span class="status-13">출력이력 ×</span>
 									</div>
-									<div class="tit-h2 pd-n webBox-align_s">
+									<div class="tit-h2">
 										<input id="chk2" type="checkbox">
 										<label for="chk2">
 											<span class="Advance-stit par_n">마음든든플러스유니버셜종신보험 1종(기본형)플랜명 노출</span>
@@ -144,31 +148,35 @@
 								</li>
 							</ul>   
 						</div>
-						<ul class="list-limit border-bn data-list-st01 col-02">
-							<li>
-								<em class="stit">설계일자</em>
-								<span class="scon">2026.05.10</p>
-							</li>
-							<li>
-								<em class="stit">보험료</em>
-								<span class="scon">274,800 원</p>
-							</li>
-							<li>
-								<em class="stit">계약자</em>
-								<span class="scon">홍길동</p>
-							</li>
-							
-							<li>
-								<em class="stit">피보험자</em>
-								<span class="scon">홍길동</p>
-							</li>
-						</ul>
+						<div class="list-limit">
+							<div class="flex-wrap-item">
+								<ul class="data-list-st01 col-wrap">
+									<li>
+										<em class="stit">설계일자</em>
+										<span class="scon">2026.05.10</p>
+									</li>
+									<li>
+										<em class="stit">보험료</em>
+										<span class="scon">274,800 원</p>
+									</li>
+									<li>
+										<em class="stit">계약자</em>
+										<span class="scon">홍길동</p>
+									</li>
+									
+									<li>
+										<em class="stit">피보험자</em>
+										<span class="scon">홍길동</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</article>
-					<article class="pro-covenant">
-						<div class="header pal_15 par_15" style="min-height:0rem">
-							<ul class="link-list-st01 dform square02 pdt-n w100p">
-								<li class="bg-st02 pd-n border-n">
-									<div class="flexJcC gap10 flexAiCt mab-5">
+					<article class="pro-covenant cheking-pro">
+						<div class="header type02">
+							<ul class="link-list-st01 dform square02">
+								<li class="bg-st02">
+									<div class="flexJcSb gap10 flexAiCt">
 										<p class="preResult-tit pink">불가</p>
 										<span class="status-02">출력이력 O</span>
 									</div>
@@ -181,25 +189,29 @@
 								</li>
 							</ul>   
 						</div>
-						<ul class="list-limit border-bn data-list-st01 col-02">
-							<li>
-								<em class="stit">설계일자</em>
-								<span class="scon">2026.05.10</p>
-							</li>
-							<li>
-								<em class="stit">보험료</em>
-								<span class="scon">274,800 원</p>
-							</li>
-							<li>
-								<em class="stit">계약자</em>
-								<span class="scon">홍길동</p>
-							</li>
-							
-							<li>
-								<em class="stit">피보험자</em>
-								<span class="scon">홍길동</p>
-							</li>
-						</ul>
+						<div class="list-limit">
+							<div class="flex-wrap-item">
+								<ul class="data-list-st01 col-wrap">
+									<li>
+										<em class="stit">설계일자</em>
+										<span class="scon">2026.05.10</p>
+									</li>
+									<li>
+										<em class="stit">보험료</em>
+										<span class="scon">274,800 원</p>
+									</li>
+									<li>
+										<em class="stit">계약자</em>
+										<span class="scon">홍길동</p>
+									</li>
+									
+									<li>
+										<em class="stit">피보험자</em>
+										<span class="scon">홍길동</p>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</article>
 				</div>
 				<!-- //2026 dcNew 수정 -->

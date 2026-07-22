@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>청약서작성(계약자)</title>
+<link rel="stylesheet" type="text/css" href="../../../css/d-lite_style.css"/>
+<script type="text/javascript" src="../../../js/libs/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../../js/libs/ui.js"></script>
+</head>
+<body>
+
+<!-- 화면 영역 -->
+<div class="d-wrap">
+	<!-- header 고정영역 -->
+	<header>
+		<div class="d-head">
+			<h1>청약서작성(계약자)</h1><!-- 9.25 수정 -->
+			<button class="lbtn btn-back">이전페이지 이동</button>
+			<button class="rbtn btn-view-side">전체메뉴</button>
+		</div>
+	</header>
+	<!-- //header -->
+	
+	<!-- body 스크롤영역 -->
+	<div class="d-scroll">
+		<div class="d-cont1">
+			<!-- 특정신체부위ㆍ질병 보장제한부 인수특약가입신청서 -->
+			<div class="title-step type02">
+				<h3 class="tit">특정신체부위ㆍ질병 보장제한부 인수특약가입신청서</h3>
+				<button type="button" class="sbtn-bdr-1 bdr-st06"><span>문서확인</span></button>
+			</div>
+			<!-- //특정신체부위ㆍ질병 보장제한부 인수특약가입신청서 -->
+			<!-- 표준하체인수특약 가입신청서 -->
+			<div class="title-step type02">
+				<h3 class="tit">표준하체인수특약 가입신청서</h3>
+				<button type="button" class="sbtn-bdr-1 bdr-st06"><span>문서확인</span></button>
+			</div>
+			<!-- //표준하체인수특약 가입신청서 -->
+			<div class="subscribe-wrap">
+				<div class="notice-txt ta-l"><!-- 9.17 수정 -->
+					<p class="icoTxt">가입자 확인 내용을 확인하고 서명을 진행해주세요.</p>
+				</div>
+				<div class="sign-area">
+					<span class="sign-tit">(서명/날인/SIGN)</span>
+					<div class="sign-box">
+						<span>ss</span>
+					</div>
+					<button type="button" class="btn-reset"><span>초기화</span></button>
+				</div>
+			</div>
+
+			<div class="cont1">
+			<!-- 특정신체부위ㆍ질병 보장제한부 인수특약가입신청서 -->
+				<p class="ico-txt-st02">
+					계약일[부활(효력회복)일]부터 회사가 정한 부담보기간 중에 특정 신체부위 분류표에서 지정한 신체부위에 생긴 질병을 직접적인 원인으로 보험계약 약관에 정한 보험금 등의 지급사유가 발생한 경우에 회사는 보험금을 지급하지 않거나 보험료 납입을 면제하지 않습니다. (다만, 사망으로 인하여 보험금 등의 지급사유가 발생한 경우에는 보험금을 지급합니다.)
+				</p>
+			<!-- //특정신체부위ㆍ질병 보장제한부 인수특약가입신청서 -->
+			<!-- 표준하체인수특약 가입신청서 -->
+				<p class="ico-txt-st02">
+					계약일로부터 회사가 정한 삭감기간 내에 보험계약의 규정에 정하는 재해 이외의 원인으로 피보험자가 사망하였을 경우 보험계약의 규정에도 불구하고 계약할 때에 정한 삭감기간에 따라 위의 삭감기간 표의 비율로 비율로 보험금을 차등 지급합니다.
+				</p>
+			<!-- //표준하체인수특약 가입신청서 -->
+				
+			</div>
+
+		</div>
+	</div>
+	<!-- //body 스크롤영역 -->
+
+	<!-- footer 고정영역 -->
+	<footer>
+		<div class="d-footer">
+			<button class="lbtn btn-st22 flex0 w120">이전</button>
+			<button class="lbtn btn-st04" disabled>다음</button>
+		</div>
+	</footer>
+	<!-- //footer 고정영역 -->
+</div>
+<!--//화면 영역 -->
+<script>
+var clickX = new Array();
+var clickY = new Array();
+var clickDrag = new Array();
+var isPainting = false;
+var canvasObj;
+var contextObj;
+
+/** 
+ * 서명 캔버스 데이터 초기화 (지우기) 
+ */
+function clearSignature() {
+    clickX = new Array();
+    clickY = new Array();
+    clickDrag = new Array();
+    
+    if (canvasObj) {
+        canvasObj.width = canvasObj.width; // 캔버스 내용 전체 삭제
+    }
+}
+
+/** 
+ * 좌표 데이터를 기반으로 캔버스 선 재렌더링 
+ */
+function redrawSignature() {
+    canvasObj.width = canvasObj.width; // 이전 프레임 지우기
+
+    contextObj.strokeStyle = "#000000"; // 선 색상
+    contextObj.lineJoin = "round";     // 연결점 둥글게
+    contextObj.lineCap = "round";      // 선 끝 둥글게
+    contextObj.lineWidth = 3;          // 선 두께
+
+    for (var i = 0; i < clickX.length; i++) {
+        contextObj.beginPath();
+        
+        if (clickDrag[i] && i) {
+            contextObj.moveTo(clickX[i - 1], clickY[i - 1]);
+        } else {
+            contextObj.moveTo(clickX[i] - 1, clickY[i]);
+        }
+        
+        contextObj.lineTo(clickX[i], clickY[i]);
+        contextObj.closePath();
+        contextObj.stroke();
+    }
+}
+
+/** 
+ * 터치/마우스 좌표 등록 
+ */
+function addClickPoint(x, y, dragging) {
+    clickX.push(x);
+    clickY.push(y);
+    clickDrag.push(dragging);
+}
+
+$(document).ready(function () {
+    var $signBox = $('.sign-box');
+    
+    // 1. 기존 span(placeholder 용도 등)을 비우고 Canvas 생성
+    $signBox.empty(); 
+
+    canvasObj = document.createElement('canvas');
+    
+    // sign-box의 실제 렌더링 크기에 맞춰 캔버스 해상도 설정
+    var boxWidth = $signBox.width() || 300;
+    var boxHeight = $signBox.height() || 150;
+    
+    canvasObj.setAttribute('width', boxWidth);
+    canvasObj.setAttribute('height', boxHeight);
+    canvasObj.setAttribute('id', 'signCanvas');
+    
+    $signBox.append(canvasObj);
+    contextObj = canvasObj.getContext("2d");
+
+    // 2. 초기화 버튼 클릭 이벤트 바인딩
+    $('.sign-area .btn-reset').off('click').on('click', function(e) {
+        e.preventDefault();
+        clearSignature();
+    });
+
+    // 3. 터치/마우스 이벤트 통합 바인딩 (모바일 & PC 겸용)
+    
+    // [터치 이벤트 - 모바일]
+    $signBox.on("touchstart", function (e) {
+        isPainting = true;
+        var touch = e.originalEvent.touches[0];
+        var rect = canvasObj.getBoundingClientRect();
+        
+        // 캔버스 내부 상대 좌표 계산
+        addClickPoint(touch.clientX - rect.left, touch.clientY - rect.top);
+        redrawSignature();
+    });
+
+    $signBox.on("touchmove", function (e) {
+        if (isPainting) {
+            var touch = e.originalEvent.touches[0];
+            var rect = canvasObj.getBoundingClientRect();
+            
+            addClickPoint(touch.clientX - rect.left, touch.clientY - rect.top, true);
+            redrawSignature();
+        }
+        // 서명 중 화면 전체가 스크롤되는 현상 방지
+        e.preventDefault(); 
+    });
+
+    $signBox.on("touchend touchcancel", function () {
+        isPainting = false;
+    });
+
+    // [마우스 이벤트 - PC]
+    $signBox.on("mousedown", function (e) {
+        isPainting = true;
+        var rect = canvasObj.getBoundingClientRect();
+        addClickPoint(e.clientX - rect.left, e.clientY - rect.top);
+        redrawSignature();
+    });
+
+    $signBox.on("mousemove", function (e) {
+        if (isPainting) {
+            var rect = canvasObj.getBoundingClientRect();
+            addClickPoint(e.clientX - rect.left, e.clientY - rect.top, true);
+            redrawSignature();
+        }
+    });
+
+    $(document).on("mouseup", function () {
+        isPainting = false;
+    });
+});
+</script>
+</body>
+</html>
