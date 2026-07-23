@@ -230,4 +230,45 @@
 <!--// 화면 영역 -->
 
 </body>
+<script>
+// 1. 2줄 이상(줄바꿈) 여부 체크 함수
+function checkIsMultiLine($chipFilter) {
+    // .d-lite_chipfilter 내부의 칩 요소 선택 (label, button, .chip 등)
+    const $chips = $chipFilter.find('label, button, .chip, span'); 
+    
+    if ($chips.length <= 1) return false;
+
+    // 첫 번째 칩과 마지막 칩의 Y 좌표(top) 비교
+    const firstTop = $chips.first().offset().top;
+    const lastTop = $chips.last().offset().top;
+
+    return lastTop > firstTop; // Y 위치가 다르면 2줄 이상!
+}
+
+// 2. 실행 함수 정의
+function handleChipFilterMultiLine() {
+    $('.d-lite_chipfilter').each(function() {
+        const $this = $(this);
+        // parent().parent() 대신 안전하게 .closest() 사용 & 오타 수정(tab_case)
+        const $tabCase = $this.closest('.tab_case'); 
+
+        if (checkIsMultiLine($this)) {
+            $tabCase.addClass('is-on');
+        } else {
+            $tabCase.removeClass('is-on');
+        }
+    });
+}
+
+// 3. 이벤트 바인딩
+$(document).ready(function() {
+    // 📌 페이지 처음 로드되었을 때 즉시 실행
+    handleChipFilterMultiLine();
+
+    // 📌 창 크기 변경될 때 실행 (Resize)
+    $(window).on('resize', function() {
+        handleChipFilterMultiLine();
+    });
+});
+</script>
 </html>
